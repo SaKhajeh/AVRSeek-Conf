@@ -1,0 +1,232 @@
+{
+  "pdf": "c:\\Users\\galin\\Desktop\\PHD\\Patents_Acyclovir\\Papers\\pdf.pdf",
+  "baseline": {
+    "mode": "simple_single_shot_full_text",
+    "model": "claude-opus-5",
+    "api_base": "https://api.gapgpt.app/v1",
+    "text_chars": 14976,
+    "steps_count": 5,
+    "target_name": "acyclovir {9-[(2-hydroxyethoxy)methyl]guanine}",
+    "document_type": "paper",
+    "warnings": [
+      "Steps 2–5 are described as a single one-pot procedure ('Preparation of acyclovir'); they were split into discrete unit operations (acetylation, alkylation, deacetylation, recrystallization) and intermediate yields are therefore not reported individually.",
+      "Phosphoric acid is mentioned in the discussion as part of the guanine acetylation step, but no amount is given for that stage in the experimental section; the 1.5 mL of 85.5% phosphoric acid is added at the alkylation stage.",
+      "The abstract states a total yield of 59% while the isolated acyclovir step is reported as 63%; both values are recorded as written."
+    ],
+    "steps": [
+      {
+        "step_index": 1,
+        "step_label": "Preparation of dioxolane-diacetate (1-acetyl-2-acetylmethoxy-ethyleneglycol, 7)",
+        "yield_value": "81.7% (80% cited for the literature method)",
+        "temperature": "dioxolane added to mixture precooled below 10 °C, reaction kept under 30 °C; then stirred under 30 °C",
+        "time": "1 additional hour of stirring after addition",
+        "source": "",
+        "confidence": null,
+        "smiles_entities": 0,
+        "reactants": [
+          "dioxolane (5) (1,3-dioxolane)",
+          "acetic anhydride"
+        ],
+        "products": [
+          "dioxolane-diacetate (7), 1-acetyl-2-acetylmethoxy-ethyleneglycol"
+        ]
+      },
+      {
+        "step_index": 2,
+        "step_label": "Acetylation (N2,N9-diprotection) of guanine — first stage of one-pot acyclovir preparation",
+        "yield_value": "N/A (one-pot, not isolated)",
+        "temperature": "reflux",
+        "time": "overnight",
+        "source": "",
+        "confidence": null,
+        "smiles_entities": 0,
+        "reactants": [
+          "guanine (3)"
+        ],
+        "products": [
+          "diacetylguanine (N2,N9-diacetylguanine)"
+        ]
+      },
+      {
+        "step_index": 3,
+        "step_label": "Regioselective N9-alkylation of diacetylguanine with dioxolane-diacetate 7",
+        "yield_value": "N/A (one-pot intermediate)",
+        "temperature": "reflux; then residue heated at 80 °C (oil bath)",
+        "time": "6–7 hours reflux; then 2 hours at 80 °C; trituration/stirring overnight at rt",
+        "source": "",
+        "confidence": null,
+        "smiles_entities": 0,
+        "reactants": [
+          "diacetylguanine (residue from step 2)",
+          "dioxolane-diacetate (7)"
+        ],
+        "products": [
+          "N2,O-diacetylacyclovir (2-acetamido-9-(2-acetylethoxymethyl)guanine)"
+        ]
+      },
+      {
+        "step_index": 4,
+        "step_label": "Deacetylation with ammonium hydroxide to acyclovir",
+        "yield_value": "N/A (carried to purification)",
+        "temperature": "room temperature for deacetylation; methanol treatment at 80 °C then cooled to rt",
+        "time": "stirred overnight at rt; 1 hour at 80 °C in methanol; stand at rt overnight",
+        "source": "",
+        "confidence": null,
+        "smiles_entities": 0,
+        "reactants": [
+          "N2,O-diacetylacyclovir (solid from step 3)"
+        ],
+        "products": [
+          "crude acyclovir"
+        ]
+      },
+      {
+        "step_index": 5,
+        "step_label": "Purification: recrystallization from water with activated carbon",
+        "yield_value": "63% (30 g) for acyclovir; total yield of process 59%",
+        "temperature": "hot recrystallization then cooled to room temperature; stored in refrigerator",
+        "time": "overnight in refrigerator",
+        "source": "",
+        "confidence": null,
+        "smiles_entities": 0,
+        "reactants": [
+          "crude acyclovir (solid from step 4)"
+        ],
+        "products": [
+          "acyclovir (1)"
+        ]
+      }
+    ]
+  },
+  "avrseek": {
+    "batch_id": "f4af663d45de",
+    "model_text": "claude-opus-5",
+    "model_vlm": "claude-opus-5",
+    "steps_count": 6,
+    "target_name": "acyclovir {9-[(2-hydroxyethoxy)methyl]guanine}",
+    "document_type": "paper",
+    "warnings": [
+      "Some procedure pages not included in LLM input (budget): [5].",
+      "Steps 2–4 are described as a one-pot sequence; intermediate diacetylguanine and acyclovir diacetate were not isolated with stated yields.",
+      "The 63% yield is reported for the isolated acyclovir from guanine in the one-pot procedure, while the abstract/conclusion state a total process yield of 59%.",
+      "Polyphosphoric acid is mentioned as an alternative catalyst to phosphoric acid in the alkylation but was not used with specific amounts in the worked procedure.",
+      "SMILES strings were not provided in the source and are left as null.",
+      "Normalized 6 chemical name(s) via synonym layer."
+    ],
+    "image_scheme": "1 scheme step(s), 0 page-read step(s), 3 molecule(s), 0 page-read(s) from 2 image(s) (figure pages [2, 3])",
+    "route_graph_nodes": 12,
+    "steps": [
+      {
+        "step_index": 1,
+        "step_label": "Preparation of dioxolane-diacetate (1-acetyl-2-acetylmethoxy-ethyleneglycol, 7)",
+        "yield_value": "81.7% (literature method of Chen et al. reported ~80%)",
+        "temperature": "solution precooled below 10 °C; dioxolane added keeping reaction below 30 °C; stirred at <30 °C",
+        "time": "60 minutes",
+        "source": "",
+        "confidence": 0.95,
+        "smiles_entities": 0,
+        "reactants": [
+          "dioxolane (5, 1,3-dioxolane)",
+          "acetic anhydride"
+        ],
+        "products": [
+          "1-acetyl-2-acetylmethoxyethyl acetate"
+        ]
+      },
+      {
+        "step_index": 2,
+        "step_label": "Preparation of acyclovir – Step A: acetylation (protection) of guanine to diacetylguanine",
+        "yield_value": "N/A (not isolated; lit. 95% when solvents removed by distillation)",
+        "temperature": "reflux",
+        "time": "720 minutes",
+        "source": "",
+        "confidence": 0.95,
+        "smiles_entities": 0,
+        "reactants": [
+          "guanine"
+        ],
+        "products": [
+          "N2,N9-diacetylguanine (diacetylguanine)"
+        ]
+      },
+      {
+        "step_index": 3,
+        "step_label": "Preparation of acyclovir – Step B: regioselective N9-alkylation of diacetylguanine with dioxolane-diacetate",
+        "yield_value": "N/A (carried on without isolation of yield)",
+        "temperature": "reflux; then residue heated at 80 °C (oil bath); then cooled to room temperature",
+        "time": "360-420 minutes, 120 minutes, 720 minutes",
+        "source": "",
+        "confidence": 0.95,
+        "smiles_entities": 0,
+        "reactants": [
+          "diacetylguanine (residue from Step A)",
+          "1-acetyl-2-acetylmethoxyethyl acetate"
+        ],
+        "products": [
+          "2-acetamido-9-(2-acetylethoxymethyl)guanine (N2,O-diacetylacyclovir)"
+        ]
+      },
+      {
+        "step_index": 4,
+        "step_label": "Preparation of acyclovir – Step C: deacetylation with ammonium hydroxide",
+        "yield_value": "N/A",
+        "temperature": "room temperature for deacetylation; then 80 °C for methanol treatment; cooled to rt",
+        "time": "720 minutes, 60 minutes, 720 minutes",
+        "source": "",
+        "confidence": 0.85,
+        "smiles_entities": 0,
+        "reactants": [
+          "2-acetamido-9-(2-acetylethoxymethyl)guanine (acyclovir diacetate)"
+        ],
+        "products": [
+          "crude acyclovir"
+        ]
+      },
+      {
+        "step_index": 5,
+        "step_label": "Preparation of acyclovir – Step D: recrystallization/charcoal purification to pure acyclovir",
+        "yield_value": "63% for acyclovir isolation step; total yield of the process 59%",
+        "temperature": "hot recrystallization from water, filtrate cooled to room temperature then refrigerated",
+        "time": "720 minutes",
+        "source": "",
+        "confidence": 0.95,
+        "smiles_entities": 0,
+        "reactants": [
+          "crude acyclovir"
+        ],
+        "products": [
+          "acyclovir"
+        ]
+      },
+      {
+        "step_index": 6,
+        "step_label": "Figure 3 (single step)",
+        "yield_value": "N/A",
+        "temperature": "N/A",
+        "time": "N/A",
+        "source": "scheme",
+        "confidence": 0.7,
+        "smiles_entities": 3,
+        "reactants": [
+          "5"
+        ],
+        "products": []
+      }
+    ]
+  },
+  "delta_steps": -1,
+  "only_in_baseline": [
+    "Acetylation (N2,N9-diprotection) of guanine — first stage of one-pot acyclovir preparation",
+    "Deacetylation with ammonium hydroxide to acyclovir",
+    "Purification: recrystallization from water with activated carbon",
+    "Regioselective N9-alkylation of diacetylguanine with dioxolane-diacetate 7"
+  ],
+  "only_in_avrseek": [
+    "Figure 3 (single step)",
+    "Preparation of acyclovir – Step A: acetylation (protection) of guanine to diacetylguanine",
+    "Preparation of acyclovir – Step B: regioselective N9-alkylation of diacetylguanine with dioxolane-diacetate",
+    "Preparation of acyclovir – Step C: deacetylation with ammonium hydroxide",
+    "Preparation of acyclovir – Step D: recrystallization/charcoal purification to pure acyclovir"
+  ],
+  "notes": "Baseline = one-shot full-text LLM call via extract_reactions_from_text (no OCR/VLM/reconcile). AVRSeek = full pipeline including evidence retrieval, VLM figure pages, reconcile, synonyms, route graph."
+}

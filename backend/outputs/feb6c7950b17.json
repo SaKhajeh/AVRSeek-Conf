@@ -1,0 +1,740 @@
+{
+  "job_id": "feb6c7950b17",
+  "filename": "36_1153.pdf",
+  "stages": [
+    {
+      "id": "parse_pdf",
+      "label": "PDF document understanding (+ OCR)",
+      "status": "done",
+      "detail": "5 pages, 5 images, 0 table hints, 163 text chars",
+      "data": {
+        "page_count": 5,
+        "figure_count": 5,
+        "segments": 5,
+        "text_chars": 163,
+        "ocr_used": false,
+        "ocr_backend": "",
+        "document_type": "unknown",
+        "procedure_pages": [],
+        "evidence_profile": {
+          "document_type": "unknown",
+          "procedure_pages": [],
+          "high_evidence_pages": [],
+          "low_evidence_pages": [],
+          "total_chars": 150,
+          "pages": [
+            {
+              "page": 1,
+              "char_count": 30,
+              "section": "body",
+              "synthesis_score": 0.0,
+              "evidence_types": []
+            },
+            {
+              "page": 2,
+              "char_count": 30,
+              "section": "body",
+              "synthesis_score": 0.0,
+              "evidence_types": []
+            },
+            {
+              "page": 3,
+              "char_count": 30,
+              "section": "body",
+              "synthesis_score": 0.0,
+              "evidence_types": []
+            },
+            {
+              "page": 4,
+              "char_count": 30,
+              "section": "body",
+              "synthesis_score": 0.0,
+              "evidence_types": []
+            },
+            {
+              "page": 5,
+              "char_count": 30,
+              "section": "body",
+              "synthesis_score": 0.0,
+              "evidence_types": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "text_extract",
+      "label": "Text reaction extraction (LLM)",
+      "status": "done",
+      "detail": "Extracted 0 step(s) via single-shot full text (163 chars, document_type=unknown)",
+      "data": {
+        "steps": 0,
+        "target": "N/A",
+        "text_chars_sent": 163,
+        "single_shot": true,
+        "evidence_chunks": 0,
+        "pages_included": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "pages_excluded": [],
+        "truncated": false,
+        "extraction_pass_count": 1,
+        "document_type": "unknown",
+        "extraction_plan": {
+          "candidate_procedure_pages": [],
+          "mandatory_pages": [],
+          "pages_included": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "pages_excluded": [],
+          "exclusion_reasons": {},
+          "pass_count": 1,
+          "passes": [
+            {
+              "document_type": "unknown",
+              "pages_included": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "pages_excluded": [],
+              "candidate_procedure_pages": [],
+              "mandatory_pages": [],
+              "exclusion_reasons": {},
+              "chars_total": 163,
+              "chars_selected": 313,
+              "truncated": false,
+              "truncation_note": "",
+              "pass_index": 1,
+              "pass_count": 1,
+              "chunk_count": 5,
+              "chunks": [
+                {
+                  "page_start": 1,
+                  "page_end": 1,
+                  "section": "body",
+                  "evidence_types": [],
+                  "chars": 30,
+                  "score": 0.0
+                },
+                {
+                  "page_start": 2,
+                  "page_end": 2,
+                  "section": "body",
+                  "evidence_types": [],
+                  "chars": 30,
+                  "score": 0.0
+                },
+                {
+                  "page_start": 3,
+                  "page_end": 3,
+                  "section": "body",
+                  "evidence_types": [],
+                  "chars": 30,
+                  "score": 0.0
+                },
+                {
+                  "page_start": 4,
+                  "page_end": 4,
+                  "section": "body",
+                  "evidence_types": [],
+                  "chars": 30,
+                  "score": 0.0
+                },
+                {
+                  "page_start": 5,
+                  "page_end": 5,
+                  "section": "body",
+                  "evidence_types": [],
+                  "chars": 30,
+                  "score": 0.0
+                }
+              ],
+              "procedure_pages": [],
+              "warnings": [
+                "No high-confidence experimental/example pages detected; using keyword-ranked fallback."
+              ],
+              "info": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "table_extract",
+      "label": "Table extraction (pdfplumber + LLM)",
+      "status": "stubbed",
+      "detail": "No reaction-like tables found in 0 total tables",
+      "data": {
+        "tables_total": 0,
+        "reaction_tables": 0,
+        "steps_extracted": 0
+      }
+    },
+    {
+      "id": "image_scheme",
+      "label": "Scheme / image extraction (VLM)",
+      "status": "done",
+      "detail": "0 scheme step(s), 0 page-read step(s), 0 molecule(s), 5 page-read(s) from 5 image(s)",
+      "data": {
+        "images_processed": 5,
+        "schemes_found": 0,
+        "molecules_extracted": 0,
+        "page_reads": 5,
+        "transcribed_chars": 5332,
+        "scheme_steps": 0,
+        "page_steps": 0,
+        "figure_pages": [],
+        "figure_page_info": [],
+        "schemes": [
+          {
+            "page_number": 1,
+            "image_index": 0,
+            "molecules": [],
+            "arrows": [],
+            "conditions_text": "",
+            "raw_output": "```json\n{\n  \"image_class\": \"mixed\",\n  \"transcribed_text\": \"No. 3\\t1153\\n\\n[Chem. Pharm. Bull.\\n36( 3 )1153—1157(1988)]\\n\\nA Convenient Synthesis of 9-(2-Hydroxyethoxymethyl)guanine (Acyclovir) and Related Compounds\\u00b9\\u207e\\n\\nHIROATSU MATSUMOTO,* CHISATO KANEKO, KEIKO YAMADA,\\nTADAO TAKEUCHI, TAKEO MORI,\\nand YOSHIHISA MIZUNO\\n\\nResearch Laboratory, Minophagen Pharmaceutical Co.,\\n2–5233, Komatsubara, Zama, Kanagawa 228, Japan\\n\\n(Received August 4, 1987)\\n\\nA convenient and economical synthesis of 9-(2-hydroxyethoxymethyl)guanine (1, acyclovir, Zovirax, or acyclic guanosine: an antiherpetic agent) from guanine was developed via N\\u00b2,O-diacetylacyclovir. Two closely related compounds, N\\u00b2-acetylacyclovir (7) and O-acetylacyclovir (8), were also prepared by selective deacetylation.\\n\\nKeywords——acyclovir; N\\u00b2-acetylacyclovir; O-acetylacyclovir; alkylation; p-toluenesulfonic acid; antiherpetic agent\\n\\nSchaeffer and coworkers\\u00b2\\u207e first reported that 9-(2-hydroxyethoxymethyl)guanine (1, acyclovir) may be highly specific inhibitor of herpes viruses proliferation. Since then, a large number of nucleoside analogs in which the carbohydrate moiety is replaced by an acyclic substituent (viz., 2-hydroxyethoxymethyl or 1,3-dihydroxy-2-propoxymethyl) have been prepared.\\n\\n[Chart 1: structures 1 and 2 — guanine bases bearing 2-hydroxyethoxymethyl (1) and 1,3-dihydroxy-2-propoxymethyl (2) side chains]\\n\\nChart 1\\n\\nSeveral methods for the introduction of a 2-hydroxyethoxymethyl group into purines for the synthesis of acyclovir or acyclic nucleosides have been tried,\\u00b3\\u207b\\u00b9\\u2070\\u207e with limited success. Schaeffer and colleagues have carried out the base-promoted alkylation of 2,6-dichloropurine with 2-benzoxyethoxymethyl chloride to obtain the N-9 substituted product in 41% yield.\\u00b2\\u207e Acyclovir was prepared in 13% overall yield from the N-9 derivative in four steps including ammonolysis and hydrogenolytic debenzylation. Barrio and cow",
+            "mode": "page_read",
+            "transcribed_text": "No. 3\t1153\n\n[Chem. Pharm. Bull.\n36( 3 )1153—1157(1988)]\n\nA Convenient Synthesis of 9-(2-Hydroxyethoxymethyl)guanine (Acyclovir) and Related Compounds¹⁾\n\nHIROATSU MATSUMOTO,* CHISATO KANEKO, KEIKO YAMADA,\nTADAO TAKEUCHI, TAKEO MORI,\nand YOSHIHISA MIZUNO\n\nResearch Laboratory, Minophagen Pharmaceutical Co.,\n2–5233, Komatsubara, Zama, Kanagawa 228, Japan\n\n(Received August 4, 1987)\n\nA convenient and economical synthesis of 9-(2-hydroxyethoxymethyl)guanine (1, acyclovir, Zovirax, or acyclic guanosine: an antiherpetic agent) from guanine was developed via N²,O-diacetylacyclovir. Two closely related compounds, N²-acetylacyclovir (7) and O-acetylacyclovir (8), were also prepared by selective deacetylation.\n\nKeywords——acyclovir; N²-acetylacyclovir; O-acetylacyclovir; alkylation; p-toluenesulfonic acid; antiherpetic agent\n\nSchaeffer and coworkers²⁾ first reported that 9-(2-hydroxyethoxymethyl)guanine (1, acyclovir) may be highly specific inhibitor of herpes viruses proliferation. Since then, a large number of nucleoside analogs in which the carbohydrate moiety is replaced by an acyclic substituent (viz., 2-hydroxyethoxymethyl or 1,3-dihydroxy-2-propoxymethyl) have been prepared.\n\n[Chart 1: structures 1 and 2 — guanine bases bearing 2-hydroxyethoxymethyl (1) and 1,3-dihydroxy-2-propoxymethyl (2) side chains]\n\nChart 1\n\nSeveral methods for the introduction of a 2-hydroxyethoxymethyl group into purines for the synthesis of acyclovir or acyclic nucleosides have been tried,³⁻¹⁰⁾ with limited success. Schaeffer and colleagues have carried out the base-promoted alkylation of 2,6-dichloropurine with 2-benzoxyethoxymethyl chloride to obtain the N-9 substituted product in 41% yield.²⁾ Acyclovir was prepared in 13% overall yield from the N-9 derivative in four steps including ammonolysis and hydrogenolytic debenzylation. Barrio and coworkers¹¹⁾ have studied the reaction at −63 °C of chloro- or methylthio-substituted purine with 2-trimethylsilyloxyethoxymethyl chloride to afford the N-9 substituted products in 50—80% yields. Robins and Hatfield¹²⁾ started from 2,6-dichloropurine or 2-amino-6-chloropurine which was reacted with 2-acetoxyethoxymethyl bromide to obtain the N-9 substituted derivative in 89% or 84% yield, respectively.\n\nProblems associated with these procedures were that the reagents employed were quite expensive and that the amination of the 2-chloro group was tedious. Therefore, the yield of 1\n\nNII-Electronic Library Service",
+            "image_class": "mixed",
+            "step_label": "",
+            "characterizations": []
+          },
+          {
+            "page_number": 2,
+            "image_index": 0,
+            "molecules": [],
+            "arrows": [],
+            "conditions_text": "",
+            "raw_output": "VLM page_read failed: Unterminated string starting at: line 123 column 58 (char 8489)",
+            "mode": "page_read",
+            "transcribed_text": "",
+            "image_class": "error",
+            "step_label": "",
+            "characterizations": []
+          },
+          {
+            "page_number": 3,
+            "image_index": 0,
+            "molecules": [],
+            "arrows": [],
+            "conditions_text": "",
+            "raw_output": "{\n  \"image_class\": \"mixed\",\n  \"transcribed_text\": \"No. 3\\n1155\\n\\ncatalyst.\\n\\nSelective Deprotection of N²,O-Diacetylacyclovir\\n\\nTreatment of 5 with methanol saturated with ammonia gave rise to 1 in 86% yield, which means that overall yield of 1 from guanine was 43%. O-Acetylacyclovir (8) could be isolated in 81% yield on reaction of 5 with methanolic methoxide at room temperature. On the other hand, treatment of 5 with aqueous ammonium hydroxide (pH 11.6) gave rise to N²-acetylacyclovir (7) in 55% yield (50 °C, 1 h). Compound (7) would be a suitable starting material for the preparation of acyclovir phosphate, which might be anticipated to be active against a line of herpes simplex lacking thymidine kinase.\\n\\nFinally, it is worthy of note that among the solvents we examined, dimethyl sulfoxide (DMSO) was found to be the solvent of choice in terms of the solubility of substrates and the yield of 1.\\n\\n[Chart 2]\\nguanine → 3 → 5 and 6; 5 → 1, 7, 8\\na: Ac₂O, AcOH\\nb: AcO(CH₂)₂OCH₂OAc 4, DMSO, catalyst\\nc: NH₃–CH₃OH\\nd: NH₄OH\\ne: CH₃ONa–CH₃OH\\nChart 2\\n\\nExperimental\\n\\nAll melting points were determined on a Yanagimoto micro melting point apparatus, and are uncorrected. Nuclear magnetic resonance (NMR) spectra were obtained on a JEOL-270 spectrometer using tetramethylsilane as an internal standard. The following abbreviations are used: s = singlet, d = doublet, m = multiplet. Ultraviolet (UV) spectra were measured on a Hitachi 200-20 spectrophotometer. Column chromatography was performed with Kieselgel 60 (E. Merck, 70—230 mesh ASTM).\\n\\n2-Oxa-1,4-butanediol Diacetate (4)——Acetyl bromide (50 g, 0.4 mol) was added dropwise to 1,3-dioxolane (26.6 g 0.36 mol) with cooling in an ice bath, the reaction temperature being maintained below 5 °C. The reaction mixture was allowed to warm to room temperature, and then a solution of sodium acetate (50 g) in acetic acid (200 ml) was added at 110 °C. The reaction mixture was stirred for 1 h. Insoluble material (NaBr) was filtere",
+            "mode": "page_read",
+            "transcribed_text": "No. 3\n1155\n\ncatalyst.\n\nSelective Deprotection of N²,O-Diacetylacyclovir\n\nTreatment of 5 with methanol saturated with ammonia gave rise to 1 in 86% yield, which means that overall yield of 1 from guanine was 43%. O-Acetylacyclovir (8) could be isolated in 81% yield on reaction of 5 with methanolic methoxide at room temperature. On the other hand, treatment of 5 with aqueous ammonium hydroxide (pH 11.6) gave rise to N²-acetylacyclovir (7) in 55% yield (50 °C, 1 h). Compound (7) would be a suitable starting material for the preparation of acyclovir phosphate, which might be anticipated to be active against a line of herpes simplex lacking thymidine kinase.\n\nFinally, it is worthy of note that among the solvents we examined, dimethyl sulfoxide (DMSO) was found to be the solvent of choice in terms of the solubility of substrates and the yield of 1.\n\n[Chart 2]\nguanine → 3 → 5 and 6; 5 → 1, 7, 8\na: Ac₂O, AcOH\nb: AcO(CH₂)₂OCH₂OAc 4, DMSO, catalyst\nc: NH₃–CH₃OH\nd: NH₄OH\ne: CH₃ONa–CH₃OH\nChart 2\n\nExperimental\n\nAll melting points were determined on a Yanagimoto micro melting point apparatus, and are uncorrected. Nuclear magnetic resonance (NMR) spectra were obtained on a JEOL-270 spectrometer using tetramethylsilane as an internal standard. The following abbreviations are used: s = singlet, d = doublet, m = multiplet. Ultraviolet (UV) spectra were measured on a Hitachi 200-20 spectrophotometer. Column chromatography was performed with Kieselgel 60 (E. Merck, 70—230 mesh ASTM).\n\n2-Oxa-1,4-butanediol Diacetate (4)——Acetyl bromide (50 g, 0.4 mol) was added dropwise to 1,3-dioxolane (26.6 g 0.36 mol) with cooling in an ice bath, the reaction temperature being maintained below 5 °C. The reaction mixture was allowed to warm to room temperature, and then a solution of sodium acetate (50 g) in acetic acid (200 ml) was added at 110 °C. The reaction mixture was stirred for 1 h. Insoluble material (NaBr) was filtered off and the filtrate was distilled in vacuo initially to remove acetic acid and then fractionated in vacuo. The fraction boiling at 114—118 °C/10 mmHg¹⁶⁾ was collected. The yield of 4 was 38 g (60%).\n\nN,N'-Diacetylguanine(s) (3)——Diacetylguanine was prepared, with reference to the procedure of Beauchamp and coworkers.¹⁷⁾ A mixture of guanine (15.1 g, 0.1 mol), acetic anhydride (200 ml) and acetic acid (300 ml) was",
+            "image_class": "mixed",
+            "step_label": "",
+            "characterizations": []
+          },
+          {
+            "page_number": 4,
+            "image_index": 0,
+            "molecules": [],
+            "arrows": [],
+            "conditions_text": "",
+            "raw_output": "VLM page_read failed: Expecting property name enclosed in double quotes: line 33 column 90 (char 7019)",
+            "mode": "page_read",
+            "transcribed_text": "",
+            "image_class": "error",
+            "step_label": "",
+            "characterizations": []
+          },
+          {
+            "page_number": 5,
+            "image_index": 0,
+            "molecules": [],
+            "arrows": [],
+            "conditions_text": "",
+            "raw_output": "```json\n{\n  \"image_class\": \"text_page\",\n  \"transcribed_text\": \"No. 3\\t1157\\n\\nMattews, and J. P. H. Verheyden, J. Med. Chem., 26, 759 (1983); b) M. MacCoss, R. L. Tolman, W. T. Ashton, A. F. Wagner, J. Hannah, A. K. Field, J. D. Karkas, and J. I. Germershausen, Chem. Scripta., 26, 113 (1986).\\n15) T. Sato, T. Shimadate, and Y. Ishido, Nippon Kagaku Zasshi, 81, 1440 (1960).\\n16) M. Senkus, J. Am. Chem. Soc., 68, 734 (1946).\\n17) L. M. Beauchamp, B. L. Dolmatch, H. J. Schaeffer, P. Collins, D. J. Bauer, P. M. Keller, and J. A. Fyfe, J. Med. Chem., 28, 982 (1985).\\n\\nNII-Electronic Library Service\",\n  \"steps\": []\n}\n```",
+            "mode": "page_read",
+            "transcribed_text": "No. 3\t1157\n\nMattews, and J. P. H. Verheyden, J. Med. Chem., 26, 759 (1983); b) M. MacCoss, R. L. Tolman, W. T. Ashton, A. F. Wagner, J. Hannah, A. K. Field, J. D. Karkas, and J. I. Germershausen, Chem. Scripta., 26, 113 (1986).\n15) T. Sato, T. Shimadate, and Y. Ishido, Nippon Kagaku Zasshi, 81, 1440 (1960).\n16) M. Senkus, J. Am. Chem. Soc., 68, 734 (1946).\n17) L. M. Beauchamp, B. L. Dolmatch, H. J. Schaeffer, P. Collins, D. J. Bauer, P. M. Keller, and J. A. Fyfe, J. Med. Chem., 28, 982 (1985).\n\nNII-Electronic Library Service",
+            "image_class": "text_page",
+            "step_label": "",
+            "characterizations": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "reconcile",
+      "label": "Reconcile text + table + scheme + page-read",
+      "status": "done",
+      "detail": "Merged 0 steps (text=0, tables=0, schemes=0, page_read=0)",
+      "data": {
+        "steps": 0,
+        "text_steps": 0,
+        "table_steps": 0,
+        "scheme_steps": 0,
+        "page_read_steps": 0
+      }
+    },
+    {
+      "id": "standardize",
+      "label": "Chemical standardization",
+      "status": "stubbed",
+      "detail": "No chemical entities to process",
+      "data": {
+        "resolved": 0,
+        "validated": 0,
+        "invalid": 0,
+        "unresolved": 0,
+        "total_entities": 0,
+        "times_standardized": 0,
+        "resolution_status_counts": {}
+      }
+    }
+  ],
+  "document": {
+    "filename": "ccf3bd05e269442f918ad12605798beb.pdf",
+    "page_count": 5,
+    "text": "NII-Electronic Library Service\n\n\nNII-Electronic Library Service\n\n\nNII-Electronic Library Service\n\n\nNII-Electronic Library Service\n\n\nNII-Electronic Library Service\n",
+    "segments": [
+      {
+        "segment_id": "page-1",
+        "kind": "body",
+        "page_start": 1,
+        "page_end": 1,
+        "text": "NII-Electronic Library Service",
+        "meta": {
+          "char_count": 31,
+          "source": "native",
+          "synthesis_score": 0.0,
+          "section": "body",
+          "evidence_types": [],
+          "document_type": "unknown",
+          "procedure_pages": [],
+          "high_evidence_pages": [],
+          "ocr_used": false,
+          "ocr_backend": "",
+          "native_char_count": 155,
+          "final_char_count": 163,
+          "evidence_profile": {
+            "document_type": "unknown",
+            "procedure_pages": [],
+            "high_evidence_pages": [],
+            "low_evidence_pages": [],
+            "total_chars": 150,
+            "pages": [
+              {
+                "page": 1,
+                "char_count": 30,
+                "section": "body",
+                "synthesis_score": 0.0,
+                "evidence_types": []
+              },
+              {
+                "page": 2,
+                "char_count": 30,
+                "section": "body",
+                "synthesis_score": 0.0,
+                "evidence_types": []
+              },
+              {
+                "page": 3,
+                "char_count": 30,
+                "section": "body",
+                "synthesis_score": 0.0,
+                "evidence_types": []
+              },
+              {
+                "page": 4,
+                "char_count": 30,
+                "section": "body",
+                "synthesis_score": 0.0,
+                "evidence_types": []
+              },
+              {
+                "page": 5,
+                "char_count": 30,
+                "section": "body",
+                "synthesis_score": 0.0,
+                "evidence_types": []
+              }
+            ]
+          }
+        }
+      },
+      {
+        "segment_id": "page-2",
+        "kind": "body",
+        "page_start": 2,
+        "page_end": 2,
+        "text": "NII-Electronic Library Service",
+        "meta": {
+          "char_count": 31,
+          "source": "native",
+          "synthesis_score": 0.0,
+          "section": "body",
+          "evidence_types": []
+        }
+      },
+      {
+        "segment_id": "page-3",
+        "kind": "body",
+        "page_start": 3,
+        "page_end": 3,
+        "text": "NII-Electronic Library Service",
+        "meta": {
+          "char_count": 31,
+          "source": "native",
+          "synthesis_score": 0.0,
+          "section": "body",
+          "evidence_types": []
+        }
+      },
+      {
+        "segment_id": "page-4",
+        "kind": "body",
+        "page_start": 4,
+        "page_end": 4,
+        "text": "NII-Electronic Library Service",
+        "meta": {
+          "char_count": 31,
+          "source": "native",
+          "synthesis_score": 0.0,
+          "section": "body",
+          "evidence_types": []
+        }
+      },
+      {
+        "segment_id": "page-5",
+        "kind": "body",
+        "page_start": 5,
+        "page_end": 5,
+        "text": "NII-Electronic Library Service",
+        "meta": {
+          "char_count": 31,
+          "source": "native",
+          "synthesis_score": 0.0,
+          "section": "body",
+          "evidence_types": []
+        }
+      }
+    ],
+    "figure_count": 5,
+    "table_hints": []
+  },
+  "route": {
+    "title": "NII-Electronic Library Service",
+    "target_name": "N/A",
+    "target_class": "unknown",
+    "document_type": "unknown",
+    "steps": [],
+    "warnings": [
+      "No high-confidence experimental/example pages detected; using keyword-ranked fallback.",
+      "Page-read text re-extract failed: Error code: 400 - {'error': {'message': 'Provider returned error (request id: 202609071028427166765918268d9d6kf7Ddp85)', 'type': 'upstream_error', 'param': '', 'code': 400}}",
+      "The provided text contains only repeated 'NII-Electronic Library Service' placeholder strings (likely OCR/scan artifacts) with no retrievable document content.",
+      "No title, abstract, Examples, or experimental procedures are present, so no synthesis steps, reactants, conditions, or yields could be extracted.",
+      "No antiviral target compound or intermediate is identifiable from the supplied text."
+    ],
+    "conflicts": [],
+    "route_graph": {
+      "nodes": [
+        {
+          "node_id": "n_a",
+          "name": "N/A",
+          "canonical_name": "N/A",
+          "compound_ids": [],
+          "step_indices": [
+            0
+          ],
+          "role": "target"
+        }
+      ],
+      "edges": [],
+      "target_node_id": "n_a"
+    },
+    "compound_links": []
+  },
+  "raw_model_output": "{\n  \"title\": \"NII-Electronic Library Service\",\n  \"target_name\": \"N/A\",\n  \"target_class\": \"unknown\",\n  \"document_type\": \"unknown\",\n  \"steps\": [],\n  \"warnings\": [\n    \"The provided text contains only repeated 'NII-Electronic Library Service' placeholder strings (likely OCR/scan artifacts) with no retrievable document content.\",\n    \"No title, abstract, Examples, or experimental procedures are present, so no synthesis steps, reactants, conditions, or yields could be extracted.\",\n    \"No antiviral target compound or intermediate is identifiable from the supplied text.\"\n  ]\n}",
+  "error": null,
+  "from_cache": false,
+  "content_hash": null,
+  "source_job_id": null,
+  "extraction_debug": {
+    "document_type": "unknown",
+    "pages_included": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "pages_excluded": [],
+    "candidate_procedure_pages": [],
+    "mandatory_pages": [],
+    "exclusion_reasons": {},
+    "chars_total": 163,
+    "chars_selected": 313,
+    "truncated": false,
+    "truncation_note": "",
+    "pass_index": 1,
+    "pass_count": 1,
+    "chunk_count": 5,
+    "chunks": [
+      {
+        "page_start": 1,
+        "page_end": 1,
+        "section": "body",
+        "evidence_types": [],
+        "chars": 30,
+        "score": 0.0
+      },
+      {
+        "page_start": 2,
+        "page_end": 2,
+        "section": "body",
+        "evidence_types": [],
+        "chars": 30,
+        "score": 0.0
+      },
+      {
+        "page_start": 3,
+        "page_end": 3,
+        "section": "body",
+        "evidence_types": [],
+        "chars": 30,
+        "score": 0.0
+      },
+      {
+        "page_start": 4,
+        "page_end": 4,
+        "section": "body",
+        "evidence_types": [],
+        "chars": 30,
+        "score": 0.0
+      },
+      {
+        "page_start": 5,
+        "page_end": 5,
+        "section": "body",
+        "evidence_types": [],
+        "chars": 30,
+        "score": 0.0
+      }
+    ],
+    "procedure_pages": [],
+    "warnings": [
+      "No high-confidence experimental/example pages detected; using keyword-ranked fallback."
+    ],
+    "info": [
+      "Low native/OCR text (163 chars) — relying on VLM page-read for scanned content."
+    ],
+    "page_selection": {
+      "candidate_procedure_pages": [],
+      "mandatory_pages": [],
+      "pages_included": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "pages_excluded": [],
+      "exclusion_reasons": {},
+      "pass_count": 1,
+      "passes": [
+        {
+          "document_type": "unknown",
+          "pages_included": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "pages_excluded": [],
+          "candidate_procedure_pages": [],
+          "mandatory_pages": [],
+          "exclusion_reasons": {},
+          "chars_total": 163,
+          "chars_selected": 313,
+          "truncated": false,
+          "truncation_note": "",
+          "pass_index": 1,
+          "pass_count": 1,
+          "chunk_count": 5,
+          "chunks": [
+            {
+              "page_start": 1,
+              "page_end": 1,
+              "section": "body",
+              "evidence_types": [],
+              "chars": 30,
+              "score": 0.0
+            },
+            {
+              "page_start": 2,
+              "page_end": 2,
+              "section": "body",
+              "evidence_types": [],
+              "chars": 30,
+              "score": 0.0
+            },
+            {
+              "page_start": 3,
+              "page_end": 3,
+              "section": "body",
+              "evidence_types": [],
+              "chars": 30,
+              "score": 0.0
+            },
+            {
+              "page_start": 4,
+              "page_end": 4,
+              "section": "body",
+              "evidence_types": [],
+              "chars": 30,
+              "score": 0.0
+            },
+            {
+              "page_start": 5,
+              "page_end": 5,
+              "section": "body",
+              "evidence_types": [],
+              "chars": 30,
+              "score": 0.0
+            }
+          ],
+          "procedure_pages": [],
+          "warnings": [
+            "No high-confidence experimental/example pages detected; using keyword-ranked fallback."
+          ],
+          "info": []
+        }
+      ]
+    },
+    "single_shot": true,
+    "reconciliation": {},
+    "route_graph_nodes": 1,
+    "compound_links": 0,
+    "observability": {
+      "document": {
+        "pages": 5,
+        "text_chars": 163,
+        "figures": 5,
+        "tables": 0
+      },
+      "page_selection": {
+        "candidate_procedure_pages": [],
+        "mandatory_pages": [],
+        "pages_included": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "pages_excluded": [],
+        "exclusion_reasons": {},
+        "pass_count": 1,
+        "passes": [
+          {
+            "document_type": "unknown",
+            "pages_included": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "pages_excluded": [],
+            "candidate_procedure_pages": [],
+            "mandatory_pages": [],
+            "exclusion_reasons": {},
+            "chars_total": 163,
+            "chars_selected": 313,
+            "truncated": false,
+            "truncation_note": "",
+            "pass_index": 1,
+            "pass_count": 1,
+            "chunk_count": 5,
+            "chunks": [
+              {
+                "page_start": 1,
+                "page_end": 1,
+                "section": "body",
+                "evidence_types": [],
+                "chars": 30,
+                "score": 0.0
+              },
+              {
+                "page_start": 2,
+                "page_end": 2,
+                "section": "body",
+                "evidence_types": [],
+                "chars": 30,
+                "score": 0.0
+              },
+              {
+                "page_start": 3,
+                "page_end": 3,
+                "section": "body",
+                "evidence_types": [],
+                "chars": 30,
+                "score": 0.0
+              },
+              {
+                "page_start": 4,
+                "page_end": 4,
+                "section": "body",
+                "evidence_types": [],
+                "chars": 30,
+                "score": 0.0
+              },
+              {
+                "page_start": 5,
+                "page_end": 5,
+                "section": "body",
+                "evidence_types": [],
+                "chars": 30,
+                "score": 0.0
+              }
+            ],
+            "procedure_pages": [],
+            "warnings": [
+              "No high-confidence experimental/example pages detected; using keyword-ranked fallback."
+            ],
+            "info": []
+          }
+        ]
+      },
+      "text_extraction": {
+        "steps": 0,
+        "passes": 1
+      },
+      "table_extraction": {
+        "steps": 0
+      },
+      "scheme_extraction": {
+        "scheme_steps": 0,
+        "page_read_steps": 0
+      },
+      "reconciliation": {},
+      "standardization": {
+        "resolved": 0,
+        "validated": 0,
+        "invalid": 0,
+        "unresolved": 0,
+        "total_entities": 0,
+        "times_standardized": 0,
+        "resolution_status_counts": {}
+      },
+      "provenance": {
+        "entities_with_provenance": 0,
+        "entities_without_provenance": 0,
+        "reactions_with_conflicts": 0
+      }
+    }
+  }
+}

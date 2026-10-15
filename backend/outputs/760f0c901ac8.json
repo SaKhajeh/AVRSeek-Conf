@@ -1,0 +1,890 @@
+{
+  "job_id": "760f0c901ac8",
+  "filename": "WO_9718211_A1.pdf",
+  "stages": [
+    {
+      "id": "parse_pdf",
+      "label": "PDF document understanding (+ OCR)",
+      "status": "done",
+      "detail": "14 pages, 14 images, 0 table hints, 0 text chars",
+      "data": {
+        "page_count": 14,
+        "figure_count": 14,
+        "segments": 14,
+        "text_chars": 0,
+        "ocr_used": false,
+        "ocr_backend": "",
+        "document_type": "unknown",
+        "procedure_pages": [],
+        "evidence_profile": {
+          "document_type": "unknown",
+          "procedure_pages": [],
+          "high_evidence_pages": [],
+          "low_evidence_pages": [],
+          "total_chars": 0,
+          "pages": [
+            {
+              "page": 1,
+              "char_count": 0,
+              "section": "body",
+              "synthesis_score": 0.0,
+              "evidence_types": []
+            },
+            {
+              "page": 2,
+              "char_count": 0,
+              "section": "body",
+              "synthesis_score": 0.0,
+              "evidence_types": []
+            },
+            {
+              "page": 3,
+              "char_count": 0,
+              "section": "body",
+              "synthesis_score": 0.0,
+              "evidence_types": []
+            },
+            {
+              "page": 4,
+              "char_count": 0,
+              "section": "body",
+              "synthesis_score": 0.0,
+              "evidence_types": []
+            },
+            {
+              "page": 5,
+              "char_count": 0,
+              "section": "body",
+              "synthesis_score": 0.0,
+              "evidence_types": []
+            },
+            {
+              "page": 6,
+              "char_count": 0,
+              "section": "body",
+              "synthesis_score": 0.0,
+              "evidence_types": []
+            },
+            {
+              "page": 7,
+              "char_count": 0,
+              "section": "body",
+              "synthesis_score": 0.0,
+              "evidence_types": []
+            },
+            {
+              "page": 8,
+              "char_count": 0,
+              "section": "body",
+              "synthesis_score": 0.0,
+              "evidence_types": []
+            },
+            {
+              "page": 9,
+              "char_count": 0,
+              "section": "body",
+              "synthesis_score": 0.0,
+              "evidence_types": []
+            },
+            {
+              "page": 10,
+              "char_count": 0,
+              "section": "body",
+              "synthesis_score": 0.0,
+              "evidence_types": []
+            },
+            {
+              "page": 11,
+              "char_count": 0,
+              "section": "body",
+              "synthesis_score": 0.0,
+              "evidence_types": []
+            },
+            {
+              "page": 12,
+              "char_count": 0,
+              "section": "body",
+              "synthesis_score": 0.0,
+              "evidence_types": []
+            },
+            {
+              "page": 13,
+              "char_count": 0,
+              "section": "body",
+              "synthesis_score": 0.0,
+              "evidence_types": []
+            },
+            {
+              "page": 14,
+              "char_count": 0,
+              "section": "body",
+              "synthesis_score": 0.0,
+              "evidence_types": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "text_extract",
+      "label": "Text reaction extraction (LLM)",
+      "status": "stubbed",
+      "detail": "Skipped — no extractable text (awaiting OCR/VLM page-read)",
+      "data": {
+        "steps": 0,
+        "target": null,
+        "text_chars_sent": 0,
+        "single_shot": false,
+        "evidence_chunks": 0,
+        "pages_included": [],
+        "pages_excluded": [],
+        "truncated": false,
+        "extraction_pass_count": 1,
+        "document_type": "unknown",
+        "extraction_plan": {
+          "candidate_procedure_pages": [],
+          "mandatory_pages": [],
+          "pages_included": [],
+          "pages_excluded": [],
+          "exclusion_reasons": {},
+          "pass_count": 1,
+          "passes": [
+            {
+              "document_type": "unknown",
+              "pages_included": [],
+              "pages_excluded": [],
+              "candidate_procedure_pages": [],
+              "mandatory_pages": [],
+              "exclusion_reasons": {},
+              "chars_total": 0,
+              "chars_selected": 0,
+              "truncated": false,
+              "truncation_note": "",
+              "pass_index": 1,
+              "pass_count": 1,
+              "chunk_count": 0,
+              "chunks": [],
+              "procedure_pages": [],
+              "warnings": [
+                "No extractable text segments found."
+              ],
+              "info": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "table_extract",
+      "label": "Table extraction (pdfplumber + LLM)",
+      "status": "stubbed",
+      "detail": "No reaction-like tables found in 0 total tables",
+      "data": {
+        "tables_total": 0,
+        "reaction_tables": 0,
+        "steps_extracted": 0
+      }
+    },
+    {
+      "id": "image_scheme",
+      "label": "Scheme / image extraction (VLM)",
+      "status": "done",
+      "detail": "VLM analyzed 14 figure page(s); no molecules/steps recovered (may be non-scheme figure or VLM parse issue).",
+      "data": {
+        "images_processed": 14,
+        "schemes_found": 0,
+        "molecules_extracted": 0,
+        "page_reads": 14,
+        "scheme_steps": 0,
+        "page_steps": 0,
+        "figure_pages": [],
+        "figure_page_info": [],
+        "schemes": [
+          {
+            "page_number": 1,
+            "image_index": 0,
+            "molecules": [],
+            "arrows": [],
+            "conditions_text": "",
+            "raw_output": "VLM page_read failed: Connection error.",
+            "mode": "page_read",
+            "transcribed_text": "",
+            "image_class": "error",
+            "step_label": "",
+            "characterizations": []
+          },
+          {
+            "page_number": 2,
+            "image_index": 0,
+            "molecules": [],
+            "arrows": [],
+            "conditions_text": "",
+            "raw_output": "VLM page_read failed: Connection error.",
+            "mode": "page_read",
+            "transcribed_text": "",
+            "image_class": "error",
+            "step_label": "",
+            "characterizations": []
+          },
+          {
+            "page_number": 3,
+            "image_index": 0,
+            "molecules": [],
+            "arrows": [],
+            "conditions_text": "",
+            "raw_output": "VLM page_read failed: Connection error.",
+            "mode": "page_read",
+            "transcribed_text": "",
+            "image_class": "error",
+            "step_label": "",
+            "characterizations": []
+          },
+          {
+            "page_number": 4,
+            "image_index": 0,
+            "molecules": [],
+            "arrows": [],
+            "conditions_text": "",
+            "raw_output": "VLM page_read failed: Connection error.",
+            "mode": "page_read",
+            "transcribed_text": "",
+            "image_class": "error",
+            "step_label": "",
+            "characterizations": []
+          },
+          {
+            "page_number": 5,
+            "image_index": 0,
+            "molecules": [],
+            "arrows": [],
+            "conditions_text": "",
+            "raw_output": "VLM page_read failed: Connection error.",
+            "mode": "page_read",
+            "transcribed_text": "",
+            "image_class": "error",
+            "step_label": "",
+            "characterizations": []
+          },
+          {
+            "page_number": 6,
+            "image_index": 0,
+            "molecules": [],
+            "arrows": [],
+            "conditions_text": "",
+            "raw_output": "VLM page_read failed: Connection error.",
+            "mode": "page_read",
+            "transcribed_text": "",
+            "image_class": "error",
+            "step_label": "",
+            "characterizations": []
+          },
+          {
+            "page_number": 7,
+            "image_index": 0,
+            "molecules": [],
+            "arrows": [],
+            "conditions_text": "",
+            "raw_output": "VLM page_read failed: Connection error.",
+            "mode": "page_read",
+            "transcribed_text": "",
+            "image_class": "error",
+            "step_label": "",
+            "characterizations": []
+          },
+          {
+            "page_number": 8,
+            "image_index": 0,
+            "molecules": [],
+            "arrows": [],
+            "conditions_text": "",
+            "raw_output": "VLM page_read failed: Connection error.",
+            "mode": "page_read",
+            "transcribed_text": "",
+            "image_class": "error",
+            "step_label": "",
+            "characterizations": []
+          },
+          {
+            "page_number": 9,
+            "image_index": 0,
+            "molecules": [],
+            "arrows": [],
+            "conditions_text": "",
+            "raw_output": "VLM page_read failed: Connection error.",
+            "mode": "page_read",
+            "transcribed_text": "",
+            "image_class": "error",
+            "step_label": "",
+            "characterizations": []
+          },
+          {
+            "page_number": 10,
+            "image_index": 0,
+            "molecules": [],
+            "arrows": [],
+            "conditions_text": "",
+            "raw_output": "VLM page_read failed: Connection error.",
+            "mode": "page_read",
+            "transcribed_text": "",
+            "image_class": "error",
+            "step_label": "",
+            "characterizations": []
+          },
+          {
+            "page_number": 11,
+            "image_index": 0,
+            "molecules": [],
+            "arrows": [],
+            "conditions_text": "",
+            "raw_output": "VLM page_read failed: Connection error.",
+            "mode": "page_read",
+            "transcribed_text": "",
+            "image_class": "error",
+            "step_label": "",
+            "characterizations": []
+          },
+          {
+            "page_number": 12,
+            "image_index": 0,
+            "molecules": [],
+            "arrows": [],
+            "conditions_text": "",
+            "raw_output": "VLM page_read failed: Connection error.",
+            "mode": "page_read",
+            "transcribed_text": "",
+            "image_class": "error",
+            "step_label": "",
+            "characterizations": []
+          },
+          {
+            "page_number": 13,
+            "image_index": 0,
+            "molecules": [],
+            "arrows": [],
+            "conditions_text": "",
+            "raw_output": "VLM page_read failed: Connection error.",
+            "mode": "page_read",
+            "transcribed_text": "",
+            "image_class": "error",
+            "step_label": "",
+            "characterizations": []
+          },
+          {
+            "page_number": 14,
+            "image_index": 0,
+            "molecules": [],
+            "arrows": [],
+            "conditions_text": "",
+            "raw_output": "VLM page_read failed: Connection error.",
+            "mode": "page_read",
+            "transcribed_text": "",
+            "image_class": "error",
+            "step_label": "",
+            "characterizations": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "reconcile",
+      "label": "Reconcile text + table + scheme + page-read",
+      "status": "done",
+      "detail": "Merged 0 steps (text=0, tables=0, schemes=0, page_read=0)",
+      "data": {
+        "steps": 0,
+        "text_steps": 0,
+        "table_steps": 0,
+        "scheme_steps": 0,
+        "page_read_steps": 0
+      }
+    },
+    {
+      "id": "standardize",
+      "label": "Chemical standardization",
+      "status": "stubbed",
+      "detail": "No chemical entities to process",
+      "data": {
+        "resolved": 0,
+        "validated": 0,
+        "invalid": 0,
+        "unresolved": 0,
+        "total_entities": 0,
+        "times_standardized": 0,
+        "resolution_status_counts": {}
+      }
+    }
+  ],
+  "document": {
+    "filename": "2098ecf168874aed8a168a33e46eea37.pdf",
+    "page_count": 14,
+    "text": "",
+    "segments": [
+      {
+        "segment_id": "page-1",
+        "kind": "body",
+        "page_start": 1,
+        "page_end": 1,
+        "text": "",
+        "meta": {
+          "char_count": 0,
+          "source": "native",
+          "synthesis_score": 0.0,
+          "section": "body",
+          "evidence_types": [],
+          "document_type": "unknown",
+          "procedure_pages": [],
+          "high_evidence_pages": [],
+          "ocr_used": false,
+          "ocr_backend": "",
+          "native_char_count": 0,
+          "final_char_count": 0,
+          "evidence_profile": {
+            "document_type": "unknown",
+            "procedure_pages": [],
+            "high_evidence_pages": [],
+            "low_evidence_pages": [],
+            "total_chars": 0,
+            "pages": [
+              {
+                "page": 1,
+                "char_count": 0,
+                "section": "body",
+                "synthesis_score": 0.0,
+                "evidence_types": []
+              },
+              {
+                "page": 2,
+                "char_count": 0,
+                "section": "body",
+                "synthesis_score": 0.0,
+                "evidence_types": []
+              },
+              {
+                "page": 3,
+                "char_count": 0,
+                "section": "body",
+                "synthesis_score": 0.0,
+                "evidence_types": []
+              },
+              {
+                "page": 4,
+                "char_count": 0,
+                "section": "body",
+                "synthesis_score": 0.0,
+                "evidence_types": []
+              },
+              {
+                "page": 5,
+                "char_count": 0,
+                "section": "body",
+                "synthesis_score": 0.0,
+                "evidence_types": []
+              },
+              {
+                "page": 6,
+                "char_count": 0,
+                "section": "body",
+                "synthesis_score": 0.0,
+                "evidence_types": []
+              },
+              {
+                "page": 7,
+                "char_count": 0,
+                "section": "body",
+                "synthesis_score": 0.0,
+                "evidence_types": []
+              },
+              {
+                "page": 8,
+                "char_count": 0,
+                "section": "body",
+                "synthesis_score": 0.0,
+                "evidence_types": []
+              },
+              {
+                "page": 9,
+                "char_count": 0,
+                "section": "body",
+                "synthesis_score": 0.0,
+                "evidence_types": []
+              },
+              {
+                "page": 10,
+                "char_count": 0,
+                "section": "body",
+                "synthesis_score": 0.0,
+                "evidence_types": []
+              },
+              {
+                "page": 11,
+                "char_count": 0,
+                "section": "body",
+                "synthesis_score": 0.0,
+                "evidence_types": []
+              },
+              {
+                "page": 12,
+                "char_count": 0,
+                "section": "body",
+                "synthesis_score": 0.0,
+                "evidence_types": []
+              },
+              {
+                "page": 13,
+                "char_count": 0,
+                "section": "body",
+                "synthesis_score": 0.0,
+                "evidence_types": []
+              },
+              {
+                "page": 14,
+                "char_count": 0,
+                "section": "body",
+                "synthesis_score": 0.0,
+                "evidence_types": []
+              }
+            ]
+          }
+        }
+      },
+      {
+        "segment_id": "page-2",
+        "kind": "body",
+        "page_start": 2,
+        "page_end": 2,
+        "text": "",
+        "meta": {
+          "char_count": 0,
+          "source": "native",
+          "synthesis_score": 0.0,
+          "section": "body",
+          "evidence_types": []
+        }
+      },
+      {
+        "segment_id": "page-3",
+        "kind": "body",
+        "page_start": 3,
+        "page_end": 3,
+        "text": "",
+        "meta": {
+          "char_count": 0,
+          "source": "native",
+          "synthesis_score": 0.0,
+          "section": "body",
+          "evidence_types": []
+        }
+      },
+      {
+        "segment_id": "page-4",
+        "kind": "body",
+        "page_start": 4,
+        "page_end": 4,
+        "text": "",
+        "meta": {
+          "char_count": 0,
+          "source": "native",
+          "synthesis_score": 0.0,
+          "section": "body",
+          "evidence_types": []
+        }
+      },
+      {
+        "segment_id": "page-5",
+        "kind": "body",
+        "page_start": 5,
+        "page_end": 5,
+        "text": "",
+        "meta": {
+          "char_count": 0,
+          "source": "native",
+          "synthesis_score": 0.0,
+          "section": "body",
+          "evidence_types": []
+        }
+      },
+      {
+        "segment_id": "page-6",
+        "kind": "body",
+        "page_start": 6,
+        "page_end": 6,
+        "text": "",
+        "meta": {
+          "char_count": 0,
+          "source": "native",
+          "synthesis_score": 0.0,
+          "section": "body",
+          "evidence_types": []
+        }
+      },
+      {
+        "segment_id": "page-7",
+        "kind": "body",
+        "page_start": 7,
+        "page_end": 7,
+        "text": "",
+        "meta": {
+          "char_count": 0,
+          "source": "native",
+          "synthesis_score": 0.0,
+          "section": "body",
+          "evidence_types": []
+        }
+      },
+      {
+        "segment_id": "page-8",
+        "kind": "body",
+        "page_start": 8,
+        "page_end": 8,
+        "text": "",
+        "meta": {
+          "char_count": 0,
+          "source": "native",
+          "synthesis_score": 0.0,
+          "section": "body",
+          "evidence_types": []
+        }
+      },
+      {
+        "segment_id": "page-9",
+        "kind": "body",
+        "page_start": 9,
+        "page_end": 9,
+        "text": "",
+        "meta": {
+          "char_count": 0,
+          "source": "native",
+          "synthesis_score": 0.0,
+          "section": "body",
+          "evidence_types": []
+        }
+      },
+      {
+        "segment_id": "page-10",
+        "kind": "body",
+        "page_start": 10,
+        "page_end": 10,
+        "text": "",
+        "meta": {
+          "char_count": 0,
+          "source": "native",
+          "synthesis_score": 0.0,
+          "section": "body",
+          "evidence_types": []
+        }
+      },
+      {
+        "segment_id": "page-11",
+        "kind": "body",
+        "page_start": 11,
+        "page_end": 11,
+        "text": "",
+        "meta": {
+          "char_count": 0,
+          "source": "native",
+          "synthesis_score": 0.0,
+          "section": "body",
+          "evidence_types": []
+        }
+      },
+      {
+        "segment_id": "page-12",
+        "kind": "body",
+        "page_start": 12,
+        "page_end": 12,
+        "text": "",
+        "meta": {
+          "char_count": 0,
+          "source": "native",
+          "synthesis_score": 0.0,
+          "section": "body",
+          "evidence_types": []
+        }
+      },
+      {
+        "segment_id": "page-13",
+        "kind": "body",
+        "page_start": 13,
+        "page_end": 13,
+        "text": "",
+        "meta": {
+          "char_count": 0,
+          "source": "native",
+          "synthesis_score": 0.0,
+          "section": "body",
+          "evidence_types": []
+        }
+      },
+      {
+        "segment_id": "page-14",
+        "kind": "body",
+        "page_start": 14,
+        "page_end": 14,
+        "text": "",
+        "meta": {
+          "char_count": 0,
+          "source": "native",
+          "synthesis_score": 0.0,
+          "section": "body",
+          "evidence_types": []
+        }
+      }
+    ],
+    "figure_count": 14,
+    "table_hints": []
+  },
+  "route": {
+    "title": "WO_9718211_A1.pdf",
+    "target_name": "N/A",
+    "target_class": "unknown",
+    "document_type": "unknown",
+    "steps": [],
+    "warnings": [
+      "No extractable text in this PDF even after OCR — VLM page-read will be attempted for scanned documents.",
+      "No extractable text segments found."
+    ],
+    "conflicts": [],
+    "route_graph": {
+      "nodes": [
+        {
+          "node_id": "n_a",
+          "name": "N/A",
+          "canonical_name": "N/A",
+          "compound_ids": [],
+          "step_indices": [
+            0
+          ],
+          "role": "target"
+        }
+      ],
+      "edges": [],
+      "target_node_id": "n_a"
+    },
+    "compound_links": []
+  },
+  "raw_model_output": null,
+  "error": null,
+  "from_cache": false,
+  "content_hash": null,
+  "source_job_id": null,
+  "extraction_debug": {
+    "document_type": "unknown",
+    "pages_included": [],
+    "pages_excluded": [],
+    "candidate_procedure_pages": [],
+    "mandatory_pages": [],
+    "exclusion_reasons": {},
+    "chars_total": 0,
+    "chars_selected": 0,
+    "truncated": false,
+    "truncation_note": "",
+    "pass_index": 1,
+    "pass_count": 1,
+    "chunk_count": 0,
+    "chunks": [],
+    "procedure_pages": [],
+    "warnings": [
+      "No extractable text segments found."
+    ],
+    "info": [],
+    "page_selection": {
+      "candidate_procedure_pages": [],
+      "mandatory_pages": [],
+      "pages_included": [],
+      "pages_excluded": [],
+      "exclusion_reasons": {},
+      "pass_count": 1,
+      "passes": [
+        {
+          "document_type": "unknown",
+          "pages_included": [],
+          "pages_excluded": [],
+          "candidate_procedure_pages": [],
+          "mandatory_pages": [],
+          "exclusion_reasons": {},
+          "chars_total": 0,
+          "chars_selected": 0,
+          "truncated": false,
+          "truncation_note": "",
+          "pass_index": 1,
+          "pass_count": 1,
+          "chunk_count": 0,
+          "chunks": [],
+          "procedure_pages": [],
+          "warnings": [
+            "No extractable text segments found."
+          ],
+          "info": []
+        }
+      ]
+    },
+    "reconciliation": {},
+    "route_graph_nodes": 1,
+    "compound_links": 0,
+    "observability": {
+      "document": {
+        "pages": 14,
+        "text_chars": 0,
+        "figures": 14,
+        "tables": 0
+      },
+      "page_selection": {
+        "candidate_procedure_pages": [],
+        "mandatory_pages": [],
+        "pages_included": [],
+        "pages_excluded": [],
+        "exclusion_reasons": {},
+        "pass_count": 1,
+        "passes": [
+          {
+            "document_type": "unknown",
+            "pages_included": [],
+            "pages_excluded": [],
+            "candidate_procedure_pages": [],
+            "mandatory_pages": [],
+            "exclusion_reasons": {},
+            "chars_total": 0,
+            "chars_selected": 0,
+            "truncated": false,
+            "truncation_note": "",
+            "pass_index": 1,
+            "pass_count": 1,
+            "chunk_count": 0,
+            "chunks": [],
+            "procedure_pages": [],
+            "warnings": [
+              "No extractable text segments found."
+            ],
+            "info": []
+          }
+        ]
+      },
+      "text_extraction": {
+        "steps": 0,
+        "passes": 1
+      },
+      "table_extraction": {
+        "steps": 0
+      },
+      "scheme_extraction": {
+        "scheme_steps": 0,
+        "page_read_steps": 0
+      },
+      "reconciliation": {},
+      "standardization": {
+        "resolved": 0,
+        "validated": 0,
+        "invalid": 0,
+        "unresolved": 0,
+        "total_entities": 0,
+        "times_standardized": 0,
+        "resolution_status_counts": {}
+      },
+      "provenance": {
+        "entities_with_provenance": 0,
+        "entities_without_provenance": 0,
+        "reactions_with_conflicts": 0
+      }
+    }
+  }
+}

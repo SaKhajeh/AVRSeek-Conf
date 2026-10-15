@@ -1,0 +1,385 @@
+{
+  "batch_id": "9b11aa996cae",
+  "file_count": 3,
+  "model": "claude-opus-5",
+  "notes": "AVRSeek from batch JSON; baseline = single-shot Claude Opus 5 on full parsed text. Five corpus documents pending AVRSeek re-run after API quota restored.",
+  "comparisons": [
+    {
+      "avrseek": {
+        "filename": "shiragami1995.pdf",
+        "job_id": "331e3f14820b",
+        "pipeline_complete": true,
+        "text_extract_status": "done",
+        "text_extract_detail": "Extracted 5 step(s) via single-shot full text (10045 chars, document_type=paper)",
+        "image_scheme_detail": "VLM analyzed 1 figure page(s) (figure pages [3]); no molecules/steps recovered (may be non-scheme figure or VLM parse issue).",
+        "parse_detail": "5 pages, 5 images, 0 table hints, 10045 text chars",
+        "steps_count": 3,
+        "target_name": "9-(2-hydroxyethoxymethyl)guanine (acyclovir)",
+        "document_type": "paper",
+        "route_graph_nodes": 10,
+        "warnings_count": 6,
+        "conflicts_count": 0,
+        "confidence_range": [
+          1.0,
+          1.0
+        ],
+        "smiles_entities": 0,
+        "provenance_steps": 0,
+        "scheme_steps": 0
+      },
+      "baseline": {
+        "mode": "simple_single_shot_full_text",
+        "model": "claude-opus-5",
+        "text_chars": 10045,
+        "steps_count": 5,
+        "target_name": "9-(2-hydroxyethoxymethyl)guanine (acyclovir)",
+        "document_type": "paper",
+        "warnings": [
+          "Table 1 (catalyst screening) is badly garbled by PDF text extraction; catalyst/solvent/temperature/yield pairings for individual entries are uncertain and were recorded only as approximate notes in step 2.",
+          "Step 1 (synthesis of acyclic sugar 4) has no amounts or conditions in this paper; it is described generically and referenced to Senkus (1946).",
+          "The Experimental section reports transpurination, concentration/isomerization and crystallization as a single continuous procedure; these were split into steps 2–4 as distinct unit operations.",
+          "Steps 2–4 share one isolated yield (86% of 5a); the yield is assigned to the isolation step (step 4).",
+          "SMILES strings were not provided in the source and are left null."
+        ],
+        "steps": [
+          {
+            "step_index": 1,
+            "step_label": "Preparation of acyclic sugar moiety 4 — (2-acetoxyethoxy)methyl acetate (Results and Discussion; no amounts given)",
+            "yield_value": "N/A",
+            "temperature": "N/A",
+            "time": "N/A",
+            "source": "",
+            "confidence": null,
+            "smiles_entities": 0,
+            "reactants": [
+              "1,3-dioxolane (3)"
+            ],
+            "products": [
+              "(2-acetoxyethoxy)methyl acetate (4)"
+            ]
+          },
+          {
+            "step_index": 2,
+            "step_label": "Experimental — transpurination of guanosine to 5a/5b (9- and 7-(2-acetoxyethoxymethyl)-N2-acetylguanine)",
+            "yield_value": "N/A (see steps 3–4 for isolated 5a)",
+            "temperature": "100 °C",
+            "time": "20 h",
+            "source": "",
+            "confidence": null,
+            "smiles_entities": 0,
+            "reactants": [
+              "guanosine (2)",
+              "(2-acetoxyethoxy)methyl acetate (4)"
+            ],
+            "products": [
+              "9-(2-acetoxyethoxymethyl)-N2-acetylguanine (5a)",
+              "7-(2-acetoxyethoxymethyl)-N2-acetylguanine (5b)"
+            ]
+          },
+          {
+            "step_index": 3,
+            "step_label": "Experimental — concentration and thermal isomerization of 7-isomer (5b) to 9-isomer (5a)",
+            "yield_value": "N/A",
+            "temperature": "50 °C (concentration) then 100 °C (isomerization)",
+            "time": "1 h concentration + 20 h isomerization",
+            "source": "",
+            "confidence": null,
+            "smiles_entities": 0,
+            "reactants": [
+              "crude transpurination mixture of 5a and 5b"
+            ],
+            "products": [
+              "9-(2-acetoxyethoxymethyl)-N2-acetylguanine (5a)"
+            ]
+          },
+          {
+            "step_index": 4,
+            "step_label": "Experimental — selective crystallization/isolation of 5a from ethyl acetate",
+            "yield_value": "86% (5a)",
+            "temperature": "cooled to room temperature (Table 2: 25 °C)",
+            "time": "stirred 1 h",
+            "source": "",
+            "confidence": null,
+            "smiles_entities": 0,
+            "reactants": [
+              "isomerized residue containing 5a/5b"
+            ],
+            "products": [
+              "9-(2-acetoxyethoxymethyl)-N2-acetylguanine (5a)"
+            ]
+          },
+          {
+            "step_index": 5,
+            "step_label": "Experimental — alkaline deacetylation of 5a and neutralization to acyclovir (1)",
+            "yield_value": "92% (overall yield of acyclovir from guanosine 78%)",
+            "temperature": "room temperature",
+            "time": "overnight",
+            "source": "",
+            "confidence": null,
+            "smiles_entities": 0,
+            "reactants": [
+              "crude crystals containing 9-(2-acetoxyethoxymethyl)-N2-acetylguanine (5a)"
+            ],
+            "products": [
+              "9-[2-(hydroxyethoxy)methyl]guanine (acyclovir, 1)"
+            ]
+          }
+        ],
+        "smiles_entities": 0,
+        "confidence_steps": 0,
+        "provenance_steps": 0,
+        "route_graph_nodes": 0
+      },
+      "baseline_note": "single-shot Opus 5 on cached parsed text (AvalAI)",
+      "baseline_source": "avalai_run"
+    },
+    {
+      "avrseek": {
+        "filename": "US5567816.pdf",
+        "job_id": "2eb3245d365a",
+        "pipeline_complete": true,
+        "text_extract_status": "done",
+        "text_extract_detail": "Extracted 14 step(s) via 2 pass(es) (pages covered: [1, 2, 3, 4, 5, 6, 7, 8])",
+        "image_scheme_detail": "4 scheme step(s), 0 page-read step(s), 10 molecule(s), 9 page-read(s) from 11 image(s)",
+        "parse_detail": "9 pages, 9 images, 0 table hints, 39590 text chars",
+        "steps_count": 15,
+        "target_name": "Step 1 (preferred): Preparation of Formula (2) — trisilylation of guanine with h",
+        "document_type": "patent",
+        "route_graph_nodes": 54,
+        "warnings_count": 3,
+        "conflicts_count": 0,
+        "confidence_range": [
+          0.7,
+          1.0
+        ],
+        "smiles_entities": 6,
+        "provenance_steps": 15,
+        "scheme_steps": 1
+      },
+      "baseline": {
+        "mode": "simple_single_shot_full_text",
+        "model": "claude-opus-5",
+        "text_chars": 39590,
+        "steps_count": 4,
+        "target_name": "acyclovir (9-(2-hydroxyethoxymethyl)guanine)",
+        "document_type": "patent",
+        "warnings": [
+          "Merged 2 evidence chunks from text extraction.",
+          "Examples 1 and 3 are one-pot sequences; they were split into silylation / alkylation / hydrolysis unit operations for clarity, so intermediate yields for individual sub-steps are not separately reported (Example 1 87% refers to isolated Formula (4); Example 3 78% refers to isolated acyclovir from guanine).",
+          "General process description (Steps 1–3 of Reaction Scheme A) gives ranges (3–10 equiv silylating agent, 0.01–0.1 equiv catalyst, reflux 5–48 h, hydrolysis with aqueous acid or NaOH followed by neutralization with acetic acid and crystallization from aqueous ammonium hydroxide) but is not a worked example; those numbers were not captured as steps.",
+          "OCR artifacts present in the source text (e.g. 'silylation catalyst'0', formula drawings garbled); structures/SMILES not assigned.",
+          "Byproduct bis(9-(2-hydroxyethoxymethyl)guanine)methane is mentioned as a trace impurity but no quantitative level is given in the Examples."
+        ],
+        "steps": [
+          {
+            "step_index": 1,
+            "step_label": "Example 1 – Step A: silylation of guanine (Formula (1) → Formula (2))",
+            "yield_value": "N/A",
+            "temperature": "reflux (130°–135 °C); then cooled to 35 °C; distillation bath raised to 110 °C; cooled to below 80 °C before next step",
+            "time": "16 hours",
+            "source": "",
+            "confidence": null,
+            "smiles_entities": 0,
+            "reactants": [
+              "guanine"
+            ],
+            "products": [
+              "at least partially silylated guanine (tris(trimethylsilyl)guanine, Formula (2))",
+              "at least partially silylated guanine (Formula (2))"
+            ]
+          },
+          {
+            "step_index": 2,
+            "step_label": "Example 1 – Step B: selective N-9 alkylation with 1,3-dioxolane to Formula (4)",
+            "yield_value": "87%",
+            "temperature": "reflux; then cooled to 50 °C for quench",
+            "time": "15 hours",
+            "source": "",
+            "confidence": null,
+            "smiles_entities": 0,
+            "reactants": [
+              "at least partially silylated guanine (Formula (2))",
+              "1,3-dioxolane",
+              "silylated guanine (from Step A)",
+              "silylated guanine (from Example 5 Step A)"
+            ],
+            "products": [
+              "9-(2-trimethylsilylethoxymethyl)guanine (Formula (4))",
+              "9-(2-trimethylsilyloxyethoxymethyl)guanine (silylated acyclovir, Formula (4))"
+            ]
+          },
+          {
+            "step_index": 3,
+            "step_label": "Example 2: acidic hydrolysis of Formula (4) to acyclovir (Formula (I)) with decolorization/crystallization",
+            "yield_value": "69%",
+            "temperature": "reflux, then slow cooling to 5 °C",
+            "time": "N/A",
+            "source": "",
+            "confidence": null,
+            "smiles_entities": 0,
+            "reactants": [
+              "9-(2-trimethylsilylethoxymethyl)guanine",
+              "9-(2-trimethylsilylethoxymethyl)guanine (crude, from Step B)",
+              "9-(2-trimethylsilyloxyethoxymethyl)guanine (crude from Step B)",
+              "9-(2-trimethylsilyloxyethoxymethyl)guanine (crude)"
+            ],
+            "products": [
+              "9-(2-hydroxyethoxymethyl)guanine (acyclovir)"
+            ]
+          },
+          {
+            "step_index": 4,
+            "step_label": "Example 6 — Step C: caustic hydrolysis/extraction, acetic acid neutralization and crystallization",
+            "yield_value": "N/A (7.9 g isolated; percentage not stated)",
+            "temperature": "aqueous extract heated to 90° C.; filtrate cooled to 10° C.",
+            "time": "N/A",
+            "source": "",
+            "confidence": null,
+            "smiles_entities": 0,
+            "reactants": [
+              "silylated acyclovir in toluene (from Step B)"
+            ],
+            "products": [
+              "9-(2-hydroxyethoxymethyl)guanine (acyclovir)"
+            ]
+          }
+        ],
+        "smiles_entities": 0,
+        "confidence_steps": 0,
+        "provenance_steps": 0,
+        "route_graph_nodes": 0
+      },
+      "baseline_note": "single-shot Opus 5 on cached parsed text (AvalAI)",
+      "baseline_source": "avalai_run"
+    },
+    {
+      "avrseek": {
+        "filename": "US5756737.pdf",
+        "job_id": "152442f23dd4",
+        "pipeline_complete": true,
+        "text_extract_status": "done",
+        "text_extract_detail": "Extracted 5 step(s) via single-shot full text (12459 chars, document_type=patent)",
+        "image_scheme_detail": "4 scheme step(s), 0 page-read step(s), 9 molecule(s), 5 page-read(s) from 7 image(s)",
+        "parse_detail": "5 pages, 5 images, 0 table hints, 12459 text chars",
+        "steps_count": 3,
+        "target_name": "acyclovir (9-(2-hydroxy)ethoxymethyl-guanine, compound I)",
+        "document_type": "patent",
+        "route_graph_nodes": 11,
+        "warnings_count": 8,
+        "conflicts_count": 1,
+        "confidence_range": [
+          0.7,
+          0.9
+        ],
+        "smiles_entities": 2,
+        "provenance_steps": 1,
+        "scheme_steps": 0
+      },
+      "baseline": {
+        "mode": "simple_single_shot_full_text",
+        "model": "claude-opus-5",
+        "text_chars": 12459,
+        "steps_count": 5,
+        "target_name": "acyclovir (9-(2-hydroxy)ethoxymethyl-guanine, compound I)",
+        "document_type": "patent",
+        "warnings": [
+          "The supplied document text is truncated: Example 1b ends mid-sentence ('adjusted to pH 1.8-2.2 with 6 ml of HPO,') and any further Examples (alkylation, hydrolysis, purification worked example) are missing from the provided text.",
+          "'HPO' in Example 1b is an OCR artifact interpreted as H3PO4 (phosphoric acid); 'EPLC' interpreted as HPLC; 'NAIO' interpreted as NaIO4.",
+          "Steps 3 and 4 are taken from the general process description / Scheme 1 rather than a numbered worked Example; no amounts, temperatures or times are given for them in the available text.",
+          "Compound numbering in Scheme 1 is partially garbled by OCR; assignments (1 = guanine, 2 = glyoxal-guanine diol adduct, 3 = N2-formylguanine, 4 = N2-formyl-9-(2-acetoxy)ethoxymethyl-guanine, I = acyclovir) are based on the narrative text.",
+          "Background-only citations (BE 833,006; GB 1,567,671; US 4,146,715/4,146,671; EP 0 532 878) were not extracted as procedural steps."
+        ],
+        "steps": [
+          {
+            "step_index": 1,
+            "step_label": "Example 1a — 'Glyoxalguanine' (2): glyoxal–guanine adduct formation",
+            "yield_value": "98%",
+            "temperature": "80 °C (mixed at room temperature, then heated to 80 °C); cooled gradually to 5 °C",
+            "time": "4 hours",
+            "source": "",
+            "confidence": null,
+            "smiles_entities": 0,
+            "reactants": [
+              "guanine (1)",
+              "glyoxal (40% w/v aqueous solution)"
+            ],
+            "products": [
+              "glyoxalguanine (glyoxal-guanine adduct, diol product 2)"
+            ]
+          },
+          {
+            "step_index": 2,
+            "step_label": "Example 1b — N2-Formylguanine (3): periodate oxidation of glyoxalguanine (procedure truncated in source)",
+            "yield_value": "N/A (described generally as 'very good yields')",
+            "temperature": "N/A",
+            "time": "N/A",
+            "source": "",
+            "confidence": null,
+            "smiles_entities": 0,
+            "reactants": [
+              "glyoxalguanine (2)"
+            ],
+            "products": [
+              "N2-formylguanine (3)"
+            ]
+          },
+          {
+            "step_index": 3,
+            "step_label": "Scheme 1 (general description) — N-9 alkylation of N2-formylguanine to N2-formyl-9-(2-acetoxy)ethoxymethyl-guanine (4)",
+            "yield_value": "above 90%",
+            "temperature": "N/A",
+            "time": "N/A",
+            "source": "",
+            "confidence": null,
+            "smiles_entities": 0,
+            "reactants": [
+              "N2-formylguanine (3)",
+              "2-oxa-1,4-diacetoxybutane (2-oxa-1,4-diacyloxybutane, R = hydrogen, C1-C4 alkyl or phenyl)"
+            ],
+            "products": [
+              "N2-formyl-9-(2-acetoxy)ethoxymethyl-guanine (4)"
+            ]
+          },
+          {
+            "step_index": 4,
+            "step_label": "Scheme 1 (general description) — Hydrolysis/deprotection of (4) to acyclovir (I)",
+            "yield_value": "N/A (described as 'excellent yields')",
+            "temperature": "N/A",
+            "time": "N/A",
+            "source": "",
+            "confidence": null,
+            "smiles_entities": 0,
+            "reactants": [
+              "N2-formyl-9-(2-acetoxy)ethoxymethyl-guanine (4)"
+            ],
+            "products": [
+              "acyclovir, 9-(2-hydroxy)ethoxymethyl-guanine (I)"
+            ]
+          },
+          {
+            "step_index": 5,
+            "step_label": "Purification step (a–e) — anion-exchange chromatographic purification of acyclovir to remove guanine",
+            "yield_value": "N/A",
+            "temperature": "room temperature (elution)",
+            "time": "N/A",
+            "source": "",
+            "confidence": null,
+            "smiles_entities": 0,
+            "reactants": [
+              "crude acyclovir"
+            ],
+            "products": [
+              "purified acyclovir (guanine content < 0.1%)"
+            ]
+          }
+        ],
+        "smiles_entities": 0,
+        "confidence_steps": 0,
+        "provenance_steps": 0,
+        "route_graph_nodes": 0
+      },
+      "baseline_note": "single-shot Opus 5 on cached parsed text (AvalAI)",
+      "baseline_source": "avalai_run"
+    }
+  ]
+}

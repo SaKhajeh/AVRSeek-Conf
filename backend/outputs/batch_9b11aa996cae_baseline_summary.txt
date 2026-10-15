@@ -1,0 +1,4 @@
+Wrote C:\Users\galin\Downloads\DeepSynthesis-ReactionSeek-6d42c4a\AVRSeek\backend\outputs\batch_9b11aa996cae_comparison.json
+shiragami1995.pdf: AVRSeek=3 baseline=5 | single-shot Opus 5 on cached parsed text (AvalAI)
+US5567816.pdf: AVRSeek=15 baseline=4 | single-shot Opus 5 on cached parsed text (AvalAI)
+US5756737.pdf: AVRSeek=3 baseline=5 | single-shot Opus 5 on cached parsed text (AvalAI)

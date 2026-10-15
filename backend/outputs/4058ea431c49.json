@@ -1,0 +1,3148 @@
+{
+  "job_id": "4058ea431c49",
+  "filename": "pdf.pdf",
+  "stages": [
+    {
+      "id": "parse_pdf",
+      "label": "PDF document understanding (+ OCR)",
+      "status": "done",
+      "detail": "6 pages, 21 images, 0 table hints, 14976 text chars",
+      "data": {
+        "page_count": 6,
+        "figure_count": 21,
+        "segments": 6,
+        "text_chars": 14976,
+        "ocr_used": false,
+        "ocr_backend": "",
+        "document_type": "paper",
+        "procedure_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "evidence_profile": {
+          "document_type": "paper",
+          "procedure_pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "high_evidence_pages": [
+            2,
+            3,
+            4
+          ],
+          "low_evidence_pages": [],
+          "total_chars": 14942,
+          "pages": [
+            {
+              "page": 1,
+              "char_count": 2818,
+              "section": "experimental",
+              "synthesis_score": 0.625,
+              "evidence_types": [
+                {
+                  "type": "compound_preparation",
+                  "confidence": 0.5
+                },
+                {
+                  "type": "experimental_procedure",
+                  "confidence": 0.25
+                },
+                {
+                  "type": "background",
+                  "confidence": 1.0
+                },
+                {
+                  "type": "abstract_claim",
+                  "confidence": 0.5
+                }
+              ]
+            },
+            {
+              "page": 2,
+              "char_count": 2232,
+              "section": "experimental",
+              "synthesis_score": 0.8,
+              "evidence_types": [
+                {
+                  "type": "experimental_procedure",
+                  "confidence": 0.65
+                },
+                {
+                  "type": "analytical_characterization",
+                  "confidence": 1.0
+                },
+                {
+                  "type": "compound_preparation",
+                  "confidence": 0.5
+                },
+                {
+                  "type": "reaction_conditions",
+                  "confidence": 0.333
+                }
+              ]
+            },
+            {
+              "page": 3,
+              "char_count": 3264,
+              "section": "experimental",
+              "synthesis_score": 0.844,
+              "evidence_types": [
+                {
+                  "type": "reaction_conditions",
+                  "confidence": 0.817
+                },
+                {
+                  "type": "analytical_characterization",
+                  "confidence": 1.0
+                },
+                {
+                  "type": "compound_preparation",
+                  "confidence": 0.5
+                },
+                {
+                  "type": "yield",
+                  "confidence": 0.5
+                },
+                {
+                  "type": "experimental_procedure",
+                  "confidence": 0.25
+                },
+                {
+                  "type": "discussion",
+                  "confidence": 0.5
+                }
+              ]
+            },
+            {
+              "page": 4,
+              "char_count": 3732,
+              "section": "experimental",
+              "synthesis_score": 1.0,
+              "evidence_types": [
+                {
+                  "type": "compound_preparation",
+                  "confidence": 1.0
+                },
+                {
+                  "type": "reaction_conditions",
+                  "confidence": 0.817
+                },
+                {
+                  "type": "patent_example",
+                  "confidence": 0.333
+                },
+                {
+                  "type": "experimental_procedure",
+                  "confidence": 0.25
+                }
+              ]
+            },
+            {
+              "page": 5,
+              "char_count": 2353,
+              "section": "discussion",
+              "synthesis_score": 0.55,
+              "evidence_types": [
+                {
+                  "type": "compound_preparation",
+                  "confidence": 0.5
+                },
+                {
+                  "type": "reaction_table",
+                  "confidence": 0.5
+                },
+                {
+                  "type": "discussion",
+                  "confidence": 0.5
+                },
+                {
+                  "type": "references",
+                  "confidence": 1.0
+                },
+                {
+                  "type": "experimental_procedure",
+                  "confidence": 0.6
+                }
+              ]
+            },
+            {
+              "page": 6,
+              "char_count": 543,
+              "section": "body",
+              "synthesis_score": 0.55,
+              "evidence_types": [
+                {
+                  "type": "experimental_procedure",
+                  "confidence": 0.6
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "text_extract",
+      "label": "Text reaction extraction (LLM)",
+      "status": "done",
+      "detail": "Extracted 6 step(s) via 2 pass(es) (pages covered: [1, 2, 3, 4, 6])",
+      "data": {
+        "steps": 6,
+        "target": "Preparation of dioxolane-diacetate (1-acetyl-2-acetylmethoxy-ethyleneglycol), compound 7",
+        "text_chars_sent": 13110,
+        "single_shot": false,
+        "evidence_chunks": 5,
+        "pages_included": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ],
+        "pages_excluded": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "truncated": true,
+        "extraction_pass_count": 2,
+        "document_type": "paper",
+        "extraction_plan": {
+          "candidate_procedure_pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "mandatory_pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "pages_included": [
+            1,
+            2,
+            3,
+            4,
+            6
+          ],
+          "pages_excluded": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "exclusion_reasons": {},
+          "pass_count": 2,
+          "passes": [
+            {
+              "document_type": "paper",
+              "pages_included": [
+                1,
+                2,
+                3,
+                4,
+                6
+              ],
+              "pages_excluded": [
+                5
+              ],
+              "candidate_procedure_pages": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "mandatory_pages": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "exclusion_reasons": {
+                "5": "budget (28000 chars) — needs another pass"
+              },
+              "chars_total": 14976,
+              "chars_selected": 13110,
+              "truncated": true,
+              "truncation_note": "Pass 1/1: selected 13110 chars from pages [1, 2, 3, 4, 6]; excluded [5].",
+              "pass_index": 1,
+              "pass_count": 2,
+              "chunk_count": 5,
+              "chunks": [
+                {
+                  "page_start": 1,
+                  "page_end": 1,
+                  "section": "experimental",
+                  "evidence_types": [
+                    "compound_preparation",
+                    "experimental_procedure",
+                    "background",
+                    "abstract_claim"
+                  ],
+                  "chars": 2818,
+                  "score": 0.625
+                },
+                {
+                  "page_start": 2,
+                  "page_end": 2,
+                  "section": "experimental",
+                  "evidence_types": [
+                    "experimental_procedure",
+                    "analytical_characterization",
+                    "compound_preparation",
+                    "reaction_conditions"
+                  ],
+                  "chars": 2232,
+                  "score": 0.8
+                },
+                {
+                  "page_start": 3,
+                  "page_end": 3,
+                  "section": "experimental",
+                  "evidence_types": [
+                    "reaction_conditions",
+                    "analytical_characterization",
+                    "compound_preparation",
+                    "yield"
+                  ],
+                  "chars": 3264,
+                  "score": 0.8441666666666666
+                },
+                {
+                  "page_start": 4,
+                  "page_end": 4,
+                  "section": "experimental",
+                  "evidence_types": [
+                    "compound_preparation",
+                    "reaction_conditions",
+                    "patent_example",
+                    "experimental_procedure"
+                  ],
+                  "chars": 3732,
+                  "score": 1.0
+                },
+                {
+                  "page_start": 6,
+                  "page_end": 6,
+                  "section": "body",
+                  "evidence_types": [
+                    "experimental_procedure"
+                  ],
+                  "chars": 543,
+                  "score": 0.55
+                }
+              ],
+              "procedure_pages": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "warnings": [
+                "Pages needing additional pass: [5].",
+                "Mandatory procedure pages still not in any pass after split: [5]."
+              ],
+              "info": [
+                "Procedure/evidence pages detected: [1, 2, 3, 4, 5, 6] (document_type=paper).",
+                "Mandatory procedure page set (with neighbors): [1, 2, 3, 4, 5, 6]."
+              ]
+            },
+            {
+              "document_type": "paper",
+              "pages_included": [],
+              "pages_excluded": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "candidate_procedure_pages": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "mandatory_pages": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "exclusion_reasons": {
+                "1": "budget (28000 chars) — needs another pass",
+                "2": "budget (28000 chars) — needs another pass",
+                "3": "budget (28000 chars) — needs another pass",
+                "4": "budget (28000 chars) — needs another pass",
+                "5": "budget (28000 chars) — needs another pass",
+                "6": "budget (28000 chars) — needs another pass"
+              },
+              "chars_total": 14976,
+              "chars_selected": 0,
+              "truncated": true,
+              "truncation_note": "",
+              "pass_index": 2,
+              "pass_count": 2,
+              "chunk_count": 0,
+              "chunks": [],
+              "procedure_pages": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "warnings": [
+                "Mandatory procedure pages still not in any pass after split: [5]."
+              ],
+              "info": [
+                "Multi-pass extraction: pass 2/2."
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "table_extract",
+      "label": "Table extraction (pdfplumber + LLM)",
+      "status": "stubbed",
+      "detail": "No reaction-like tables found in 1 total tables",
+      "data": {
+        "tables_total": 1,
+        "reaction_tables": 0,
+        "steps_extracted": 0
+      }
+    },
+    {
+      "id": "image_scheme",
+      "label": "Scheme / image extraction (VLM)",
+      "status": "done",
+      "detail": "1 scheme step(s), 0 page-read step(s), 3 molecule(s), 0 page-read(s) from 2 image(s) (figure pages [2, 3])",
+      "data": {
+        "images_processed": 2,
+        "schemes_found": 1,
+        "molecules_extracted": 3,
+        "page_reads": 0,
+        "transcribed_chars": 0,
+        "scheme_steps": 1,
+        "page_steps": 0,
+        "figure_pages": [
+          2,
+          3
+        ],
+        "figure_page_info": [
+          {
+            "page": 2,
+            "score": 7.5,
+            "reason": "caption:figure 2; caption:Figure 2; vector_drawings=94"
+          },
+          {
+            "page": 3,
+            "score": 4.35,
+            "reason": "caption:Figure 3; vector_drawings=34"
+          }
+        ],
+        "schemes": [
+          {
+            "page_number": 2,
+            "image_index": 0,
+            "molecules": [],
+            "arrows": [
+              {
+                "from": [
+                  0.4,
+                  0.5
+                ],
+                "to": [
+                  0.53,
+                  0.5
+                ],
+                "type": "reaction_arrow"
+              },
+              {
+                "from": [
+                  0.66,
+                  0.5
+                ],
+                "to": [
+                  0.75,
+                  0.5
+                ],
+                "type": "reaction_arrow"
+              },
+              {
+                "from": [
+                  0.48,
+                  0.585
+                ],
+                "to": [
+                  0.6,
+                  0.585
+                ],
+                "type": "reaction_arrow"
+              }
+            ],
+            "conditions_text": "Ac2O/AcOH (partially visible text at the bottom of the page image); experimental text: dioxolane 5 added dropwise to p-toluenesulfonic acid monohydrate in acetic anhydride and acetic acid, below 10 ºC, reaction kept under 30 ºC; Figure 2, step 1: N/A (no legible text on arrow in the reproduced figure; page text mentions Ac2O/AcOH); Figure 2, step 2: N/A (arrow legible but no readable condition text); Figure 2, step 3: N/A (no readable condition text on arrow); 7 yield 81.7% (431.5 g) LC/MS N/A 1H-NMR (CD3OD, 500 MHz, δ ppm): 2.06, 2.08 (s, 6H, 2xCH3), 3.85, 4.21 (s, 4H, OCH2CH2O), 5.28 (s, 2H, OCH2O). Second distillate fraction collected at 80-95 ºC at 0.75 mmHg and redistilled. (Value taken from the page experimental text, not from a figure text block.); caption: group [3].  \n \n \n \nFigure 1: Acyclovir mechanism of action \n \nACV was prepared in different forms such \nas tablets (200 mg, 400 mg, 800 mg), capsules \n200 mg, powder for injection, oral suspension, \ncreams for skin 5% and for eyes 3%. After oral \nadministration, ACV is absorbed slowly and not \ncompletely, bioavailability of only 10-20% [9].  \nACV rapidly attracted attention of chemist, \nas well as",
+            "raw_output": "{\n  \"is_reaction_scheme\": true,\n  \"steps\": [\n    {\n      \"step_label\": \"Figure 2, step 1\",\n      \"conditions_text\": \"N/A (no legible text on arrow in the reproduced figure; page text mentions Ac2O/AcOH)\",\n      \"molecules\": [\n        {\n          \"label\": null,\n          \"smiles\": null,\n          \"role\": \"reactant\",\n          \"bbox\": [0.29, 0.46, 0.40, 0.53],\n          \"confidence\": 0.2\n        },\n        {\n          \"label\": null,\n          \"smiles\": null,\n          \"role\": \"product\",\n          \"bbox\": [0.53, 0.46, 0.65, 0.53],\n          \"confidence\": 0.2\n        }\n      ]\n    },\n    {\n      \"step_label\": \"Figure 2, step 2\",\n      \"conditions_text\": \"N/A (arrow legible but no readable condition text)\",\n      \"molecules\": [\n        {\n          \"label\": null,\n          \"smiles\": null,\n          \"role\": \"reactant\",\n          \"bbox\": [0.53, 0.46, 0.65, 0.53],\n          \"confidence\": 0.2\n        },\n        {\n          \"label\": null,\n          \"smiles\": null,\n          \"role\": \"intermediate\",\n          \"bbox\": [0.26, 0.54, 0.47, 0.63],\n          \"confidence\": 0.15\n        }\n      ]\n    },\n    {\n      \"step_label\": \"Figure 2, step 3\",\n      \"conditions_text\": \"N/A (no readable condition text on arrow)\",\n      \"molecules\": [\n        {\n          \"label\": null,\n          \"smiles\": null,\n          \"role\": \"reactant\",\n          \"bbox\": [0.26, 0.54, 0.47, 0.63],\n          \"confidence\": 0.15\n        },\n        {\n          \"label\": null,\n          \"smiles\": null,\n          \"role\": \"product\",\n          \"bbox\": [0.59, 0.54, 0.77, 0.63],\n          \"confidence\": 0.15\n        }\n      ]\n    }\n  ],\n  \"characterizations\": [\n    {\n      \"compound_id\": \"7\",\n      \"name\": \"N/A (referred to as pure 7 in the experimental text)\",\n      \"yield_value\": \"81.7% (431.5 g)\",\n      \"lcms\": \"N/A\",\n      \"notes\": \"1H-NMR (CD3OD, 500 MHz, δ ppm): 2.06, 2.08 (s, 6H, 2xCH3), 3.85, 4.21 (s, 4H, OCH2CH2O), 5.28 (s, 2H, OCH2O). Second distillate fraction collected at 80-95 ºC at 0.75 mmHg and redistilled. (Va",
+            "mode": "scheme",
+            "transcribed_text": "",
+            "image_class": "text_page",
+            "step_label": "",
+            "characterizations": [
+              {
+                "compound_id": "7",
+                "name": "N/A (referred to as pure 7 in the experimental text)",
+                "yield_value": "81.7% (431.5 g)",
+                "lcms": "N/A",
+                "notes": "1H-NMR (CD3OD, 500 MHz, δ ppm): 2.06, 2.08 (s, 6H, 2xCH3), 3.85, 4.21 (s, 4H, OCH2CH2O), 5.28 (s, 2H, OCH2O). Second distillate fraction collected at 80-95 ºC at 0.75 mmHg and redistilled. (Value taken from the page experimental text, not from a figure text block.)"
+              }
+            ]
+          },
+          {
+            "page_number": 3,
+            "image_index": 0,
+            "molecules": [
+              {
+                "smiles": "C1COCO1",
+                "bbox": [
+                  0.27,
+                  0.13,
+                  0.34,
+                  0.19
+                ],
+                "role": "reactant",
+                "confidence": 0.55,
+                "source": "vlm",
+                "name": "5"
+              },
+              {
+                "smiles": "CC(=O)OC(C)=O",
+                "bbox": [
+                  0.35,
+                  0.13,
+                  0.47,
+                  0.19
+                ],
+                "role": "reactant",
+                "confidence": 0.55,
+                "source": "vlm",
+                "name": "6"
+              },
+              {
+                "smiles": "Cc1ccc(cc1)S(=O)(=O)O",
+                "bbox": [
+                  0.9,
+                  0.29,
+                  1.0,
+                  0.33
+                ],
+                "role": "catalyst",
+                "confidence": 0.5,
+                "source": "vlm",
+                "name": "TsOH"
+              }
+            ],
+            "arrows": [
+              {
+                "from": [
+                  0.46,
+                  0.165
+                ],
+                "to": [
+                  0.52,
+                  0.165
+                ],
+                "type": "reaction_arrow"
+              }
+            ],
+            "conditions_text": "TsOH (label printed near the scheme); Figure 3: TsOH; (N/A) Figure 3: Preparation of Dioxolane-diacetate; 1 yield 63% LC/MS EI-MS m/e (%) 226 [M+] (100), 152 [M+-C3H6O2] (42) mp. 242 - 244 oC (H2O); 1H-NMR (DMSO-d6, 500 MHz): 3.34, 3.46 (s, 4H, CH2CH2), 4.65 (br, 1H, OH), 5.34 (s, 2H, OCH2), 6.48 (s, 2H, NH2), 7.80 (s, 1H, H-8), 10.62 (s, 1H, NH). From surrounding page text, not from the figure itself.; caption: 525\n \n \nFigure 3: Preparation of Dioxolane-diacetate  \n \nPreparation of acyclovir \nA mixture of guanine (3, 32.13 g, 213 \nmmol), acetic anhydride (320 ml) and acetic \nacid (480 ml) was refluxed overnight, during \nwhich time the mixture became almost clear. \nThe liquid was removed by evaporation in \nreduced pressure. To the residue was added \ntoluene (300 ml), 7 (75 g, 426 mmol), and \nphosphoric ac",
+            "raw_output": "{\n  \"is_reaction_scheme\": true,\n  \"steps\": [\n    {\n      \"step_label\": \"Figure 3\",\n      \"conditions_text\": \"TsOH\",\n      \"molecules\": [\n        {\n          \"label\": \"5\",\n          \"smiles\": \"C1COCO1\",\n          \"role\": \"reactant\",\n          \"bbox\": [0.27, 0.13, 0.34, 0.19],\n          \"confidence\": 0.55\n        },\n        {\n          \"label\": \"6\",\n          \"smiles\": \"CC(=O)OC(C)=O\",\n          \"role\": \"reactant\",\n          \"bbox\": [0.35, 0.13, 0.47, 0.19],\n          \"confidence\": 0.55\n        },\n        {\n          \"label\": \"TsOH\",\n          \"smiles\": \"Cc1ccc(cc1)S(=O)(=O)O\",\n          \"role\": \"catalyst\",\n          \"bbox\": [0.9, 0.29, 1.0, 0.33],\n          \"confidence\": 0.5\n        },\n        {\n          \"label\": null,\n          \"smiles\": null,\n          \"role\": \"product\",\n          \"bbox\": [0.52, 0.13, 0.76, 0.19],\n          \"confidence\": 0.35\n        }\n      ]\n    }\n  ],\n  \"characterizations\": [\n    {\n      \"compound_id\": \"1\",\n      \"name\": \"acyclovir\",\n      \"yield_value\": \"63%\",\n      \"lcms\": \"EI-MS m/e (%) 226 [M+] (100), 152 [M+-C3H6O2] (42)\",\n      \"notes\": \"mp. 242 - 244 oC (H2O); 1H-NMR (DMSO-d6, 500 MHz): 3.34, 3.46 (s, 4H, CH2CH2), 4.65 (br, 1H, OH), 5.34 (s, 2H, OCH2), 6.48 (s, 2H, NH2), 7.80 (s, 1H, H-8), 10.62 (s, 1H, NH). From surrounding page text, not from the figure itself.\"\n    }\n  ],\n  \"legend_conditions\": [\n    {\n      \"roman\": \"N/A\",\n      \"text\": \"Figure 3: Preparation of Dioxolane-diacetate\"\n    }\n  ],\n  \"arrows\": [\n    {\n      \"from\": [0.46, 0.165],\n      \"to\": [0.52, 0.165],\n      \"type\": \"reaction_arrow\"\n    }\n  ],\n  \"conditions_text\": \"TsOH (label printed near the scheme)\",\n  \"notes\": \"Structure rendering in the image is degraded; drawn fragments appear as a five-membered ring (assigned to 5, dioxolane) plus an anhydride-type fragment (assigned to 6). Only labels 5, 6 and TsOH are legible in the scheme; the product label is not readable in the figure (page text refers to compound 7, 75 g, 426 mmol, used in the acyclovir preparation, but t",
+            "mode": "scheme",
+            "transcribed_text": "",
+            "image_class": "scheme",
+            "step_label": "",
+            "characterizations": [
+              {
+                "compound_id": "1",
+                "name": "acyclovir",
+                "yield_value": "63%",
+                "lcms": "EI-MS m/e (%) 226 [M+] (100), 152 [M+-C3H6O2] (42)",
+                "notes": "mp. 242 - 244 oC (H2O); 1H-NMR (DMSO-d6, 500 MHz): 3.34, 3.46 (s, 4H, CH2CH2), 4.65 (br, 1H, OH), 5.34 (s, 2H, OCH2), 6.48 (s, 2H, NH2), 7.80 (s, 1H, H-8), 10.62 (s, 1H, NH). From surrounding page text, not from the figure itself."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "reconcile",
+      "label": "Reconcile text + table + scheme + page-read",
+      "status": "done",
+      "detail": "Merged 6 steps (text=6, tables=0, schemes=1, page_read=0)",
+      "data": {
+        "steps": 6,
+        "text_steps": 6,
+        "table_steps": 0,
+        "scheme_steps": 1,
+        "page_read_steps": 0
+      }
+    },
+    {
+      "id": "standardize",
+      "label": "Chemical standardization",
+      "status": "done",
+      "detail": "3 already had SMILES; 37 name(s) could not be resolved; Standardized 6 reaction time(s) to minutes",
+      "data": {
+        "resolved": 0,
+        "validated": 0,
+        "invalid": 0,
+        "unresolved": 37,
+        "total_entities": 40,
+        "times_standardized": 6,
+        "resolution_status_counts": {
+          "unresolved": 37
+        }
+      }
+    }
+  ],
+  "document": {
+    "filename": "64f5ffb02135487b8c5dd685906b8367.pdf",
+    "page_count": 6,
+    "text": " \n523\nJournal of Chemistry, Vol. 47 (4), P. 523 - 528, 2009 \n \nSYNTHESIS OF ACYCLOVIR AS AN ANTIHERPES-VIRUS DRUG  \nReceived 4 February 2009  \nTran Quang Hung1, Nguyen Thi Thuong2, Tran Van Sung1 \n1Laboratory of Organic Synthesis, Institute of Chemistry, VAST \n2Laboratory of Herpes viruses, Faculty of Virus, National Institute of Hygiene and Epidemiology \n \nAbstract \nA one-pot process for high-yield regioselective synthesis of 9-[(2-hydroxyethoxy) \nmethyl]guanine (acyclovir),  an antiherpetic agent, was achieved from guanine via the steps of \nreacting of N2,N9 -diprotected guanine with 1-acetyl-2-acetylmethoxy-ethyleneglycol in presence \nof phosphoric acid or polyphosphoric acid. Total yield of product was 59%. The obtained \nacyclovir meets the standards in the British Pharmacopoeia 2007 (BP2007). Its activity as \ninhibitor of herpes simplex virus type 1 (HSV-1) and type 2 (HSV-2) was evaluated according to \nthe plaque reduction assay method and compared with the standard compound. The synthesized \nacyclovir showed a similar activity as the control. \nKeywords: Acyclovir, Herpes simplex virus, Nucleoside, One- pot synthesis. \n \nI - Introduction \nVirus was a cause of many dangerous \ndiseases and variety of epidemic diseases in \nlarge area. It is important that antibiotics have \nno or almost no effect on viruses. Although the \nproduction of herpes vaccine is desired by many \ncountries but it still stays on a testing level. The \nprevention of herpes infection is a special \nproblem because the disease often recurred in \npresent of antibody. Therefore, development of \nanti-virus drugs is important, necessary and still \nbe a leading interest.  \n \n1: Acyclovir  \nAcyclovir, \n{9-[(2-hydroxyethoxy)methyl] \nguanine} (ACV 1), was first reported by \nSchaeffer and co-workers [1] and is a nucleoside \nanalogue. It acts selectively on herpes-infected \ncells. It has specific inhibition effects on \nreplication of herpes virus simplex type 1 and \ntype 2 (HSV1 and HSV2) and Varicella zoster \nvirus that cause almost no intoxication to the \nhost cells. From nearly three decades ago, ACV \nwas used as a primary drug to treat herpes virus, \nespecially genital herpes and herpes simplex \nencephalitis and herpes in immunity deficient \npeople [2].  \nACV has no activity against viral pathogens \nuntil it is converted to an active form acyclovir \ntriphosphate. Its mechanism of action is initiated \nby \nthe \nviral \nenzyme \nThymidine \nkinase; \nsubsequently, human Cellular kinase perform \nthe second and the third phosphorylation steps \nto complete the process (figure 1). Acyclovir \ntriphosphate, the active form of acyclovir, is \npresent in 40- to 100-fold higher concentrations \nin herpes simplex virus (HSV)-infected cells \nthan in uninfected cells. As a result, the \nselectivity of ACV is significant [3, 4]. \n\n\n \n524\nAcyclovir triphosphate has a two-pronged \nmechanism of action: (1) it competes with 2-\ndeoxyguanosine triphosphate (dGTP) as a \nsubstrate for viral DNA polymerase and (2) \nonce \nit \nbecomes \nincorporated \ninto \nthe \nreplicating viral DNA, it acts as a chain \nterminator because it does not have a terminal \n3-hydroxyl group [3].  \n \n \n \nFigure 1: Acyclovir mechanism of action \n \nACV was prepared in different forms such \nas tablets (200 mg, 400 mg, 800 mg), capsules \n200 mg, powder for injection, oral suspension, \ncreams for skin 5% and for eyes 3%. After oral \nadministration, ACV is absorbed slowly and not \ncompletely, bioavailability of only 10-20% [9].  \nACV rapidly attracted attention of chemist, \nas well as pharmacist by virtue of its selective \nanti-virus activity and effect. There were many \nefforts for synthesis of ACV by different ways \nreported. \nAmong \ndivert \norientations \nof \nsynthesizing ACV, it could be accounted 5 \ncommon and most effective pathways. The most \ncommon pathway departed from guanine with \neffectiveness and simplicity where guanine was \nacylated [5]. The important problem is to \ndecrease \nthe \nN7 \nsubstituted \nisomer \nand \nselectively akylating into N9 position. Our \nsynthesis of ACV is showed in figure 2.\n \n \n \nFigure 2: Pathway for synthesis of acyclovir \n \nII - Experimental \nPreparation of dioxolane-diacetate (1-acetyl-\n2-acetylmethoxy-ethyleneglycol) \nDioxolane 5 (224 g, 99%, 211.6 ml, 3 mol) \nwas added drop wise to a solution of p-\ntoluenesulfonic acid monohydrate (10 g, 0.053 \nmol) in acetic anhydride (306 g, 283.3 ml,3 \nmol) and acetic acid (45 g, 42.9 ml, 0.75 mol) \nprecooled to below 10oC, at the rate that \nmaintained the reaction temperature under 30oC. \nThe solution was then stirred for an additional \nhour at a temperature under 30oC, and then \ndistilled. The first portion of distillate was \ncollected at a temperature of 40 - 80oC/1.5 \nmmHg and contained acetic acid, acetic \nanhydride, and other materials. The second \nportion of distillate was collected at 80 - 95oC. \nat 0.75 mmHg and redistilled to give pure 7 in a \nyield of 431.5 g (81.7%). 1H-NMR (CD3OD, \n500 MHz, δ ppm): 2.06, 2.08 (s, 6H, 2xCH3), \n3.85, 4.21 (s, 4H, OCH2CH2O), 5.28 (s, 2H, \nOCH2O). \n\n\n \n525\n \n \nFigure 3: Preparation of Dioxolane-diacetate  \n \nPreparation of acyclovir \nA mixture of guanine (3, 32.13 g, 213 \nmmol), acetic anhydride (320 ml) and acetic \nacid (480 ml) was refluxed overnight, during \nwhich time the mixture became almost clear. \nThe liquid was removed by evaporation in \nreduced pressure. To the residue was added \ntoluene (300 ml), 7 (75 g, 426 mmol), and \nphosphoric acid (85.5%, 1.5 ml) with stirring. \nThe resulting mixture was refluxed for 6 - 7 \nhours with vigorous stirring.  \nToluene and acetic anhydride were then \nremoved under reduced pressure and the residue \nwas heated at 80oC (oil bath) under reduced \npressure (20 mm Hg) for another 2 hours, \ncooled to room temperature, triturated with \nethyl acetate (100 ml), and stirred at room \ntemperature overnight.  \nThe resulting solid was collected by \nfiltration, washed twice with ethyl acetate (25 \nml), dissolved in ammonium hydroxide (30%, \n300 ml). The solution became clear and solution \nwas stirred at room temperature overnight. The \nmixture was concentrated to dryness under \nreduced pressure. The residue was treated with \nmethanol (150 ml) and the resulting mixture \nwas heated at 80oC for 1 hour, cooled, and \nallowed to stand at room temperature overnight. \nThe resulting solid was collected by filtration \nand recrystallized from water (1700 ml) using 1 \ngram of activated carbon. The filtrate was \ncooled to room temperature, and stored in the \nrefrigerator overnight. The resulting solid was \ncollected by filtration, washed twice with \nmethanol (20 ml), and dried to give pure \nacyclovir 1 (30 g, 63%). mp. 242 - 244oC (H2O). \nUV λmax (MeOH-H2O; 1-1) nm: 251, 276 (sh); \n1H-NMR (DMSO-d6, 500 MHz, δ ppm): δ 3.34, \n3.46 (s, 4H, CH2CH2), 4.65 (br, 1H, OH), 5.34 \n(s, 2H, OCH2O), 6.48 (s 2H, NH2), 7.80 (s, 1H, \nH-8), 10.62 (s, 1H, NH). EI-MS m/e (%) 226 \n[M+] (100), 152 [M+-C3H6O2] (42). The mother \nliquor was concentrated to give a second crop \n(2.6 g) which contained the N7-isomer.  \nAntiherpetic activity evaluation \na) Cells and viruses \nVero cells (Green Africa Monkey Kidney) \nwere propagated in culture medium (Medium \nEssential \nMedium \n(MEM, \nGIBCO), \nsupplemented with 3% fetal bovine serum (FBS, \nSigma), glutamine, non-essential amino acid, \nand antibiotics). \nThe 5 clinical HSV isolates used in this \nstudy included 2 HSV-1 and 3 HSV-2. \nb) Method of plaque reduction assay (PRA) \nConfluent Vero cell monolayer in 24-well \nculture plates were infected with 200 μl of 10 \nfold dilutions from 10-5 to 10-2 of virus stocks \nper well. After 1 hour incubation at 37oC x \n5%CO2 with gently rocking, inoculates were \ndiscarded and cells were incubated with culture \nmedium and 1.0% methylcellulose (Sigma) with \nthe \npresence \nof \nincreasing \nantiviral \nconcentrations of 0, 1, 5, 15, and 50 μM. \nPlaques were counted at 72 h post inoculation \nafter cells were treated with formaldehyde and \nstained \nwith \ncrystal \nviolet. \nIC50s \nwere \ndetermined on log papers and defined as the \nminimum concentration of ACV that reduced \nthe numbers of plaque by 50% compared to the \ncell controls (absence of ACV). IC50s ≥ 7 μM \nwere considered resistant to ACV. \nIII - Results and discussion \n1. Preparation of acyclovir \nA method for the preparation of ACV is \n\n\n \n526\nprovided that is suitable for the commercial \nmanufacture of the product. In the first step, \nguanine is acetylated using acetic anhydride, \nacetic acid, and phosphoric acid. In the second \nstep, diacetyl guanine is alkylated at the N9-\nposition using CH3COOCH2O(CH2)2OCOCH3, \nacetic anhydride and phosphoric acid or \npolyphosphoric acid. The acetyl groups are then \nremoved as desired. \nIC50\nIC50\n \nFigure 4: Plot for determination of IC50 \n2. Acetylation of guanine \nIn the first step of the reaction, the 2-amino \ngroup of guanine is protected to prevent it from \nbeing alkylated in the second step of the \nreaction. The choice of protecting group may \neffect the ultimate yield of product, in that \nprotecting groups are removed with varying \ndegrees of difficulty. In general, in the process \nof protecting the 2-amino group, the N9 group \nusually also reacts with the protecting group. \nAcylation, \nand \nin \nparticular, \nacetylation, \nactivates the N9-position toward alkylation in \nthe second step, and therefore, is desirable. \nDiacetylguanine, which has been used as an \nintermediate in the production of acyclovir, has \nbeen prepared using several methods. Guanine \nhas been acetylated using acetic anhydride in \nN,N-dimethylacetamide to give diacetylguanine \nin 90.5% yield [6]. This reaction produces a \nproduct which is grey in color due to the high \nreaction temperature used (160oC for 7 hours). \nIn general, it is preferred to use a symmetrical \nanhydride \nin \nthe \nreaction \nscheme \nthat \ncorresponds to the acid used. For example, \nacetic acid is preferably used in combination \nwith acetic anhydride, and propionic acid is \npreferably used in combination with propionic \nanhydride. \nGuanine has also been acetylated in acetic \nanhydride and acetic acid to give different \nproducts depending on the work-up conditions \n[7]. For example, after the reaction mixture \nbecomes an almost clear solution, if solvents are \nremoved by distillation, only diacetyl guanine is \nobtained in 95% yield. However, the addition of \nwater at 60oC. followed by stirring at room \ntemperature \novernight \nproduces \nN2-\nacetylguanine in 94.4% yield. If the reaction \nmixture is merely cooled down, a mixture of \nmono- and di-acetylguanine is produced.  \n3. Preparation of dioxolane-diacetate (7) \nThe dioxolane ring is opened using acetic \nanhydride as the ring-opening reagent in the \npresence \nof \ncatalytic \namounts \nof \np-\ntoluenesulfonic acid. This provided dioxolane-\ndiacetate in 80% yield after distillation by the \nmethod of Chen et al. [8]. \n4. Alkylation of diacetylguanine \nIn this step of the synthesis, the diacetylated \nguanine from previous step is alkylated in the \nN9-position \nto \nproduce \n2-acetamido-9-(2-\nacetylethoxymethyl)guanine.  \nMatsumoto, et al., have studied the effect of \nsolvent, acid catalyst and reaction temperature \non the yield of the alkylation of diacetylguanine \nwith 2-oxo-1,4-butanediol diacetate (\"dioxolane \ndiacetate\") to produce N2\n ,O-diacetylacyclovir \n[7]. Among the acid catalysts tested (p-\ntoluenesulfonic \nacid, \nsulfanilic \nacid, \np-\nnitrobenzenesulfonic acid, 2,4-dinitrobenzene \nsulfonic acid, iron(II) sulfate, and zinc chloride), \nMatsumoto reported that p-toluenesulfonic acid \nand sulfanilic acid exhibited the highest \ncatalytic activity. In a preferred reaction \nscheme, a combination of an acid and anhydride \nare used.  \n5. Deacetylation of acyclovir diacetate \nBoth \nmethylamine \nand \nammonium \nhydroxide proved to be good deacetylating \nagents. Although the working-up is easier using \nmethylamine than it is using ammonium \nhydroxide, on an industrial scale, the smell of \nmethylamine may dictate the preferred use of \nammonium hydroxide as a deacetylation agent. \n\n\n \n527\nThe synthesized ACV has been analyzed in \nthe National Institute for Drug Quality Control. \nIt meets all the standards of BP 2007. \n6. Biological activity \nACV was evaluated against HSV-1 and HSV-\n2. The effects of standard ACV and tested ACV \non 5 clinical HSV isolates included HSV-1 and \nHSV-2 were tested in parallel with their antiviral \nactivity. The results are given in table 1. \n \nTable 1: The antiviral activity of ACV compared to the standard ACV \nIC50  \nOrder \nClinical HSV \nisolate \nType \nStandard \nTested \nCorrelated \ncoefficient\n1 \n06003 \nHSV-2 \n1.70 \nS \n1.20 \nS \n2 \n07069 \nHSV-1 \n0.53 \nS \n0.57 \nS \n3 \n07089 \nHSV-2 \n0.91 \nS \n0.10 \nS \n4 \n07092 \nHSV-2 \n2.80 \nS \n2.60 \nS \n5 \n07094 \nHSV-1 \n0.89 \nS \n0.53 \nS \n0.95 \nS: Sensitive. \n.\nThe tested ACV showed the anti-HSV \nactivity \nat \nlow \nconcentration \nand \nvery \ncorresponds with standard ACV. The correlated \nfactor is 0.95. \n \n‘\n \nFigure 5: Antiherpestic activity of standard \n(left) and tested (right) acyclovir \n \nIV - Conclusion \nThis report describes a one-pot process for \nthe preparation of acyclovir from guanine. \nReacting N2,N9-diprotected guanine with 1-\nacetyl-2-acetylmethoxy-ethyleneglycol \nin \npresent of phosphoric acid as catalyst provide \nACV with high yield and good regioselectivity. \nTherefore, \nthe \npurification \nwas \nsimple, \ninexpensive and conforming to pilot scale. The \nchemicals and the solvents were common and \nfriendly with environment. The antiherpetic \nactivity of the synthesized ACV was show to be \ncomparable (95%) to the standard ACV. This \nsynthesized ACV was approved by National \nInstitute of Drug Quality Control to meet the \nquality standard of BP 2007. \nAcknowledgements: \nThis \nresearch \nwas \nsupported by a research grant from Vietnam \nAcademy of Science and Technology (VAST). \n \nReferences \n \n1. H. J. Schaeffer, L. Beauchamp, P. Miranda \nde, G. B. Elion, D. J. Bauer, P. Collins. \nNature, 272, 583 - 585 (1978). \n2. Thuong Nguyen Thi. Master of Medicine \ndissertation, 2006, National Institute of \nHygiene and Epidemiology. \n3. Balfour HH Jr. N. Engl. J. Med., 340, 1255 \n- 1268 (1999). \n4. J. C. Martin, C. A. Dvorak, D. F. Smee, T. \nR. Matthews, J. P. Verheyden. J. Med. \nChem., 26(5), 759 - 761 (1983). \n5. Hongwu Gao, Ashim K. Mitra. Synthesis, 3, \n329 - 351 (2000). \n6. R. Zou and M. J. Robins. Can. J. Chem., 65, \n1436 - 1437 (1987). \n\n\n \n528\n7. H. Matsumoto, C. Kaneko, K. Yamada, T. \nTakeuchi, T. Mori, Y. Mizuno. Chem. \nPharm. Bull. 36 (3), 1153 - 1157 (1988).  \n8. Z. J. Chen, W. G. Liu, J. Z. Song, Y. Zhang. \nChemical Abstracts, 117, 1992, 151269e. \n9. Smith J. B. CaractÐrisation des mutaion du \nvirus herpÌs simplex impliquÐes dans la \nrésistance \naux \nantiviraux. \nThÌse \nde \nPhilosophie Doctor (Ph.D.), 2004, FacultÐ \nde médecine. UniversitÐ Laval QuÐbeque.\n  \nCorresponding author: Tran Van Sung \n            Laboratory of Organic Synthesis, Institute of Chemistry, VAST. \n",
+    "segments": [
+      {
+        "segment_id": "page-1",
+        "kind": "procedure_candidate",
+        "page_start": 1,
+        "page_end": 1,
+        "text": "523\nJournal of Chemistry, Vol. 47 (4), P. 523 - 528, 2009 \n \nSYNTHESIS OF ACYCLOVIR AS AN ANTIHERPES-VIRUS DRUG  \nReceived 4 February 2009  \nTran Quang Hung1, Nguyen Thi Thuong2, Tran Van Sung1 \n1Laboratory of Organic Synthesis, Institute of Chemistry, VAST \n2Laboratory of Herpes viruses, Faculty of Virus, National Institute of Hygiene and Epidemiology \n \nAbstract \nA one-pot process for high-yield regioselective synthesis of 9-[(2-hydroxyethoxy) \nmethyl]guanine (acyclovir),  an antiherpetic agent, was achieved from guanine via the steps of \nreacting of N2,N9 -diprotected guanine with 1-acetyl-2-acetylmethoxy-ethyleneglycol in presence \nof phosphoric acid or polyphosphoric acid. Total yield of product was 59%. The obtained \nacyclovir meets the standards in the British Pharmacopoeia 2007 (BP2007). Its activity as \ninhibitor of herpes simplex virus type 1 (HSV-1) and type 2 (HSV-2) was evaluated according to \nthe plaque reduction assay method and compared with the standard compound. The synthesized \nacyclovir showed a similar activity as the control. \nKeywords: Acyclovir, Herpes simplex virus, Nucleoside, One- pot synthesis. \n \nI - Introduction \nVirus was a cause of many dangerous \ndiseases and variety of epidemic diseases in \nlarge area. It is important that antibiotics have \nno or almost no effect on viruses. Although the \nproduction of herpes vaccine is desired by many \ncountries but it still stays on a testing level. The \nprevention of herpes infection is a special \nproblem because the disease often recurred in \npresent of antibody. Therefore, development of \nanti-virus drugs is important, necessary and still \nbe a leading interest.  \n \n1: Acyclovir  \nAcyclovir, \n{9-[(2-hydroxyethoxy)methyl] \nguanine} (ACV 1), was first reported by \nSchaeffer and co-workers [1] and is a nucleoside \nanalogue. It acts selectively on herpes-infected \ncells. It has specific inhibition effects on \nreplication of herpes virus simplex type 1 and \ntype 2 (HSV1 and HSV2) and Varicella zoster \nvirus that cause almost no intoxication to the \nhost cells. From nearly three decades ago, ACV \nwas used as a primary drug to treat herpes virus, \nespecially genital herpes and herpes simplex \nencephalitis and herpes in immunity deficient \npeople [2].  \nACV has no activity against viral pathogens \nuntil it is converted to an active form acyclovir \ntriphosphate. Its mechanism of action is initiated \nby \nthe \nviral \nenzyme \nThymidine \nkinase; \nsubsequently, human Cellular kinase perform \nthe second and the third phosphorylation steps \nto complete the process (figure 1). Acyclovir \ntriphosphate, the active form of acyclovir, is \npresent in 40- to 100-fold higher concentrations \nin herpes simplex virus (HSV)-infected cells \nthan in uninfected cells. As a result, the \nselectivity of ACV is significant [3, 4].",
+        "meta": {
+          "char_count": 2822,
+          "source": "native",
+          "synthesis_score": 0.625,
+          "section": "experimental",
+          "evidence_types": [
+            {
+              "type": "compound_preparation",
+              "confidence": 0.5
+            },
+            {
+              "type": "experimental_procedure",
+              "confidence": 0.25
+            },
+            {
+              "type": "background",
+              "confidence": 1.0
+            },
+            {
+              "type": "abstract_claim",
+              "confidence": 0.5
+            }
+          ],
+          "document_type": "paper",
+          "procedure_pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "high_evidence_pages": [
+            2,
+            3,
+            4
+          ],
+          "ocr_used": false,
+          "ocr_backend": "",
+          "native_char_count": 14966,
+          "final_char_count": 14976,
+          "evidence_profile": {
+            "document_type": "paper",
+            "procedure_pages": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "high_evidence_pages": [
+              2,
+              3,
+              4
+            ],
+            "low_evidence_pages": [],
+            "total_chars": 14942,
+            "pages": [
+              {
+                "page": 1,
+                "char_count": 2818,
+                "section": "experimental",
+                "synthesis_score": 0.625,
+                "evidence_types": [
+                  {
+                    "type": "compound_preparation",
+                    "confidence": 0.5
+                  },
+                  {
+                    "type": "experimental_procedure",
+                    "confidence": 0.25
+                  },
+                  {
+                    "type": "background",
+                    "confidence": 1.0
+                  },
+                  {
+                    "type": "abstract_claim",
+                    "confidence": 0.5
+                  }
+                ]
+              },
+              {
+                "page": 2,
+                "char_count": 2232,
+                "section": "experimental",
+                "synthesis_score": 0.8,
+                "evidence_types": [
+                  {
+                    "type": "experimental_procedure",
+                    "confidence": 0.65
+                  },
+                  {
+                    "type": "analytical_characterization",
+                    "confidence": 1.0
+                  },
+                  {
+                    "type": "compound_preparation",
+                    "confidence": 0.5
+                  },
+                  {
+                    "type": "reaction_conditions",
+                    "confidence": 0.333
+                  }
+                ]
+              },
+              {
+                "page": 3,
+                "char_count": 3264,
+                "section": "experimental",
+                "synthesis_score": 0.844,
+                "evidence_types": [
+                  {
+                    "type": "reaction_conditions",
+                    "confidence": 0.817
+                  },
+                  {
+                    "type": "analytical_characterization",
+                    "confidence": 1.0
+                  },
+                  {
+                    "type": "compound_preparation",
+                    "confidence": 0.5
+                  },
+                  {
+                    "type": "yield",
+                    "confidence": 0.5
+                  },
+                  {
+                    "type": "experimental_procedure",
+                    "confidence": 0.25
+                  },
+                  {
+                    "type": "discussion",
+                    "confidence": 0.5
+                  }
+                ]
+              },
+              {
+                "page": 4,
+                "char_count": 3732,
+                "section": "experimental",
+                "synthesis_score": 1.0,
+                "evidence_types": [
+                  {
+                    "type": "compound_preparation",
+                    "confidence": 1.0
+                  },
+                  {
+                    "type": "reaction_conditions",
+                    "confidence": 0.817
+                  },
+                  {
+                    "type": "patent_example",
+                    "confidence": 0.333
+                  },
+                  {
+                    "type": "experimental_procedure",
+                    "confidence": 0.25
+                  }
+                ]
+              },
+              {
+                "page": 5,
+                "char_count": 2353,
+                "section": "discussion",
+                "synthesis_score": 0.55,
+                "evidence_types": [
+                  {
+                    "type": "compound_preparation",
+                    "confidence": 0.5
+                  },
+                  {
+                    "type": "reaction_table",
+                    "confidence": 0.5
+                  },
+                  {
+                    "type": "discussion",
+                    "confidence": 0.5
+                  },
+                  {
+                    "type": "references",
+                    "confidence": 1.0
+                  },
+                  {
+                    "type": "experimental_procedure",
+                    "confidence": 0.6
+                  }
+                ]
+              },
+              {
+                "page": 6,
+                "char_count": 543,
+                "section": "body",
+                "synthesis_score": 0.55,
+                "evidence_types": [
+                  {
+                    "type": "experimental_procedure",
+                    "confidence": 0.6
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "segment_id": "page-2",
+        "kind": "procedure_candidate",
+        "page_start": 2,
+        "page_end": 2,
+        "text": "524\nAcyclovir triphosphate has a two-pronged \nmechanism of action: (1) it competes with 2-\ndeoxyguanosine triphosphate (dGTP) as a \nsubstrate for viral DNA polymerase and (2) \nonce \nit \nbecomes \nincorporated \ninto \nthe \nreplicating viral DNA, it acts as a chain \nterminator because it does not have a terminal \n3-hydroxyl group [3].  \n \n \n \nFigure 1: Acyclovir mechanism of action \n \nACV was prepared in different forms such \nas tablets (200 mg, 400 mg, 800 mg), capsules \n200 mg, powder for injection, oral suspension, \ncreams for skin 5% and for eyes 3%. After oral \nadministration, ACV is absorbed slowly and not \ncompletely, bioavailability of only 10-20% [9].  \nACV rapidly attracted attention of chemist, \nas well as pharmacist by virtue of its selective \nanti-virus activity and effect. There were many \nefforts for synthesis of ACV by different ways \nreported. \nAmong \ndivert \norientations \nof \nsynthesizing ACV, it could be accounted 5 \ncommon and most effective pathways. The most \ncommon pathway departed from guanine with \neffectiveness and simplicity where guanine was \nacylated [5]. The important problem is to \ndecrease \nthe \nN7 \nsubstituted \nisomer \nand \nselectively akylating into N9 position. Our \nsynthesis of ACV is showed in figure 2.\n \n \n \nFigure 2: Pathway for synthesis of acyclovir \n \nII - Experimental \nPreparation of dioxolane-diacetate (1-acetyl-\n2-acetylmethoxy-ethyleneglycol) \nDioxolane 5 (224 g, 99%, 211.6 ml, 3 mol) \nwas added drop wise to a solution of p-\ntoluenesulfonic acid monohydrate (10 g, 0.053 \nmol) in acetic anhydride (306 g, 283.3 ml,3 \nmol) and acetic acid (45 g, 42.9 ml, 0.75 mol) \nprecooled to below 10oC, at the rate that \nmaintained the reaction temperature under 30oC. \nThe solution was then stirred for an additional \nhour at a temperature under 30oC, and then \ndistilled. The first portion of distillate was \ncollected at a temperature of 40 - 80oC/1.5 \nmmHg and contained acetic acid, acetic \nanhydride, and other materials. The second \nportion of distillate was collected at 80 - 95oC. \nat 0.75 mmHg and redistilled to give pure 7 in a \nyield of 431.5 g (81.7%). 1H-NMR (CD3OD, \n500 MHz, δ ppm): 2.06, 2.08 (s, 6H, 2xCH3), \n3.85, 4.21 (s, 4H, OCH2CH2O), 5.28 (s, 2H, \nOCH2O).",
+        "meta": {
+          "char_count": 2236,
+          "source": "native",
+          "synthesis_score": 0.8,
+          "section": "experimental",
+          "evidence_types": [
+            {
+              "type": "experimental_procedure",
+              "confidence": 0.65
+            },
+            {
+              "type": "analytical_characterization",
+              "confidence": 1.0
+            },
+            {
+              "type": "compound_preparation",
+              "confidence": 0.5
+            },
+            {
+              "type": "reaction_conditions",
+              "confidence": 0.3333333333333333
+            }
+          ]
+        }
+      },
+      {
+        "segment_id": "page-3",
+        "kind": "procedure_candidate",
+        "page_start": 3,
+        "page_end": 3,
+        "text": "525\n \n \nFigure 3: Preparation of Dioxolane-diacetate  \n \nPreparation of acyclovir \nA mixture of guanine (3, 32.13 g, 213 \nmmol), acetic anhydride (320 ml) and acetic \nacid (480 ml) was refluxed overnight, during \nwhich time the mixture became almost clear. \nThe liquid was removed by evaporation in \nreduced pressure. To the residue was added \ntoluene (300 ml), 7 (75 g, 426 mmol), and \nphosphoric acid (85.5%, 1.5 ml) with stirring. \nThe resulting mixture was refluxed for 6 - 7 \nhours with vigorous stirring.  \nToluene and acetic anhydride were then \nremoved under reduced pressure and the residue \nwas heated at 80oC (oil bath) under reduced \npressure (20 mm Hg) for another 2 hours, \ncooled to room temperature, triturated with \nethyl acetate (100 ml), and stirred at room \ntemperature overnight.  \nThe resulting solid was collected by \nfiltration, washed twice with ethyl acetate (25 \nml), dissolved in ammonium hydroxide (30%, \n300 ml). The solution became clear and solution \nwas stirred at room temperature overnight. The \nmixture was concentrated to dryness under \nreduced pressure. The residue was treated with \nmethanol (150 ml) and the resulting mixture \nwas heated at 80oC for 1 hour, cooled, and \nallowed to stand at room temperature overnight. \nThe resulting solid was collected by filtration \nand recrystallized from water (1700 ml) using 1 \ngram of activated carbon. The filtrate was \ncooled to room temperature, and stored in the \nrefrigerator overnight. The resulting solid was \ncollected by filtration, washed twice with \nmethanol (20 ml), and dried to give pure \nacyclovir 1 (30 g, 63%). mp. 242 - 244oC (H2O). \nUV λmax (MeOH-H2O; 1-1) nm: 251, 276 (sh); \n1H-NMR (DMSO-d6, 500 MHz, δ ppm): δ 3.34, \n3.46 (s, 4H, CH2CH2), 4.65 (br, 1H, OH), 5.34 \n(s, 2H, OCH2O), 6.48 (s 2H, NH2), 7.80 (s, 1H, \nH-8), 10.62 (s, 1H, NH). EI-MS m/e (%) 226 \n[M+] (100), 152 [M+-C3H6O2] (42). The mother \nliquor was concentrated to give a second crop \n(2.6 g) which contained the N7-isomer.  \nAntiherpetic activity evaluation \na) Cells and viruses \nVero cells (Green Africa Monkey Kidney) \nwere propagated in culture medium (Medium \nEssential \nMedium \n(MEM, \nGIBCO), \nsupplemented with 3% fetal bovine serum (FBS, \nSigma), glutamine, non-essential amino acid, \nand antibiotics). \nThe 5 clinical HSV isolates used in this \nstudy included 2 HSV-1 and 3 HSV-2. \nb) Method of plaque reduction assay (PRA) \nConfluent Vero cell monolayer in 24-well \nculture plates were infected with 200 μl of 10 \nfold dilutions from 10-5 to 10-2 of virus stocks \nper well. After 1 hour incubation at 37oC x \n5%CO2 with gently rocking, inoculates were \ndiscarded and cells were incubated with culture \nmedium and 1.0% methylcellulose (Sigma) with \nthe \npresence \nof \nincreasing \nantiviral \nconcentrations of 0, 1, 5, 15, and 50 μM. \nPlaques were counted at 72 h post inoculation \nafter cells were treated with formaldehyde and \nstained \nwith \ncrystal \nviolet. \nIC50s \nwere \ndetermined on log papers and defined as the \nminimum concentration of ACV that reduced \nthe numbers of plaque by 50% compared to the \ncell controls (absence of ACV). IC50s ≥ 7 μM \nwere considered resistant to ACV. \nIII - Results and discussion \n1. Preparation of acyclovir \nA method for the preparation of ACV is",
+        "meta": {
+          "char_count": 3268,
+          "source": "native",
+          "synthesis_score": 0.8441666666666666,
+          "section": "experimental",
+          "evidence_types": [
+            {
+              "type": "reaction_conditions",
+              "confidence": 0.8166666666666667
+            },
+            {
+              "type": "analytical_characterization",
+              "confidence": 1.0
+            },
+            {
+              "type": "compound_preparation",
+              "confidence": 0.5
+            },
+            {
+              "type": "yield",
+              "confidence": 0.5
+            },
+            {
+              "type": "experimental_procedure",
+              "confidence": 0.25
+            },
+            {
+              "type": "discussion",
+              "confidence": 0.5
+            }
+          ]
+        }
+      },
+      {
+        "segment_id": "page-4",
+        "kind": "procedure_candidate",
+        "page_start": 4,
+        "page_end": 4,
+        "text": "526\nprovided that is suitable for the commercial \nmanufacture of the product. In the first step, \nguanine is acetylated using acetic anhydride, \nacetic acid, and phosphoric acid. In the second \nstep, diacetyl guanine is alkylated at the N9-\nposition using CH3COOCH2O(CH2)2OCOCH3, \nacetic anhydride and phosphoric acid or \npolyphosphoric acid. The acetyl groups are then \nremoved as desired. \nIC50\nIC50\n \nFigure 4: Plot for determination of IC50 \n2. Acetylation of guanine \nIn the first step of the reaction, the 2-amino \ngroup of guanine is protected to prevent it from \nbeing alkylated in the second step of the \nreaction. The choice of protecting group may \neffect the ultimate yield of product, in that \nprotecting groups are removed with varying \ndegrees of difficulty. In general, in the process \nof protecting the 2-amino group, the N9 group \nusually also reacts with the protecting group. \nAcylation, \nand \nin \nparticular, \nacetylation, \nactivates the N9-position toward alkylation in \nthe second step, and therefore, is desirable. \nDiacetylguanine, which has been used as an \nintermediate in the production of acyclovir, has \nbeen prepared using several methods. Guanine \nhas been acetylated using acetic anhydride in \nN,N-dimethylacetamide to give diacetylguanine \nin 90.5% yield [6]. This reaction produces a \nproduct which is grey in color due to the high \nreaction temperature used (160oC for 7 hours). \nIn general, it is preferred to use a symmetrical \nanhydride \nin \nthe \nreaction \nscheme \nthat \ncorresponds to the acid used. For example, \nacetic acid is preferably used in combination \nwith acetic anhydride, and propionic acid is \npreferably used in combination with propionic \nanhydride. \nGuanine has also been acetylated in acetic \nanhydride and acetic acid to give different \nproducts depending on the work-up conditions \n[7]. For example, after the reaction mixture \nbecomes an almost clear solution, if solvents are \nremoved by distillation, only diacetyl guanine is \nobtained in 95% yield. However, the addition of \nwater at 60oC. followed by stirring at room \ntemperature \novernight \nproduces \nN2-\nacetylguanine in 94.4% yield. If the reaction \nmixture is merely cooled down, a mixture of \nmono- and di-acetylguanine is produced.  \n3. Preparation of dioxolane-diacetate (7) \nThe dioxolane ring is opened using acetic \nanhydride as the ring-opening reagent in the \npresence \nof \ncatalytic \namounts \nof \np-\ntoluenesulfonic acid. This provided dioxolane-\ndiacetate in 80% yield after distillation by the \nmethod of Chen et al. [8]. \n4. Alkylation of diacetylguanine \nIn this step of the synthesis, the diacetylated \nguanine from previous step is alkylated in the \nN9-position \nto \nproduce \n2-acetamido-9-(2-\nacetylethoxymethyl)guanine.  \nMatsumoto, et al., have studied the effect of \nsolvent, acid catalyst and reaction temperature \non the yield of the alkylation of diacetylguanine \nwith 2-oxo-1,4-butanediol diacetate (\"dioxolane \ndiacetate\") to produce N2\n ,O-diacetylacyclovir \n[7]. Among the acid catalysts tested (p-\ntoluenesulfonic \nacid, \nsulfanilic \nacid, \np-\nnitrobenzenesulfonic acid, 2,4-dinitrobenzene \nsulfonic acid, iron(II) sulfate, and zinc chloride), \nMatsumoto reported that p-toluenesulfonic acid \nand sulfanilic acid exhibited the highest \ncatalytic activity. In a preferred reaction \nscheme, a combination of an acid and anhydride \nare used.  \n5. Deacetylation of acyclovir diacetate \nBoth \nmethylamine \nand \nammonium \nhydroxide proved to be good deacetylating \nagents. Although the working-up is easier using \nmethylamine than it is using ammonium \nhydroxide, on an industrial scale, the smell of \nmethylamine may dictate the preferred use of \nammonium hydroxide as a deacetylation agent.",
+        "meta": {
+          "char_count": 3736,
+          "source": "native",
+          "synthesis_score": 1.0,
+          "section": "experimental",
+          "evidence_types": [
+            {
+              "type": "compound_preparation",
+              "confidence": 1.0
+            },
+            {
+              "type": "reaction_conditions",
+              "confidence": 0.8166666666666667
+            },
+            {
+              "type": "patent_example",
+              "confidence": 0.3333333333333333
+            },
+            {
+              "type": "experimental_procedure",
+              "confidence": 0.25
+            }
+          ]
+        }
+      },
+      {
+        "segment_id": "page-5",
+        "kind": "procedure_candidate",
+        "page_start": 5,
+        "page_end": 5,
+        "text": "527\nThe synthesized ACV has been analyzed in \nthe National Institute for Drug Quality Control. \nIt meets all the standards of BP 2007. \n6. Biological activity \nACV was evaluated against HSV-1 and HSV-\n2. The effects of standard ACV and tested ACV \non 5 clinical HSV isolates included HSV-1 and \nHSV-2 were tested in parallel with their antiviral \nactivity. The results are given in table 1. \n \nTable 1: The antiviral activity of ACV compared to the standard ACV \nIC50  \nOrder \nClinical HSV \nisolate \nType \nStandard \nTested \nCorrelated \ncoefficient\n1 \n06003 \nHSV-2 \n1.70 \nS \n1.20 \nS \n2 \n07069 \nHSV-1 \n0.53 \nS \n0.57 \nS \n3 \n07089 \nHSV-2 \n0.91 \nS \n0.10 \nS \n4 \n07092 \nHSV-2 \n2.80 \nS \n2.60 \nS \n5 \n07094 \nHSV-1 \n0.89 \nS \n0.53 \nS \n0.95 \nS: Sensitive. \n.\nThe tested ACV showed the anti-HSV \nactivity \nat \nlow \nconcentration \nand \nvery \ncorresponds with standard ACV. The correlated \nfactor is 0.95. \n \n‘\n \nFigure 5: Antiherpestic activity of standard \n(left) and tested (right) acyclovir \n \nIV - Conclusion \nThis report describes a one-pot process for \nthe preparation of acyclovir from guanine. \nReacting N2,N9-diprotected guanine with 1-\nacetyl-2-acetylmethoxy-ethyleneglycol \nin \npresent of phosphoric acid as catalyst provide \nACV with high yield and good regioselectivity. \nTherefore, \nthe \npurification \nwas \nsimple, \ninexpensive and conforming to pilot scale. The \nchemicals and the solvents were common and \nfriendly with environment. The antiherpetic \nactivity of the synthesized ACV was show to be \ncomparable (95%) to the standard ACV. This \nsynthesized ACV was approved by National \nInstitute of Drug Quality Control to meet the \nquality standard of BP 2007. \nAcknowledgements: \nThis \nresearch \nwas \nsupported by a research grant from Vietnam \nAcademy of Science and Technology (VAST). \n \nReferences \n \n1. H. J. Schaeffer, L. Beauchamp, P. Miranda \nde, G. B. Elion, D. J. Bauer, P. Collins. \nNature, 272, 583 - 585 (1978). \n2. Thuong Nguyen Thi. Master of Medicine \ndissertation, 2006, National Institute of \nHygiene and Epidemiology. \n3. Balfour HH Jr. N. Engl. J. Med., 340, 1255 \n- 1268 (1999). \n4. J. C. Martin, C. A. Dvorak, D. F. Smee, T. \nR. Matthews, J. P. Verheyden. J. Med. \nChem., 26(5), 759 - 761 (1983). \n5. Hongwu Gao, Ashim K. Mitra. Synthesis, 3, \n329 - 351 (2000). \n6. R. Zou and M. J. Robins. Can. J. Chem., 65, \n1436 - 1437 (1987).",
+        "meta": {
+          "char_count": 2357,
+          "source": "native",
+          "synthesis_score": 0.55,
+          "section": "discussion",
+          "evidence_types": [
+            {
+              "type": "compound_preparation",
+              "confidence": 0.5
+            },
+            {
+              "type": "reaction_table",
+              "confidence": 0.5
+            },
+            {
+              "type": "discussion",
+              "confidence": 0.5
+            },
+            {
+              "type": "references",
+              "confidence": 1.0
+            },
+            {
+              "type": "experimental_procedure",
+              "confidence": 0.6
+            }
+          ]
+        }
+      },
+      {
+        "segment_id": "page-6",
+        "kind": "procedure_candidate",
+        "page_start": 6,
+        "page_end": 6,
+        "text": "528\n7. H. Matsumoto, C. Kaneko, K. Yamada, T. \nTakeuchi, T. Mori, Y. Mizuno. Chem. \nPharm. Bull. 36 (3), 1153 - 1157 (1988).  \n8. Z. J. Chen, W. G. Liu, J. Z. Song, Y. Zhang. \nChemical Abstracts, 117, 1992, 151269e. \n9. Smith J. B. CaractÐrisation des mutaion du \nvirus herpÌs simplex impliquÐes dans la \nrésistance \naux \nantiviraux. \nThÌse \nde \nPhilosophie Doctor (Ph.D.), 2004, FacultÐ \nde médecine. UniversitÐ Laval QuÐbeque.\n  \nCorresponding author: Tran Van Sung \n            Laboratory of Organic Synthesis, Institute of Chemistry, VAST.",
+        "meta": {
+          "char_count": 547,
+          "source": "native",
+          "synthesis_score": 0.55,
+          "section": "body",
+          "evidence_types": [
+            {
+              "type": "experimental_procedure",
+              "confidence": 0.6
+            }
+          ]
+        }
+      }
+    ],
+    "figure_count": 21,
+    "table_hints": []
+  },
+  "route": {
+    "title": "523",
+    "target_name": "Preparation of dioxolane-diacetate (1-acetyl-2-acetylmethoxy-ethyleneglycol), compound 7",
+    "target_class": "unknown",
+    "document_type": "paper",
+    "steps": [
+      {
+        "step_index": 1,
+        "step_label": "Preparation of dioxolane-diacetate (1-acetyl-2-acetylmethoxy-ethyleneglycol), compound 7",
+        "reactants": [
+          {
+            "name": "Dioxolane 5 (1,3-dioxolane)",
+            "role": "reactant",
+            "amount": "224 g, 99%, 211.6 ml, 3 mol",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null,
+            "original_name": "Dioxolane 5 (1,3-dioxolane)",
+            "canonical_name": null,
+            "resolution_status": "unresolved",
+            "resolution_source": "none",
+            "inchi": null,
+            "inchikey": null,
+            "molecular_formula": null,
+            "information_kind": "unknown",
+            "is_isolated": null,
+            "provenance_source": "",
+            "page": null,
+            "confidence": null
+          },
+          {
+            "name": "acetic anhydride",
+            "role": "reactant",
+            "amount": "306 g, 283.3 ml, 3 mol",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null,
+            "original_name": "acetic anhydride",
+            "canonical_name": null,
+            "resolution_status": "unresolved",
+            "resolution_source": "none",
+            "inchi": null,
+            "inchikey": null,
+            "molecular_formula": null,
+            "information_kind": "unknown",
+            "is_isolated": null,
+            "provenance_source": "",
+            "page": null,
+            "confidence": null
+          },
+          {
+            "name": "acetic acid",
+            "role": "reactant",
+            "amount": "45 g, 42.9 ml, 0.75 mol",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null,
+            "original_name": "acetic acid",
+            "canonical_name": null,
+            "resolution_status": "unresolved",
+            "resolution_source": "none",
+            "inchi": null,
+            "inchikey": null,
+            "molecular_formula": null,
+            "information_kind": "unknown",
+            "is_isolated": null,
+            "provenance_source": "",
+            "page": null,
+            "confidence": null
+          },
+          {
+            "name": "5",
+            "role": "reactant",
+            "amount": "N/A",
+            "smiles": "C1COCO1",
+            "cas": null,
+            "notes": null,
+            "evidence": null,
+            "original_name": null,
+            "canonical_name": null,
+            "resolution_status": "unresolved",
+            "resolution_source": null,
+            "inchi": null,
+            "inchikey": null,
+            "molecular_formula": null,
+            "information_kind": "unknown",
+            "is_isolated": null,
+            "provenance_source": "",
+            "page": null,
+            "confidence": null
+          },
+          {
+            "name": "6",
+            "role": "reactant",
+            "amount": "N/A",
+            "smiles": "CC(=O)OC(C)=O",
+            "cas": null,
+            "notes": null,
+            "evidence": null,
+            "original_name": null,
+            "canonical_name": null,
+            "resolution_status": "unresolved",
+            "resolution_source": null,
+            "inchi": null,
+            "inchikey": null,
+            "molecular_formula": null,
+            "information_kind": "unknown",
+            "is_isolated": null,
+            "provenance_source": "",
+            "page": null,
+            "confidence": null
+          }
+        ],
+        "reagents": [],
+        "catalysts": [
+          {
+            "name": "p-toluenesulfonic acid",
+            "role": "catalyst",
+            "amount": "10 g, 0.053 mol",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null,
+            "original_name": "p-toluenesulfonic acid monohydrate",
+            "canonical_name": "p-toluenesulfonic acid",
+            "resolution_status": "unresolved",
+            "resolution_source": "none",
+            "inchi": null,
+            "inchikey": null,
+            "molecular_formula": null,
+            "information_kind": "unknown",
+            "is_isolated": null,
+            "provenance_source": "",
+            "page": null,
+            "confidence": null
+          },
+          {
+            "name": "p-toluenesulfonic acid",
+            "role": "catalyst",
+            "amount": "N/A",
+            "smiles": "Cc1ccc(cc1)S(=O)(=O)O",
+            "cas": null,
+            "notes": null,
+            "evidence": null,
+            "original_name": "TsOH",
+            "canonical_name": "p-toluenesulfonic acid",
+            "resolution_status": "synonym",
+            "resolution_source": "synonym_layer",
+            "inchi": null,
+            "inchikey": null,
+            "molecular_formula": null,
+            "information_kind": "unknown",
+            "is_isolated": null,
+            "provenance_source": "",
+            "page": null,
+            "confidence": null
+          }
+        ],
+        "ligands": [],
+        "solvents": [
+          {
+            "name": "acetic anhydride (also serves as reaction medium)",
+            "role": "solvent",
+            "amount": "283.3 ml",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null,
+            "original_name": "acetic anhydride (also serves as reaction medium)",
+            "canonical_name": null,
+            "resolution_status": "unresolved",
+            "resolution_source": "none",
+            "inchi": null,
+            "inchikey": null,
+            "molecular_formula": null,
+            "information_kind": "unknown",
+            "is_isolated": null,
+            "provenance_source": "",
+            "page": null,
+            "confidence": null
+          },
+          {
+            "name": "acetic acid (also serves as reaction medium)",
+            "role": "solvent",
+            "amount": "42.9 ml",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null,
+            "original_name": "acetic acid (also serves as reaction medium)",
+            "canonical_name": null,
+            "resolution_status": "unresolved",
+            "resolution_source": "none",
+            "inchi": null,
+            "inchikey": null,
+            "molecular_formula": null,
+            "information_kind": "unknown",
+            "is_isolated": null,
+            "provenance_source": "",
+            "page": null,
+            "confidence": null
+          }
+        ],
+        "intermediates": [],
+        "products": [
+          {
+            "name": "1-acetyl-2-acetylmethoxyethyl acetate",
+            "role": "product",
+            "amount": "431.5 g",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null,
+            "original_name": "dioxolane-diacetate (1-acetyl-2-acetylmethoxy-ethyleneglycol), compound 7",
+            "canonical_name": "1-acetyl-2-acetylmethoxyethyl acetate",
+            "resolution_status": "unresolved",
+            "resolution_source": "none",
+            "inchi": null,
+            "inchikey": null,
+            "molecular_formula": null,
+            "information_kind": "unknown",
+            "is_isolated": null,
+            "provenance_source": "",
+            "page": null,
+            "confidence": null
+          },
+          {
+            "name": "acyclovir",
+            "role": "product",
+            "amount": "63%",
+            "smiles": null,
+            "cas": null,
+            "notes": "mp. 242 - 244 oC (H2O); 1H-NMR (DMSO-d6, 500 MHz): 3.34, 3.46 (s, 4H, CH2CH2), 4.65 (br, 1H, OH), 5.34 (s, 2H, OCH2), 6.48 (s, 2H, NH2), 7.80 (s, 1H, H-8), 10.62 (s, 1H, NH). From surrounding page text, not from the figure itself.",
+            "evidence": null,
+            "original_name": "acyclovir",
+            "canonical_name": null,
+            "resolution_status": "unresolved",
+            "resolution_source": "none",
+            "inchi": null,
+            "inchikey": null,
+            "molecular_formula": null,
+            "information_kind": "unknown",
+            "is_isolated": null,
+            "provenance_source": "",
+            "page": null,
+            "confidence": null
+          }
+        ],
+        "conditions": {
+          "temperature": "acid/anhydride/acetic acid solution precooled to below 10 °C; dioxolane added dropwise at a rate maintaining reaction temperature under 30 °C; stirred at <30 °C",
+          "time": "60 minutes",
+          "pressure": "distillation under vacuum: first fraction 1.5 mmHg; second fraction 0.75 mmHg",
+          "atmosphere": "N/A",
+          "other": "Dioxolane added dropwise to the p-TsOH·H2O/acetic anhydride/acetic acid solution; then distilled. First distillate fraction collected at 40–80 °C/1.5 mmHg (contained acetic acid, acetic anhydride and other materials) and discarded; second fraction collected at 80–95 °C/0.75 mmHg and redistilled to give pure product 7"
+        },
+        "yield_value": "81.7% (431.5 g)",
+        "ee_or_dr": "N/A",
+        "notes": "Product characterized by 1H-NMR (CD3OD, 500 MHz, δ ppm): 2.06, 2.08 (s, 6H, 2xCH3), 3.85, 4.21 (s, 4H, OCH2CH2O), 5.28 (s, 2H, OCH2O). Dioxolane starting material stated as 99% purity.; yield conflict: 81.7% (431.5 g) vs 63%; Extracted from image via VLM/OCSR (scheme); LC/MS EI-MS m/e (%) 226 [M+] (100), 152 [M+-C3H6O2] (42)",
+        "evidence": "Dioxolane 5 (224 g, 99%, 211.6 ml, 3 mol) was added drop wise to a solution of p-toluenesulfonic acid monohydrate (10 g, 0.053 mol) in acetic anhydride (306 g, 283.3 ml,3 mol) and acetic acid (45 g, 42.9 ml, 0.75 mol) precooled to below 10oC ... redistilled to give pure 7 in a yield of 431.5 g (81.7%).; TsOH",
+        "source": "text",
+        "confidence": 0.7,
+        "evidence_refs": [
+          {
+            "page": 2,
+            "page_end": 2,
+            "section": "experimental",
+            "evidence_type": "experimental_procedure",
+            "source": "native_text",
+            "quote": "Dioxolane 5 (224 g, 99%, 211.6 ml, 3 mol) was added drop wise to a solution of p-toluenesulfonic acid monohydrate (10 g, 0.053 mol) in acetic anhydride (306 g, 283.3 ml,3 mol) and acetic acid (45 g, 42.9 ml, 0.75 mol) precooled to below 10oC ... redistilled to give pure 7 in a yield of 431.5 g (81.7%).",
+            "confidence": 0.85,
+            "image_id": null,
+            "extraction_method": "llm_text",
+            "information_kind": "explicit"
+          },
+          {
+            "page": 3,
+            "page_end": null,
+            "section": "figures",
+            "evidence_type": "reaction_scheme",
+            "source": "scheme",
+            "quote": "TsOH",
+            "confidence": 0.7,
+            "image_id": "page3",
+            "extraction_method": "vlm_scheme",
+            "information_kind": "scheme"
+          }
+        ],
+        "information_kind": "explicit",
+        "is_isolated": true,
+        "workup": "",
+        "purification": "",
+        "extraction_methods": [
+          "llm_text",
+          "vlm_scheme"
+        ]
+      },
+      {
+        "step_index": 2,
+        "step_label": "Preparation of acyclovir – Step A: acetylation of guanine",
+        "reactants": [
+          {
+            "name": "guanine (compound 3)",
+            "role": "reactant",
+            "amount": "32.13 g, 213 mmol",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null,
+            "original_name": "guanine (compound 3)",
+            "canonical_name": null,
+            "resolution_status": "unresolved",
+            "resolution_source": "none",
+            "inchi": null,
+            "inchikey": null,
+            "molecular_formula": null,
+            "information_kind": "unknown",
+            "is_isolated": null,
+            "provenance_source": "",
+            "page": null,
+            "confidence": null
+          }
+        ],
+        "reagents": [
+          {
+            "name": "acetic anhydride",
+            "role": "reagent",
+            "amount": "320 ml",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null,
+            "original_name": "acetic anhydride",
+            "canonical_name": null,
+            "resolution_status": "unresolved",
+            "resolution_source": "none",
+            "inchi": null,
+            "inchikey": null,
+            "molecular_formula": null,
+            "information_kind": "unknown",
+            "is_isolated": null,
+            "provenance_source": "",
+            "page": null,
+            "confidence": null
+          }
+        ],
+        "catalysts": [],
+        "ligands": [],
+        "solvents": [
+          {
+            "name": "acetic acid",
+            "role": "solvent",
+            "amount": "480 ml",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null,
+            "original_name": "acetic acid",
+            "canonical_name": null,
+            "resolution_status": "unresolved",
+            "resolution_source": "none",
+            "inchi": null,
+            "inchikey": null,
+            "molecular_formula": null,
+            "information_kind": "unknown",
+            "is_isolated": null,
+            "provenance_source": "",
+            "page": null,
+            "confidence": null
+          },
+          {
+            "name": "acetic anhydride (also serves as solvent)",
+            "role": "solvent",
+            "amount": "320 ml",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null,
+            "original_name": "acetic anhydride (also serves as solvent)",
+            "canonical_name": null,
+            "resolution_status": "unresolved",
+            "resolution_source": "none",
+            "inchi": null,
+            "inchikey": null,
+            "molecular_formula": null,
+            "information_kind": "unknown",
+            "is_isolated": null,
+            "provenance_source": "",
+            "page": null,
+            "confidence": null
+          }
+        ],
+        "intermediates": [],
+        "products": [
+          {
+            "name": "acetylated guanine residue (crude, used directly in next step)",
+            "role": "product",
+            "amount": "N/A",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null,
+            "original_name": "acetylated guanine residue (crude, used directly in next step)",
+            "canonical_name": null,
+            "resolution_status": "unresolved",
+            "resolution_source": "none",
+            "inchi": null,
+            "inchikey": null,
+            "molecular_formula": null,
+            "information_kind": "unknown",
+            "is_isolated": null,
+            "provenance_source": "",
+            "page": null,
+            "confidence": null
+          }
+        ],
+        "conditions": {
+          "temperature": "reflux",
+          "time": "720 minutes",
+          "pressure": "N/A",
+          "atmosphere": "N/A",
+          "other": "Mixture became almost clear; liquid removed by evaporation under reduced pressure to give residue"
+        },
+        "yield_value": "N/A",
+        "ee_or_dr": "N/A",
+        "notes": "Residue carried forward without isolation/characterization",
+        "evidence": "A mixture of guanine (3, 32.13 g, 213 mmol), acetic anhydride (320 ml) and acetic acid (480 ml) was refluxed overnight... The liquid was removed by evaporation in reduced pressure.",
+        "source": "text",
+        "confidence": 0.774,
+        "evidence_refs": [
+          {
+            "page": 3,
+            "page_end": 3,
+            "section": "experimental",
+            "evidence_type": "reaction_conditions",
+            "source": "native_text",
+            "quote": "A mixture of guanine (3, 32.13 g, 213 mmol), acetic anhydride (320 ml) and acetic acid (480 ml) was refluxed overnight... The liquid was removed by evaporation in reduced pressure.",
+            "confidence": 0.7,
+            "image_id": null,
+            "extraction_method": "llm_text",
+            "information_kind": "ambiguous"
+          }
+        ],
+        "information_kind": "ambiguous",
+        "is_isolated": false,
+        "workup": "",
+        "purification": "",
+        "extraction_methods": [
+          "llm_text"
+        ]
+      },
+      {
+        "step_index": 3,
+        "step_label": "Preparation of acyclovir – Step B: coupling/glycosylation with dioxolane-diacetate (7)",
+        "reactants": [
+          {
+            "name": "acetylated guanine residue from Step A",
+            "role": "reactant",
+            "amount": "residue from 32.13 g guanine",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null,
+            "original_name": "acetylated guanine residue from Step A",
+            "canonical_name": null,
+            "resolution_status": "unresolved",
+            "resolution_source": "none",
+            "inchi": null,
+            "inchikey": null,
+            "molecular_formula": null,
+            "information_kind": "unknown",
+            "is_isolated": null,
+            "provenance_source": "",
+            "page": null,
+            "confidence": null
+          },
+          {
+            "name": "1-acetyl-2-acetylmethoxyethyl acetate",
+            "role": "reactant",
+            "amount": "75 g, 426 mmol",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null,
+            "original_name": "dioxolane-diacetate (compound 7)",
+            "canonical_name": "1-acetyl-2-acetylmethoxyethyl acetate",
+            "resolution_status": "unresolved",
+            "resolution_source": "none",
+            "inchi": null,
+            "inchikey": null,
+            "molecular_formula": null,
+            "information_kind": "unknown",
+            "is_isolated": null,
+            "provenance_source": "",
+            "page": null,
+            "confidence": null
+          }
+        ],
+        "reagents": [],
+        "catalysts": [
+          {
+            "name": "phosphoric acid (85.5%)",
+            "role": "catalyst",
+            "amount": "1.5 ml",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null,
+            "original_name": "phosphoric acid (85.5%)",
+            "canonical_name": null,
+            "resolution_status": "unresolved",
+            "resolution_source": "none",
+            "inchi": null,
+            "inchikey": null,
+            "molecular_formula": null,
+            "information_kind": "unknown",
+            "is_isolated": null,
+            "provenance_source": "",
+            "page": null,
+            "confidence": null
+          }
+        ],
+        "ligands": [],
+        "solvents": [
+          {
+            "name": "toluene",
+            "role": "solvent",
+            "amount": "300 ml",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null,
+            "original_name": "toluene",
+            "canonical_name": null,
+            "resolution_status": "unresolved",
+            "resolution_source": "none",
+            "inchi": null,
+            "inchikey": null,
+            "molecular_formula": null,
+            "information_kind": "unknown",
+            "is_isolated": null,
+            "provenance_source": "",
+            "page": null,
+            "confidence": null
+          }
+        ],
+        "intermediates": [],
+        "products": [
+          {
+            "name": "acylated acyclovir intermediate (crude solid)",
+            "role": "product",
+            "amount": "N/A",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null,
+            "original_name": "acylated acyclovir intermediate (crude solid)",
+            "canonical_name": null,
+            "resolution_status": "unresolved",
+            "resolution_source": "none",
+            "inchi": null,
+            "inchikey": null,
+            "molecular_formula": null,
+            "information_kind": "unknown",
+            "is_isolated": null,
+            "provenance_source": "",
+            "page": null,
+            "confidence": null
+          }
+        ],
+        "conditions": {
+          "temperature": "reflux, then 80 °C (oil bath); cooled to room temperature",
+          "time": "360-420 minutes, 120 minutes, 720 minutes",
+          "pressure": "reduced pressure (20 mm Hg) during the 80 °C heating",
+          "atmosphere": "N/A",
+          "other": "Vigorous stirring; toluene and acetic anhydride removed under reduced pressure; residue triturated with ethyl acetate (100 ml) and stirred at rt overnight; solid filtered and washed twice with ethyl acetate (25 ml)"
+        },
+        "yield_value": "N/A",
+        "ee_or_dr": "N/A",
+        "notes": "Crude solid used directly in ammonolysis step",
+        "evidence": "To the residue was added toluene (300 ml), 7 (75 g, 426 mmol), and phosphoric acid (85.5%, 1.5 ml) with stirring. The resulting mixture was refluxed for 6 - 7 hours with vigorous stirring.",
+        "source": "text",
+        "confidence": 0.774,
+        "evidence_refs": [
+          {
+            "page": 3,
+            "page_end": 3,
+            "section": "experimental",
+            "evidence_type": "reaction_conditions",
+            "source": "native_text",
+            "quote": "To the residue was added toluene (300 ml), 7 (75 g, 426 mmol), and phosphoric acid (85.5%, 1.5 ml) with stirring. The resulting mixture was refluxed for 6 - 7 hours with vigorous stirring.",
+            "confidence": 0.7,
+            "image_id": null,
+            "extraction_method": "llm_text",
+            "information_kind": "ambiguous"
+          }
+        ],
+        "information_kind": "ambiguous",
+        "is_isolated": null,
+        "workup": "",
+        "purification": "",
+        "extraction_methods": [
+          "llm_text"
+        ]
+      },
+      {
+        "step_index": 4,
+        "step_label": "Preparation of acyclovir – Step C: deacetylation (ammonolysis) with ammonium hydroxide",
+        "reactants": [
+          {
+            "name": "acylated acyclovir intermediate (solid from Step B)",
+            "role": "reactant",
+            "amount": "N/A",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null,
+            "original_name": "acylated acyclovir intermediate (solid from Step B)",
+            "canonical_name": null,
+            "resolution_status": "unresolved",
+            "resolution_source": "none",
+            "inchi": null,
+            "inchikey": null,
+            "molecular_formula": null,
+            "information_kind": "unknown",
+            "is_isolated": null,
+            "provenance_source": "",
+            "page": null,
+            "confidence": null
+          }
+        ],
+        "reagents": [
+          {
+            "name": "ammonium hydroxide",
+            "role": "reagent",
+            "amount": "300 ml",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null,
+            "original_name": "ammonium hydroxide (30%)",
+            "canonical_name": "ammonium hydroxide",
+            "resolution_status": "unresolved",
+            "resolution_source": "none",
+            "inchi": null,
+            "inchikey": null,
+            "molecular_formula": null,
+            "information_kind": "unknown",
+            "is_isolated": null,
+            "provenance_source": "",
+            "page": null,
+            "confidence": null
+          }
+        ],
+        "catalysts": [],
+        "ligands": [],
+        "solvents": [
+          {
+            "name": "ammonium hydroxide",
+            "role": "solvent",
+            "amount": "300 ml",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null,
+            "original_name": "ammonium hydroxide (30%) aqueous solution",
+            "canonical_name": "ammonium hydroxide",
+            "resolution_status": "unresolved",
+            "resolution_source": "none",
+            "inchi": null,
+            "inchikey": null,
+            "molecular_formula": null,
+            "information_kind": "unknown",
+            "is_isolated": null,
+            "provenance_source": "",
+            "page": null,
+            "confidence": null
+          },
+          {
+            "name": "methanol",
+            "role": "solvent",
+            "amount": "150 ml (trituration/heating)",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null,
+            "original_name": "methanol",
+            "canonical_name": null,
+            "resolution_status": "unresolved",
+            "resolution_source": "none",
+            "inchi": null,
+            "inchikey": null,
+            "molecular_formula": null,
+            "information_kind": "unknown",
+            "is_isolated": null,
+            "provenance_source": "",
+            "page": null,
+            "confidence": null
+          }
+        ],
+        "intermediates": [
+          {
+            "name": "crude acyclovir",
+            "role": "intermediate",
+            "amount": "N/A",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null,
+            "original_name": "crude acyclovir",
+            "canonical_name": null,
+            "resolution_status": "unresolved",
+            "resolution_source": "none",
+            "inchi": null,
+            "inchikey": null,
+            "molecular_formula": null,
+            "information_kind": "unknown",
+            "is_isolated": null,
+            "provenance_source": "",
+            "page": null,
+            "confidence": null
+          }
+        ],
+        "products": [
+          {
+            "name": "crude acyclovir",
+            "role": "intermediate",
+            "amount": "N/A",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null,
+            "original_name": "crude acyclovir",
+            "canonical_name": null,
+            "resolution_status": "unresolved",
+            "resolution_source": "none",
+            "inchi": null,
+            "inchikey": null,
+            "molecular_formula": null,
+            "information_kind": "unknown",
+            "is_isolated": null,
+            "provenance_source": "",
+            "page": null,
+            "confidence": null
+          }
+        ],
+        "conditions": {
+          "temperature": "room temperature, then 80 °C (methanol treatment), then cooled to rt",
+          "time": "720 minutes, 60 minutes, 720 minutes",
+          "pressure": "reduced pressure for concentration to dryness",
+          "atmosphere": "N/A",
+          "other": "Solution became clear; concentrated to dryness under reduced pressure; residue treated with methanol (150 ml); resulting solid collected by filtration"
+        },
+        "yield_value": "N/A",
+        "ee_or_dr": "N/A",
+        "notes": "Crude acyclovir solid taken to recrystallization",
+        "evidence": "dissolved in ammonium hydroxide (30%, 300 ml). The solution became clear and solution was stirred at room temperature overnight... treated with methanol (150 ml) and the resulting mixture was heated at 80oC for 1 hour",
+        "source": "text",
+        "confidence": 0.774,
+        "evidence_refs": [
+          {
+            "page": 3,
+            "page_end": 3,
+            "section": "experimental",
+            "evidence_type": "reaction_conditions",
+            "source": "native_text",
+            "quote": "dissolved in ammonium hydroxide (30%, 300 ml). The solution became clear and solution was stirred at room temperature overnight... treated with methanol (150 ml) and the resulting mixture was heated at 80oC for 1 hour",
+            "confidence": 0.7,
+            "image_id": null,
+            "extraction_method": "llm_text",
+            "information_kind": "ambiguous"
+          }
+        ],
+        "information_kind": "ambiguous",
+        "is_isolated": null,
+        "workup": "",
+        "purification": "",
+        "extraction_methods": [
+          "llm_text"
+        ]
+      },
+      {
+        "step_index": 5,
+        "step_label": "Preparation of acyclovir – Step D: recrystallization/purification (activated carbon, water)",
+        "reactants": [
+          {
+            "name": "crude acyclovir",
+            "role": "reactant",
+            "amount": "N/A",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null,
+            "original_name": "crude acyclovir",
+            "canonical_name": null,
+            "resolution_status": "unresolved",
+            "resolution_source": "none",
+            "inchi": null,
+            "inchikey": null,
+            "molecular_formula": null,
+            "information_kind": "unknown",
+            "is_isolated": null,
+            "provenance_source": "",
+            "page": null,
+            "confidence": null
+          }
+        ],
+        "reagents": [
+          {
+            "name": "activated carbon (charcoal)",
+            "role": "reagent",
+            "amount": "1 gram",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null,
+            "original_name": "activated carbon (charcoal)",
+            "canonical_name": null,
+            "resolution_status": "unresolved",
+            "resolution_source": "none",
+            "inchi": null,
+            "inchikey": null,
+            "molecular_formula": null,
+            "information_kind": "unknown",
+            "is_isolated": null,
+            "provenance_source": "",
+            "page": null,
+            "confidence": null
+          }
+        ],
+        "catalysts": [],
+        "ligands": [],
+        "solvents": [
+          {
+            "name": "water",
+            "role": "solvent",
+            "amount": "1700 ml",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null,
+            "original_name": "water",
+            "canonical_name": null,
+            "resolution_status": "unresolved",
+            "resolution_source": "none",
+            "inchi": null,
+            "inchikey": null,
+            "molecular_formula": null,
+            "information_kind": "unknown",
+            "is_isolated": null,
+            "provenance_source": "",
+            "page": null,
+            "confidence": null
+          },
+          {
+            "name": "methanol (wash)",
+            "role": "solvent",
+            "amount": "2 × 20 ml",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null,
+            "original_name": "methanol (wash)",
+            "canonical_name": null,
+            "resolution_status": "unresolved",
+            "resolution_source": "none",
+            "inchi": null,
+            "inchikey": null,
+            "molecular_formula": null,
+            "information_kind": "unknown",
+            "is_isolated": null,
+            "provenance_source": "",
+            "page": null,
+            "confidence": null
+          }
+        ],
+        "intermediates": [],
+        "products": [
+          {
+            "name": "acyclovir (compound 1, pure)",
+            "role": "product",
+            "amount": "30 g",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null,
+            "original_name": "acyclovir (compound 1, pure)",
+            "canonical_name": null,
+            "resolution_status": "unresolved",
+            "resolution_source": "none",
+            "inchi": null,
+            "inchikey": null,
+            "molecular_formula": null,
+            "information_kind": "unknown",
+            "is_isolated": null,
+            "provenance_source": "",
+            "page": null,
+            "confidence": null
+          },
+          {
+            "name": "second crop (contains N7-isomer)",
+            "role": "product",
+            "amount": "2.6 g",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null,
+            "original_name": "second crop (contains N7-isomer)",
+            "canonical_name": null,
+            "resolution_status": "unresolved",
+            "resolution_source": "none",
+            "inchi": null,
+            "inchikey": null,
+            "molecular_formula": null,
+            "information_kind": "unknown",
+            "is_isolated": null,
+            "provenance_source": "",
+            "page": null,
+            "confidence": null
+          }
+        ],
+        "conditions": {
+          "temperature": "recrystallization from hot water; filtrate cooled to room temperature then refrigerated",
+          "time": "720 minutes",
+          "pressure": "N/A",
+          "atmosphere": "N/A",
+          "other": "Solid collected by filtration, washed twice with methanol (20 ml), and dried; mother liquor concentrated to give second crop"
+        },
+        "yield_value": "63% (30 g)",
+        "ee_or_dr": "N/A",
+        "notes": "mp 242–244 °C (H2O); UV λmax (MeOH–H2O 1:1) 251, 276 (sh) nm; 1H-NMR (DMSO-d6, 500 MHz): δ 3.34, 3.46 (s, 4H, CH2CH2), 4.65 (br, 1H, OH), 5.34 (s, 2H, OCH2O), 6.48 (s, 2H, NH2), 7.80 (s, 1H, H-8), 10.62 (s, 1H, NH); EI-MS m/e 226 [M+] (100), 152 [M+-C3H6O2] (42). Second crop (2.6 g) contained the N7-isomer.",
+        "evidence": "recrystallized from water (1700 ml) using 1 gram of activated carbon... washed twice with methanol (20 ml), and dried to give pure acyclovir 1 (30 g, 63%). mp. 242 - 244oC (H2O)",
+        "source": "text",
+        "confidence": 0.874,
+        "evidence_refs": [
+          {
+            "page": 3,
+            "page_end": 3,
+            "section": "experimental",
+            "evidence_type": "reaction_conditions",
+            "source": "native_text",
+            "quote": "recrystallized from water (1700 ml) using 1 gram of activated carbon... washed twice with methanol (20 ml), and dried to give pure acyclovir 1 (30 g, 63%). mp. 242 - 244oC (H2O)",
+            "confidence": 0.7,
+            "image_id": null,
+            "extraction_method": "llm_text",
+            "information_kind": "ambiguous"
+          }
+        ],
+        "information_kind": "ambiguous",
+        "is_isolated": true,
+        "workup": "",
+        "purification": "",
+        "extraction_methods": [
+          "llm_text"
+        ]
+      },
+      {
+        "step_index": 6,
+        "step_label": "Step 1 - Acetylation of guanine (to diacetylguanine)",
+        "reactants": [
+          {
+            "name": "guanine",
+            "role": "reactant",
+            "amount": "N/A",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null,
+            "original_name": "guanine",
+            "canonical_name": null,
+            "resolution_status": "unresolved",
+            "resolution_source": "none",
+            "inchi": null,
+            "inchikey": null,
+            "molecular_formula": null,
+            "information_kind": "unknown",
+            "is_isolated": null,
+            "provenance_source": "",
+            "page": null,
+            "confidence": null
+          }
+        ],
+        "reagents": [
+          {
+            "name": "acetic anhydride",
+            "role": "reagent",
+            "amount": "N/A",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null,
+            "original_name": "acetic anhydride",
+            "canonical_name": null,
+            "resolution_status": "unresolved",
+            "resolution_source": "none",
+            "inchi": null,
+            "inchikey": null,
+            "molecular_formula": null,
+            "information_kind": "unknown",
+            "is_isolated": null,
+            "provenance_source": "",
+            "page": null,
+            "confidence": null
+          },
+          {
+            "name": "acetic acid",
+            "role": "reagent",
+            "amount": "N/A",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null,
+            "original_name": "acetic acid",
+            "canonical_name": null,
+            "resolution_status": "unresolved",
+            "resolution_source": "none",
+            "inchi": null,
+            "inchikey": null,
+            "molecular_formula": null,
+            "information_kind": "unknown",
+            "is_isolated": null,
+            "provenance_source": "",
+            "page": null,
+            "confidence": null
+          },
+          {
+            "name": "phosphoric acid",
+            "role": "reagent",
+            "amount": "N/A",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null,
+            "original_name": "phosphoric acid",
+            "canonical_name": null,
+            "resolution_status": "unresolved",
+            "resolution_source": "none",
+            "inchi": null,
+            "inchikey": null,
+            "molecular_formula": null,
+            "information_kind": "unknown",
+            "is_isolated": null,
+            "provenance_source": "",
+            "page": null,
+            "confidence": null
+          }
+        ],
+        "catalysts": [],
+        "ligands": [],
+        "solvents": [
+          {
+            "name": "acetic acid",
+            "role": "solvent",
+            "amount": "N/A",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null,
+            "original_name": "acetic acid",
+            "canonical_name": null,
+            "resolution_status": "unresolved",
+            "resolution_source": "none",
+            "inchi": null,
+            "inchikey": null,
+            "molecular_formula": null,
+            "information_kind": "unknown",
+            "is_isolated": null,
+            "provenance_source": "",
+            "page": null,
+            "confidence": null
+          },
+          {
+            "name": "N,N-dimethylacetamide (alternative literature method with acetic anhydride)",
+            "role": "solvent",
+            "amount": "N/A",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null,
+            "original_name": "N,N-dimethylacetamide (alternative literature method with acetic anhydride)",
+            "canonical_name": null,
+            "resolution_status": "unresolved",
+            "resolution_source": "none",
+            "inchi": null,
+            "inchikey": null,
+            "molecular_formula": null,
+            "information_kind": "unknown",
+            "is_isolated": null,
+            "provenance_source": "",
+            "page": null,
+            "confidence": null
+          }
+        ],
+        "intermediates": [],
+        "products": [
+          {
+            "name": "diacetylguanine (N2,9-diacetylguanine)",
+            "role": "product",
+            "amount": "N/A",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null,
+            "original_name": "diacetylguanine (N2,9-diacetylguanine)",
+            "canonical_name": null,
+            "resolution_status": "unresolved",
+            "resolution_source": "none",
+            "inchi": null,
+            "inchikey": null,
+            "molecular_formula": null,
+            "information_kind": "unknown",
+            "is_isolated": null,
+            "provenance_source": "",
+            "page": null,
+            "confidence": null
+          }
+        ],
+        "conditions": {
+          "temperature": "160 °C (literature acetylation in N,N-dimethylacetamide)",
+          "time": "420 minutes",
+          "pressure": "N/A",
+          "atmosphere": "N/A",
+          "other": "Work-up dictates product: after the reaction mixture becomes an almost clear solution, removal of solvents by distillation gives only diacetylguanine (95%); addition of water at 60 °C followed by stirring at room temperature overnight gives N2-acetylguanine (94.4%); merely cooling gives a mixture of mono- and di-acetylguanine. Symmetrical anhydride matched to the acid is preferred (acetic acid/acetic anhydride; propionic acid/propionic anhydride)."
+        },
+        "yield_value": "90.5% (acetic anhydride in N,N-dimethylacetamide); 95% (acetic anhydride/acetic acid with distillative work-up)",
+        "ee_or_dr": "N/A",
+        "notes": "The 2-amino group is protected to prevent alkylation in the next step; acetylation also activates the N9-position toward alkylation. The N,N-dimethylacetamide route gives a grey-colored product due to the high reaction temperature. Alternative work-up gives N2-acetylguanine in 94.4% yield.",
+        "evidence": "\"guanine is acetylated using acetic anhydride, acetic acid, and phosphoric acid\"; \"Guanine has been acetylated using acetic anhydride in N,N-dimethylacetamide to give diacetylguanine in 90.5% yield\"; \"if solvents are removed by distillation, only diacetyl guanine is obtained in 95% yield\"",
+        "source": "text",
+        "confidence": 0.624,
+        "evidence_refs": [
+          {
+            "page": 4,
+            "page_end": 4,
+            "section": "experimental",
+            "evidence_type": "compound_preparation",
+            "source": "native_text",
+            "quote": "\"guanine is acetylated using acetic anhydride, acetic acid, and phosphoric acid\"; \"Guanine has been acetylated using acetic anhydride in N,N-dimethylacetamide to give diacetylguanine in 90.5% yield\"; \"if solvents are removed by distillation, only diacetyl guanine is obtained in 95% yield\"",
+            "confidence": 0.7,
+            "image_id": null,
+            "extraction_method": "llm_text",
+            "information_kind": "ambiguous"
+          }
+        ],
+        "information_kind": "ambiguous",
+        "is_isolated": true,
+        "workup": "",
+        "purification": "",
+        "extraction_methods": [
+          "llm_text"
+        ]
+      }
+    ],
+    "warnings": [
+      "Pages needing additional pass: [5].",
+      "Mandatory procedure pages still not in any pass after split: [5].",
+      "Merged 2 evidence-based extraction passes.",
+      "Merged 1 redundant VLM scheme step(s) into matching text steps.",
+      "Normalized 6 chemical name(s) via synonym layer."
+    ],
+    "conflicts": [
+      {
+        "field": "yield:Preparation of dioxolane-diacetate (1-acetyl-2-acetylmethoxy-ethyleneglycol), compound 7",
+        "values": [
+          {
+            "value": "81.7% (431.5 g)",
+            "source": "text",
+            "pages": [
+              2
+            ],
+            "information_kind": "explicit"
+          },
+          {
+            "value": "63%",
+            "source": "scheme",
+            "pages": [
+              3
+            ],
+            "information_kind": "scheme"
+          }
+        ],
+        "status": "conflicting_or_context_dependent"
+      }
+    ],
+    "route_graph": {
+      "nodes": [
+        {
+          "node_id": "1_acetyl_2_acetylmethoxyethyl_acetate",
+          "name": "1-acetyl-2-acetylmethoxyethyl acetate",
+          "canonical_name": "1-acetyl-2-acetylmethoxyethyl acetate",
+          "compound_ids": [],
+          "step_indices": [
+            1,
+            3
+          ],
+          "role": "product"
+        },
+        {
+          "node_id": "acyclovir",
+          "name": "acyclovir",
+          "canonical_name": "acyclovir",
+          "compound_ids": [],
+          "step_indices": [
+            1
+          ],
+          "role": "product"
+        },
+        {
+          "node_id": "dioxolane_5_1_3_dioxolane",
+          "name": "Dioxolane 5 (1,3-dioxolane)",
+          "canonical_name": "Dioxolane 5 (1,3-dioxolane)",
+          "compound_ids": [],
+          "step_indices": [
+            1
+          ],
+          "role": "reactant"
+        },
+        {
+          "node_id": "acetic_anhydride",
+          "name": "acetic anhydride",
+          "canonical_name": "acetic anhydride",
+          "compound_ids": [],
+          "step_indices": [
+            1
+          ],
+          "role": "reactant"
+        },
+        {
+          "node_id": "acetic_acid",
+          "name": "acetic acid",
+          "canonical_name": "acetic acid",
+          "compound_ids": [],
+          "step_indices": [
+            1
+          ],
+          "role": "reactant"
+        },
+        {
+          "node_id": "5",
+          "name": "5",
+          "canonical_name": "5",
+          "compound_ids": [],
+          "step_indices": [
+            1
+          ],
+          "role": "reactant"
+        },
+        {
+          "node_id": "6",
+          "name": "6",
+          "canonical_name": "6",
+          "compound_ids": [],
+          "step_indices": [
+            1
+          ],
+          "role": "reactant"
+        },
+        {
+          "node_id": "acetylated_guanine_residue_crude_used_directly_in_next_step",
+          "name": "acetylated guanine residue (crude, used directly in next step)",
+          "canonical_name": "acetylated guanine residue (crude, used directly in next step)",
+          "compound_ids": [],
+          "step_indices": [
+            2
+          ],
+          "role": "product"
+        },
+        {
+          "node_id": "guanine_compound_3",
+          "name": "guanine (compound 3)",
+          "canonical_name": "guanine (compound 3)",
+          "compound_ids": [],
+          "step_indices": [
+            2
+          ],
+          "role": "reactant"
+        },
+        {
+          "node_id": "acylated_acyclovir_intermediate_crude_solid",
+          "name": "acylated acyclovir intermediate (crude solid)",
+          "canonical_name": "acylated acyclovir intermediate (crude solid)",
+          "compound_ids": [],
+          "step_indices": [
+            3
+          ],
+          "role": "product"
+        },
+        {
+          "node_id": "acetylated_guanine_residue_from_step_a",
+          "name": "acetylated guanine residue from Step A",
+          "canonical_name": "acetylated guanine residue from Step A",
+          "compound_ids": [],
+          "step_indices": [
+            3
+          ],
+          "role": "reactant"
+        },
+        {
+          "node_id": "crude_acyclovir",
+          "name": "crude acyclovir",
+          "canonical_name": "crude acyclovir",
+          "compound_ids": [],
+          "step_indices": [
+            4,
+            5
+          ],
+          "role": "product"
+        },
+        {
+          "node_id": "acylated_acyclovir_intermediate_solid_from_step_b",
+          "name": "acylated acyclovir intermediate (solid from Step B)",
+          "canonical_name": "acylated acyclovir intermediate (solid from Step B)",
+          "compound_ids": [],
+          "step_indices": [
+            4
+          ],
+          "role": "reactant"
+        },
+        {
+          "node_id": "acyclovir_compound_1_pure",
+          "name": "acyclovir (compound 1, pure)",
+          "canonical_name": "acyclovir (compound 1, pure)",
+          "compound_ids": [],
+          "step_indices": [
+            5
+          ],
+          "role": "product"
+        },
+        {
+          "node_id": "second_crop_contains_n7_isomer",
+          "name": "second crop (contains N7-isomer)",
+          "canonical_name": "second crop (contains N7-isomer)",
+          "compound_ids": [],
+          "step_indices": [
+            5
+          ],
+          "role": "product"
+        },
+        {
+          "node_id": "diacetylguanine_n2_9_diacetylguanine",
+          "name": "diacetylguanine (N2,9-diacetylguanine)",
+          "canonical_name": "diacetylguanine (N2,9-diacetylguanine)",
+          "compound_ids": [],
+          "step_indices": [
+            6
+          ],
+          "role": "product"
+        },
+        {
+          "node_id": "guanine",
+          "name": "guanine",
+          "canonical_name": "guanine",
+          "compound_ids": [],
+          "step_indices": [
+            6
+          ],
+          "role": "reactant"
+        },
+        {
+          "node_id": "preparation_of_dioxolane_diacetate_1_acetyl_2_acetylmethoxy_ethyleneglycol_compound_7",
+          "name": "Preparation of dioxolane-diacetate (1-acetyl-2-acetylmethoxy-ethyleneglycol), compound 7",
+          "canonical_name": "Preparation of dioxolane-diacetate (1-acetyl-2-acetylmethoxy-ethyleneglycol), compound 7",
+          "compound_ids": [],
+          "step_indices": [
+            6
+          ],
+          "role": "target"
+        }
+      ],
+      "edges": [
+        {
+          "from_node": "dioxolane_5_1_3_dioxolane",
+          "to_node": "1_acetyl_2_acetylmethoxyethyl_acetate",
+          "step_index": 1,
+          "relation": "transforms_to"
+        },
+        {
+          "from_node": "dioxolane_5_1_3_dioxolane",
+          "to_node": "acyclovir",
+          "step_index": 1,
+          "relation": "transforms_to"
+        },
+        {
+          "from_node": "acetic_anhydride",
+          "to_node": "1_acetyl_2_acetylmethoxyethyl_acetate",
+          "step_index": 1,
+          "relation": "transforms_to"
+        },
+        {
+          "from_node": "acetic_anhydride",
+          "to_node": "acyclovir",
+          "step_index": 1,
+          "relation": "transforms_to"
+        },
+        {
+          "from_node": "acetic_acid",
+          "to_node": "1_acetyl_2_acetylmethoxyethyl_acetate",
+          "step_index": 1,
+          "relation": "transforms_to"
+        },
+        {
+          "from_node": "acetic_acid",
+          "to_node": "acyclovir",
+          "step_index": 1,
+          "relation": "transforms_to"
+        },
+        {
+          "from_node": "5",
+          "to_node": "1_acetyl_2_acetylmethoxyethyl_acetate",
+          "step_index": 1,
+          "relation": "transforms_to"
+        },
+        {
+          "from_node": "5",
+          "to_node": "acyclovir",
+          "step_index": 1,
+          "relation": "transforms_to"
+        },
+        {
+          "from_node": "6",
+          "to_node": "1_acetyl_2_acetylmethoxyethyl_acetate",
+          "step_index": 1,
+          "relation": "transforms_to"
+        },
+        {
+          "from_node": "6",
+          "to_node": "acyclovir",
+          "step_index": 1,
+          "relation": "transforms_to"
+        },
+        {
+          "from_node": "guanine_compound_3",
+          "to_node": "acetylated_guanine_residue_crude_used_directly_in_next_step",
+          "step_index": 2,
+          "relation": "transforms_to"
+        },
+        {
+          "from_node": "acetylated_guanine_residue_from_step_a",
+          "to_node": "acylated_acyclovir_intermediate_crude_solid",
+          "step_index": 3,
+          "relation": "transforms_to"
+        },
+        {
+          "from_node": "1_acetyl_2_acetylmethoxyethyl_acetate",
+          "to_node": "acylated_acyclovir_intermediate_crude_solid",
+          "step_index": 3,
+          "relation": "transforms_to"
+        },
+        {
+          "from_node": "acylated_acyclovir_intermediate_solid_from_step_b",
+          "to_node": "crude_acyclovir",
+          "step_index": 4,
+          "relation": "transforms_to"
+        },
+        {
+          "from_node": "crude_acyclovir",
+          "to_node": "acyclovir_compound_1_pure",
+          "step_index": 5,
+          "relation": "transforms_to"
+        },
+        {
+          "from_node": "crude_acyclovir",
+          "to_node": "second_crop_contains_n7_isomer",
+          "step_index": 5,
+          "relation": "transforms_to"
+        },
+        {
+          "from_node": "guanine",
+          "to_node": "diacetylguanine_n2_9_diacetylguanine",
+          "step_index": 6,
+          "relation": "transforms_to"
+        },
+        {
+          "from_node": "crude_acyclovir",
+          "to_node": "crude_acyclovir",
+          "step_index": 5,
+          "relation": "intermediate_flow"
+        }
+      ],
+      "target_node_id": "preparation_of_dioxolane_diacetate_1_acetyl_2_acetylmethoxy_ethyleneglycol_compound_7"
+    },
+    "compound_links": []
+  },
+  "raw_model_output": "{\n  \"title\": \"Synthesis of acyclovir as an antiherpes-virus drug\",\n  \"target_name\": \"acyclovir (9-[(2-hydroxyethoxy)methyl]guanine, ACV 1)\",\n  \"target_class\": \"nucleoside analog\",\n  \"document_type\": \"paper\",\n  \"steps\": [\n    {\n      \"step_index\": 1,\n      \"step_label\": \"Abstract-level summary: one-pot regioselective synthesis of acyclovir from guanine\",\n      \"reactants\": [\n        {\"name\": \"guanine\", \"role\": \"reactant\", \"amount\": \"N/A\", \"smiles\": null},\n        {\"name\": \"N2,N9-diprotected guanine\", \"role\": \"intermediate/reactant\", \"amount\": \"N/A\", \"smiles\": null},\n        {\"name\": \"1-acetyl-2-acetylmethoxy-ethyleneglycol\", \"role\": \"reactant\", \"amount\": \"N/A\", \"smiles\": null}\n      ],\n      \"reagents\": [\n        {\"name\": \"phosphoric acid\", \"role\": \"reagent\", \"amount\": \"N/A\"},\n        {\"name\": \"polyphosphoric acid\", \"role\": \"reagent\", \"amount\": \"N/A\"}\n      ],\n      \"catalysts\": [],\n      \"ligands\": [],\n      \"solvents\": [],\n      \"intermediates\": [\n        {\"name\": \"N2,N9-diprotected guanine\", \"role\": \"intermediate\", \"amount\": \"N/A\"}\n      ],\n      \"products\": [\n        {\"name\": \"acyclovir (9-[(2-hydroxyethoxy)methyl]guanine)\", \"role\": \"product\", \"amount\": \"N/A\"}\n      ],\n      \"conditions\": {\n        \"temperature\": \"N/A\",\n        \"time\": \"N/A\",\n        \"pressure\": \"N/A\",\n        \"atmosphere\": \"N/A\",\n        \"other\": \"One-pot process; regioselective (N9) alkylation\"\n      },\n      \"yield_value\": \"59% (total yield)\",\n      \"ee_or_dr\": \"N/A\",\n      \"notes\": \"Product reported to meet British Pharmacopoeia 2007 (BP2007) standards; anti-HSV-1/HSV-2 activity assessed by plaque reduction assay, similar to control.\",\n      \"evidence\": \"A one-pot process for high-yield regioselective synthesis of 9-[(2-hydroxyethoxy)methyl]guanine (acyclovir) ... was achieved from guanine via the steps of reacting of N2,N9-diprotected guanine with 1-acetyl-2-acetylmethoxy-ethyleneglycol in presence of phosphoric acid or polyphosphoric acid. Total yield of product was 59%.\"\n    }\n  ],\n  \"warnings\": [\n    \"This portion of the document (page 1) contains only the abstract and introduction; no detailed experimental section, amounts, temperatures or times are provided.\",\n    \"The single step recorded is a high-level summary from the abstract, not a worked Example; individual protection/alkylation/deprotection operations and their conditions are not described in the supplied text.\"\n  ]\n}\n\n---\n\n{\n  \"title\": \"Synthesis of acyclovir — Preparation of dioxolane-diacetate (1-acetyl-2-acetylmethoxy-ethyleneglycol)\",\n  \"target_name\": \"acyclovir (ACV)\",\n  \"target_class\": \"nucleoside analog (acyclic guanine nucleoside analog / viral DNA polymerase inhibitor and chain terminator)\",\n  \"document_type\": \"paper\",\n  \"steps\": [\n    {\n      \"step_index\": 1,\n      \"step_label\": \"Preparation of dioxolane-diacetate (1-acetyl-2-acetylmethoxy-ethyleneglycol), compound 7\",\n      \"reactants\": [\n        {\n          \"name\": \"Dioxolane 5 (1,3-dioxolane)\",\n          \"role\": \"reactant\",\n          \"amount\": \"224 g, 99%, 211.6 ml, 3 mol\",\n          \"smiles\": null\n        },\n        {\n          \"name\": \"acetic anhydride\",\n          \"role\": \"reactant\",\n          \"amount\": \"306 g, 283.3 ml, 3 mol\",\n          \"smiles\": null\n        },\n        {\n          \"name\": \"acetic acid\",\n          \"role\": \"reactant\",\n          \"amount\": \"45 g, 42.9 ml, 0.75 mol\",\n          \"smiles\": null\n        }\n      ],\n      \"reagents\": [],\n      \"catalysts\": [\n        {\n          \"name\": \"p-toluenesulfonic acid monohydrate\",\n          \"role\": \"catalyst\",\n          \"amount\": \"10 g, 0.053 mol\"\n        }\n      ],\n      \"ligands\": [],\n      \"solvents\": [\n        {\n          \"name\": \"acetic anhydride (also serves as reaction medium)\",\n          \"role\": \"solvent\",\n          \"amount\": \"283.3 ml\"\n        },\n        {\n          \"name\": \"acetic acid (also serves as reaction medium)\",\n          \"role\": \"solvent\",\n          \"amount\": \"42.9 ml\"\n        }\n      ],\n      \"intermediates\": [],\n      \"products\": [\n        {\n          \"name\": \"dioxolane-diacetate (1-acetyl-2-acetylmethoxy-ethyleneglycol), compound 7\",\n          \"role\": \"product\",\n          \"amount\": \"431.5 g\"\n        }\n      ],\n      \"conditions\": {\n        \"temperature\": \"acid/anhydride/acetic acid solution precooled to below 10 °C; dioxolane added dropwise at a rate maintaining reaction temperature under 30 °C; stirred at <30 °C\",\n        \"time\": \"additional 1 hour of stirring after addition\",\n        \"pressure\": \"distillation under vacuum: first fraction 1.5 mmHg; second fraction 0.75 mmHg\",\n        \"atmosphere\": \"N/A\",\n        \"other\": \"Dioxolane added dropwise to the p-TsOH·H2O/acetic anhydride/acetic acid solution; then distilled. First distillate fraction collected at 40–80 °C/1.5 mmHg (contained acetic acid, acetic anhydride and other materials) and discarded; second fraction collected at 80–95 °C/0.75 mmHg and redistilled to give pure product 7\"\n      },\n      \"yield_value\": \"81.7% (431.5 g)\",\n      \"ee_or_dr\": \"N/A\",\n      \"notes\": \"Product characterized by 1H-NMR (CD3OD, 500 MHz, δ ppm): 2.06, 2.08 (s, 6H, 2xCH3), 3.85, 4.21 (s, 4H, OCH2CH2O), 5.28 (s, 2H, OCH2O). Dioxolane starting material stated as 99% purity.\",\n      \"evidence\": \"Dioxolane 5 (224 g, 99%, 211.6 ml, 3 mol) was added drop wise to a solution of p-toluenesulfonic acid monohydrate (10 g, 0.053 mol) in acetic anhydride (306 g, 283.3 ml,3 mol) and acetic acid (45 g, 42.9 ml, 0.75 mol) precooled to below 10oC ... redistilled to give pure 7 in a yield of 431.5 g (81.7%).\"\n    }\n  ],\n  \"warnings\": [\n    \"This document part contains only one experimental procedure (preparation of the dioxolane-diacetate intermediate 7); subsequent steps toward acyclovir (e.g., guanine alkylation/acylation) are referenced in the introduction and Figure 2 but no procedures are given in this excerpt.\",\n    \"Compound numbering ('5', '7') comes from the paper's scheme (Figure 2); structures were not textually defined beyond the given names.\"\n  ]\n}\n\n---\n\n{\n  \"title\": \"Preparation of acyclovir (from guanine and dioxolane-diacetate) with antiherpetic activity evaluation\",\n  \"target_name\": \"acyclovir (ACV, compound 1)\",\n  \"target_class\": \"nucleoside analog (acyclic guanine nucleoside, DNA polymerase inhibitor)\",\n  \"document_type\": \"paper\",\n  \"steps\": [\n    {\n      \"step_index\": 1,\n      \"step_label\": \"Preparation of acyclovir – Step A: acetylation of guanine\",\n      \"reactants\": [\n        {\"name\": \"guanine (compound 3)\", \"role\": \"reactant\", \"amount\": \"32.13 g, 213 mmol\", \"smiles\": null}\n      ],\n      \"reagents\": [\n        {\"name\": \"acetic anhydride\", \"role\": \"reagent\", \"amount\": \"320 ml\"}\n      ],\n      \"catalysts\": [],\n      \"ligands\": [],\n      \"solvents\": [\n        {\"name\": \"acetic acid\", \"role\": \"solvent\", \"amount\": \"480 ml\"},\n        {\"name\": \"acetic anhydride (also serves as solvent)\", \"role\": \"solvent\", \"amount\": \"320 ml\"}\n      ],\n      \"intermediates\": [],\n      \"products\": [\n        {\"name\": \"acetylated guanine residue (crude, used directly in next step)\", \"role\": \"product\", \"amount\": \"N/A\"}\n      ],\n      \"conditions\": {\n        \"temperature\": \"reflux\",\n        \"time\": \"overnight\",\n        \"pressure\": \"N/A\",\n        \"atmosphere\": \"N/A\",\n        \"other\": \"Mixture became almost clear; liquid removed by evaporation under reduced pressure to give residue\"\n      },\n      \"yield_value\": \"N/A\",\n      \"ee_or_dr\": \"N/A\",\n      \"notes\": \"Residue carried forward without isolation/characterization\",\n      \"evidence\": \"A mixture of guanine (3, 32.13 g, 213 mmol), acetic anhydride (320 ml) and acetic acid (480 ml) was refluxed overnight... The liquid was removed by evaporation in reduced pressure.\"\n    },\n    {\n      \"step_index\": 2,\n      \"step_label\": \"Preparation of acyclovir – Step B: coupling/glycosylation with dioxolane-diacetate (7)\",\n      \"reactants\": [\n        {\"name\": \"acetylated guanine residue from Step A\", \"role\": \"reactant\", \"amount\": \"residue from 32.13 g guanine\"},\n        {\"name\": \"dioxolane-diacetate (compound 7)\", \"role\": \"reactant\", \"amount\": \"75 g, 426 mmol\"}\n      ],\n      \"reagents\": [],\n      \"catalysts\": [\n        {\"name\": \"phosphoric acid (85.5%)\", \"role\": \"catalyst\", \"amount\": \"1.5 ml\"}\n      ],\n      \"ligands\": [],\n      \"solvents\": [\n        {\"name\": \"toluene\", \"role\": \"solvent\", \"amount\": \"300 ml\"}\n      ],\n      \"intermediates\": [],\n      \"products\": [\n        {\"name\": \"acylated acyclovir intermediate (crude solid)\", \"role\": \"product\", \"amount\": \"N/A\"}\n      ],\n      \"conditions\": {\n        \"temperature\": \"reflux, then 80 °C (oil bath); cooled to room temperature\",\n        \"time\": \"6–7 hours reflux, then 2 hours at 80 °C, then trituration/stirring overnight\",\n        \"pressure\": \"reduced pressure (20 mm Hg) during the 80 °C heating\",\n        \"atmosphere\": \"N/A\",\n        \"other\": \"Vigorous stirring; toluene and acetic anhydride removed under reduced pressure; residue triturated with ethyl acetate (100 ml) and stirred at rt overnight; solid filtered and washed twice with ethyl acetate (25 ml)\"\n      },\n      \"yield_value\": \"N/A\",\n      \"ee_or_dr\": \"N/A\",\n      \"notes\": \"Crude solid used directly in ammonolysis step\",\n      \"evidence\": \"To the residue was added toluene (300 ml), 7 (75 g, 426 mmol), and phosphoric acid (85.5%, 1.5 ml) with stirring. The resulting mixture was refluxed for 6 - 7 hours with vigorous stirring.\"\n    },\n    {\n      \"step_index\": 3,\n      \"step_label\": \"Preparation of acyclovir – Step C: deacetylation (ammonolysis) with ammonium hydroxide\",\n      \"reactants\": [\n        {\"name\": \"acylated acyclovir intermediate (solid from Step B)\", \"role\": \"reactant\", \"amount\": \"N/A\"}\n      ],\n      \"reagents\": [\n        {\"name\": \"ammonium hydroxide (30%)\", \"role\": \"reagent\", \"amount\": \"300 ml\"}\n      ],\n      \"catalysts\": [],\n      \"ligands\": [],\n      \"solvents\": [\n        {\"name\": \"ammonium hydroxide (30%) aqueous solution\", \"role\": \"solvent\", \"amount\": \"300 ml\"},\n        {\"name\": \"methanol\", \"role\": \"solvent\", \"amount\": \"150 ml (trituration/heating)\"}\n      ],\n      \"intermediates\": [],\n      \"products\": [\n        {\"name\": \"crude acyclovir\", \"role\": \"product\", \"amount\": \"N/A\"}\n      ],\n      \"conditions\": {\n        \"temperature\": \"room temperature, then 80 °C (methanol treatment), then cooled to rt\",\n        \"time\": \"stirred overnight at rt; 1 hour at 80 °C in methanol; standing at rt overnight\",\n        \"pressure\": \"reduced pressure for concentration to dryness\",\n        \"atmosphere\": \"N/A\",\n        \"other\": \"Solution became clear; concentrated to dryness under reduced pressure; residue treated with methanol (150 ml); resulting solid collected by filtration\"\n      },\n      \"yield_value\": \"N/A\",\n      \"ee_or_dr\": \"N/A\",\n      \"notes\": \"Crude acyclovir solid taken to recrystallization\",\n      \"evidence\": \"dissolved in ammonium hydroxide (30%, 300 ml). The solution became clear and solution was stirred at room temperature overnight... treated with methanol (150 ml) and the resulting mixture was heated at 80oC for 1 hour\"\n    },\n    {\n      \"step_index\": 4,\n      \"step_label\": \"Preparation of acyclovir – Step D: recrystallization/purification (activated carbon, water)\",\n      \"reactants\": [\n        {\"name\": \"crude acyclovir\", \"role\": \"reactant\", \"amount\": \"N/A\"}\n      ],\n      \"reagents\": [\n        {\"name\": \"activated carbon (charcoal)\", \"role\": \"reagent\", \"amount\": \"1 gram\"}\n      ],\n      \"catalysts\": [],\n      \"ligands\": [],\n      \"solvents\": [\n        {\"name\": \"water\", \"role\": \"solvent\", \"amount\": \"1700 ml\"},\n        {\"name\": \"methanol (wash)\", \"role\": \"solvent\", \"amount\": \"2 × 20 ml\"}\n      ],\n      \"intermediates\": [],\n      \"products\": [\n        {\"name\": \"acyclovir (compound 1, pure)\", \"role\": \"product\", \"amount\": \"30 g\"},\n        {\"name\": \"second crop (contains N7-isomer)\", \"role\": \"product\", \"amount\": \"2.6 g\"}\n      ],\n      \"conditions\": {\n        \"temperature\": \"recrystallization from hot water; filtrate cooled to room temperature then refrigerated\",\n        \"time\": \"stored in refrigerator overnight\",\n        \"pressure\": \"N/A\",\n        \"atmosphere\": \"N/A\",\n        \"other\": \"Solid collected by filtration, washed twice with methanol (20 ml), and dried; mother liquor concentrated to give second crop\"\n      },\n      \"yield_value\": \"63% (30 g)\",\n      \"ee_or_dr\": \"N/A\",\n      \"notes\": \"mp 242–244 °C (H2O); UV λmax (MeOH–H2O 1:1) 251, 276 (sh) nm; 1H-NMR (DMSO-d6, 500 MHz): δ 3.34, 3.46 (s, 4H, CH2CH2), 4.65 (br, 1H, OH), 5.34 (s, 2H, OCH2O), 6.48 (s, 2H, NH2), 7.80 (s, 1H, H-8), 10.62 (s, 1H, NH); EI-MS m/e 226 [M+] (100), 152 [M+-C3H6O2] (42). Second crop (2.6 g) contained the N7-isomer.\",\n      \"evidence\": \"recrystallized from water (1700 ml) using 1 gram of activated carbon... washed twice with methanol (20 ml), and dried to give pure acyclovir 1 (30 g, 63%). mp. 242 - 244oC (H2O)\"\n    }\n  ],\n  \"warnings\": [\n    \"The identity of compound 7 is given only as 'dioxolane-diacetate' (Figure 3, 'Preparation of Dioxolane-diacetate'); its full chemical name/structure is not stated in the provided text.\",\n    \"Steps A–C are described as one continuous procedure; they were split into unit operations (acetylation, coupling, ammonolysis, recrystallization) for clarity, and intermediate yields are not reported.\",\n    \"Antiherpetic activity evaluation (Vero cells, plaque reduction assay, IC50 determination) is biological testing, not a synthesis step, so it was not included in steps[].\"\n  ]\n}\n\n---\n\n{\n  \"title\": \"Process for the manufacture of acyclovir: acetylation of guanine, dioxolane-diacetate preparation, N9-alkylation and deacetylation\",\n  \"target_name\": \"acyclovir\",\n  \"target_class\": \"nucleoside analog\",\n  \"document_type\": \"paper\",\n  \"steps\": [\n    {\n      \"step_index\": 1,\n      \"step_label\": \"Step 1 - Acetylation of guanine (to diacetylguanine)\",\n      \"reactants\": [\n        {\"name\": \"guanine\", \"role\": \"reactant\", \"amount\": \"N/A\", \"smiles\": null}\n      ],\n      \"reagents\": [\n        {\"name\": \"acetic anhydride\", \"role\": \"reagent\", \"amount\": \"N/A\"},\n        {\"name\": \"acetic acid\", \"role\": \"reagent\", \"amount\": \"N/A\"},\n        {\"name\": \"phosphoric acid\", \"role\": \"reagent\", \"amount\": \"N/A\"}\n      ],\n      \"catalysts\": [],\n      \"ligands\": [],\n      \"solvents\": [\n        {\"name\": \"acetic acid\", \"role\": \"solvent\", \"amount\": \"N/A\"},\n        {\"name\": \"N,N-dimethylacetamide (alternative literature method with acetic anhydride)\", \"role\": \"solvent\", \"amount\": \"N/A\"}\n      ],\n      \"intermediates\": [],\n      \"products\": [\n        {\"name\": \"diacetylguanine (N2,9-diacetylguanine)\", \"role\": \"product\", \"amount\": \"N/A\"}\n      ],\n      \"conditions\": {\n        \"temperature\": \"160 °C (literature acetylation in N,N-dimethylacetamide)\",\n        \"time\": \"7 hours (literature acetylation in N,N-dimethylacetamide)\",\n        \"pressure\": \"N/A\",\n        \"atmosphere\": \"N/A\",\n        \"other\": \"Work-up dictates product: after the reaction mixture becomes an almost clear solution, removal of solvents by distillation gives only diacetylguanine (95%); addition of water at 60 °C followed by stirring at room temperature overnight gives N2-acetylguanine (94.4%); merely cooling gives a mixture of mono- and di-acetylguanine. Symmetrical anhydride matched to the acid is preferred (acetic acid/acetic anhydride; propionic acid/propionic anhydride).\"\n      },\n      \"yield_value\": \"90.5% (acetic anhydride in N,N-dimethylacetamide); 95% (acetic anhydride/acetic acid with distillative work-up)\",\n      \"ee_or_dr\": \"N/A\",\n      \"notes\": \"The 2-amino group is protected to prevent alkylation in the next step; acetylation also activates the N9-position toward alkylation. The N,N-dimethylacetamide route gives a grey-colored product due to the high reaction temperature. Alternative work-up gives N2-acetylguanine in 94.4% yield.\",\n      \"evidence\": \"\\\"guanine is acetylated using acetic anhydride, acetic acid, and phosphoric acid\\\"; \\\"Guanine has been acetylated using acetic anhydride in N,N-dimethylacetamide to give diacetylguanine in 90.5% yield\\\"; \\\"if solvents are removed by distillation, only diacetyl guanine is obtained in 95% yield\\\"\"\n    },\n    {\n      \"step_index\": 2,\n      \"step_label\": \"Preparation of dioxolane-diacetate (7) - ring opening\",\n      \"reactants\": [\n        {\"name\": \"dioxolane (1,3-dioxolane ring compound)\", \"role\": \"reactant\", \"amount\": \"N/A\", \"smiles\": null}\n      ],\n      \"reagents\": [\n        {\"name\": \"acetic anhydride (ring-opening reagent)\", \"role\": \"reagent\", \"amount\": \"N/A\"}\n      ],\n      \"catalysts\": [\n        {\"name\": \"p-toluenesulfonic acid\", \"role\": \"catalyst\", \"amount\": \"catalytic amounts\"}\n      ],\n      \"ligands\": [],\n      \"solvents\": [],\n      \"intermediates\": [],\n      \"products\": [\n        {\"name\": \"dioxolane-diacetate (7) (2-oxo-1,4-butanediol diacetate; CH3COOCH2O(CH2)2OCOCH3)\", \"role\": \"product\", \"amount\": \"N/A\"}\n      ],\n      \"conditions\": {\n        \"temperature\": \"N/A\",\n        \"time\": \"N/A\",\n        \"pressure\": \"N/A\",\n        \"atmosphere\": \"N/A\",\n        \"other\": \"Product isolated by distillation; method of Chen et al. [8]\"\n      },\n      \"yield_value\": \"80%\",\n      \"ee_or_dr\": \"N/A\",\n      \"notes\": \"Yield reported after distillation\",\n      \"evidence\": \"\\\"The dioxolane ring is opened using acetic anhydride as the ring-opening reagent in the presence of catalytic amounts of p-toluenesulfonic acid. This provided dioxolane-diacetate in 80% yield after distillation\\\"\"\n    },\n    {\n      \"step_index\": 3,\n      \"step_label\": \"Step 2 - N9-Alkylation of diacetylguanine to acyclovir diacetate\",\n      \"reactants\": [\n        {\"name\": \"diacetylguanine\", \"role\": \"reactant\", \"amount\": \"N/A\", \"smiles\": null},\n        {\"name\": \"dioxolane diacetate (CH3COOCH2O(CH2)2OCOCH3; 2-oxo-1,4-butanediol diacetate)\", \"role\": \"reactant\", \"amount\": \"N/A\", \"smiles\": null}\n      ],\n      \"reagents\": [\n        {\"name\": \"acetic anhydride\", \"role\": \"reagent\", \"amount\": \"N/A\"},\n        {\"name\": \"phosphoric acid or polyphosphoric acid\", \"role\": \"reagent\", \"amount\": \"N/A\"}\n      ],\n      \"catalysts\": [\n        {\"name\": \"p-toluenesulfonic acid (highest catalytic activity, per Matsumoto et al.)\", \"role\": \"catalyst\", \"amount\": \"N/A\"},\n        {\"name\": \"sulfanilic acid (highest catalytic activity, per Matsumoto et al.)\", \"role\": \"catalyst\", \"amount\": \"N/A\"}\n      ],\n      \"ligands\": [],\n      \"solvents\": [],\n      \"intermediates\": [],\n      \"products\": [\n        {\"name\": \"2-acetamido-9-(2-acetylethoxymethyl)guanine (N2,O-diacetylacyclovir; acyclovir diacetate)\", \"role\": \"product\", \"amount\": \"N/A\"}\n      ],\n      \"conditions\": {\n        \"temperature\": \"N/A\",\n        \"time\": \"N/A\",\n        \"pressure\": \"N/A\",\n        \"atmosphere\": \"N/A\",\n        \"other\": \"Preferred scheme uses a combination of an acid and an anhydride; effects of solvent, acid catalyst and temperature on yield studied by Matsumoto et al. Other catalysts screened: p-nitrobenzenesulfonic acid, 2,4-dinitrobenzenesulfonic acid, iron(II) sulfate, zinc chloride.\"\n      },\n      \"yield_value\": \"N/A\",\n      \"ee_or_dr\": \"N/A\",\n      \"notes\": \"Alkylation occurs regioselectively at the N9-position; acetylation of guanine activates N9 toward alkylation\",\n      \"evidence\": \"\\\"diacetyl guanine is alkylated at the N9-position using CH3COOCH2O(CH2)2OCOCH3, acetic anhydride and phosphoric acid or polyphosphoric acid\\\"; \\\"Matsumoto reported that p-toluenesulfonic acid and sulfanilic acid exhibited the highest catalytic activity\\\"\"\n    },\n    {\n      \"step_index\": 4,\n      \"step_label\": \"Step 3 - Deacetylation of acyclovir diacetate to acyclovir\",\n      \"reactants\": [\n        {\"name\": \"acyclovir diacetate (N2,O-diacetylacyclovir)\", \"role\": \"reactant\", \"amount\": \"N/A\", \"smiles\": null}\n      ],\n      \"reagents\": [\n        {\"name\": \"methylamine\", \"role\": \"reagent\", \"amount\": \"N/A\"},\n        {\"name\": \"ammonium hydroxide\", \"role\": \"reagent\", \"amount\": \"N/A\"}\n      ],\n      \"catalysts\": [],\n      \"ligands\": [],\n      \"solvents\": [],\n      \"intermediates\": [],\n      \"products\": [\n        {\"name\": \"acyclovir\", \"role\": \"product\", \"amount\": \"N/A\"}\n      ],\n      \"conditions\": {\n        \"temperature\": \"N/A\",\n        \"time\": \"N/A\",\n        \"pressure\": \"N/A\",\n        \"atmosphere\": \"N/A\",\n        \"other\": \"Work-up easier with methylamine; ammonium hydroxide preferred on industrial scale due to odor of methylamine\"\n      },\n      \"yield_value\": \"N/A\",\n      \"ee_or_dr\": \"N/A\",\n      \"notes\": \"Both methylamine and ammonium hydroxide are good deacetylating agents; acetyl groups removed as desired\",\n      \"evidence\": \"\\\"Both methylamine and ammonium hydroxide proved to be good deacetylating agents... on an industrial scale, the smell of methylamine may dictate the preferred use of ammonium hydroxide as a deacetylation agent.\\\"\"\n    }\n  ],\n  \"warnings\": [\n    \"The excerpt is a narrative/discussion section describing a commercial acyclovir process and literature methods; no specific worked Example with charged amounts, molar equivalents, or detailed time/temperature profiles is given for most steps.\",\n    \"Yields cited (90.5%, 95%, 94.4%, 80%) are from referenced literature methods [6], [7], [8], not from a worked Example in this text.\",\n    \"Document type ambiguous: text cites literature references like a paper but the source label ('523) and tags suggest patent-derived content.\",\n    \"The starting dioxolane substrate for the ring-opening step is not explicitly named in the excerpt.\"\n  ]\n}\n\n---\n\n{\n  \"title\": \"'523 [pass 1/2] [part 5/5]\",\n  \"target_name\": \"N/A\",\n  \"target_class\": \"unknown\",\n  \"document_type\": \"paper\",\n  \"steps\": [],\n  \"warnings\": [\n    \"The provided text fragment contains only a bibliography/reference list and corresponding author information; no experimental procedures, compounds, amounts, or reaction conditions are described.\",\n    \"Although the section is labeled 'experimental_procedure', no concrete synthesis steps are present in this excerpt (part 5/5).\",\n    \"Antiviral context is only implied by a cited thesis on herpes simplex virus antiviral resistance; no target compound is named.\"\n  ]\n}",
+  "error": null,
+  "from_cache": false,
+  "content_hash": null,
+  "source_job_id": null,
+  "extraction_debug": {
+    "document_type": "paper",
+    "pages_included": [
+      1,
+      2,
+      3,
+      4,
+      6
+    ],
+    "pages_excluded": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "candidate_procedure_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "mandatory_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "exclusion_reasons": {},
+    "chars_total": 14976,
+    "chars_selected": 13110,
+    "truncated": true,
+    "truncation_note": "Split into 2 extraction pass(es); see passes in extraction_debug.",
+    "pass_index": 1,
+    "pass_count": 2,
+    "chunk_count": 5,
+    "chunks": [
+      {
+        "page_start": 1,
+        "page_end": 1,
+        "section": "experimental",
+        "evidence_types": [
+          "compound_preparation",
+          "experimental_procedure",
+          "background",
+          "abstract_claim"
+        ],
+        "chars": 2818,
+        "score": 0.625
+      },
+      {
+        "page_start": 2,
+        "page_end": 2,
+        "section": "experimental",
+        "evidence_types": [
+          "experimental_procedure",
+          "analytical_characterization",
+          "compound_preparation",
+          "reaction_conditions"
+        ],
+        "chars": 2232,
+        "score": 0.8
+      },
+      {
+        "page_start": 3,
+        "page_end": 3,
+        "section": "experimental",
+        "evidence_types": [
+          "reaction_conditions",
+          "analytical_characterization",
+          "compound_preparation",
+          "yield"
+        ],
+        "chars": 3264,
+        "score": 0.8441666666666666
+      },
+      {
+        "page_start": 4,
+        "page_end": 4,
+        "section": "experimental",
+        "evidence_types": [
+          "compound_preparation",
+          "reaction_conditions",
+          "patent_example",
+          "experimental_procedure"
+        ],
+        "chars": 3732,
+        "score": 1.0
+      },
+      {
+        "page_start": 6,
+        "page_end": 6,
+        "section": "body",
+        "evidence_types": [
+          "experimental_procedure"
+        ],
+        "chars": 543,
+        "score": 0.55
+      }
+    ],
+    "procedure_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "warnings": [
+      "Pages needing additional pass: [5].",
+      "Mandatory procedure pages still not in any pass after split: [5]."
+    ],
+    "info": [
+      "Procedure/evidence pages detected: [1, 2, 3, 4, 5, 6] (document_type=paper).",
+      "Mandatory procedure page set (with neighbors): [1, 2, 3, 4, 5, 6].",
+      "Multi-pass extraction: pass 2/2.",
+      "Multi-pass plan: 2 LLM extraction pass(es) required.",
+      "Experimental/example pages detected: [1, 2, 3, 4, 5, 6]."
+    ],
+    "page_selection": {
+      "candidate_procedure_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "mandatory_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "pages_included": [
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "pages_excluded": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "exclusion_reasons": {},
+      "pass_count": 2,
+      "passes": [
+        {
+          "document_type": "paper",
+          "pages_included": [
+            1,
+            2,
+            3,
+            4,
+            6
+          ],
+          "pages_excluded": [
+            5
+          ],
+          "candidate_procedure_pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "mandatory_pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "exclusion_reasons": {
+            "5": "budget (28000 chars) — needs another pass"
+          },
+          "chars_total": 14976,
+          "chars_selected": 13110,
+          "truncated": true,
+          "truncation_note": "Pass 1/1: selected 13110 chars from pages [1, 2, 3, 4, 6]; excluded [5].",
+          "pass_index": 1,
+          "pass_count": 2,
+          "chunk_count": 5,
+          "chunks": [
+            {
+              "page_start": 1,
+              "page_end": 1,
+              "section": "experimental",
+              "evidence_types": [
+                "compound_preparation",
+                "experimental_procedure",
+                "background",
+                "abstract_claim"
+              ],
+              "chars": 2818,
+              "score": 0.625
+            },
+            {
+              "page_start": 2,
+              "page_end": 2,
+              "section": "experimental",
+              "evidence_types": [
+                "experimental_procedure",
+                "analytical_characterization",
+                "compound_preparation",
+                "reaction_conditions"
+              ],
+              "chars": 2232,
+              "score": 0.8
+            },
+            {
+              "page_start": 3,
+              "page_end": 3,
+              "section": "experimental",
+              "evidence_types": [
+                "reaction_conditions",
+                "analytical_characterization",
+                "compound_preparation",
+                "yield"
+              ],
+              "chars": 3264,
+              "score": 0.8441666666666666
+            },
+            {
+              "page_start": 4,
+              "page_end": 4,
+              "section": "experimental",
+              "evidence_types": [
+                "compound_preparation",
+                "reaction_conditions",
+                "patent_example",
+                "experimental_procedure"
+              ],
+              "chars": 3732,
+              "score": 1.0
+            },
+            {
+              "page_start": 6,
+              "page_end": 6,
+              "section": "body",
+              "evidence_types": [
+                "experimental_procedure"
+              ],
+              "chars": 543,
+              "score": 0.55
+            }
+          ],
+          "procedure_pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "warnings": [
+            "Pages needing additional pass: [5].",
+            "Mandatory procedure pages still not in any pass after split: [5]."
+          ],
+          "info": [
+            "Procedure/evidence pages detected: [1, 2, 3, 4, 5, 6] (document_type=paper).",
+            "Mandatory procedure page set (with neighbors): [1, 2, 3, 4, 5, 6]."
+          ]
+        },
+        {
+          "document_type": "paper",
+          "pages_included": [],
+          "pages_excluded": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "candidate_procedure_pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "mandatory_pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "exclusion_reasons": {
+            "1": "budget (28000 chars) — needs another pass",
+            "2": "budget (28000 chars) — needs another pass",
+            "3": "budget (28000 chars) — needs another pass",
+            "4": "budget (28000 chars) — needs another pass",
+            "5": "budget (28000 chars) — needs another pass",
+            "6": "budget (28000 chars) — needs another pass"
+          },
+          "chars_total": 14976,
+          "chars_selected": 0,
+          "truncated": true,
+          "truncation_note": "",
+          "pass_index": 2,
+          "pass_count": 2,
+          "chunk_count": 0,
+          "chunks": [],
+          "procedure_pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "warnings": [
+            "Mandatory procedure pages still not in any pass after split: [5]."
+          ],
+          "info": [
+            "Multi-pass extraction: pass 2/2."
+          ]
+        }
+      ]
+    },
+    "multi_pass": true,
+    "text_extraction_passes": 2,
+    "reconcile_preview": {
+      "input_text_steps": 6,
+      "input_table_steps": 0,
+      "input_scheme_steps": 0,
+      "input_page_read_steps": 0,
+      "merged_steps": 6,
+      "scheme_steps_absorbed": 0,
+      "duplicate_steps_merged": 0,
+      "conflicts": 0,
+      "steps_with_provenance": 6,
+      "steps_without_provenance": 0
+    },
+    "single_shot": false,
+    "figure_pages_vlm": [
+      {
+        "page": 2,
+        "score": 7.5,
+        "reason": "caption:figure 2; caption:Figure 2; vector_drawings=94"
+      },
+      {
+        "page": 3,
+        "score": 4.35,
+        "reason": "caption:Figure 3; vector_drawings=34"
+      }
+    ],
+    "reconciliation": {
+      "input_text_steps": 6,
+      "input_table_steps": 0,
+      "input_scheme_steps": 1,
+      "input_page_read_steps": 0,
+      "merged_steps": 6,
+      "scheme_steps_absorbed": 1,
+      "duplicate_steps_merged": 0,
+      "conflicts": 1,
+      "steps_with_provenance": 6,
+      "steps_without_provenance": 0
+    },
+    "route_graph_nodes": 18,
+    "compound_links": 0,
+    "observability": {
+      "document": {
+        "pages": 6,
+        "text_chars": 14976,
+        "figures": 21,
+        "tables": 0
+      },
+      "page_selection": {
+        "candidate_procedure_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "mandatory_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "pages_included": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ],
+        "pages_excluded": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "exclusion_reasons": {},
+        "pass_count": 2,
+        "passes": [
+          {
+            "document_type": "paper",
+            "pages_included": [
+              1,
+              2,
+              3,
+              4,
+              6
+            ],
+            "pages_excluded": [
+              5
+            ],
+            "candidate_procedure_pages": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "mandatory_pages": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "exclusion_reasons": {
+              "5": "budget (28000 chars) — needs another pass"
+            },
+            "chars_total": 14976,
+            "chars_selected": 13110,
+            "truncated": true,
+            "truncation_note": "Pass 1/1: selected 13110 chars from pages [1, 2, 3, 4, 6]; excluded [5].",
+            "pass_index": 1,
+            "pass_count": 2,
+            "chunk_count": 5,
+            "chunks": [
+              {
+                "page_start": 1,
+                "page_end": 1,
+                "section": "experimental",
+                "evidence_types": [
+                  "compound_preparation",
+                  "experimental_procedure",
+                  "background",
+                  "abstract_claim"
+                ],
+                "chars": 2818,
+                "score": 0.625
+              },
+              {
+                "page_start": 2,
+                "page_end": 2,
+                "section": "experimental",
+                "evidence_types": [
+                  "experimental_procedure",
+                  "analytical_characterization",
+                  "compound_preparation",
+                  "reaction_conditions"
+                ],
+                "chars": 2232,
+                "score": 0.8
+              },
+              {
+                "page_start": 3,
+                "page_end": 3,
+                "section": "experimental",
+                "evidence_types": [
+                  "reaction_conditions",
+                  "analytical_characterization",
+                  "compound_preparation",
+                  "yield"
+                ],
+                "chars": 3264,
+                "score": 0.8441666666666666
+              },
+              {
+                "page_start": 4,
+                "page_end": 4,
+                "section": "experimental",
+                "evidence_types": [
+                  "compound_preparation",
+                  "reaction_conditions",
+                  "patent_example",
+                  "experimental_procedure"
+                ],
+                "chars": 3732,
+                "score": 1.0
+              },
+              {
+                "page_start": 6,
+                "page_end": 6,
+                "section": "body",
+                "evidence_types": [
+                  "experimental_procedure"
+                ],
+                "chars": 543,
+                "score": 0.55
+              }
+            ],
+            "procedure_pages": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "warnings": [
+              "Pages needing additional pass: [5].",
+              "Mandatory procedure pages still not in any pass after split: [5]."
+            ],
+            "info": [
+              "Procedure/evidence pages detected: [1, 2, 3, 4, 5, 6] (document_type=paper).",
+              "Mandatory procedure page set (with neighbors): [1, 2, 3, 4, 5, 6]."
+            ]
+          },
+          {
+            "document_type": "paper",
+            "pages_included": [],
+            "pages_excluded": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "candidate_procedure_pages": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "mandatory_pages": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "exclusion_reasons": {
+              "1": "budget (28000 chars) — needs another pass",
+              "2": "budget (28000 chars) — needs another pass",
+              "3": "budget (28000 chars) — needs another pass",
+              "4": "budget (28000 chars) — needs another pass",
+              "5": "budget (28000 chars) — needs another pass",
+              "6": "budget (28000 chars) — needs another pass"
+            },
+            "chars_total": 14976,
+            "chars_selected": 0,
+            "truncated": true,
+            "truncation_note": "",
+            "pass_index": 2,
+            "pass_count": 2,
+            "chunk_count": 0,
+            "chunks": [],
+            "procedure_pages": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "warnings": [
+              "Mandatory procedure pages still not in any pass after split: [5]."
+            ],
+            "info": [
+              "Multi-pass extraction: pass 2/2."
+            ]
+          }
+        ]
+      },
+      "text_extraction": {
+        "steps": 6,
+        "passes": 2
+      },
+      "table_extraction": {
+        "steps": 0
+      },
+      "scheme_extraction": {
+        "scheme_steps": 1,
+        "page_read_steps": 0
+      },
+      "reconciliation": {
+        "input_text_steps": 6,
+        "input_table_steps": 0,
+        "input_scheme_steps": 1,
+        "input_page_read_steps": 0,
+        "merged_steps": 6,
+        "scheme_steps_absorbed": 1,
+        "duplicate_steps_merged": 0,
+        "conflicts": 1,
+        "steps_with_provenance": 6,
+        "steps_without_provenance": 0
+      },
+      "standardization": {
+        "resolved": 0,
+        "validated": 0,
+        "invalid": 0,
+        "unresolved": 37,
+        "total_entities": 40,
+        "times_standardized": 6,
+        "resolution_status_counts": {
+          "unresolved": 37
+        }
+      },
+      "provenance": {
+        "entities_with_provenance": 0,
+        "entities_without_provenance": 40,
+        "reactions_with_conflicts": 1
+      }
+    }
+  }
+}

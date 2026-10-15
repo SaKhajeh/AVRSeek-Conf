@@ -1,0 +1,35 @@
+{
+  "batch_id": "a84c93faf6b1",
+  "file_count": 1,
+  "results": [
+    {
+      "job_id": "b336104ea933",
+      "filename": "WO_9718211_A1.pdf",
+      "stages": [
+        {
+          "id": "pipeline",
+          "label": "Pipeline",
+          "status": "error",
+          "detail": "name 'run_pipeline' is not defined",
+          "data": null
+        }
+      ],
+      "document": null,
+      "route": {
+        "title": "WO_9718211_A1.pdf",
+        "target_name": "",
+        "target_class": "",
+        "document_type": "paper",
+        "steps": [],
+        "warnings": [
+          "name 'run_pipeline' is not defined"
+        ]
+      },
+      "raw_model_output": null,
+      "error": "name 'run_pipeline' is not defined",
+      "from_cache": false,
+      "content_hash": null,
+      "source_job_id": null
+    }
+  ]
+}

@@ -1,0 +1,513 @@
+{
+  "job_id": "69d3faf3f288",
+  "filename": "36_1153.pdf",
+  "stages": [
+    {
+      "id": "parse_pdf",
+      "label": "PDF document understanding (+ OCR)",
+      "status": "done",
+      "detail": "5 pages, 5 images, 0 table hints, 163 text chars",
+      "data": {
+        "page_count": 5,
+        "figure_count": 5,
+        "segments": 5,
+        "text_chars": 163,
+        "ocr_used": false,
+        "ocr_backend": "",
+        "document_type": "unknown",
+        "procedure_pages": [],
+        "evidence_profile": {
+          "document_type": "unknown",
+          "procedure_pages": [],
+          "high_evidence_pages": [],
+          "low_evidence_pages": [],
+          "total_chars": 150,
+          "pages": [
+            {
+              "page": 1,
+              "char_count": 30,
+              "section": "body",
+              "synthesis_score": 0.0,
+              "evidence_types": []
+            },
+            {
+              "page": 2,
+              "char_count": 30,
+              "section": "body",
+              "synthesis_score": 0.0,
+              "evidence_types": []
+            },
+            {
+              "page": 3,
+              "char_count": 30,
+              "section": "body",
+              "synthesis_score": 0.0,
+              "evidence_types": []
+            },
+            {
+              "page": 4,
+              "char_count": 30,
+              "section": "body",
+              "synthesis_score": 0.0,
+              "evidence_types": []
+            },
+            {
+              "page": 5,
+              "char_count": 30,
+              "section": "body",
+              "synthesis_score": 0.0,
+              "evidence_types": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "text_extract",
+      "label": "Text reaction extraction (LLM)",
+      "status": "done",
+      "detail": "Extracted 0 step(s) via single-shot full text (163 chars, document_type=unknown)",
+      "data": {
+        "steps": 0,
+        "target": "N/A",
+        "text_chars_sent": 163,
+        "single_shot": true,
+        "evidence_chunks": 0,
+        "pages_included": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "pages_excluded": [],
+        "truncated": false,
+        "document_type": "unknown",
+        "extraction_plan": {
+          "document_type": "unknown",
+          "pages_included": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "pages_excluded": [],
+          "chars_total": 163,
+          "chars_selected": 313,
+          "truncated": false,
+          "truncation_note": "",
+          "chunk_count": 5,
+          "chunks": [
+            {
+              "page_start": 1,
+              "page_end": 1,
+              "section": "body",
+              "evidence_types": [],
+              "chars": 30,
+              "score": 0.0
+            },
+            {
+              "page_start": 2,
+              "page_end": 2,
+              "section": "body",
+              "evidence_types": [],
+              "chars": 30,
+              "score": 0.0
+            },
+            {
+              "page_start": 3,
+              "page_end": 3,
+              "section": "body",
+              "evidence_types": [],
+              "chars": 30,
+              "score": 0.0
+            },
+            {
+              "page_start": 4,
+              "page_end": 4,
+              "section": "body",
+              "evidence_types": [],
+              "chars": 30,
+              "score": 0.0
+            },
+            {
+              "page_start": 5,
+              "page_end": 5,
+              "section": "body",
+              "evidence_types": [],
+              "chars": 30,
+              "score": 0.0
+            }
+          ],
+          "procedure_pages": [],
+          "warnings": [
+            "No high-confidence experimental/example pages detected by heuristics; using keyword-ranked fallback."
+          ],
+          "info": [
+            "Low native/OCR text (163 chars) — relying on VLM page-read for scanned content."
+          ],
+          "single_shot": true,
+          "route_graph_nodes": 1,
+          "compound_links": 0
+        }
+      }
+    },
+    {
+      "id": "table_extract",
+      "label": "Table extraction (pdfplumber + LLM)",
+      "status": "stubbed",
+      "detail": "No reaction-like tables found in 0 total tables",
+      "data": {
+        "tables_total": 0,
+        "reaction_tables": 0,
+        "steps_extracted": 0
+      }
+    },
+    {
+      "id": "image_scheme",
+      "label": "Scheme / image extraction (VLM)",
+      "status": "done",
+      "detail": "0 scheme step(s), 0 page-read step(s), 0 molecule(s), 5 page-read(s) from 5 image(s)",
+      "data": {
+        "images_processed": 5,
+        "schemes_found": 0,
+        "molecules_extracted": 0,
+        "page_reads": 5,
+        "transcribed_chars": 8578,
+        "scheme_steps": 0,
+        "page_steps": 0,
+        "figure_pages": [],
+        "figure_page_info": [],
+        "schemes": [
+          {
+            "page_number": 1,
+            "image_index": 0,
+            "molecules": [],
+            "arrows": [],
+            "conditions_text": "",
+            "raw_output": "{\"image_class\": \"mixed\", \"transcribed_text\": \"No. 3\\n1153\\n\\n[Chem. Pharm. Bull.\\n36( 3 )1153—1157(1988)]\\n\\nA Convenient Synthesis of 9-(2-Hydroxyethoxymethyl)guanine\\n(Acyclovir) and Related Compounds^1)\\n\\nHIROATSU MATSUMOTO,* CHISATO KANEKO, KEIKO YAMADA,\\nTADAO TAKEUCHI, TAKEO MORI,\\nand YOSHIHISA MIZUNO\\n\\nResearch Laboratory, Minophagen Pharmaceutical Co.,\\n2–5233, Komatsubara, Zama, Kanagawa 228, Japan\\n\\n(Received August 4, 1987)\\n\\nA convenient and economical synthesis of 9-(2-hydroxyethoxymethyl)guanine (1, acyclovir, Zovirax, or acyclic guanosine: an antiherpetic agent) from guanine was developed via N^2,O-diacetylacyclovir. Two closely related compounds, N^2-acetylacyclovir (7) and O-acetylacyclovir (8), were also prepared by selective deacetylation.\\n\\nKeywords——acyclovir; N^2-acetylacyclovir; O-acetylacyclovir; alkylation; p-toluenesulfonic acid; antiherpetic agent\\n\\nSchaeffer and coworkers^2) first reported that 9-(2-hydroxyethoxymethyl)guanine (1, acyclovir) may be highly specific inhibitor of herpes viruses proliferation. Since then, a large number of nucleoside analogs in which the carbohydrate moiety is replaced by an acyclic substituent (viz., 2-hydroxyethoxymethyl or 1,3-dihydroxy-2-propoxymethyl) have been prepared.\\n\\nChart 1\\n\\nSeveral methods for the introduction of a 2-hydroxyethoxymethyl group into purines for the synthesis of acyclovir or acyclic nucleosides have been tried,^3−10) with limited success. Schaeffer and colleagues have carried out the base-promoted alkylation of 2,6-dichloropurine with 2-benzoxyethoxymethyl chloride to obtain the N-9 substituted product in 41% yield.^2) Acyclovir was prepared in 13% overall yield from the N-9 derivative in four steps including ammonolysis and hydrogenolytic debenzylation. Barrio and coworkers^11) have studied the reaction at −63 °C of chloro- or methylthio-substituted purine with 2-trimethylsilyloxyethoxymethyl chloride to afford the N-9 substituted products in 50—80% yields. Robins and Hat",
+            "mode": "page_read",
+            "transcribed_text": "No. 3\n1153\n\n[Chem. Pharm. Bull.\n36( 3 )1153—1157(1988)]\n\nA Convenient Synthesis of 9-(2-Hydroxyethoxymethyl)guanine\n(Acyclovir) and Related Compounds^1)\n\nHIROATSU MATSUMOTO,* CHISATO KANEKO, KEIKO YAMADA,\nTADAO TAKEUCHI, TAKEO MORI,\nand YOSHIHISA MIZUNO\n\nResearch Laboratory, Minophagen Pharmaceutical Co.,\n2–5233, Komatsubara, Zama, Kanagawa 228, Japan\n\n(Received August 4, 1987)\n\nA convenient and economical synthesis of 9-(2-hydroxyethoxymethyl)guanine (1, acyclovir, Zovirax, or acyclic guanosine: an antiherpetic agent) from guanine was developed via N^2,O-diacetylacyclovir. Two closely related compounds, N^2-acetylacyclovir (7) and O-acetylacyclovir (8), were also prepared by selective deacetylation.\n\nKeywords——acyclovir; N^2-acetylacyclovir; O-acetylacyclovir; alkylation; p-toluenesulfonic acid; antiherpetic agent\n\nSchaeffer and coworkers^2) first reported that 9-(2-hydroxyethoxymethyl)guanine (1, acyclovir) may be highly specific inhibitor of herpes viruses proliferation. Since then, a large number of nucleoside analogs in which the carbohydrate moiety is replaced by an acyclic substituent (viz., 2-hydroxyethoxymethyl or 1,3-dihydroxy-2-propoxymethyl) have been prepared.\n\nChart 1\n\nSeveral methods for the introduction of a 2-hydroxyethoxymethyl group into purines for the synthesis of acyclovir or acyclic nucleosides have been tried,^3−10) with limited success. Schaeffer and colleagues have carried out the base-promoted alkylation of 2,6-dichloropurine with 2-benzoxyethoxymethyl chloride to obtain the N-9 substituted product in 41% yield.^2) Acyclovir was prepared in 13% overall yield from the N-9 derivative in four steps including ammonolysis and hydrogenolytic debenzylation. Barrio and coworkers^11) have studied the reaction at −63 °C of chloro- or methylthio-substituted purine with 2-trimethylsilyloxyethoxymethyl chloride to afford the N-9 substituted products in 50—80% yields. Robins and Hatfield^12) started from 2,6-dichloropurine or 2-amino-6-chloropurine which was reacted with 2-acetoxyethoxymethyl bromide to obtain the N-9 substituted derivative in 89% or 84% yield, respectively.\n\nProblems associated with these procedures were that the reagents employed were quite expensive and that the amination of the 2-chloro group was tedious. Therefore, the yield of 1",
+            "image_class": "mixed",
+            "step_label": "",
+            "characterizations": []
+          },
+          {
+            "page_number": 2,
+            "image_index": 0,
+            "molecules": [],
+            "arrows": [],
+            "conditions_text": "",
+            "raw_output": "{\n  \"image_class\": \"text_page\",\n  \"transcribed_text\": \"1154\\n\\nVol. 36 (1988)\\n\\nwas usually not satisfactory. According to the patent literature^13) on the synthesis of acyclovir, the drug was prepared in 24% yield by debenzylation of the product obtained by the reaction of trimethylsilylated guanine and 2-benzoxyethoxymethyl chloride. As a closely related example, it is worthy of note that Martin et al.^14) employed alkylation of N, 9-diacetylguanine with 2-O-(acetoxymethyl)-1,3-di-O-benzylglycerol in the presence of a catalytic amount of p-toluenesulfonic acid in sulfolane (95 °C, 72 h), and the subsequent debenzylation and deacetylation gave rise to 9-(1,3-dihydroxy-2-propoxymethyl)guanine (2, DHPG) in 27% overall yield. This procedure involves the use of a solvent (solvent method), which may permit a homogeneous reaction and contribute to the improvement of the yield.\\n\\nWe adopted the solvent method and examined the effect of several parameters (solvent, catalyst, and reaction temperature) upon the yield of protected acyclovir.\\n\\nIt was found the N^2,O-diacetylacyclovir (5) could be synthesized in fair or good yield by the condensation of N,N'-diacetylguanine(s) (3) and 2-oxa-1,4-butanediol diacetate in the presence of p-toluenesulfonic acid or sulfanilic acid in organic solvents.\\n\\nThe present paper deals with a convenient synthesis of the 9-(2-hydroxyethoxymethyl)guanine and closely related compounds.\\n\\nResults and Discussion\\n\\nEffects of Catalysts and Reaction Temperature\\n\\nSato and coworkers^15) have developed a fusion method for the nucleoside synthesis. They have examined the catalytic activities of a number of protic acids as well as Lewis acids.\\n\\nWe evaluated the effect of catalysts such as p-toluenesulfonic acid, sulfanilic acid, o-, m-, and p-, nitrobenzenesulfonic acid, zinc chloride, and iron(II) sulfate upon the yields in acyclovir synthesis.\\n\\nWe also examined the effect of reaction temperature, in the range from 60 to 120 °C. Concerning ",
+            "mode": "page_read",
+            "transcribed_text": "1154\n\nVol. 36 (1988)\n\nwas usually not satisfactory. According to the patent literature^13) on the synthesis of acyclovir, the drug was prepared in 24% yield by debenzylation of the product obtained by the reaction of trimethylsilylated guanine and 2-benzoxyethoxymethyl chloride. As a closely related example, it is worthy of note that Martin et al.^14) employed alkylation of N, 9-diacetylguanine with 2-O-(acetoxymethyl)-1,3-di-O-benzylglycerol in the presence of a catalytic amount of p-toluenesulfonic acid in sulfolane (95 °C, 72 h), and the subsequent debenzylation and deacetylation gave rise to 9-(1,3-dihydroxy-2-propoxymethyl)guanine (2, DHPG) in 27% overall yield. This procedure involves the use of a solvent (solvent method), which may permit a homogeneous reaction and contribute to the improvement of the yield.\n\nWe adopted the solvent method and examined the effect of several parameters (solvent, catalyst, and reaction temperature) upon the yield of protected acyclovir.\n\nIt was found the N^2,O-diacetylacyclovir (5) could be synthesized in fair or good yield by the condensation of N,N'-diacetylguanine(s) (3) and 2-oxa-1,4-butanediol diacetate in the presence of p-toluenesulfonic acid or sulfanilic acid in organic solvents.\n\nThe present paper deals with a convenient synthesis of the 9-(2-hydroxyethoxymethyl)guanine and closely related compounds.\n\nResults and Discussion\n\nEffects of Catalysts and Reaction Temperature\n\nSato and coworkers^15) have developed a fusion method for the nucleoside synthesis. They have examined the catalytic activities of a number of protic acids as well as Lewis acids.\n\nWe evaluated the effect of catalysts such as p-toluenesulfonic acid, sulfanilic acid, o-, m-, and p-, nitrobenzenesulfonic acid, zinc chloride, and iron(II) sulfate upon the yields in acyclovir synthesis.\n\nWe also examined the effect of reaction temperature, in the range from 60 to 120 °C. Concerning reaction temperature, the best yield of 5 was obtained at 100 °C (with the exception of zinc chloride and 2,4-dinitrobenzenesulfonic acid). In connection with the catalysts, p-toluenesulfonic acid and sulfanilic acid were found to be the best in terms of the catalytic activity. On the other hand, large differences in reactivity were observed when aprotic acids were used as catalysts. When o-, m-, or p-, nitrobenzenesulfonic acid was utilized, the yield of 5 was 55%, 50%, and 59%, respectively. Therefore, it may be concluded that the use of isomeric nitrobenzenesulfonic acid does not result in much difference in the yield of 5. The use of 2,4-dinitrobenzenesulfonic acid as the catalyst at 100 °C reduced the yield to a considerable extent, indicating that the acid is too strong to act as an effective\n\nTABLE I. Effect of Catalysts and Temperature on Yield of N^2,O-Diacetylacyclovir^a)\n\nCatalyst | Reaction temperature and product yield (%)\n         | 80 °C: 5 | 80 °C: 6 | 100 °C: 5 | 100 °C: 6\np-Toluenesulfonic acid | 31 | 53 | 66 | 26\nSulfanilic acid | 51 | 27 | 66 | 28\np-Nitrobenzenesulfonic acid | 56 | 33 | 59 | 24\n2,4-Dinitrobenzene sulonic acid | 50 | 19 | 38 | 20\nIron(II) sulfate | 12 | 7 | 38 | 21\nZinc chloride | —^b) | — | — | —\n\na) Compound (3) (1 eq) was reacted with 4 (2 eq) in the presence of the indicated catalyst (0.025 eq) in DMSO. b) The symbol (—) indicates that one (3) of the starting materials was recovered unchanged.\n\nNII-Electronic Library Service",
+            "image_class": "text_page",
+            "step_label": "",
+            "characterizations": []
+          },
+          {
+            "page_number": 3,
+            "image_index": 0,
+            "molecules": [],
+            "arrows": [],
+            "conditions_text": "",
+            "raw_output": "{\n  \"image_class\": \"mixed\",\n  \"transcribed_text\": \"No. 3\\t1155\\n\\ncatalyst.\\n\\nSelective Deprotection of N²,O-Diacetylacyclovir\\nTreatment of 5 with methanol saturated with ammonia gave rise to 1 in 86% yield, which means that overall yield of 1 from guanine was 43%. O-Acetylacyclovir (8) could be isolated in 81% yield on reaction of 5 with methanolic methoxide at room temperature. On the other hand, treatment of 5 with aqueous ammonium hydroxide (pH 11.6) gave rise to N²-acetylacyclovir (7) in 55% yield (50 °C, 1 h). Compound (7) would be a suitable starting material for the preparation of acyclovir phosphate, which might be anticipated to be active against a line of herpes simplex lacking thymidine kinase.\\nFinally, it is worthy of note that among the solvents we examined, dimethyl sulfoxide (DMSO) was found to be the solvent of choice in terms of the solubility of substrates and the yield of 1.\\n\\nChart 2\\nguanine → 3 → 5 (and 6) → 1, 7, 8\\na: Ac₂O, AcOH\\nb: AcO(CH₂)₂OCH₂OAc 4, DMSO, catalyst\\nc: NH₃–CH₃OH\\nd: NH₄OH\\ne: CH₃ONa–CH₃OH\\n\\nExperimental\\n\\nAll melting points were determined on a Yanagimoto micro melting point apparatus, and are uncorrected. Nuclear magnetic resonance (NMR) spectra were obtained on a JEOL-270 spectrometer using tetramethylsilane as an internal standard. The following abbreviations are used: s = singlet, d = doublet, m = multiplet. Ultraviolet (UV) spectra were measured on a Hitachi 200-20 spectrophotometer. Column chromatography was performed with Kieselgel 60 (E. Merck, 70—230 mesh ASTM).\\n\\n2-Oxa-1,4-butanediol Diacetate (4)——Acetyl bromide (50 g, 0.4 mol) was added dropwise to 1,3-dioxolane (26.6 g 0.36 mol) with cooling in an ice bath, the reaction temperature being maintained below 5 °C. The reaction mixture was allowed to warm to room temperature, and then a solution of sodium acetate (50 g) in acetic acid (200 ml) was added at 110 °C. The reaction mixture was stirred for 1 h. Insoluble material (NaBr) was filtered off and the fi",
+            "mode": "page_read",
+            "transcribed_text": "No. 3\t1155\n\ncatalyst.\n\nSelective Deprotection of N²,O-Diacetylacyclovir\nTreatment of 5 with methanol saturated with ammonia gave rise to 1 in 86% yield, which means that overall yield of 1 from guanine was 43%. O-Acetylacyclovir (8) could be isolated in 81% yield on reaction of 5 with methanolic methoxide at room temperature. On the other hand, treatment of 5 with aqueous ammonium hydroxide (pH 11.6) gave rise to N²-acetylacyclovir (7) in 55% yield (50 °C, 1 h). Compound (7) would be a suitable starting material for the preparation of acyclovir phosphate, which might be anticipated to be active against a line of herpes simplex lacking thymidine kinase.\nFinally, it is worthy of note that among the solvents we examined, dimethyl sulfoxide (DMSO) was found to be the solvent of choice in terms of the solubility of substrates and the yield of 1.\n\nChart 2\nguanine → 3 → 5 (and 6) → 1, 7, 8\na: Ac₂O, AcOH\nb: AcO(CH₂)₂OCH₂OAc 4, DMSO, catalyst\nc: NH₃–CH₃OH\nd: NH₄OH\ne: CH₃ONa–CH₃OH\n\nExperimental\n\nAll melting points were determined on a Yanagimoto micro melting point apparatus, and are uncorrected. Nuclear magnetic resonance (NMR) spectra were obtained on a JEOL-270 spectrometer using tetramethylsilane as an internal standard. The following abbreviations are used: s = singlet, d = doublet, m = multiplet. Ultraviolet (UV) spectra were measured on a Hitachi 200-20 spectrophotometer. Column chromatography was performed with Kieselgel 60 (E. Merck, 70—230 mesh ASTM).\n\n2-Oxa-1,4-butanediol Diacetate (4)——Acetyl bromide (50 g, 0.4 mol) was added dropwise to 1,3-dioxolane (26.6 g 0.36 mol) with cooling in an ice bath, the reaction temperature being maintained below 5 °C. The reaction mixture was allowed to warm to room temperature, and then a solution of sodium acetate (50 g) in acetic acid (200 ml) was added at 110 °C. The reaction mixture was stirred for 1 h. Insoluble material (NaBr) was filtered off and the filtrate was distilled in vacuo initially to remove acetic acid and then fractionated in vacuo. The fraction boiling at 114—118 °C/10 mmHg¹⁶⁾ was collected. The yield of 4 was 38 g (60%).\n\nN,N'-Diacetylguanine(s) (3)——Diacetylguanine was prepared, with reference to the procedure of Beauchamp and coworkers.¹⁷⁾ A mixture of guanine (15.1 g, 0.1 mol), acetic anhydride (200 ml) and acetic acid (300 ml) was",
+            "image_class": "mixed",
+            "step_label": "",
+            "characterizations": []
+          },
+          {
+            "page_number": 4,
+            "image_index": 0,
+            "molecules": [],
+            "arrows": [],
+            "conditions_text": "",
+            "raw_output": "VLM page_read failed: Unterminated string starting at: line 33 column 18 (char 6973)",
+            "mode": "page_read",
+            "transcribed_text": "",
+            "image_class": "error",
+            "step_label": "",
+            "characterizations": []
+          },
+          {
+            "page_number": 5,
+            "image_index": 0,
+            "molecules": [],
+            "arrows": [],
+            "conditions_text": "",
+            "raw_output": "{\"image_class\":\"text_page\",\"transcribed_text\":\"No. 3\\t1157\\n\\nMattews, and J. P. H. Verheyden, J. Med. Chem., 26, 759 (1983); b) M. MacCoss, R. L. Tolman, W. T. Ashton, A. F. Wagner, J. Hannah, A. K. Field, J. D. Karkas, and J. I. Germershausen, Chem. Scripta., 26, 113 (1986).\\n15) T. Sato, T. Shimadate, and Y. Ishido, Nippon Kagaku Zasshi, 81, 1440 (1960).\\n16) M. Senkus, J. Am. Chem. Soc., 68, 734 (1946).\\n17) L. M. Beauchamp, B. L. Dolmatch, H. J. Schaeffer, P. Collins, D. J. Bauer, P. M. Keller, and J. A. Fyfe, J. Med. Chem., 28, 982 (1985).\\n\\nNII-Electronic Library Service\",\"steps\":[]}",
+            "mode": "page_read",
+            "transcribed_text": "No. 3\t1157\n\nMattews, and J. P. H. Verheyden, J. Med. Chem., 26, 759 (1983); b) M. MacCoss, R. L. Tolman, W. T. Ashton, A. F. Wagner, J. Hannah, A. K. Field, J. D. Karkas, and J. I. Germershausen, Chem. Scripta., 26, 113 (1986).\n15) T. Sato, T. Shimadate, and Y. Ishido, Nippon Kagaku Zasshi, 81, 1440 (1960).\n16) M. Senkus, J. Am. Chem. Soc., 68, 734 (1946).\n17) L. M. Beauchamp, B. L. Dolmatch, H. J. Schaeffer, P. Collins, D. J. Bauer, P. M. Keller, and J. A. Fyfe, J. Med. Chem., 28, 982 (1985).\n\nNII-Electronic Library Service",
+            "image_class": "text_page",
+            "step_label": "",
+            "characterizations": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "reconcile",
+      "label": "Reconcile text + table + scheme + page-read",
+      "status": "done",
+      "detail": "Merged 0 steps (text=0, tables=0, schemes=0, page_read=0)",
+      "data": {
+        "steps": 0,
+        "text_steps": 0,
+        "table_steps": 0,
+        "scheme_steps": 0,
+        "page_read_steps": 0
+      }
+    },
+    {
+      "id": "standardize",
+      "label": "Chemical standardization",
+      "status": "stubbed",
+      "detail": "No chemical entities to process",
+      "data": {
+        "resolved": 0,
+        "validated": 0,
+        "invalid": 0,
+        "unresolved": 0,
+        "total_entities": 0,
+        "times_standardized": 0
+      }
+    }
+  ],
+  "document": {
+    "filename": "950159db18e64146ae10bff8d4447cc3.pdf",
+    "page_count": 5,
+    "text": "NII-Electronic Library Service\n\n\nNII-Electronic Library Service\n\n\nNII-Electronic Library Service\n\n\nNII-Electronic Library Service\n\n\nNII-Electronic Library Service\n",
+    "segments": [
+      {
+        "segment_id": "page-1",
+        "kind": "body",
+        "page_start": 1,
+        "page_end": 1,
+        "text": "NII-Electronic Library Service",
+        "meta": {
+          "char_count": 31,
+          "source": "native",
+          "synthesis_score": 0.0,
+          "section": "body",
+          "evidence_types": [],
+          "document_type": "unknown",
+          "procedure_pages": [],
+          "high_evidence_pages": [],
+          "ocr_used": false,
+          "ocr_backend": "",
+          "native_char_count": 155,
+          "final_char_count": 163,
+          "evidence_profile": {
+            "document_type": "unknown",
+            "procedure_pages": [],
+            "high_evidence_pages": [],
+            "low_evidence_pages": [],
+            "total_chars": 150,
+            "pages": [
+              {
+                "page": 1,
+                "char_count": 30,
+                "section": "body",
+                "synthesis_score": 0.0,
+                "evidence_types": []
+              },
+              {
+                "page": 2,
+                "char_count": 30,
+                "section": "body",
+                "synthesis_score": 0.0,
+                "evidence_types": []
+              },
+              {
+                "page": 3,
+                "char_count": 30,
+                "section": "body",
+                "synthesis_score": 0.0,
+                "evidence_types": []
+              },
+              {
+                "page": 4,
+                "char_count": 30,
+                "section": "body",
+                "synthesis_score": 0.0,
+                "evidence_types": []
+              },
+              {
+                "page": 5,
+                "char_count": 30,
+                "section": "body",
+                "synthesis_score": 0.0,
+                "evidence_types": []
+              }
+            ]
+          }
+        }
+      },
+      {
+        "segment_id": "page-2",
+        "kind": "body",
+        "page_start": 2,
+        "page_end": 2,
+        "text": "NII-Electronic Library Service",
+        "meta": {
+          "char_count": 31,
+          "source": "native",
+          "synthesis_score": 0.0,
+          "section": "body",
+          "evidence_types": []
+        }
+      },
+      {
+        "segment_id": "page-3",
+        "kind": "body",
+        "page_start": 3,
+        "page_end": 3,
+        "text": "NII-Electronic Library Service",
+        "meta": {
+          "char_count": 31,
+          "source": "native",
+          "synthesis_score": 0.0,
+          "section": "body",
+          "evidence_types": []
+        }
+      },
+      {
+        "segment_id": "page-4",
+        "kind": "body",
+        "page_start": 4,
+        "page_end": 4,
+        "text": "NII-Electronic Library Service",
+        "meta": {
+          "char_count": 31,
+          "source": "native",
+          "synthesis_score": 0.0,
+          "section": "body",
+          "evidence_types": []
+        }
+      },
+      {
+        "segment_id": "page-5",
+        "kind": "body",
+        "page_start": 5,
+        "page_end": 5,
+        "text": "NII-Electronic Library Service",
+        "meta": {
+          "char_count": 31,
+          "source": "native",
+          "synthesis_score": 0.0,
+          "section": "body",
+          "evidence_types": []
+        }
+      }
+    ],
+    "figure_count": 5,
+    "table_hints": []
+  },
+  "route": {
+    "title": "NII-Electronic Library Service",
+    "target_name": "N/A",
+    "target_class": "unknown",
+    "document_type": "unknown",
+    "steps": [],
+    "warnings": [
+      "No high-confidence experimental/example pages detected by heuristics; using keyword-ranked fallback.",
+      "Page-read text re-extract failed: Error code: 400 - {'error': {'message': 'Provider returned error (request id: 202608291257443357480598268d9d67SVkCBeA)', 'type': 'upstream_error', 'param': '', 'code': 400}}",
+      "The provided document contains no scientific or experimental content — only repeated 'NII-Electronic Library Service' placeholder text (likely a failed OCR/text extraction of a scanned journal article).",
+      "No title, target compound, reaction, reagent, condition, or yield information could be extracted."
+    ],
+    "conflicts": [],
+    "route_graph": {
+      "nodes": [
+        {
+          "node_id": "n_a",
+          "name": "N/A",
+          "canonical_name": "N/A",
+          "compound_ids": [],
+          "step_indices": [
+            0
+          ],
+          "role": "target"
+        }
+      ],
+      "edges": [],
+      "target_node_id": "n_a"
+    },
+    "compound_links": []
+  },
+  "raw_model_output": "{\n  \"title\": \"NII-Electronic Library Service\",\n  \"target_name\": \"N/A\",\n  \"target_class\": \"unknown\",\n  \"document_type\": \"unknown\",\n  \"steps\": [],\n  \"warnings\": [\n    \"The provided document contains no scientific or experimental content — only repeated 'NII-Electronic Library Service' placeholder text (likely a failed OCR/text extraction of a scanned journal article).\",\n    \"No title, target compound, reaction, reagent, condition, or yield information could be extracted.\"\n  ]\n}",
+  "error": null,
+  "from_cache": false,
+  "content_hash": null,
+  "source_job_id": null,
+  "extraction_debug": {
+    "document_type": "unknown",
+    "pages_included": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "pages_excluded": [],
+    "chars_total": 163,
+    "chars_selected": 313,
+    "truncated": false,
+    "truncation_note": "",
+    "chunk_count": 5,
+    "chunks": [
+      {
+        "page_start": 1,
+        "page_end": 1,
+        "section": "body",
+        "evidence_types": [],
+        "chars": 30,
+        "score": 0.0
+      },
+      {
+        "page_start": 2,
+        "page_end": 2,
+        "section": "body",
+        "evidence_types": [],
+        "chars": 30,
+        "score": 0.0
+      },
+      {
+        "page_start": 3,
+        "page_end": 3,
+        "section": "body",
+        "evidence_types": [],
+        "chars": 30,
+        "score": 0.0
+      },
+      {
+        "page_start": 4,
+        "page_end": 4,
+        "section": "body",
+        "evidence_types": [],
+        "chars": 30,
+        "score": 0.0
+      },
+      {
+        "page_start": 5,
+        "page_end": 5,
+        "section": "body",
+        "evidence_types": [],
+        "chars": 30,
+        "score": 0.0
+      }
+    ],
+    "procedure_pages": [],
+    "warnings": [
+      "No high-confidence experimental/example pages detected by heuristics; using keyword-ranked fallback."
+    ],
+    "info": [
+      "Low native/OCR text (163 chars) — relying on VLM page-read for scanned content."
+    ],
+    "single_shot": true,
+    "route_graph_nodes": 1,
+    "compound_links": 0
+  }
+}

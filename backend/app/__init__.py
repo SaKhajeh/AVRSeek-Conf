@@ -1,0 +1,1 @@
+"""AVRSeek backend — antiviral reaction knowledge extraction."""

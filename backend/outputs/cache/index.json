@@ -1,0 +1,23 @@
+{
+  "4357cf0518a82f49d43d33133fe5ddcadc465e0f41e8a3d561c23420aa374ebf": {
+    "job_id": "f0b51e309668",
+    "filename": "RU2111967C1.pdf",
+    "content_hash": "4357cf0518a82f49d43d33133fe5ddcadc465e0f41e8a3d561c23420aa374ebf",
+    "processed_at": "2026-08-25T07:31:34.684806+00:00",
+    "steps": 4
+  },
+  "d7513925ce3119d12e0f585817113b55e8f33d13a0e62412d58adaa86645d226": {
+    "job_id": "069250cd254b",
+    "filename": "WO_9718211_A1.pdf",
+    "content_hash": "d7513925ce3119d12e0f585817113b55e8f33d13a0e62412d58adaa86645d226",
+    "processed_at": "2026-08-25T07:47:53.557707+00:00",
+    "steps": 7
+  },
+  "8f36ea9aa9e8ea73a9dde5103362749bc360fd59b9fb22ebcbc6b795314b3537": {
+    "job_id": "ba87a2b5fa47",
+    "filename": "36_1153.pdf",
+    "content_hash": "8f36ea9aa9e8ea73a9dde5103362749bc360fd59b9fb22ebcbc6b795314b3537",
+    "processed_at": "2026-08-25T13:28:29.689512+00:00",
+    "steps": 5
+  }
+}

@@ -1,0 +1,1006 @@
+{
+  "job_id": "96ef31568b7e",
+  "filename": "shiragami1995.pdf",
+  "stages": [
+    {
+      "id": "parse_pdf",
+      "label": "PDF document understanding (+ OCR)",
+      "status": "done",
+      "detail": "5 pages, 5 images, 0 table hints, 10045 text chars",
+      "data": {
+        "page_count": 5,
+        "figure_count": 5,
+        "segments": 5,
+        "text_chars": 10045,
+        "ocr_used": false,
+        "ocr_backend": "",
+        "document_type": "paper",
+        "procedure_pages": [
+          1,
+          2,
+          4,
+          5
+        ],
+        "evidence_profile": {
+          "document_type": "paper",
+          "procedure_pages": [
+            1,
+            2,
+            4,
+            5
+          ],
+          "high_evidence_pages": [
+            4,
+            5
+          ],
+          "low_evidence_pages": [],
+          "total_chars": 10028,
+          "pages": [
+            {
+              "page": 1,
+              "char_count": 1987,
+              "section": "body",
+              "synthesis_score": 0.55,
+              "evidence_types": [
+                {
+                  "type": "compound_preparation",
+                  "confidence": 0.5
+                },
+                {
+                  "type": "experimental_procedure",
+                  "confidence": 0.6
+                }
+              ]
+            },
+            {
+              "page": 2,
+              "char_count": 2185,
+              "section": "abstract",
+              "synthesis_score": 0.55,
+              "evidence_types": [
+                {
+                  "type": "compound_preparation",
+                  "confidence": 0.5
+                },
+                {
+                  "type": "reaction_table",
+                  "confidence": 0.5
+                },
+                {
+                  "type": "background",
+                  "confidence": 1.0
+                },
+                {
+                  "type": "abstract_claim",
+                  "confidence": 0.5
+                },
+                {
+                  "type": "experimental_procedure",
+                  "confidence": 0.6
+                }
+              ]
+            },
+            {
+              "page": 3,
+              "char_count": 1416,
+              "section": "tables",
+              "synthesis_score": 0.5,
+              "evidence_types": [
+                {
+                  "type": "analytical_characterization",
+                  "confidence": 1.0
+                },
+                {
+                  "type": "compound_preparation",
+                  "confidence": 0.5
+                },
+                {
+                  "type": "reaction_table",
+                  "confidence": 0.5
+                }
+              ]
+            },
+            {
+              "page": 4,
+              "char_count": 1585,
+              "section": "experimental",
+              "synthesis_score": 0.8,
+              "evidence_types": [
+                {
+                  "type": "experimental_procedure",
+                  "confidence": 0.65
+                },
+                {
+                  "type": "analytical_characterization",
+                  "confidence": 1.0
+                },
+                {
+                  "type": "compound_preparation",
+                  "confidence": 0.5
+                },
+                {
+                  "type": "reaction_table",
+                  "confidence": 0.5
+                },
+                {
+                  "type": "reaction_conditions",
+                  "confidence": 0.333
+                }
+              ]
+            },
+            {
+              "page": 5,
+              "char_count": 2855,
+              "section": "experimental",
+              "synthesis_score": 0.844,
+              "evidence_types": [
+                {
+                  "type": "reaction_conditions",
+                  "confidence": 0.817
+                },
+                {
+                  "type": "analytical_characterization",
+                  "confidence": 1.0
+                },
+                {
+                  "type": "experimental_procedure",
+                  "confidence": 0.25
+                },
+                {
+                  "type": "references",
+                  "confidence": 1.0
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "text_extract",
+      "label": "Text reaction extraction (LLM)",
+      "status": "error",
+      "detail": "Connection error.",
+      "data": null
+    },
+    {
+      "id": "table_extract",
+      "label": "Table extraction (pdfplumber + LLM)",
+      "status": "stubbed",
+      "detail": "No reaction-like tables found in 0 total tables",
+      "data": {
+        "tables_total": 0,
+        "reaction_tables": 0,
+        "steps_extracted": 0
+      }
+    },
+    {
+      "id": "image_scheme",
+      "label": "Scheme / image extraction (VLM)",
+      "status": "done",
+      "detail": "VLM analyzed 1 figure page(s) (figure pages [3]); no molecules/steps recovered (may be non-scheme figure or VLM parse issue).",
+      "data": {
+        "images_processed": 1,
+        "schemes_found": 0,
+        "molecules_extracted": 0,
+        "page_reads": 0,
+        "scheme_steps": 0,
+        "page_steps": 0,
+        "figure_pages": [
+          3
+        ],
+        "figure_page_info": [
+          {
+            "page": 3,
+            "score": 2.5,
+            "reason": "caption:FIG. 11"
+          }
+        ],
+        "schemes": [
+          {
+            "page_number": 3,
+            "image_index": 0,
+            "molecules": [],
+            "arrows": [],
+            "conditions_text": "caption: t acetic anhydride (FIG. 11). \nSince the catalyst in the synthesis of the acyclic sugar moiety 4 could be the same \nas that used in transpurination, the one pot reaction of guanosine with 1,3-dioxolane (3) \nand acetic anhydride in the presence of acid catalyst gave similar results (TABLE 1). \nTo obtain the desired, biologically active N-9 isomer 5a exclusively, isomerization \nof the N-7 isomer 5 b  to 5n is required. This w",
+            "raw_output": "VLM scheme failed: Connection error.",
+            "mode": "scheme",
+            "transcribed_text": "",
+            "image_class": "error",
+            "step_label": "",
+            "characterizations": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "reconcile",
+      "label": "Reconcile text + table + scheme + page-read",
+      "status": "done",
+      "detail": "Merged 0 steps (text=0, tables=0, schemes=0, page_read=0)",
+      "data": {
+        "steps": 0,
+        "text_steps": 0,
+        "table_steps": 0,
+        "scheme_steps": 0,
+        "page_read_steps": 0
+      }
+    },
+    {
+      "id": "standardize",
+      "label": "Chemical standardization",
+      "status": "stubbed",
+      "detail": "No chemical entities to process",
+      "data": {
+        "resolved": 0,
+        "validated": 0,
+        "invalid": 0,
+        "unresolved": 0,
+        "total_entities": 0,
+        "times_standardized": 0,
+        "resolution_status_counts": {}
+      }
+    }
+  ],
+  "document": {
+    "filename": "1db2a89e7eba49b38db48543dd8e9e83.pdf",
+    "page_count": 5,
+    "text": "This article was downloaded by: [University of Glasgow]\nOn: 12 April 2013, At: 03:59\nPublisher: Taylor & Francis\nInforma Ltd Registered in England and Wales Registered Number: 1072954 Registered\noffice: Mortimer House, 37-41 Mortimer Street, London W1T 3JH, UK\nNucleosides and Nucleotides\nPublication details, including instructions for authors and\nsubscription information:\nhttp://www.tandfonline.com/loi/lncn19\nSynthesis of 9-(2-\nHydroxyethoxymethyl)guanine\n(Acyclovir) from Guanosine\nHiroshi Shiragami a , Yoshihito Koguchi a , Yasuhiro Tanaka a , Satoshi\nTakamatsu a , Yumiko Uchida a , Takashi Ineyama a & Kunisuke Izawa\na\na Central Research Laboratories, Ajinomoto Co., Inc, 1-1 Suzuki-cho,\nKawasaki-ku, Kawasaki, 210, Japan\nVersion of record first published: 16 Feb 2007.\nTo cite this article: Hiroshi Shiragami , Yoshihito Koguchi , Yasuhiro Tanaka , Satoshi\nTakamatsu , Yumiko Uchida , Takashi Ineyama & Kunisuke Izawa (1995): Synthesis of 9-(2-\nHydroxyethoxymethyl)guanine (Acyclovir) from Guanosine, Nucleosides and Nucleotides, 14:3-5,\n337-340\nTo link to this article:  http://dx.doi.org/10.1080/15257779508012376\nPLEASE SCROLL DOWN FOR ARTICLE\nFull terms and conditions of use: http://www.tandfonline.com/page/terms-and-conditions\nThis article may be used for research, teaching, and private study purposes. Any\nsubstantial or systematic reproduction, redistribution, reselling, loan, sub-licensing,\nsystematic supply, or distribution in any form to anyone is expressly forbidden.\nThe publisher does not give any warranty express or implied or make any representation\nthat the contents will be complete or accurate or up to date. The accuracy of any\ninstructions, formulae, and drug doses should be independently verified with primary\nsources. The publisher shall not be liable for any loss, actions, claims, proceedings,\ndemand, or costs or damages whatsoever or howsoever caused arising directly or\nindirectly in connection with or arising out of the use of this material.\n\n\nNUCLEOSIDES & NUCLEOTIDES, 14(3-5), 337-340 (1995) \nSYNTHESIS OF 9-(2-HYDROXYETHOXYMETHYL)GUANINE \n(ACYCLOVIR) FROM GUANOSINE \nHiroshi Shiragami, Yoshihito Koguchi, Yasuhiro Tanaka, Satoshi Takamatsu, \nYumiko Uchida, Takashi Ineyama and Kunisuke Izawa* \nCentral Research Laboratories, Ajinomoto Co., Inc. \n1-1 Suzuki-cho, Kawasaki-ku, Kawasaki 210, Japan \nAbstract: A convenient synthesis of 9-(2-hydroxyethoxymethyl)guanine (acyclovir) from \nguanosine by chemical transpurination was developed. The isomerization of the 7-isomer \nto the desired 9-isomer and the purification of the 9-isomer was achieved simply by \nconcentration, heating and further crystallization. \nIntroduction \nThe discovery of 9-(2-hydroxyethoxymethyl)guanine (acyclovir)la-c (1) which has \npotent activity against herpes simplex type 1 and 2 viruses triggered a world wide effort to \nsynthesize guanine nucleosides and acyclic nucleoside analogues.2a-f Several methods for \nthe synthesis of acyclovir have been reported. Previously, Boryski and Golankiewicz \nreported3 transpurination of tetraa~etylguanosine~ \n(6), leading to 9- and 7-(2- \nacetoxyethoxymethyl)-N2-acetyIguanine (5). However, many problems occur when \nadapting this method for large-scale production, because it requires many steps and \nisolation of intermediary products, and has less regioselectivity. \nHere, we wish to report more convenient and economical synthesis of acyclovir (1) \nfrom natural g uanos i tie (2) by c hem ical t ran spu ri nat ion. \nResults and Disciission \nReacting 1,3-dioxolane (3) with acetic anhydride in the presence of acid catalyst \ngave (2-acetoxyethoxy)methyl acetate5 (4). The transpurination reaction of guanosine (2) \nwith this acyclic sugar moiety 4 in the presence of acetic anhydride and catalytic amount of \nacid gave a mixture of 9-(2-acetoxyethoxyrnethyl)-N~-acetylguanine \n(5a) and 742- \nacetoxyethoxymethyl)-N2-acetylguanine (5b) in high yield (FIG. I). Various acid catalysts \nwere applicable to the transpurination, as summarized in TABLE 1. The reaction proceeded \nwith or without solvent. \n337 \nCopyright 0 1995 by Marcel Defier, Inc. \nDownloaded by [University of Glasgow] at 03:59 12 April 2013 \n\n\n338 \nSHIRAGAMI ET AL. \nHO OH \nguanosine (2) \n7-isomer (5b) \n9-isomer (5a) \nisomerization \nFIG. I \nTABLE 1. Transpurinntion reaction from guanosine. \nconditions \nproducts \nadditives \ncatalysts \nsolvent temp. \ntime \n(% yield) \nP-TSOH*H~O \nH2S04 \nH2NPhS03H \nH3P04 \np-TsOH*H20 \np-TsOH.H20 \nH2NPhS03H \nHzP04 \n(\"C) \n100 \n1 00 \n100 \n100 \nMeCN \n82 \nDMF \n120 \nDMF \n120 \n100 \n24 \n24 \n24 \n48 \n24 \n24 \n24 \n5a \n48 \n42 \n40 \n47 \n30 \n35 \n33 \n45 \n5 b  \n38 - \n35 \n36 \n38 \n19 \n21 \n19 \n39 \na 0.1 equiv. of catalyst was used for the reaction. \nHPLC analysis of the reaction revealed that tetraacetylguanosine (6) was produced \nfirst and the transformation of 6 into 5 was observed subsequently. Indeed, the reaction \nstarting from the fully protected nucleoside 6 gave the comparable formation of 5 even in \nthe absence of acetic anhydride, but the transpurination of guanosine (2) itself did not \noccur without acetic anhydride (FIG. 11). \nSince the catalyst in the synthesis of the acyclic sugar moiety 4 could be the same \nas that used in transpurination, the one pot reaction of guanosine with 1,3-dioxolane (3) \nand acetic anhydride in the presence of acid catalyst gave similar results (TABLE 1). \nTo obtain the desired, biologically active N-9 isomer 5a exclusively, isomerization \nof the N-7 isomer 5 b  to 5n is required. This was realized by distilling off volatile \nDownloaded by [University of Glasgow] at 03:59 12 April 2013 \n\n\nSYNTHESIS OF ACYCLOVIR FROM GUANOSINE \n339 \nAcO OAc \n(6) \n(4) \n9-isomer (5a) (42%) \n7-isomer (5b) (30%) \ne \npTsOH*HzO a- \nNo Reaction \n100 C . 4 8 h .  \nFIG. II \nTABLE 2. Isomer ratios in the process. \nconditions \nprocedure \ntemp. \ntime \npressure \n947- isomer \n(\"C) \n(h) \n(mmHg) \nratioa \nTranspurinat ionb \n90-100 \n19.0 \n760 \n1.45 \nConcentration \n90-100 \n1.0 \n30-40 \nc.a. 2.0 \nIsomerization \n90-100 \n3.0 \n30 \n6.34 \n90-100 \n22.5 \n30 \n17.1 \nCrystallization \n25 \n1.0 \n760 \n120 \na The ratios were calculated based on HPLC peak area. \nb Giianosine (2) was reacted with 1,3-dioxolane (3) (2 equiv.) and \nAc2O (7 equiv.) in the presence of p-TsOHoH20 (0.1 equiv.). \ncomponents from the reaction mixture, followed by heating the residue at 100 \"C under \nreduced pressure (FIG. I). These isomerization conditions were considerably milder than \nthose reported previously3 and afforded a much higher N-9/N-7 ratio. After the \nisomerization, by adding an appropriate solvent such as ethyl acetate, acetonitrile or water \nto the residue, 5a was crystallized selectively from the concentrate (TABLE 2). \nTreating 5a with aqueous sodium hydroxide followed by neutralization with \nhydrochloric acid gave acyclovir (I) in 92% yield with high isomeric purity, which means \nthat the overall yield of I from guanosine was 78%. \nExperimental \n9-(2-acetoxyethoxymethyl)-N2-acetylguanine (5a) \nTo 50 g (176.5 mmol) of guanosine were added 62 g (353 mmol) of 4, 180 g \n(1.75 mol) of acetic anhydride and 3.4 g (17.5 mmol) of p-toluenesulfonic acid \nDownloaded by [University of Glasgow] at 03:59 12 April 2013 \n\n\n340 \nSHIRAGAMI ET AL. \nmonohydrate, and the mixture was stirred at 100 \"C for 20 h. The reaction mixture was \nconcentrated under reduced pressure (10 mmHg) at 50 \"C for 1 h. The resulting residue \nwas stirred at 100 \"C under reduced pressure (10 mmHg) for 20 h. The mixture was cooled \nto room temperature and 100 mL of ethyl acetate was added, and stirred further for 1 h. \nThe crystals were separated by filtration, washed with ethyl acetate (20 mL), and dried \nunder reduced pressure. The crude crystals (53 g) contained 46.9 g of 5a (86% yield), \naccompanied with 270 mg (0.5%) of 511, which were determined by HPLC. \n9-[2-(hydroxyethoxy)methyl]guanine (1) (acyclovir) \n10 g of crude crystals containing 5a were dissolved in 100 mL of 5% aqueous \nNaOH and the mixture was stirred at room temperature overnight. The reaction mixture \nwas neutralized by 1M HC1 and the resulting precipitate was filtered to provide 6.4 g of 1 \n(92% yield): m.p. 247-248 \"C; hmax(H20) 252 nm (E 12127); hmin(H20) 221 nm (E \n2298); lH NMR(400MHz, Me2SO-dg) 6 3.47 (4H, s, H-3', 47, 4.67 (lH, brs, OH), \n5.35 (2H, s, H-l'), 6.50 (2H, brs, NH2), 7.81 (lH, s, H-8), 10.63 (lH, brs, CONH). \n13C NMR (400 MHz, Me2SO-dg) 6 60.14 (C-4'), 70.62 (C-3'), 72.27 (C-l'), 116.73 \n(C-5), 138.00 (C-8), 15 1.67 (C-4), 154.1 1 (C-2), 157.05 (C-6); fast atom bombardment \nmass spectrum, m/z 226 (MH+). Anal. Calcd. for CsHllN503: C, 42.67; H, 4.92; N, \n31.10. Found: C, 42.39; H, 4.98; N, 30.95. \nREFERENCES \n1. (a) Elion, G. B.; Furman, P. A.; Fyfe, J. A.; de Miranda, P.; Beauchamp, L.; \nSchaeffer, H. J. Proc. Natl. Acod. Sci. USA, 1977, 74, 5716. \n(b) Schaeffer, H. J.; Beauchamp, L.; de Miranda, P.; Elion, C. B.; Bauer, D. J.; \nCollins, P. Nature, 1978, 272, 583. \n(c) Kelley J. L.; Schaeffer, H. J. .I. Hetcrocycl. Chem., 1986, 23(1), 271. \n2. (a) Chu, C. K.; Cutler, S. J. $1. Hcterocycl. Chcm., 1986, 23, 289. \n(b) Moorman, A. R.; Hill, J. A. ,I. Labelled Compd. Radiopharm, 1988,25(9), 963. \n(c) Kusmierek, J. T.; Czochralska, B.; Johansson, N. G.; Shugar, D. Acta Chem. \nScand, Ser. B., 1987, B41(10), 701. \n(d) Krenitsky, T. A,; Hall, W. W.; Pauro, D. M.; Beauchamp, L. M.; Schaeffer, H. \nJ.; Whiteman, P. D. Proc. Nutl. Acad. Sci. USA, 1984,8(10), 3209. \n(e) Matsumoto, H.; Kaneko, K. T.; Mori, T.; Mizuno, Y. Chem. Pharm. Bull., 1989, \n37(1), 229. \n(0 \nKaneko, C.; Matsurnoto, H.; Yarnada, K.; Takeuchi, T.; Mori, T.; Mizuno, Y. \nChem. Pharm Bit/l., 1988, 36(4), 1283. \n3. Boryski, J; Golankiewicz, R. Niiclcosides & Nucleotides, 1987, 6, 385 and 1989, 8, \n529. The 7-isomer was converted to a 55:45 mixture of the 9- and 7-isomers by heating \nat 230 \"C for 5 niin without catalyst. \n4. Reese, C. B.; Saffhill, R. J. .I. Chcm. Soc., Pcrkin Trans. 11, 1972, 2937. \n5. Senkus, M. .I. Am. Clicm. Soc., 1946,661, 734. \nDownloaded by [University of Glasgow] at 03:59 12 April 2013 \n",
+    "segments": [
+      {
+        "segment_id": "page-1",
+        "kind": "procedure_candidate",
+        "page_start": 1,
+        "page_end": 1,
+        "text": "This article was downloaded by: [University of Glasgow]\nOn: 12 April 2013, At: 03:59\nPublisher: Taylor & Francis\nInforma Ltd Registered in England and Wales Registered Number: 1072954 Registered\noffice: Mortimer House, 37-41 Mortimer Street, London W1T 3JH, UK\nNucleosides and Nucleotides\nPublication details, including instructions for authors and\nsubscription information:\nhttp://www.tandfonline.com/loi/lncn19\nSynthesis of 9-(2-\nHydroxyethoxymethyl)guanine\n(Acyclovir) from Guanosine\nHiroshi Shiragami a , Yoshihito Koguchi a , Yasuhiro Tanaka a , Satoshi\nTakamatsu a , Yumiko Uchida a , Takashi Ineyama a & Kunisuke Izawa\na\na Central Research Laboratories, Ajinomoto Co., Inc, 1-1 Suzuki-cho,\nKawasaki-ku, Kawasaki, 210, Japan\nVersion of record first published: 16 Feb 2007.\nTo cite this article: Hiroshi Shiragami , Yoshihito Koguchi , Yasuhiro Tanaka , Satoshi\nTakamatsu , Yumiko Uchida , Takashi Ineyama & Kunisuke Izawa (1995): Synthesis of 9-(2-\nHydroxyethoxymethyl)guanine (Acyclovir) from Guanosine, Nucleosides and Nucleotides, 14:3-5,\n337-340\nTo link to this article:  http://dx.doi.org/10.1080/15257779508012376\nPLEASE SCROLL DOWN FOR ARTICLE\nFull terms and conditions of use: http://www.tandfonline.com/page/terms-and-conditions\nThis article may be used for research, teaching, and private study purposes. Any\nsubstantial or systematic reproduction, redistribution, reselling, loan, sub-licensing,\nsystematic supply, or distribution in any form to anyone is expressly forbidden.\nThe publisher does not give any warranty express or implied or make any representation\nthat the contents will be complete or accurate or up to date. The accuracy of any\ninstructions, formulae, and drug doses should be independently verified with primary\nsources. The publisher shall not be liable for any loss, actions, claims, proceedings,\ndemand, or costs or damages whatsoever or howsoever caused arising directly or\nindirectly in connection with or arising out of the use of this material.",
+        "meta": {
+          "char_count": 1988,
+          "source": "native",
+          "synthesis_score": 0.55,
+          "section": "body",
+          "evidence_types": [
+            {
+              "type": "compound_preparation",
+              "confidence": 0.5
+            },
+            {
+              "type": "experimental_procedure",
+              "confidence": 0.6
+            }
+          ],
+          "document_type": "paper",
+          "procedure_pages": [
+            1,
+            2,
+            4,
+            5
+          ],
+          "high_evidence_pages": [
+            4,
+            5
+          ],
+          "ocr_used": false,
+          "ocr_backend": "",
+          "native_char_count": 10037,
+          "final_char_count": 10045,
+          "evidence_profile": {
+            "document_type": "paper",
+            "procedure_pages": [
+              1,
+              2,
+              4,
+              5
+            ],
+            "high_evidence_pages": [
+              4,
+              5
+            ],
+            "low_evidence_pages": [],
+            "total_chars": 10028,
+            "pages": [
+              {
+                "page": 1,
+                "char_count": 1987,
+                "section": "body",
+                "synthesis_score": 0.55,
+                "evidence_types": [
+                  {
+                    "type": "compound_preparation",
+                    "confidence": 0.5
+                  },
+                  {
+                    "type": "experimental_procedure",
+                    "confidence": 0.6
+                  }
+                ]
+              },
+              {
+                "page": 2,
+                "char_count": 2185,
+                "section": "abstract",
+                "synthesis_score": 0.55,
+                "evidence_types": [
+                  {
+                    "type": "compound_preparation",
+                    "confidence": 0.5
+                  },
+                  {
+                    "type": "reaction_table",
+                    "confidence": 0.5
+                  },
+                  {
+                    "type": "background",
+                    "confidence": 1.0
+                  },
+                  {
+                    "type": "abstract_claim",
+                    "confidence": 0.5
+                  },
+                  {
+                    "type": "experimental_procedure",
+                    "confidence": 0.6
+                  }
+                ]
+              },
+              {
+                "page": 3,
+                "char_count": 1416,
+                "section": "tables",
+                "synthesis_score": 0.5,
+                "evidence_types": [
+                  {
+                    "type": "analytical_characterization",
+                    "confidence": 1.0
+                  },
+                  {
+                    "type": "compound_preparation",
+                    "confidence": 0.5
+                  },
+                  {
+                    "type": "reaction_table",
+                    "confidence": 0.5
+                  }
+                ]
+              },
+              {
+                "page": 4,
+                "char_count": 1585,
+                "section": "experimental",
+                "synthesis_score": 0.8,
+                "evidence_types": [
+                  {
+                    "type": "experimental_procedure",
+                    "confidence": 0.65
+                  },
+                  {
+                    "type": "analytical_characterization",
+                    "confidence": 1.0
+                  },
+                  {
+                    "type": "compound_preparation",
+                    "confidence": 0.5
+                  },
+                  {
+                    "type": "reaction_table",
+                    "confidence": 0.5
+                  },
+                  {
+                    "type": "reaction_conditions",
+                    "confidence": 0.333
+                  }
+                ]
+              },
+              {
+                "page": 5,
+                "char_count": 2855,
+                "section": "experimental",
+                "synthesis_score": 0.844,
+                "evidence_types": [
+                  {
+                    "type": "reaction_conditions",
+                    "confidence": 0.817
+                  },
+                  {
+                    "type": "analytical_characterization",
+                    "confidence": 1.0
+                  },
+                  {
+                    "type": "experimental_procedure",
+                    "confidence": 0.25
+                  },
+                  {
+                    "type": "references",
+                    "confidence": 1.0
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "segment_id": "page-2",
+        "kind": "procedure_candidate",
+        "page_start": 2,
+        "page_end": 2,
+        "text": "NUCLEOSIDES & NUCLEOTIDES, 14(3-5), 337-340 (1995) \nSYNTHESIS OF 9-(2-HYDROXYETHOXYMETHYL)GUANINE \n(ACYCLOVIR) FROM GUANOSINE \nHiroshi Shiragami, Yoshihito Koguchi, Yasuhiro Tanaka, Satoshi Takamatsu, \nYumiko Uchida, Takashi Ineyama and Kunisuke Izawa* \nCentral Research Laboratories, Ajinomoto Co., Inc. \n1-1 Suzuki-cho, Kawasaki-ku, Kawasaki 210, Japan \nAbstract: A convenient synthesis of 9-(2-hydroxyethoxymethyl)guanine (acyclovir) from \nguanosine by chemical transpurination was developed. The isomerization of the 7-isomer \nto the desired 9-isomer and the purification of the 9-isomer was achieved simply by \nconcentration, heating and further crystallization. \nIntroduction \nThe discovery of 9-(2-hydroxyethoxymethyl)guanine (acyclovir)la-c (1) which has \npotent activity against herpes simplex type 1 and 2 viruses triggered a world wide effort to \nsynthesize guanine nucleosides and acyclic nucleoside analogues.2a-f Several methods for \nthe synthesis of acyclovir have been reported. Previously, Boryski and Golankiewicz \nreported3 transpurination of tetraa~etylguanosine~ \n(6), leading to 9- and 7-(2- \nacetoxyethoxymethyl)-N2-acetyIguanine (5). However, many problems occur when \nadapting this method for large-scale production, because it requires many steps and \nisolation of intermediary products, and has less regioselectivity. \nHere, we wish to report more convenient and economical synthesis of acyclovir (1) \nfrom natural g uanos i tie (2) by c hem ical t ran spu ri nat ion. \nResults and Disciission \nReacting 1,3-dioxolane (3) with acetic anhydride in the presence of acid catalyst \ngave (2-acetoxyethoxy)methyl acetate5 (4). The transpurination reaction of guanosine (2) \nwith this acyclic sugar moiety 4 in the presence of acetic anhydride and catalytic amount of \nacid gave a mixture of 9-(2-acetoxyethoxyrnethyl)-N~-acetylguanine \n(5a) and 742- \nacetoxyethoxymethyl)-N2-acetylguanine (5b) in high yield (FIG. I). Various acid catalysts \nwere applicable to the transpurination, as summarized in TABLE 1. The reaction proceeded \nwith or without solvent. \n337 \nCopyright 0 1995 by Marcel Defier, Inc. \nDownloaded by [University of Glasgow] at 03:59 12 April 2013",
+        "meta": {
+          "char_count": 2187,
+          "source": "native",
+          "synthesis_score": 0.55,
+          "section": "abstract",
+          "evidence_types": [
+            {
+              "type": "compound_preparation",
+              "confidence": 0.5
+            },
+            {
+              "type": "reaction_table",
+              "confidence": 0.5
+            },
+            {
+              "type": "background",
+              "confidence": 1.0
+            },
+            {
+              "type": "abstract_claim",
+              "confidence": 0.5
+            },
+            {
+              "type": "experimental_procedure",
+              "confidence": 0.6
+            }
+          ]
+        }
+      },
+      {
+        "segment_id": "page-3",
+        "kind": "procedure_candidate",
+        "page_start": 3,
+        "page_end": 3,
+        "text": "338 \nSHIRAGAMI ET AL. \nHO OH \nguanosine (2) \n7-isomer (5b) \n9-isomer (5a) \nisomerization \nFIG. I \nTABLE 1. Transpurinntion reaction from guanosine. \nconditions \nproducts \nadditives \ncatalysts \nsolvent temp. \ntime \n(% yield) \nP-TSOH*H~O \nH2S04 \nH2NPhS03H \nH3P04 \np-TsOH*H20 \np-TsOH.H20 \nH2NPhS03H \nHzP04 \n(\"C) \n100 \n1 00 \n100 \n100 \nMeCN \n82 \nDMF \n120 \nDMF \n120 \n100 \n24 \n24 \n24 \n48 \n24 \n24 \n24 \n5a \n48 \n42 \n40 \n47 \n30 \n35 \n33 \n45 \n5 b  \n38 - \n35 \n36 \n38 \n19 \n21 \n19 \n39 \na 0.1 equiv. of catalyst was used for the reaction. \nHPLC analysis of the reaction revealed that tetraacetylguanosine (6) was produced \nfirst and the transformation of 6 into 5 was observed subsequently. Indeed, the reaction \nstarting from the fully protected nucleoside 6 gave the comparable formation of 5 even in \nthe absence of acetic anhydride, but the transpurination of guanosine (2) itself did not \noccur without acetic anhydride (FIG. 11). \nSince the catalyst in the synthesis of the acyclic sugar moiety 4 could be the same \nas that used in transpurination, the one pot reaction of guanosine with 1,3-dioxolane (3) \nand acetic anhydride in the presence of acid catalyst gave similar results (TABLE 1). \nTo obtain the desired, biologically active N-9 isomer 5a exclusively, isomerization \nof the N-7 isomer 5 b  to 5n is required. This was realized by distilling off volatile \nDownloaded by [University of Glasgow] at 03:59 12 April 2013",
+        "meta": {
+          "char_count": 1418,
+          "source": "native",
+          "synthesis_score": 0.5,
+          "section": "tables",
+          "evidence_types": [
+            {
+              "type": "analytical_characterization",
+              "confidence": 1.0
+            },
+            {
+              "type": "compound_preparation",
+              "confidence": 0.5
+            },
+            {
+              "type": "reaction_table",
+              "confidence": 0.5
+            }
+          ]
+        }
+      },
+      {
+        "segment_id": "page-4",
+        "kind": "procedure_candidate",
+        "page_start": 4,
+        "page_end": 4,
+        "text": "SYNTHESIS OF ACYCLOVIR FROM GUANOSINE \n339 \nAcO OAc \n(6) \n(4) \n9-isomer (5a) (42%) \n7-isomer (5b) (30%) \ne \npTsOH*HzO a- \nNo Reaction \n100 C . 4 8 h .  \nFIG. II \nTABLE 2. Isomer ratios in the process. \nconditions \nprocedure \ntemp. \ntime \npressure \n947- isomer \n(\"C) \n(h) \n(mmHg) \nratioa \nTranspurinat ionb \n90-100 \n19.0 \n760 \n1.45 \nConcentration \n90-100 \n1.0 \n30-40 \nc.a. 2.0 \nIsomerization \n90-100 \n3.0 \n30 \n6.34 \n90-100 \n22.5 \n30 \n17.1 \nCrystallization \n25 \n1.0 \n760 \n120 \na The ratios were calculated based on HPLC peak area. \nb Giianosine (2) was reacted with 1,3-dioxolane (3) (2 equiv.) and \nAc2O (7 equiv.) in the presence of p-TsOHoH20 (0.1 equiv.). \ncomponents from the reaction mixture, followed by heating the residue at 100 \"C under \nreduced pressure (FIG. I). These isomerization conditions were considerably milder than \nthose reported previously3 and afforded a much higher N-9/N-7 ratio. After the \nisomerization, by adding an appropriate solvent such as ethyl acetate, acetonitrile or water \nto the residue, 5a was crystallized selectively from the concentrate (TABLE 2). \nTreating 5a with aqueous sodium hydroxide followed by neutralization with \nhydrochloric acid gave acyclovir (I) in 92% yield with high isomeric purity, which means \nthat the overall yield of I from guanosine was 78%. \nExperimental \n9-(2-acetoxyethoxymethyl)-N2-acetylguanine (5a) \nTo 50 g (176.5 mmol) of guanosine were added 62 g (353 mmol) of 4, 180 g \n(1.75 mol) of acetic anhydride and 3.4 g (17.5 mmol) of p-toluenesulfonic acid \nDownloaded by [University of Glasgow] at 03:59 12 April 2013",
+        "meta": {
+          "char_count": 1587,
+          "source": "native",
+          "synthesis_score": 0.8,
+          "section": "experimental",
+          "evidence_types": [
+            {
+              "type": "experimental_procedure",
+              "confidence": 0.65
+            },
+            {
+              "type": "analytical_characterization",
+              "confidence": 1.0
+            },
+            {
+              "type": "compound_preparation",
+              "confidence": 0.5
+            },
+            {
+              "type": "reaction_table",
+              "confidence": 0.5
+            },
+            {
+              "type": "reaction_conditions",
+              "confidence": 0.3333333333333333
+            }
+          ]
+        }
+      },
+      {
+        "segment_id": "page-5",
+        "kind": "body",
+        "page_start": 5,
+        "page_end": 5,
+        "text": "340 \nSHIRAGAMI ET AL. \nmonohydrate, and the mixture was stirred at 100 \"C for 20 h. The reaction mixture was \nconcentrated under reduced pressure (10 mmHg) at 50 \"C for 1 h. The resulting residue \nwas stirred at 100 \"C under reduced pressure (10 mmHg) for 20 h. The mixture was cooled \nto room temperature and 100 mL of ethyl acetate was added, and stirred further for 1 h. \nThe crystals were separated by filtration, washed with ethyl acetate (20 mL), and dried \nunder reduced pressure. The crude crystals (53 g) contained 46.9 g of 5a (86% yield), \naccompanied with 270 mg (0.5%) of 511, which were determined by HPLC. \n9-[2-(hydroxyethoxy)methyl]guanine (1) (acyclovir) \n10 g of crude crystals containing 5a were dissolved in 100 mL of 5% aqueous \nNaOH and the mixture was stirred at room temperature overnight. The reaction mixture \nwas neutralized by 1M HC1 and the resulting precipitate was filtered to provide 6.4 g of 1 \n(92% yield): m.p. 247-248 \"C; hmax(H20) 252 nm (E 12127); hmin(H20) 221 nm (E \n2298); lH NMR(400MHz, Me2SO-dg) 6 3.47 (4H, s, H-3', 47, 4.67 (lH, brs, OH), \n5.35 (2H, s, H-l'), 6.50 (2H, brs, NH2), 7.81 (lH, s, H-8), 10.63 (lH, brs, CONH). \n13C NMR (400 MHz, Me2SO-dg) 6 60.14 (C-4'), 70.62 (C-3'), 72.27 (C-l'), 116.73 \n(C-5), 138.00 (C-8), 15 1.67 (C-4), 154.1 1 (C-2), 157.05 (C-6); fast atom bombardment \nmass spectrum, m/z 226 (MH+). Anal. Calcd. for CsHllN503: C, 42.67; H, 4.92; N, \n31.10. Found: C, 42.39; H, 4.98; N, 30.95. \nREFERENCES \n1. (a) Elion, G. B.; Furman, P. A.; Fyfe, J. A.; de Miranda, P.; Beauchamp, L.; \nSchaeffer, H. J. Proc. Natl. Acod. Sci. USA, 1977, 74, 5716. \n(b) Schaeffer, H. J.; Beauchamp, L.; de Miranda, P.; Elion, C. B.; Bauer, D. J.; \nCollins, P. Nature, 1978, 272, 583. \n(c) Kelley J. L.; Schaeffer, H. J. .I. Hetcrocycl. Chem., 1986, 23(1), 271. \n2. (a) Chu, C. K.; Cutler, S. J. $1. Hcterocycl. Chcm., 1986, 23, 289. \n(b) Moorman, A. R.; Hill, J. A. ,I. Labelled Compd. Radiopharm, 1988,25(9), 963. \n(c) Kusmierek, J. T.; Czochralska, B.; Johansson, N. G.; Shugar, D. Acta Chem. \nScand, Ser. B., 1987, B41(10), 701. \n(d) Krenitsky, T. A,; Hall, W. W.; Pauro, D. M.; Beauchamp, L. M.; Schaeffer, H. \nJ.; Whiteman, P. D. Proc. Nutl. Acad. Sci. USA, 1984,8(10), 3209. \n(e) Matsumoto, H.; Kaneko, K. T.; Mori, T.; Mizuno, Y. Chem. Pharm. Bull., 1989, \n37(1), 229. \n(0 \nKaneko, C.; Matsurnoto, H.; Yarnada, K.; Takeuchi, T.; Mori, T.; Mizuno, Y. \nChem. Pharm Bit/l., 1988, 36(4), 1283. \n3. Boryski, J; Golankiewicz, R. Niiclcosides & Nucleotides, 1987, 6, 385 and 1989, 8, \n529. The 7-isomer was converted to a 55:45 mixture of the 9- and 7-isomers by heating \nat 230 \"C for 5 niin without catalyst. \n4. Reese, C. B.; Saffhill, R. J. .I. Chcm. Soc., Pcrkin Trans. 11, 1972, 2937. \n5. Senkus, M. .I. Am. Clicm. Soc., 1946,661, 734. \nDownloaded by [University of Glasgow] at 03:59 12 April 2013",
+        "meta": {
+          "char_count": 2857,
+          "source": "native",
+          "synthesis_score": 0.8441666666666666,
+          "section": "experimental",
+          "evidence_types": [
+            {
+              "type": "reaction_conditions",
+              "confidence": 0.8166666666666667
+            },
+            {
+              "type": "analytical_characterization",
+              "confidence": 1.0
+            },
+            {
+              "type": "experimental_procedure",
+              "confidence": 0.25
+            },
+            {
+              "type": "references",
+              "confidence": 1.0
+            }
+          ]
+        }
+      }
+    ],
+    "figure_count": 5,
+    "table_hints": []
+  },
+  "route": {
+    "title": "shiragami1995.pdf",
+    "target_name": "N/A",
+    "target_class": "unknown",
+    "document_type": "unknown",
+    "steps": [],
+    "warnings": [
+      "Experimental content detected on pages [1, 2, 4, 5], but only 0 reaction step(s) extracted while 5 procedure subsection(s) were retrieved — possible under-extraction."
+    ],
+    "conflicts": [],
+    "route_graph": {
+      "nodes": [
+        {
+          "node_id": "n_a",
+          "name": "N/A",
+          "canonical_name": "N/A",
+          "compound_ids": [],
+          "step_indices": [
+            0
+          ],
+          "role": "target"
+        }
+      ],
+      "edges": [],
+      "target_node_id": "n_a"
+    },
+    "compound_links": []
+  },
+  "raw_model_output": null,
+  "error": null,
+  "from_cache": false,
+  "content_hash": null,
+  "source_job_id": null,
+  "extraction_debug": {
+    "document_type": "paper",
+    "pages_included": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "pages_excluded": [],
+    "candidate_procedure_pages": [
+      1,
+      2,
+      4,
+      5
+    ],
+    "mandatory_pages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "exclusion_reasons": {},
+    "chars_total": 10045,
+    "chars_selected": 10539,
+    "truncated": false,
+    "truncation_note": "",
+    "pass_index": 1,
+    "pass_count": 1,
+    "chunk_count": 5,
+    "chunks": [
+      {
+        "page_start": 1,
+        "page_end": 1,
+        "section": "body",
+        "evidence_types": [
+          "compound_preparation",
+          "experimental_procedure"
+        ],
+        "chars": 1987,
+        "score": 0.55
+      },
+      {
+        "page_start": 2,
+        "page_end": 2,
+        "section": "abstract",
+        "evidence_types": [
+          "compound_preparation",
+          "reaction_table",
+          "background",
+          "abstract_claim"
+        ],
+        "chars": 2185,
+        "score": 0.55
+      },
+      {
+        "page_start": 3,
+        "page_end": 3,
+        "section": "tables",
+        "evidence_types": [
+          "analytical_characterization",
+          "compound_preparation",
+          "reaction_table"
+        ],
+        "chars": 1416,
+        "score": 0.5
+      },
+      {
+        "page_start": 4,
+        "page_end": 4,
+        "section": "experimental",
+        "evidence_types": [
+          "experimental_procedure",
+          "analytical_characterization",
+          "compound_preparation",
+          "reaction_table"
+        ],
+        "chars": 1585,
+        "score": 0.8
+      },
+      {
+        "page_start": 5,
+        "page_end": 5,
+        "section": "experimental",
+        "evidence_types": [
+          "reaction_conditions",
+          "analytical_characterization",
+          "experimental_procedure",
+          "references"
+        ],
+        "chars": 2855,
+        "score": 0.8441666666666666
+      }
+    ],
+    "procedure_pages": [
+      1,
+      2,
+      4,
+      5
+    ],
+    "warnings": [],
+    "info": [
+      "Procedure/evidence pages detected: [1, 2, 4, 5] (document_type=paper).",
+      "Mandatory procedure page set (with neighbors): [1, 2, 3, 4, 5].",
+      "Experimental/example pages detected: [1, 2, 4, 5]."
+    ],
+    "page_selection": {
+      "candidate_procedure_pages": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "mandatory_pages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "pages_included": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "pages_excluded": [],
+      "exclusion_reasons": {},
+      "pass_count": 1,
+      "passes": [
+        {
+          "document_type": "paper",
+          "pages_included": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "pages_excluded": [],
+          "candidate_procedure_pages": [
+            1,
+            2,
+            4,
+            5
+          ],
+          "mandatory_pages": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "exclusion_reasons": {},
+          "chars_total": 10045,
+          "chars_selected": 10539,
+          "truncated": false,
+          "truncation_note": "",
+          "pass_index": 1,
+          "pass_count": 1,
+          "chunk_count": 5,
+          "chunks": [
+            {
+              "page_start": 1,
+              "page_end": 1,
+              "section": "body",
+              "evidence_types": [
+                "compound_preparation",
+                "experimental_procedure"
+              ],
+              "chars": 1987,
+              "score": 0.55
+            },
+            {
+              "page_start": 2,
+              "page_end": 2,
+              "section": "abstract",
+              "evidence_types": [
+                "compound_preparation",
+                "reaction_table",
+                "background",
+                "abstract_claim"
+              ],
+              "chars": 2185,
+              "score": 0.55
+            },
+            {
+              "page_start": 3,
+              "page_end": 3,
+              "section": "tables",
+              "evidence_types": [
+                "analytical_characterization",
+                "compound_preparation",
+                "reaction_table"
+              ],
+              "chars": 1416,
+              "score": 0.5
+            },
+            {
+              "page_start": 4,
+              "page_end": 4,
+              "section": "experimental",
+              "evidence_types": [
+                "experimental_procedure",
+                "analytical_characterization",
+                "compound_preparation",
+                "reaction_table"
+              ],
+              "chars": 1585,
+              "score": 0.8
+            },
+            {
+              "page_start": 5,
+              "page_end": 5,
+              "section": "experimental",
+              "evidence_types": [
+                "reaction_conditions",
+                "analytical_characterization",
+                "experimental_procedure",
+                "references"
+              ],
+              "chars": 2855,
+              "score": 0.8441666666666666
+            }
+          ],
+          "procedure_pages": [
+            1,
+            2,
+            4,
+            5
+          ],
+          "warnings": [],
+          "info": [
+            "Procedure/evidence pages detected: [1, 2, 4, 5] (document_type=paper).",
+            "Mandatory procedure page set (with neighbors): [1, 2, 3, 4, 5]."
+          ]
+        }
+      ]
+    },
+    "figure_pages_vlm": [
+      {
+        "page": 3,
+        "score": 2.5,
+        "reason": "caption:FIG. 11"
+      }
+    ],
+    "reconciliation": {},
+    "route_graph_nodes": 1,
+    "compound_links": 0,
+    "observability": {
+      "document": {
+        "pages": 5,
+        "text_chars": 10045,
+        "figures": 5,
+        "tables": 0
+      },
+      "page_selection": {
+        "candidate_procedure_pages": [
+          1,
+          2,
+          4,
+          5
+        ],
+        "mandatory_pages": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "pages_included": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "pages_excluded": [],
+        "exclusion_reasons": {},
+        "pass_count": 1,
+        "passes": [
+          {
+            "document_type": "paper",
+            "pages_included": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "pages_excluded": [],
+            "candidate_procedure_pages": [
+              1,
+              2,
+              4,
+              5
+            ],
+            "mandatory_pages": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "exclusion_reasons": {},
+            "chars_total": 10045,
+            "chars_selected": 10539,
+            "truncated": false,
+            "truncation_note": "",
+            "pass_index": 1,
+            "pass_count": 1,
+            "chunk_count": 5,
+            "chunks": [
+              {
+                "page_start": 1,
+                "page_end": 1,
+                "section": "body",
+                "evidence_types": [
+                  "compound_preparation",
+                  "experimental_procedure"
+                ],
+                "chars": 1987,
+                "score": 0.55
+              },
+              {
+                "page_start": 2,
+                "page_end": 2,
+                "section": "abstract",
+                "evidence_types": [
+                  "compound_preparation",
+                  "reaction_table",
+                  "background",
+                  "abstract_claim"
+                ],
+                "chars": 2185,
+                "score": 0.55
+              },
+              {
+                "page_start": 3,
+                "page_end": 3,
+                "section": "tables",
+                "evidence_types": [
+                  "analytical_characterization",
+                  "compound_preparation",
+                  "reaction_table"
+                ],
+                "chars": 1416,
+                "score": 0.5
+              },
+              {
+                "page_start": 4,
+                "page_end": 4,
+                "section": "experimental",
+                "evidence_types": [
+                  "experimental_procedure",
+                  "analytical_characterization",
+                  "compound_preparation",
+                  "reaction_table"
+                ],
+                "chars": 1585,
+                "score": 0.8
+              },
+              {
+                "page_start": 5,
+                "page_end": 5,
+                "section": "experimental",
+                "evidence_types": [
+                  "reaction_conditions",
+                  "analytical_characterization",
+                  "experimental_procedure",
+                  "references"
+                ],
+                "chars": 2855,
+                "score": 0.8441666666666666
+              }
+            ],
+            "procedure_pages": [
+              1,
+              2,
+              4,
+              5
+            ],
+            "warnings": [],
+            "info": [
+              "Procedure/evidence pages detected: [1, 2, 4, 5] (document_type=paper).",
+              "Mandatory procedure page set (with neighbors): [1, 2, 3, 4, 5]."
+            ]
+          }
+        ]
+      },
+      "text_extraction": {
+        "steps": 0,
+        "passes": 1
+      },
+      "table_extraction": {
+        "steps": 0
+      },
+      "scheme_extraction": {
+        "scheme_steps": 0,
+        "page_read_steps": 0
+      },
+      "reconciliation": {},
+      "standardization": {
+        "resolved": 0,
+        "validated": 0,
+        "invalid": 0,
+        "unresolved": 0,
+        "total_entities": 0,
+        "times_standardized": 0,
+        "resolution_status_counts": {}
+      },
+      "provenance": {
+        "entities_with_provenance": 0,
+        "entities_without_provenance": 0,
+        "reactions_with_conflicts": 0
+      }
+    }
+  }
+}

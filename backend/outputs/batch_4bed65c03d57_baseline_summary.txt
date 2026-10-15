@@ -1,0 +1,12 @@
+Wrote C:\Users\galin\Downloads\DeepSynthesis-ReactionSeek-6d42c4a\AVRSeek\backend\outputs\batch_4bed65c03d57_comparison.json
+36_1153.pdf: AVRSeek=3 baseline=0 | single-shot Opus 5 on cached parsed text (AvalAI)
+EP0532878A2.pdf: AVRSeek=12 baseline=4 | single-shot Opus 5 on cached parsed text (AvalAI)
+EP0709385A1.pdf: AVRSeek=17 baseline=- | baseline failed: Expecting ',' delimiter: line 352 column 213 (char 15231)
+EP0862570B1.pdf: AVRSeek=4 baseline=5 | single-shot Opus 5 on cached parsed text (AvalAI)
+jm00146a002.pdf: AVRSeek=25 baseline=- | baseline failed: Expecting ',' delimiter: line 369 column 212 (char 15733)
+pdf.pdf: AVRSeek=5 baseline=5 | single-shot Opus 5 on cached parsed text (AvalAI)
+RU2111967C1.pdf: AVRSeek=0 baseline=- | no extractable text in job cache (OCR needed)
+shiragami1995.pdf: AVRSeek=0 baseline=6 | single-shot Opus 5 on cached parsed text (AvalAI)
+US5567816.pdf: AVRSeek=0 baseline=- | baseline failed: Expecting ',' delimiter: line 508 column 28 (char 15023)
+US5756737.pdf: AVRSeek=0 baseline=6 | single-shot Opus 5 on cached parsed text (AvalAI)
+WO_9718211_A1.pdf: AVRSeek=0 baseline=- | no extractable text in job cache (OCR needed)

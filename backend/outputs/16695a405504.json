@@ -1,0 +1,262 @@
+{
+  "job_id": "16695a405504",
+  "filename": "pdf.pdf",
+  "stages": [
+    {
+      "id": "parse_pdf",
+      "label": "PDF document understanding (+ OCR)",
+      "status": "done",
+      "detail": "6 pages, 21 images, 1 table hints, 14976 text chars",
+      "data": {
+        "page_count": 6,
+        "figure_count": 21,
+        "segments": 6,
+        "text_chars": 14976,
+        "ocr_used": false,
+        "ocr_backend": ""
+      }
+    },
+    {
+      "id": "text_extract",
+      "label": "Text reaction extraction (LLM)",
+      "status": "done",
+      "detail": "Extracted 1 step(s) with claude-opus-5",
+      "data": {
+        "steps": 1,
+        "target": "acyclovir {9-[(2-hydroxyethoxy)methyl]guanine} (ACV, 1)",
+        "text_chars_sent": 3363
+      }
+    },
+    {
+      "id": "table_extract",
+      "label": "Table extraction (pdfplumber + LLM)",
+      "status": "stubbed",
+      "detail": "No reaction-like tables found in 1 total tables",
+      "data": {
+        "tables_total": 1,
+        "reaction_tables": 0,
+        "steps_extracted": 0
+      }
+    },
+    {
+      "id": "image_scheme",
+      "label": "Scheme / image extraction (VLM)",
+      "status": "stubbed",
+      "detail": "No schemes or page text recovered from 0 analyzed image(s).",
+      "data": {
+        "images_processed": 0,
+        "schemes_found": 0,
+        "molecules_extracted": 0,
+        "page_reads": 0,
+        "scheme_steps": 0,
+        "page_steps": 0
+      }
+    },
+    {
+      "id": "reconcile",
+      "label": "Reconcile text + table + scheme + page-read",
+      "status": "done",
+      "detail": "Merged 1 steps (text=1, tables=0, schemes=0, page_read=0)",
+      "data": {
+        "steps": 1,
+        "text_steps": 1,
+        "table_steps": 0,
+        "scheme_steps": 0,
+        "page_read_steps": 0
+      }
+    },
+    {
+      "id": "standardize",
+      "label": "Chemical standardization",
+      "status": "stubbed",
+      "detail": "6 name(s) could not be resolved",
+      "data": {
+        "resolved": 0,
+        "validated": 0,
+        "invalid": 0,
+        "unresolved": 6,
+        "total_entities": 6,
+        "times_standardized": 0
+      }
+    }
+  ],
+  "document": {
+    "filename": "e691240295774f0cbe7b9a7de9ef854f.pdf",
+    "page_count": 6,
+    "text": " \n523\nJournal of Chemistry, Vol. 47 (4), P. 523 - 528, 2009 \n \nSYNTHESIS OF ACYCLOVIR AS AN ANTIHERPES-VIRUS DRUG  \nReceived 4 February 2009  \nTran Quang Hung1, Nguyen Thi Thuong2, Tran Van Sung1 \n1Laboratory of Organic Synthesis, Institute of Chemistry, VAST \n2Laboratory of Herpes viruses, Faculty of Virus, National Institute of Hygiene and Epidemiology \n \nAbstract \nA one-pot process for high-yield regioselective synthesis of 9-[(2-hydroxyethoxy) \nmethyl]guanine (acyclovir),  an antiherpetic agent, was achieved from guanine via the steps of \nreacting of N2,N9 -diprotected guanine with 1-acetyl-2-acetylmethoxy-ethyleneglycol in presence \nof phosphoric acid or polyphosphoric acid. Total yield of product was 59%. The obtained \nacyclovir meets the standards in the British Pharmacopoeia 2007 (BP2007). Its activity as \ninhibitor of herpes simplex virus type 1 (HSV-1) and type 2 (HSV-2) was evaluated according to \nthe plaque reduction assay method and compared with the standard compound. The synthesized \nacyclovir showed a similar activity as the control. \nKeywords: Acyclovir, Herpes simplex virus, Nucleoside, One- pot synthesis. \n \nI - Introduction \nVirus was a cause of many dangerous \ndiseases and variety of epidemic diseases in \nlarge area. It is important that antibiotics have \nno or almost no effect on viruses. Although the \nproduction of herpes vaccine is desired by many \ncountries but it still stays on a testing level. The \nprevention of herpes infection is a special \nproblem because the disease often recurred in \npresent of antibody. Therefore, development of \nanti-virus drugs is important, necessary and still \nbe a leading interest.  \n \n1: Acyclovir  \nAcyclovir, \n{9-[(2-hydroxyethoxy)methyl] \nguanine} (ACV 1), was first reported by \nSchaeffer and co-workers [1] and is a nucleoside \nanalogue. It acts selectively on herpes-infected \ncells. It has specific inhibition effects on \nreplication of herpes virus simplex type 1 and \ntype 2 (HSV1 and HSV2) and Varicella zoster \nvirus that cause almost no intoxication to the \nhost cells. From nearly three decades ago, ACV \nwas used as a primary drug to treat herpes virus, \nespecially genital herpes and herpes simplex \nencephalitis and herpes in immunity deficient \npeople [2].  \nACV has no activity against viral pathogens \nuntil it is converted to an active form acyclovir \ntriphosphate. Its mechanism of action is initiated \nby \nthe \nviral \nenzyme \nThymidine \nkinase; \nsubsequently, human Cellular kinase perform \nthe second and the third phosphorylation steps \nto complete the process (figure 1). Acyclovir \ntriphosphate, the active form of acyclovir, is \npresent in 40- to 100-fold higher concentrations \nin herpes simplex virus (HSV)-infected cells \nthan in uninfected cells. As a result, the \nselectivity of ACV is significant [3, 4]. \n\n\n \n524\nAcyclovir triphosphate has a two-pronged \nmechanism of action: (1) it competes with 2-\ndeoxyguanosine triphosphate (dGTP) as a \nsubstrate for viral DNA polymerase and (2) \nonce \nit \nbecomes \nincorporated \ninto \nthe \nreplicating viral DNA, it acts as a chain \nterminator because it does not have a terminal \n3-hydroxyl group [3].  \n \n \n \nFigure 1: Acyclovir mechanism of action \n \nACV was prepared in different forms such \nas tablets (200 mg, 400 mg, 800 mg), capsules \n200 mg, powder for injection, oral suspension, \ncreams for skin 5% and for eyes 3%. After oral \nadministration, ACV is absorbed slowly and not \ncompletely, bioavailability of only 10-20% [9].  \nACV rapidly attracted attention of chemist, \nas well as pharmacist by virtue of its selective \nanti-virus activity and effect. There were many \nefforts for synthesis of ACV by different ways \nreported. \nAmong \ndivert \norientations \nof \nsynthesizing ACV, it could be accounted 5 \ncommon and most effective pathways. The most \ncommon pathway departed from guanine with \neffectiveness and simplicity where guanine was \nacylated [5]. The important problem is to \ndecrease \nthe \nN7 \nsubstituted \nisomer \nand \nselectively akylating into N9 position. Our \nsynthesis of ACV is showed in figure 2.\n \n \n \nFigure 2: Pathway for synthesis of acyclovir \n \nII - Experimental \nPreparation of dioxolane-diacetate (1-acetyl-\n2-acetylmethoxy-ethyleneglycol) \nDioxolane 5 (224 g, 99%, 211.6 ml, 3 mol) \nwas added drop wise to a solution of p-\ntoluenesulfonic acid monohydrate (10 g, 0.053 \nmol) in acetic anhydride (306 g, 283.3 ml,3 \nmol) and acetic acid (45 g, 42.9 ml, 0.75 mol) \nprecooled to below 10oC, at the rate that \nmaintained the reaction temperature under 30oC. \nThe solution was then stirred for an additional \nhour at a temperature under 30oC, and then \ndistilled. The first portion of distillate was \ncollected at a temperature of 40 - 80oC/1.5 \nmmHg and contained acetic acid, acetic \nanhydride, and other materials. The second \nportion of distillate was collected at 80 - 95oC. \nat 0.75 mmHg and redistilled to give pure 7 in a \nyield of 431.5 g (81.7%). 1H-NMR (CD3OD, \n500 MHz, δ ppm): 2.06, 2.08 (s, 6H, 2xCH3), \n3.85, 4.21 (s, 4H, OCH2CH2O), 5.28 (s, 2H, \nOCH2O). \n\n\n \n525\n \n \nFigure 3: Preparation of Dioxolane-diacetate  \n \nPreparation of acyclovir \nA mixture of guanine (3, 32.13 g, 213 \nmmol), acetic anhydride (320 ml) and acetic \nacid (480 ml) was refluxed overnight, during \nwhich time the mixture became almost clear. \nThe liquid was removed by evaporation in \nreduced pressure. To the residue was added \ntoluene (300 ml), 7 (75 g, 426 mmol), and \nphosphoric acid (85.5%, 1.5 ml) with stirring. \nThe resulting mixture was refluxed for 6 - 7 \nhours with vigorous stirring.  \nToluene and acetic anhydride were then \nremoved under reduced pressure and the residue \nwas heated at 80oC (oil bath) under reduced \npressure (20 mm Hg) for another 2 hours, \ncooled to room temperature, triturated with \nethyl acetate (100 ml), and stirred at room \ntemperature overnight.  \nThe resulting solid was collected by \nfiltration, washed twice with ethyl acetate (25 \nml), dissolved in ammonium hydroxide (30%, \n300 ml). The solution became clear and solution \nwas stirred at room temperature overnight. The \nmixture was concentrated to dryness under \nreduced pressure. The residue was treated with \nmethanol (150 ml) and the resulting mixture \nwas heated at 80oC for 1 hour, cooled, and \nallowed to stand at room temperature overnight. \nThe resulting solid was collected by filtration \nand recrystallized from water (1700 ml) using 1 \ngram of activated carbon. The filtrate was \ncooled to room temperature, and stored in the \nrefrigerator overnight. The resulting solid was \ncollected by filtration, washed twice with \nmethanol (20 ml), and dried to give pure \nacyclovir 1 (30 g, 63%). mp. 242 - 244oC (H2O). \nUV λmax (MeOH-H2O; 1-1) nm: 251, 276 (sh); \n1H-NMR (DMSO-d6, 500 MHz, δ ppm): δ 3.34, \n3.46 (s, 4H, CH2CH2), 4.65 (br, 1H, OH), 5.34 \n(s, 2H, OCH2O), 6.48 (s 2H, NH2), 7.80 (s, 1H, \nH-8), 10.62 (s, 1H, NH). EI-MS m/e (%) 226 \n[M+] (100), 152 [M+-C3H6O2] (42). The mother \nliquor was concentrated to give a second crop \n(2.6 g) which contained the N7-isomer.  \nAntiherpetic activity evaluation \na) Cells and viruses \nVero cells (Green Africa Monkey Kidney) \nwere propagated in culture medium (Medium \nEssential \nMedium \n(MEM, \nGIBCO), \nsupplemented with 3% fetal bovine serum (FBS, \nSigma), glutamine, non-essential amino acid, \nand antibiotics). \nThe 5 clinical HSV isolates used in this \nstudy included 2 HSV-1 and 3 HSV-2. \nb) Method of plaque reduction assay (PRA) \nConfluent Vero cell monolayer in 24-well \nculture plates were infected with 200 μl of 10 \nfold dilutions from 10-5 to 10-2 of virus stocks \nper well. After 1 hour incubation at 37oC x \n5%CO2 with gently rocking, inoculates were \ndiscarded and cells were incubated with culture \nmedium and 1.0% methylcellulose (Sigma) with \nthe \npresence \nof \nincreasing \nantiviral \nconcentrations of 0, 1, 5, 15, and 50 μM. \nPlaques were counted at 72 h post inoculation \nafter cells were treated with formaldehyde and \nstained \nwith \ncrystal \nviolet. \nIC50s \nwere \ndetermined on log papers and defined as the \nminimum concentration of ACV that reduced \nthe numbers of plaque by 50% compared to the \ncell controls (absence of ACV). IC50s ≥ 7 μM \nwere considered resistant to ACV. \nIII - Results and discussion \n1. Preparation of acyclovir \nA method for the preparation of ACV is \n\n\n \n526\nprovided that is suitable for the commercial \nmanufacture of the product. In the first step, \nguanine is acetylated using acetic anhydride, \nacetic acid, and phosphoric acid. In the second \nstep, diacetyl guanine is alkylated at the N9-\nposition using CH3COOCH2O(CH2)2OCOCH3, \nacetic anhydride and phosphoric acid or \npolyphosphoric acid. The acetyl groups are then \nremoved as desired. \nIC50\nIC50\n \nFigure 4: Plot for determination of IC50 \n2. Acetylation of guanine \nIn the first step of the reaction, the 2-amino \ngroup of guanine is protected to prevent it from \nbeing alkylated in the second step of the \nreaction. The choice of protecting group may \neffect the ultimate yield of product, in that \nprotecting groups are removed with varying \ndegrees of difficulty. In general, in the process \nof protecting the 2-amino group, the N9 group \nusually also reacts with the protecting group. \nAcylation, \nand \nin \nparticular, \nacetylation, \nactivates the N9-position toward alkylation in \nthe second step, and therefore, is desirable. \nDiacetylguanine, which has been used as an \nintermediate in the production of acyclovir, has \nbeen prepared using several methods. Guanine \nhas been acetylated using acetic anhydride in \nN,N-dimethylacetamide to give diacetylguanine \nin 90.5% yield [6]. This reaction produces a \nproduct which is grey in color due to the high \nreaction temperature used (160oC for 7 hours). \nIn general, it is preferred to use a symmetrical \nanhydride \nin \nthe \nreaction \nscheme \nthat \ncorresponds to the acid used. For example, \nacetic acid is preferably used in combination \nwith acetic anhydride, and propionic acid is \npreferably used in combination with propionic \nanhydride. \nGuanine has also been acetylated in acetic \nanhydride and acetic acid to give different \nproducts depending on the work-up conditions \n[7]. For example, after the reaction mixture \nbecomes an almost clear solution, if solvents are \nremoved by distillation, only diacetyl guanine is \nobtained in 95% yield. However, the addition of \nwater at 60oC. followed by stirring at room \ntemperature \novernight \nproduces \nN2-\nacetylguanine in 94.4% yield. If the reaction \nmixture is merely cooled down, a mixture of \nmono- and di-acetylguanine is produced.  \n3. Preparation of dioxolane-diacetate (7) \nThe dioxolane ring is opened using acetic \nanhydride as the ring-opening reagent in the \npresence \nof \ncatalytic \namounts \nof \np-\ntoluenesulfonic acid. This provided dioxolane-\ndiacetate in 80% yield after distillation by the \nmethod of Chen et al. [8]. \n4. Alkylation of diacetylguanine \nIn this step of the synthesis, the diacetylated \nguanine from previous step is alkylated in the \nN9-position \nto \nproduce \n2-acetamido-9-(2-\nacetylethoxymethyl)guanine.  \nMatsumoto, et al., have studied the effect of \nsolvent, acid catalyst and reaction temperature \non the yield of the alkylation of diacetylguanine \nwith 2-oxo-1,4-butanediol diacetate (\"dioxolane \ndiacetate\") to produce N2\n ,O-diacetylacyclovir \n[7]. Among the acid catalysts tested (p-\ntoluenesulfonic \nacid, \nsulfanilic \nacid, \np-\nnitrobenzenesulfonic acid, 2,4-dinitrobenzene \nsulfonic acid, iron(II) sulfate, and zinc chloride), \nMatsumoto reported that p-toluenesulfonic acid \nand sulfanilic acid exhibited the highest \ncatalytic activity. In a preferred reaction \nscheme, a combination of an acid and anhydride \nare used.  \n5. Deacetylation of acyclovir diacetate \nBoth \nmethylamine \nand \nammonium \nhydroxide proved to be good deacetylating \nagents. Although the working-up is easier using \nmethylamine than it is using ammonium \nhydroxide, on an industrial scale, the smell of \nmethylamine may dictate the preferred use of \nammonium hydroxide as a deacetylation agent. \n\n\n \n527\nThe synthesized ACV has been analyzed in \nthe National Institute for Drug Quality Control. \nIt meets all the standards of BP 2007. \n6. Biological activity \nACV was evaluated against HSV-1 and HSV-\n2. The effects of standard ACV and tested ACV \non 5 clinical HSV isolates included HSV-1 and \nHSV-2 were tested in parallel with their antiviral \nactivity. The results are given in table 1. \n \nTable 1: The antiviral activity of ACV compared to the standard ACV \nIC50  \nOrder \nClinical HSV \nisolate \nType \nStandard \nTested \nCorrelated \ncoefficient\n1 \n06003 \nHSV-2 \n1.70 \nS \n1.20 \nS \n2 \n07069 \nHSV-1 \n0.53 \nS \n0.57 \nS \n3 \n07089 \nHSV-2 \n0.91 \nS \n0.10 \nS \n4 \n07092 \nHSV-2 \n2.80 \nS \n2.60 \nS \n5 \n07094 \nHSV-1 \n0.89 \nS \n0.53 \nS \n0.95 \nS: Sensitive. \n.\nThe tested ACV showed the anti-HSV \nactivity \nat \nlow \nconcentration \nand \nvery \ncorresponds with standard ACV. The correlated \nfactor is 0.95. \n \n‘\n \nFigure 5: Antiherpestic activity of standard \n(left) and tested (right) acyclovir \n \nIV - Conclusion \nThis report describes a one-pot process for \nthe preparation of acyclovir from guanine. \nReacting N2,N9-diprotected guanine with 1-\nacetyl-2-acetylmethoxy-ethyleneglycol \nin \npresent of phosphoric acid as catalyst provide \nACV with high yield and good regioselectivity. \nTherefore, \nthe \npurification \nwas \nsimple, \ninexpensive and conforming to pilot scale. The \nchemicals and the solvents were common and \nfriendly with environment. The antiherpetic \nactivity of the synthesized ACV was show to be \ncomparable (95%) to the standard ACV. This \nsynthesized ACV was approved by National \nInstitute of Drug Quality Control to meet the \nquality standard of BP 2007. \nAcknowledgements: \nThis \nresearch \nwas \nsupported by a research grant from Vietnam \nAcademy of Science and Technology (VAST). \n \nReferences \n \n1. H. J. Schaeffer, L. Beauchamp, P. Miranda \nde, G. B. Elion, D. J. Bauer, P. Collins. \nNature, 272, 583 - 585 (1978). \n2. Thuong Nguyen Thi. Master of Medicine \ndissertation, 2006, National Institute of \nHygiene and Epidemiology. \n3. Balfour HH Jr. N. Engl. J. Med., 340, 1255 \n- 1268 (1999). \n4. J. C. Martin, C. A. Dvorak, D. F. Smee, T. \nR. Matthews, J. P. Verheyden. J. Med. \nChem., 26(5), 759 - 761 (1983). \n5. Hongwu Gao, Ashim K. Mitra. Synthesis, 3, \n329 - 351 (2000). \n6. R. Zou and M. J. Robins. Can. J. Chem., 65, \n1436 - 1437 (1987). \n\n\n \n528\n7. H. Matsumoto, C. Kaneko, K. Yamada, T. \nTakeuchi, T. Mori, Y. Mizuno. Chem. \nPharm. Bull. 36 (3), 1153 - 1157 (1988).  \n8. Z. J. Chen, W. G. Liu, J. Z. Song, Y. Zhang. \nChemical Abstracts, 117, 1992, 151269e. \n9. Smith J. B. CaractÐrisation des mutaion du \nvirus herpÌs simplex impliquÐes dans la \nrésistance \naux \nantiviraux. \nThÌse \nde \nPhilosophie Doctor (Ph.D.), 2004, FacultÐ \nde médecine. UniversitÐ Laval QuÐbeque.\n  \nCorresponding author: Tran Van Sung \n            Laboratory of Organic Synthesis, Institute of Chemistry, VAST. \n",
+    "segments": [
+      {
+        "segment_id": "page-1",
+        "kind": "procedure_candidate",
+        "page_start": 1,
+        "page_end": 1,
+        "text": "523\nJournal of Chemistry, Vol. 47 (4), P. 523 - 528, 2009 \n \nSYNTHESIS OF ACYCLOVIR AS AN ANTIHERPES-VIRUS DRUG  \nReceived 4 February 2009  \nTran Quang Hung1, Nguyen Thi Thuong2, Tran Van Sung1 \n1Laboratory of Organic Synthesis, Institute of Chemistry, VAST \n2Laboratory of Herpes viruses, Faculty of Virus, National Institute of Hygiene and Epidemiology \n \nAbstract \nA one-pot process for high-yield regioselective synthesis of 9-[(2-hydroxyethoxy) \nmethyl]guanine (acyclovir),  an antiherpetic agent, was achieved from guanine via the steps of \nreacting of N2,N9 -diprotected guanine with 1-acetyl-2-acetylmethoxy-ethyleneglycol in presence \nof phosphoric acid or polyphosphoric acid. Total yield of product was 59%. The obtained \nacyclovir meets the standards in the British Pharmacopoeia 2007 (BP2007). Its activity as \ninhibitor of herpes simplex virus type 1 (HSV-1) and type 2 (HSV-2) was evaluated according to \nthe plaque reduction assay method and compared with the standard compound. The synthesized \nacyclovir showed a similar activity as the control. \nKeywords: Acyclovir, Herpes simplex virus, Nucleoside, One- pot synthesis. \n \nI - Introduction \nVirus was a cause of many dangerous \ndiseases and variety of epidemic diseases in \nlarge area. It is important that antibiotics have \nno or almost no effect on viruses. Although the \nproduction of herpes vaccine is desired by many \ncountries but it still stays on a testing level. The \nprevention of herpes infection is a special \nproblem because the disease often recurred in \npresent of antibody. Therefore, development of \nanti-virus drugs is important, necessary and still \nbe a leading interest.  \n \n1: Acyclovir  \nAcyclovir, \n{9-[(2-hydroxyethoxy)methyl] \nguanine} (ACV 1), was first reported by \nSchaeffer and co-workers [1] and is a nucleoside \nanalogue. It acts selectively on herpes-infected \ncells. It has specific inhibition effects on \nreplication of herpes virus simplex type 1 and \ntype 2 (HSV1 and HSV2) and Varicella zoster \nvirus that cause almost no intoxication to the \nhost cells. From nearly three decades ago, ACV \nwas used as a primary drug to treat herpes virus, \nespecially genital herpes and herpes simplex \nencephalitis and herpes in immunity deficient \npeople [2].  \nACV has no activity against viral pathogens \nuntil it is converted to an active form acyclovir \ntriphosphate. Its mechanism of action is initiated \nby \nthe \nviral \nenzyme \nThymidine \nkinase; \nsubsequently, human Cellular kinase perform \nthe second and the third phosphorylation steps \nto complete the process (figure 1). Acyclovir \ntriphosphate, the active form of acyclovir, is \npresent in 40- to 100-fold higher concentrations \nin herpes simplex virus (HSV)-infected cells \nthan in uninfected cells. As a result, the \nselectivity of ACV is significant [3, 4].",
+        "meta": {
+          "char_count": 2822,
+          "source": "native",
+          "ocr_used": false,
+          "ocr_backend": "",
+          "native_char_count": 14966,
+          "final_char_count": 14976
+        }
+      },
+      {
+        "segment_id": "page-2",
+        "kind": "body",
+        "page_start": 2,
+        "page_end": 2,
+        "text": "524\nAcyclovir triphosphate has a two-pronged \nmechanism of action: (1) it competes with 2-\ndeoxyguanosine triphosphate (dGTP) as a \nsubstrate for viral DNA polymerase and (2) \nonce \nit \nbecomes \nincorporated \ninto \nthe \nreplicating viral DNA, it acts as a chain \nterminator because it does not have a terminal \n3-hydroxyl group [3].  \n \n \n \nFigure 1: Acyclovir mechanism of action \n \nACV was prepared in different forms such \nas tablets (200 mg, 400 mg, 800 mg), capsules \n200 mg, powder for injection, oral suspension, \ncreams for skin 5% and for eyes 3%. After oral \nadministration, ACV is absorbed slowly and not \ncompletely, bioavailability of only 10-20% [9].  \nACV rapidly attracted attention of chemist, \nas well as pharmacist by virtue of its selective \nanti-virus activity and effect. There were many \nefforts for synthesis of ACV by different ways \nreported. \nAmong \ndivert \norientations \nof \nsynthesizing ACV, it could be accounted 5 \ncommon and most effective pathways. The most \ncommon pathway departed from guanine with \neffectiveness and simplicity where guanine was \nacylated [5]. The important problem is to \ndecrease \nthe \nN7 \nsubstituted \nisomer \nand \nselectively akylating into N9 position. Our \nsynthesis of ACV is showed in figure 2.\n \n \n \nFigure 2: Pathway for synthesis of acyclovir \n \nII - Experimental \nPreparation of dioxolane-diacetate (1-acetyl-\n2-acetylmethoxy-ethyleneglycol) \nDioxolane 5 (224 g, 99%, 211.6 ml, 3 mol) \nwas added drop wise to a solution of p-\ntoluenesulfonic acid monohydrate (10 g, 0.053 \nmol) in acetic anhydride (306 g, 283.3 ml,3 \nmol) and acetic acid (45 g, 42.9 ml, 0.75 mol) \nprecooled to below 10oC, at the rate that \nmaintained the reaction temperature under 30oC. \nThe solution was then stirred for an additional \nhour at a temperature under 30oC, and then \ndistilled. The first portion of distillate was \ncollected at a temperature of 40 - 80oC/1.5 \nmmHg and contained acetic acid, acetic \nanhydride, and other materials. The second \nportion of distillate was collected at 80 - 95oC. \nat 0.75 mmHg and redistilled to give pure 7 in a \nyield of 431.5 g (81.7%). 1H-NMR (CD3OD, \n500 MHz, δ ppm): 2.06, 2.08 (s, 6H, 2xCH3), \n3.85, 4.21 (s, 4H, OCH2CH2O), 5.28 (s, 2H, \nOCH2O).",
+        "meta": {
+          "char_count": 2236,
+          "source": "native"
+        }
+      },
+      {
+        "segment_id": "page-3",
+        "kind": "body",
+        "page_start": 3,
+        "page_end": 3,
+        "text": "525\n \n \nFigure 3: Preparation of Dioxolane-diacetate  \n \nPreparation of acyclovir \nA mixture of guanine (3, 32.13 g, 213 \nmmol), acetic anhydride (320 ml) and acetic \nacid (480 ml) was refluxed overnight, during \nwhich time the mixture became almost clear. \nThe liquid was removed by evaporation in \nreduced pressure. To the residue was added \ntoluene (300 ml), 7 (75 g, 426 mmol), and \nphosphoric acid (85.5%, 1.5 ml) with stirring. \nThe resulting mixture was refluxed for 6 - 7 \nhours with vigorous stirring.  \nToluene and acetic anhydride were then \nremoved under reduced pressure and the residue \nwas heated at 80oC (oil bath) under reduced \npressure (20 mm Hg) for another 2 hours, \ncooled to room temperature, triturated with \nethyl acetate (100 ml), and stirred at room \ntemperature overnight.  \nThe resulting solid was collected by \nfiltration, washed twice with ethyl acetate (25 \nml), dissolved in ammonium hydroxide (30%, \n300 ml). The solution became clear and solution \nwas stirred at room temperature overnight. The \nmixture was concentrated to dryness under \nreduced pressure. The residue was treated with \nmethanol (150 ml) and the resulting mixture \nwas heated at 80oC for 1 hour, cooled, and \nallowed to stand at room temperature overnight. \nThe resulting solid was collected by filtration \nand recrystallized from water (1700 ml) using 1 \ngram of activated carbon. The filtrate was \ncooled to room temperature, and stored in the \nrefrigerator overnight. The resulting solid was \ncollected by filtration, washed twice with \nmethanol (20 ml), and dried to give pure \nacyclovir 1 (30 g, 63%). mp. 242 - 244oC (H2O). \nUV λmax (MeOH-H2O; 1-1) nm: 251, 276 (sh); \n1H-NMR (DMSO-d6, 500 MHz, δ ppm): δ 3.34, \n3.46 (s, 4H, CH2CH2), 4.65 (br, 1H, OH), 5.34 \n(s, 2H, OCH2O), 6.48 (s 2H, NH2), 7.80 (s, 1H, \nH-8), 10.62 (s, 1H, NH). EI-MS m/e (%) 226 \n[M+] (100), 152 [M+-C3H6O2] (42). The mother \nliquor was concentrated to give a second crop \n(2.6 g) which contained the N7-isomer.  \nAntiherpetic activity evaluation \na) Cells and viruses \nVero cells (Green Africa Monkey Kidney) \nwere propagated in culture medium (Medium \nEssential \nMedium \n(MEM, \nGIBCO), \nsupplemented with 3% fetal bovine serum (FBS, \nSigma), glutamine, non-essential amino acid, \nand antibiotics). \nThe 5 clinical HSV isolates used in this \nstudy included 2 HSV-1 and 3 HSV-2. \nb) Method of plaque reduction assay (PRA) \nConfluent Vero cell monolayer in 24-well \nculture plates were infected with 200 μl of 10 \nfold dilutions from 10-5 to 10-2 of virus stocks \nper well. After 1 hour incubation at 37oC x \n5%CO2 with gently rocking, inoculates were \ndiscarded and cells were incubated with culture \nmedium and 1.0% methylcellulose (Sigma) with \nthe \npresence \nof \nincreasing \nantiviral \nconcentrations of 0, 1, 5, 15, and 50 μM. \nPlaques were counted at 72 h post inoculation \nafter cells were treated with formaldehyde and \nstained \nwith \ncrystal \nviolet. \nIC50s \nwere \ndetermined on log papers and defined as the \nminimum concentration of ACV that reduced \nthe numbers of plaque by 50% compared to the \ncell controls (absence of ACV). IC50s ≥ 7 μM \nwere considered resistant to ACV. \nIII - Results and discussion \n1. Preparation of acyclovir \nA method for the preparation of ACV is",
+        "meta": {
+          "char_count": 3268,
+          "source": "native"
+        }
+      },
+      {
+        "segment_id": "page-4",
+        "kind": "body",
+        "page_start": 4,
+        "page_end": 4,
+        "text": "526\nprovided that is suitable for the commercial \nmanufacture of the product. In the first step, \nguanine is acetylated using acetic anhydride, \nacetic acid, and phosphoric acid. In the second \nstep, diacetyl guanine is alkylated at the N9-\nposition using CH3COOCH2O(CH2)2OCOCH3, \nacetic anhydride and phosphoric acid or \npolyphosphoric acid. The acetyl groups are then \nremoved as desired. \nIC50\nIC50\n \nFigure 4: Plot for determination of IC50 \n2. Acetylation of guanine \nIn the first step of the reaction, the 2-amino \ngroup of guanine is protected to prevent it from \nbeing alkylated in the second step of the \nreaction. The choice of protecting group may \neffect the ultimate yield of product, in that \nprotecting groups are removed with varying \ndegrees of difficulty. In general, in the process \nof protecting the 2-amino group, the N9 group \nusually also reacts with the protecting group. \nAcylation, \nand \nin \nparticular, \nacetylation, \nactivates the N9-position toward alkylation in \nthe second step, and therefore, is desirable. \nDiacetylguanine, which has been used as an \nintermediate in the production of acyclovir, has \nbeen prepared using several methods. Guanine \nhas been acetylated using acetic anhydride in \nN,N-dimethylacetamide to give diacetylguanine \nin 90.5% yield [6]. This reaction produces a \nproduct which is grey in color due to the high \nreaction temperature used (160oC for 7 hours). \nIn general, it is preferred to use a symmetrical \nanhydride \nin \nthe \nreaction \nscheme \nthat \ncorresponds to the acid used. For example, \nacetic acid is preferably used in combination \nwith acetic anhydride, and propionic acid is \npreferably used in combination with propionic \nanhydride. \nGuanine has also been acetylated in acetic \nanhydride and acetic acid to give different \nproducts depending on the work-up conditions \n[7]. For example, after the reaction mixture \nbecomes an almost clear solution, if solvents are \nremoved by distillation, only diacetyl guanine is \nobtained in 95% yield. However, the addition of \nwater at 60oC. followed by stirring at room \ntemperature \novernight \nproduces \nN2-\nacetylguanine in 94.4% yield. If the reaction \nmixture is merely cooled down, a mixture of \nmono- and di-acetylguanine is produced.  \n3. Preparation of dioxolane-diacetate (7) \nThe dioxolane ring is opened using acetic \nanhydride as the ring-opening reagent in the \npresence \nof \ncatalytic \namounts \nof \np-\ntoluenesulfonic acid. This provided dioxolane-\ndiacetate in 80% yield after distillation by the \nmethod of Chen et al. [8]. \n4. Alkylation of diacetylguanine \nIn this step of the synthesis, the diacetylated \nguanine from previous step is alkylated in the \nN9-position \nto \nproduce \n2-acetamido-9-(2-\nacetylethoxymethyl)guanine.  \nMatsumoto, et al., have studied the effect of \nsolvent, acid catalyst and reaction temperature \non the yield of the alkylation of diacetylguanine \nwith 2-oxo-1,4-butanediol diacetate (\"dioxolane \ndiacetate\") to produce N2\n ,O-diacetylacyclovir \n[7]. Among the acid catalysts tested (p-\ntoluenesulfonic \nacid, \nsulfanilic \nacid, \np-\nnitrobenzenesulfonic acid, 2,4-dinitrobenzene \nsulfonic acid, iron(II) sulfate, and zinc chloride), \nMatsumoto reported that p-toluenesulfonic acid \nand sulfanilic acid exhibited the highest \ncatalytic activity. In a preferred reaction \nscheme, a combination of an acid and anhydride \nare used.  \n5. Deacetylation of acyclovir diacetate \nBoth \nmethylamine \nand \nammonium \nhydroxide proved to be good deacetylating \nagents. Although the working-up is easier using \nmethylamine than it is using ammonium \nhydroxide, on an industrial scale, the smell of \nmethylamine may dictate the preferred use of \nammonium hydroxide as a deacetylation agent.",
+        "meta": {
+          "char_count": 3736,
+          "source": "native"
+        }
+      },
+      {
+        "segment_id": "page-5",
+        "kind": "table_candidate",
+        "page_start": 5,
+        "page_end": 5,
+        "text": "527\nThe synthesized ACV has been analyzed in \nthe National Institute for Drug Quality Control. \nIt meets all the standards of BP 2007. \n6. Biological activity \nACV was evaluated against HSV-1 and HSV-\n2. The effects of standard ACV and tested ACV \non 5 clinical HSV isolates included HSV-1 and \nHSV-2 were tested in parallel with their antiviral \nactivity. The results are given in table 1. \n \nTable 1: The antiviral activity of ACV compared to the standard ACV \nIC50  \nOrder \nClinical HSV \nisolate \nType \nStandard \nTested \nCorrelated \ncoefficient\n1 \n06003 \nHSV-2 \n1.70 \nS \n1.20 \nS \n2 \n07069 \nHSV-1 \n0.53 \nS \n0.57 \nS \n3 \n07089 \nHSV-2 \n0.91 \nS \n0.10 \nS \n4 \n07092 \nHSV-2 \n2.80 \nS \n2.60 \nS \n5 \n07094 \nHSV-1 \n0.89 \nS \n0.53 \nS \n0.95 \nS: Sensitive. \n.\nThe tested ACV showed the anti-HSV \nactivity \nat \nlow \nconcentration \nand \nvery \ncorresponds with standard ACV. The correlated \nfactor is 0.95. \n \n‘\n \nFigure 5: Antiherpestic activity of standard \n(left) and tested (right) acyclovir \n \nIV - Conclusion \nThis report describes a one-pot process for \nthe preparation of acyclovir from guanine. \nReacting N2,N9-diprotected guanine with 1-\nacetyl-2-acetylmethoxy-ethyleneglycol \nin \npresent of phosphoric acid as catalyst provide \nACV with high yield and good regioselectivity. \nTherefore, \nthe \npurification \nwas \nsimple, \ninexpensive and conforming to pilot scale. The \nchemicals and the solvents were common and \nfriendly with environment. The antiherpetic \nactivity of the synthesized ACV was show to be \ncomparable (95%) to the standard ACV. This \nsynthesized ACV was approved by National \nInstitute of Drug Quality Control to meet the \nquality standard of BP 2007. \nAcknowledgements: \nThis \nresearch \nwas \nsupported by a research grant from Vietnam \nAcademy of Science and Technology (VAST). \n \nReferences \n \n1. H. J. Schaeffer, L. Beauchamp, P. Miranda \nde, G. B. Elion, D. J. Bauer, P. Collins. \nNature, 272, 583 - 585 (1978). \n2. Thuong Nguyen Thi. Master of Medicine \ndissertation, 2006, National Institute of \nHygiene and Epidemiology. \n3. Balfour HH Jr. N. Engl. J. Med., 340, 1255 \n- 1268 (1999). \n4. J. C. Martin, C. A. Dvorak, D. F. Smee, T. \nR. Matthews, J. P. Verheyden. J. Med. \nChem., 26(5), 759 - 761 (1983). \n5. Hongwu Gao, Ashim K. Mitra. Synthesis, 3, \n329 - 351 (2000). \n6. R. Zou and M. J. Robins. Can. J. Chem., 65, \n1436 - 1437 (1987).",
+        "meta": {
+          "char_count": 2357,
+          "source": "native"
+        }
+      },
+      {
+        "segment_id": "page-6",
+        "kind": "procedure_candidate",
+        "page_start": 6,
+        "page_end": 6,
+        "text": "528\n7. H. Matsumoto, C. Kaneko, K. Yamada, T. \nTakeuchi, T. Mori, Y. Mizuno. Chem. \nPharm. Bull. 36 (3), 1153 - 1157 (1988).  \n8. Z. J. Chen, W. G. Liu, J. Z. Song, Y. Zhang. \nChemical Abstracts, 117, 1992, 151269e. \n9. Smith J. B. CaractÐrisation des mutaion du \nvirus herpÌs simplex impliquÐes dans la \nrésistance \naux \nantiviraux. \nThÌse \nde \nPhilosophie Doctor (Ph.D.), 2004, FacultÐ \nde médecine. UniversitÐ Laval QuÐbeque.\n  \nCorresponding author: Tran Van Sung \n            Laboratory of Organic Synthesis, Institute of Chemistry, VAST.",
+        "meta": {
+          "char_count": 547,
+          "source": "native"
+        }
+      }
+    ],
+    "figure_count": 21,
+    "table_hints": [
+      "page 5"
+    ]
+  },
+  "route": {
+    "title": "Synthesis of acyclovir as an antiherpes-virus drug",
+    "target_name": "acyclovir {9-[(2-hydroxyethoxy)methyl]guanine} (ACV, 1)",
+    "target_class": "nucleoside analog (viral DNA polymerase inhibitor / antiherpetic)",
+    "document_type": "paper",
+    "steps": [
+      {
+        "step_index": 1,
+        "step_label": "Abstract-level one-pot regioselective synthesis of acyclovir from guanine",
+        "reactants": [
+          {
+            "name": "guanine",
+            "role": "reactant",
+            "amount": "N/A",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          },
+          {
+            "name": "N2,N9-diprotected guanine (formed in situ from guanine)",
+            "role": "reactant",
+            "amount": "N/A",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          },
+          {
+            "name": "1-acetyl-2-acetylmethoxy-ethyleneglycol",
+            "role": "reactant",
+            "amount": "N/A",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "reagents": [
+          {
+            "name": "phosphoric acid or polyphosphoric acid",
+            "role": "reagent",
+            "amount": "N/A",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "catalysts": [],
+        "ligands": [],
+        "solvents": [],
+        "intermediates": [
+          {
+            "name": "N2,N9-diprotected guanine",
+            "role": "intermediate",
+            "amount": "N/A",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "products": [
+          {
+            "name": "acyclovir (9-[(2-hydroxyethoxy)methyl]guanine)",
+            "role": "product",
+            "amount": "N/A",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "conditions": {
+          "temperature": "N/A",
+          "time": "N/A",
+          "pressure": "N/A",
+          "atmosphere": "N/A",
+          "other": "One-pot process; regioselective N9-alkylation"
+        },
+        "yield_value": "59% (total yield)",
+        "ee_or_dr": "N/A",
+        "notes": "Product reported to meet British Pharmacopoeia 2007 (BP2007) standards; anti-HSV-1/HSV-2 activity assessed by plaque reduction assay, comparable to standard acyclovir.",
+        "evidence": "A one-pot process for high-yield regioselective synthesis of 9-[(2-hydroxyethoxy)methyl]guanine (acyclovir) ... was achieved from guanine via the steps of reacting of N2,N9-diprotected guanine with 1-acetyl-2-acetylmethoxy-ethyleneglycol in presence of phosphoric acid or polyphosphoric acid. Total yield of product was 59%."
+      }
+    ],
+    "warnings": [
+      "The supplied text contains only the title page/abstract/introduction and part of the reference list; the Experimental section with concrete amounts, temperatures, times, and workup details is missing.",
+      "The single step recorded is reconstructed from the abstract summary, not from a detailed worked procedure; stoichiometry, solvent, protecting-group identity, temperature and reaction time are unknown.",
+      "No individual step yields or purity data (beyond the BP2007 compliance statement) are available in the provided excerpt."
+    ]
+  },
+  "raw_model_output": "{\n  \"title\": \"Synthesis of acyclovir as an antiherpes-virus drug\",\n  \"target_name\": \"acyclovir {9-[(2-hydroxyethoxy)methyl]guanine} (ACV, 1)\",\n  \"target_class\": \"nucleoside analog (viral DNA polymerase inhibitor / antiherpetic)\",\n  \"document_type\": \"paper\",\n  \"steps\": [\n    {\n      \"step_index\": 1,\n      \"step_label\": \"Abstract-level one-pot regioselective synthesis of acyclovir from guanine\",\n      \"reactants\": [\n        {\"name\": \"guanine\", \"role\": \"reactant\", \"amount\": \"N/A\", \"smiles\": null},\n        {\"name\": \"N2,N9-diprotected guanine (formed in situ from guanine)\", \"role\": \"reactant\", \"amount\": \"N/A\", \"smiles\": null},\n        {\"name\": \"1-acetyl-2-acetylmethoxy-ethyleneglycol\", \"role\": \"reactant\", \"amount\": \"N/A\", \"smiles\": null}\n      ],\n      \"reagents\": [\n        {\"name\": \"phosphoric acid or polyphosphoric acid\", \"role\": \"reagent\", \"amount\": \"N/A\"}\n      ],\n      \"catalysts\": [],\n      \"ligands\": [],\n      \"solvents\": [],\n      \"intermediates\": [\n        {\"name\": \"N2,N9-diprotected guanine\", \"role\": \"intermediate\", \"amount\": \"N/A\"}\n      ],\n      \"products\": [\n        {\"name\": \"acyclovir (9-[(2-hydroxyethoxy)methyl]guanine)\", \"role\": \"product\", \"amount\": \"N/A\"}\n      ],\n      \"conditions\": {\n        \"temperature\": \"N/A\",\n        \"time\": \"N/A\",\n        \"pressure\": \"N/A\",\n        \"atmosphere\": \"N/A\",\n        \"other\": \"One-pot process; regioselective N9-alkylation\"\n      },\n      \"yield_value\": \"59% (total yield)\",\n      \"ee_or_dr\": \"N/A\",\n      \"notes\": \"Product reported to meet British Pharmacopoeia 2007 (BP2007) standards; anti-HSV-1/HSV-2 activity assessed by plaque reduction assay, comparable to standard acyclovir.\",\n      \"evidence\": \"A one-pot process for high-yield regioselective synthesis of 9-[(2-hydroxyethoxy)methyl]guanine (acyclovir) ... was achieved from guanine via the steps of reacting of N2,N9-diprotected guanine with 1-acetyl-2-acetylmethoxy-ethyleneglycol in presence of phosphoric acid or polyphosphoric acid. Total yield of product was 59%.\"\n    }\n  ],\n  \"warnings\": [\n    \"The supplied text contains only the title page/abstract/introduction and part of the reference list; the Experimental section with concrete amounts, temperatures, times, and workup details is missing.\",\n    \"The single step recorded is reconstructed from the abstract summary, not from a detailed worked procedure; stoichiometry, solvent, protecting-group identity, temperature and reaction time are unknown.\",\n    \"No individual step yields or purity data (beyond the BP2007 compliance statement) are available in the provided excerpt.\"\n  ]\n}",
+  "error": null,
+  "from_cache": false,
+  "content_hash": null,
+  "source_job_id": null
+}

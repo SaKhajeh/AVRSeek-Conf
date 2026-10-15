@@ -1,0 +1,1007 @@
+{
+  "job_id": "069250cd254b",
+  "filename": "WO_9718211_A1.pdf",
+  "stages": [
+    {
+      "id": "parse_pdf",
+      "label": "PDF document understanding (+ OCR)",
+      "status": "done",
+      "detail": "14 pages, 14 images, 0 table hints, 0 text chars",
+      "data": {
+        "page_count": 14,
+        "figure_count": 14,
+        "segments": 14,
+        "text_chars": 0,
+        "ocr_used": false,
+        "ocr_backend": ""
+      }
+    },
+    {
+      "id": "text_extract",
+      "label": "Text reaction extraction (LLM)",
+      "status": "stubbed",
+      "detail": "Skipped — no extractable text (awaiting OCR/VLM page-read)",
+      "data": {
+        "steps": 0,
+        "target": null,
+        "text_chars_sent": 0
+      }
+    },
+    {
+      "id": "table_extract",
+      "label": "Table extraction (pdfplumber + LLM)",
+      "status": "stubbed",
+      "detail": "No reaction-like tables found in 0 total tables",
+      "data": {
+        "tables_total": 0,
+        "reaction_tables": 0,
+        "steps_extracted": 0
+      }
+    },
+    {
+      "id": "image_scheme",
+      "label": "Scheme / image extraction (VLM)",
+      "status": "done",
+      "detail": "2 scheme step(s), 0 page-read step(s), 5 molecule(s), 14 page-read(s) from 15 image(s)",
+      "data": {
+        "images_processed": 15,
+        "schemes_found": 1,
+        "molecules_extracted": 5,
+        "page_reads": 14,
+        "transcribed_chars": 21907,
+        "scheme_steps": 2,
+        "page_steps": 0,
+        "schemes": [
+          {
+            "page_number": 1,
+            "image_index": 0,
+            "molecules": [],
+            "arrows": [],
+            "conditions_text": "",
+            "raw_output": "{\n  \"image_class\": \"text_page\",\n  \"transcribed_text\": \"PCT\\nWORLD INTELLECTUAL PROPERTY ORGANIZATION\\nInternational Bureau\\n\\nINTERNATIONAL APPLICATION PUBLISHED UNDER THE PATENT COOPERATION TREATY (PCT)\\n\\n(51) International Patent Classification 6 : C07D 473/00    A1\\n(11) International Publication Number: WO 97/18211\\n(43) International Publication Date: 22 May 1997 (22.05.97)\\n\\n(21) International Application Number: PCT/EP96/04882\\n(22) International Filing Date: 6 November 1996 (06.11.96)\\n(30) Priority Data: MI95A002333  14 November 1995 (14.11.95)  IT\\n(71) Applicant (for all designated States except US): ARCHIMICA S.P.A. [IT/IT]; Viale Europa, 11, I-21040 Origgio (IT).\\n(72) Inventor; and\\n(75) Inventor/Applicant (for US only): BELLANI, Piero [IT/IT]; Via Trento, 10, I-20017 Rho (IT).\\n(74) Agents: DRAGOTTI, Gianfranco; Saic Brevetti S.r.l., Galleria San Babila, 4/D, I-20122 Milano (IT) et al.\\n\\n(81) Designated States: AM, AU, BB, BG, BR, BY, CA, CN, CZ, EE, GE, HU, JP, KE, KG, KP, KR, KZ, LK, LR, LT, LV, MD, MG, MN, MW, MX, NO, NZ, PL, RO, RU, SD, SI, SK, TJ, TT, UA, US, UZ, VN, ARIPO patent (KE, LS, MW, SD, SZ, UG), European patent (AT, BE, CH, DE, DK, ES, FI, FR, GB, GR, IE, IT, LU, MC, NL, PT, SE), OAPI patent (BF, BJ, CF, CG, CI, CM, GA, GN, ML, MR, NE, SN, TD, TG).\\n\\nPublished\\nWith international search report.\\n\\n(54) Title: PROCESS FOR THE PREPARATION OF 9-[(2-HYDROXYETHOXY)METHYL]GUANINE\\n\\n(57) Abstract\\n\\nThere is described a process for the preparation of acyclovir by hydrolysis of N2-acetyl-9-(2-acetoxyethoxymethyl)guanine with monoethanolamine and isolation of acyclovir by neutralization with an acid and filtration. There is furthermore described a method for the purification of acyclovir by transformation of it into one of its alkali metal salts and neutralization of the alkali metal salt thus obtained.\",\n  \"steps\": []\n}",
+            "mode": "page_read",
+            "transcribed_text": "PCT\nWORLD INTELLECTUAL PROPERTY ORGANIZATION\nInternational Bureau\n\nINTERNATIONAL APPLICATION PUBLISHED UNDER THE PATENT COOPERATION TREATY (PCT)\n\n(51) International Patent Classification 6 : C07D 473/00    A1\n(11) International Publication Number: WO 97/18211\n(43) International Publication Date: 22 May 1997 (22.05.97)\n\n(21) International Application Number: PCT/EP96/04882\n(22) International Filing Date: 6 November 1996 (06.11.96)\n(30) Priority Data: MI95A002333  14 November 1995 (14.11.95)  IT\n(71) Applicant (for all designated States except US): ARCHIMICA S.P.A. [IT/IT]; Viale Europa, 11, I-21040 Origgio (IT).\n(72) Inventor; and\n(75) Inventor/Applicant (for US only): BELLANI, Piero [IT/IT]; Via Trento, 10, I-20017 Rho (IT).\n(74) Agents: DRAGOTTI, Gianfranco; Saic Brevetti S.r.l., Galleria San Babila, 4/D, I-20122 Milano (IT) et al.\n\n(81) Designated States: AM, AU, BB, BG, BR, BY, CA, CN, CZ, EE, GE, HU, JP, KE, KG, KP, KR, KZ, LK, LR, LT, LV, MD, MG, MN, MW, MX, NO, NZ, PL, RO, RU, SD, SI, SK, TJ, TT, UA, US, UZ, VN, ARIPO patent (KE, LS, MW, SD, SZ, UG), European patent (AT, BE, CH, DE, DK, ES, FI, FR, GB, GR, IE, IT, LU, MC, NL, PT, SE), OAPI patent (BF, BJ, CF, CG, CI, CM, GA, GN, ML, MR, NE, SN, TD, TG).\n\nPublished\nWith international search report.\n\n(54) Title: PROCESS FOR THE PREPARATION OF 9-[(2-HYDROXYETHOXY)METHYL]GUANINE\n\n(57) Abstract\n\nThere is described a process for the preparation of acyclovir by hydrolysis of N2-acetyl-9-(2-acetoxyethoxymethyl)guanine with monoethanolamine and isolation of acyclovir by neutralization with an acid and filtration. There is furthermore described a method for the purification of acyclovir by transformation of it into one of its alkali metal salts and neutralization of the alkali metal salt thus obtained.",
+            "image_class": "text_page",
+            "step_label": "",
+            "characterizations": []
+          },
+          {
+            "page_number": 2,
+            "image_index": 0,
+            "molecules": [],
+            "arrows": [],
+            "conditions_text": "",
+            "raw_output": "{\"image_class\":\"other\",\"transcribed_text\":\"FOR THE PURPOSES OF INFORMATION ONLY\\n\\nCodes used to identify States party to the PCT on the front pages of pamphlets publishing international applications under the PCT.\\n\\nAM Armenia\\nAT Austria\\nAU Australia\\nBB Barbados\\nBE Belgium\\nBF Burkina Faso\\nBG Bulgaria\\nBJ Benin\\nBR Brazil\\nBY Belarus\\nCA Canada\\nCF Central African Republic\\nCG Congo\\nCH Switzerland\\nCI Côte d'Ivoire\\nCM Cameroon\\nCN China\\nCS Czechoslovakia\\nCZ Czech Republic\\nDE Germany\\nDK Denmark\\nEE Estonia\\nES Spain\\nFI Finland\\nFR France\\nGA Gabon\\n\\nGB United Kingdom\\nGE Georgia\\nGN Guinea\\nGR Greece\\nHU Hungary\\nIE Ireland\\nIT Italy\\nJP Japan\\nKE Kenya\\nKG Kyrgystan\\nKP Democratic People's Republic of Korea\\nKR Republic of Korea\\nKZ Kazakhstan\\nLI Liechtenstein\\nLK Sri Lanka\\nLR Liberia\\nLT Lithuania\\nLU Luxembourg\\nLV Latvia\\nMC Monaco\\nMD Republic of Moldova\\nMG Madagascar\\nML Mali\\nMN Mongolia\\nMR Mauritania\\n\\nMW Malawi\\nMX Mexico\\nNE Niger\\nNL Netherlands\\nNO Norway\\nNZ New Zealand\\nPL Poland\\nPT Portugal\\nRO Romania\\nRU Russian Federation\\nSD Sudan\\nSE Sweden\\nSG Singapore\\nSI Slovenia\\nSK Slovakia\\nSN Senegal\\nSZ Swaziland\\nTD Chad\\nTG Togo\\nTJ Tajikistan\\nTT Trinidad and Tobago\\nUA Ukraine\\nUG Uganda\\nUS United States of America\\nUZ Uzbekistan\\nVN Viet Nam\",\n\"steps\": []}",
+            "mode": "page_read",
+            "transcribed_text": "FOR THE PURPOSES OF INFORMATION ONLY\n\nCodes used to identify States party to the PCT on the front pages of pamphlets publishing international applications under the PCT.\n\nAM Armenia\nAT Austria\nAU Australia\nBB Barbados\nBE Belgium\nBF Burkina Faso\nBG Bulgaria\nBJ Benin\nBR Brazil\nBY Belarus\nCA Canada\nCF Central African Republic\nCG Congo\nCH Switzerland\nCI Côte d'Ivoire\nCM Cameroon\nCN China\nCS Czechoslovakia\nCZ Czech Republic\nDE Germany\nDK Denmark\nEE Estonia\nES Spain\nFI Finland\nFR France\nGA Gabon\n\nGB United Kingdom\nGE Georgia\nGN Guinea\nGR Greece\nHU Hungary\nIE Ireland\nIT Italy\nJP Japan\nKE Kenya\nKG Kyrgystan\nKP Democratic People's Republic of Korea\nKR Republic of Korea\nKZ Kazakhstan\nLI Liechtenstein\nLK Sri Lanka\nLR Liberia\nLT Lithuania\nLU Luxembourg\nLV Latvia\nMC Monaco\nMD Republic of Moldova\nMG Madagascar\nML Mali\nMN Mongolia\nMR Mauritania\n\nMW Malawi\nMX Mexico\nNE Niger\nNL Netherlands\nNO Norway\nNZ New Zealand\nPL Poland\nPT Portugal\nRO Romania\nRU Russian Federation\nSD Sudan\nSE Sweden\nSG Singapore\nSI Slovenia\nSK Slovakia\nSN Senegal\nSZ Swaziland\nTD Chad\nTG Togo\nTJ Tajikistan\nTT Trinidad and Tobago\nUA Ukraine\nUG Uganda\nUS United States of America\nUZ Uzbekistan\nVN Viet Nam",
+            "image_class": "other",
+            "step_label": "",
+            "characterizations": []
+          },
+          {
+            "page_number": 3,
+            "image_index": 0,
+            "molecules": [],
+            "arrows": [],
+            "conditions_text": "",
+            "raw_output": "{\"image_class\": \"mixed\", \"transcribed_text\": \"WO 97/18211\\nPCT/EP96/04882\\n\\nPROCESS FOR THE PREPARATION OF 9-[(2-HYDROXYETHOXY)METHYL]GUANINE\\n\\nThe present invention relates to a process for the preparation of 9-[(2-hydroxyethoxy)methyl] guanine, known under its International Non-proprietary Name \\\"acyclovir\\\", hereinbelow designated by this name and represented by the following structural formula I\\n\\n(structure: OH on purine ring; H2N–C; N; N; CH2OCH2CH2OH)  (I)\\n\\nAcyclovir has been disclosed for the first time in Belgian patent 833,006; in this document there are also described various processes for its preparation, including the process involving the final step of transformation of the O-protected acyclovir into acyclovir. The expression \\\"O-protected acyclovir\\\" designates the protected acyclovir on the aliphatic hydroxy group. According to this method, the O-protecting group is, in general, an ester, more particularly an acyl group, preferably a benzoyl group. Removal of the O-protecting group is carried out, according to BE 833,006, by treatment with ammonia saturated methanol to give acyclovir in a 75% yield.\\n\\nOther methods for the preparation of acyclovir are indicated by the literature. Thus, EP 532,878 discloses the preparation of O,N2-diprotected acyclovir by acetylation and subsequent deprotection by treatment with sodium hydroxyde to give acyclovir in a 92% yield. According to this document, however, diacetylacyclovir [N2-acetyl-9-(2-acetoxyethoxymethyl)guanine] is in its turn obtained in admixture with N2-acetyl-7-(2-acetoxyethoxymethyl)guanine in the 2.5:1 ratio which requires a previous chromatographic separation of the two isomers.\\n\\nAn analogous synthesis is described by H. Matsumoto et al. in Chem. Pharm. Bull. 1988, 36, 1153, where, after the separation of the two acetylated isomers, the hydrolysis of diacetylacyclovir is carried out with aqueous ammonia to give acyclovir in a 55% yield.\\n\\nIn EP 564,006, the preparation of 9-(2-acetoxyeth",
+            "mode": "page_read",
+            "transcribed_text": "WO 97/18211\nPCT/EP96/04882\n\nPROCESS FOR THE PREPARATION OF 9-[(2-HYDROXYETHOXY)METHYL]GUANINE\n\nThe present invention relates to a process for the preparation of 9-[(2-hydroxyethoxy)methyl] guanine, known under its International Non-proprietary Name \"acyclovir\", hereinbelow designated by this name and represented by the following structural formula I\n\n(structure: OH on purine ring; H2N–C; N; N; CH2OCH2CH2OH)  (I)\n\nAcyclovir has been disclosed for the first time in Belgian patent 833,006; in this document there are also described various processes for its preparation, including the process involving the final step of transformation of the O-protected acyclovir into acyclovir. The expression \"O-protected acyclovir\" designates the protected acyclovir on the aliphatic hydroxy group. According to this method, the O-protecting group is, in general, an ester, more particularly an acyl group, preferably a benzoyl group. Removal of the O-protecting group is carried out, according to BE 833,006, by treatment with ammonia saturated methanol to give acyclovir in a 75% yield.\n\nOther methods for the preparation of acyclovir are indicated by the literature. Thus, EP 532,878 discloses the preparation of O,N2-diprotected acyclovir by acetylation and subsequent deprotection by treatment with sodium hydroxyde to give acyclovir in a 92% yield. According to this document, however, diacetylacyclovir [N2-acetyl-9-(2-acetoxyethoxymethyl)guanine] is in its turn obtained in admixture with N2-acetyl-7-(2-acetoxyethoxymethyl)guanine in the 2.5:1 ratio which requires a previous chromatographic separation of the two isomers.\n\nAn analogous synthesis is described by H. Matsumoto et al. in Chem. Pharm. Bull. 1988, 36, 1153, where, after the separation of the two acetylated isomers, the hydrolysis of diacetylacyclovir is carried out with aqueous ammonia to give acyclovir in a 55% yield.\n\nIn EP 564,006, the preparation of 9-(2-acetoxyethoxymethyl)guanine and N2-acetyl-9-(2-acetoxyethoxymethyl)guanine is described. The conversion into acyclovir is carried out with a basis, particularly",
+            "image_class": "mixed",
+            "step_label": "",
+            "characterizations": []
+          },
+          {
+            "page_number": 4,
+            "image_index": 0,
+            "molecules": [],
+            "arrows": [],
+            "conditions_text": "",
+            "raw_output": "{\"image_class\": \"mixed\", \"transcribed_text\": \"WO 97/18211\\nPCT/EP96/04882\\n- 2 -\\n\\nwith ammonia, a 50% aqueous solution of methylamine, sodium methylate or sodium hydroxide even though it is not exemplified.\\n\\nThe document IT MI 93A001264 discloses a process for obtaining acyclovir which is substantially analogous to that described in BE 833,006, whereby O-protected acyclovir is used as starting material, the protecting group being acyl and the deprotection being carried out with sodium hydroxide.\\n\\nThe above mentioned documents and in general the known methods for the preparation of acyclovir involve, at the end of the synthesis, complex purifications, more particularly a passage of very diluted aqueous solutions of the product on columns of ionic resins, which render such methods somewhat laborious.\\n\\nIt has now been found that acyclovir in a pharmacologically acceptable purity state can be prepared in very high yields by hydrolysis of diacetylacyclovir of formyla II\\n\\n[Structure (II): CH3CO-NH substituted purine, 6-OH, N9-CH2OCH2CH2O-COCH3]   (II)\\n\\nby hydrolysis with an aqueous solution of an alcanolamine, preferably monoethanolamine.\\n\\nIt has also surprisingly found that, by hydrolysis with aqueous monoethanolamine, acyclovir precipitates straightforward in the reaction medium and may be thus isolated by simple filtration in a purity state at least sufficient to be pharmacologically acceptable.\\n\\nFinally, it has been found that acyclovir may be easily purified by transformation in one of its alkali metal salts of formula III\\n\\n[Structure (III): 6-OM, 2-H2N purine, N9-CH2OCH2CH2OH]   (III)\\n\\nwherein M is an atom of an alkali metal, preferably sodium or potassium, and subsequent neutralization of the aqueous solution of\",\n  \"steps\": []}",
+            "mode": "page_read",
+            "transcribed_text": "WO 97/18211\nPCT/EP96/04882\n- 2 -\n\nwith ammonia, a 50% aqueous solution of methylamine, sodium methylate or sodium hydroxide even though it is not exemplified.\n\nThe document IT MI 93A001264 discloses a process for obtaining acyclovir which is substantially analogous to that described in BE 833,006, whereby O-protected acyclovir is used as starting material, the protecting group being acyl and the deprotection being carried out with sodium hydroxide.\n\nThe above mentioned documents and in general the known methods for the preparation of acyclovir involve, at the end of the synthesis, complex purifications, more particularly a passage of very diluted aqueous solutions of the product on columns of ionic resins, which render such methods somewhat laborious.\n\nIt has now been found that acyclovir in a pharmacologically acceptable purity state can be prepared in very high yields by hydrolysis of diacetylacyclovir of formyla II\n\n[Structure (II): CH3CO-NH substituted purine, 6-OH, N9-CH2OCH2CH2O-COCH3]   (II)\n\nby hydrolysis with an aqueous solution of an alcanolamine, preferably monoethanolamine.\n\nIt has also surprisingly found that, by hydrolysis with aqueous monoethanolamine, acyclovir precipitates straightforward in the reaction medium and may be thus isolated by simple filtration in a purity state at least sufficient to be pharmacologically acceptable.\n\nFinally, it has been found that acyclovir may be easily purified by transformation in one of its alkali metal salts of formula III\n\n[Structure (III): 6-OM, 2-H2N purine, N9-CH2OCH2CH2OH]   (III)\n\nwherein M is an atom of an alkali metal, preferably sodium or potassium, and subsequent neutralization of the aqueous solution of",
+            "image_class": "mixed",
+            "step_label": "",
+            "characterizations": []
+          },
+          {
+            "page_number": 4,
+            "image_index": 0,
+            "molecules": [
+              {
+                "smiles": "OC1=NC(NC(C)=O)=NC2=C1N=CN2COCCOC(C)=O",
+                "bbox": [
+                  0.34,
+                  0.45,
+                  0.74,
+                  0.55
+                ],
+                "role": "reactant",
+                "confidence": 0.82,
+                "source": "vlm",
+                "name": "II"
+              },
+              {
+                "smiles": "NCCO",
+                "bbox": null,
+                "role": "reagent",
+                "confidence": 0.75,
+                "source": "vlm",
+                "name": "monoethanolamine (aqueous)"
+              },
+              {
+                "smiles": "",
+                "bbox": null,
+                "role": "product",
+                "confidence": 0.6,
+                "source": "vlm",
+                "name": "acyclovir"
+              },
+              {
+                "smiles": "",
+                "bbox": null,
+                "role": "reactant",
+                "confidence": 0.5,
+                "source": "vlm",
+                "name": "acyclovir"
+              },
+              {
+                "smiles": "",
+                "bbox": [
+                  0.38,
+                  0.72,
+                  0.72,
+                  0.83
+                ],
+                "role": "intermediate",
+                "confidence": 0.6,
+                "source": "vlm",
+                "name": "III"
+              }
+            ],
+            "arrows": [],
+            "conditions_text": "hydrolysis of diacetylacyclovir of formula II by hydrolysis with an aqueous solution of an alcanolamine, preferably monoethanolamine; acyclovir precipitates in the reaction medium and is isolated by simple filtration; purification by transformation into an alkali metal salt of formula III and subsequent neutralization; hydrolysis of diacetylacyclovir (II) to acyclovir: hydrolysis with an aqueous solution of an alcanolamine, preferably monoethanolamine; purification via alkali metal salt (III): transformation in one of its alkali metal salts of formula III ... wherein M is an atom of an alkali metal, preferably sodium or potassium, and subsequent neutralization of the aqueous solution",
+            "raw_output": "{\n  \"is_reaction_scheme\": true,\n  \"steps\": [\n    {\n      \"step_label\": \"hydrolysis of diacetylacyclovir (II) to acyclovir\",\n      \"conditions_text\": \"hydrolysis with an aqueous solution of an alcanolamine, preferably monoethanolamine\",\n      \"molecules\": [\n        {\n          \"label\": \"II\",\n          \"smiles\": \"OC1=NC(NC(C)=O)=NC2=C1N=CN2COCCOC(C)=O\",\n          \"role\": \"reactant\",\n          \"bbox\": [0.34, 0.45, 0.74, 0.55],\n          \"confidence\": 0.82\n        },\n        {\n          \"label\": \"monoethanolamine (aqueous)\",\n          \"smiles\": \"NCCO\",\n          \"role\": \"reagent\",\n          \"bbox\": null,\n          \"confidence\": 0.75\n        },\n        {\n          \"label\": \"acyclovir\",\n          \"smiles\": null,\n          \"role\": \"product\",\n          \"bbox\": null,\n          \"confidence\": 0.6\n        }\n      ]\n    },\n    {\n      \"step_label\": \"purification via alkali metal salt (III)\",\n      \"conditions_text\": \"transformation in one of its alkali metal salts of formula III ... wherein M is an atom of an alkali metal, preferably sodium or potassium, and subsequent neutralization of the aqueous solution\",\n      \"molecules\": [\n        {\n          \"label\": \"acyclovir\",\n          \"smiles\": null,\n          \"role\": \"reactant\",\n          \"bbox\": null,\n          \"confidence\": 0.5\n        },\n        {\n          \"label\": \"III\",\n          \"smiles\": null,\n          \"role\": \"intermediate\",\n          \"bbox\": [0.38, 0.72, 0.72, 0.83],\n          \"confidence\": 0.6\n        }\n      ]\n    }\n  ],\n  \"characterizations\": [],\n  \"legend_conditions\": [],\n  \"arrows\": [],\n  \"conditions_text\": \"hydrolysis of diacetylacyclovir of formula II by hydrolysis with an aqueous solution of an alcanolamine, preferably monoethanolamine; acyclovir precipitates in the reaction medium and is isolated by simple filtration; purification by transformation into an alkali metal salt of formula III and subsequent neutralization\",\n  \"notes\": \"Patent description page (WO 97/18211, PCT/EP96/04882, page 2) showing drawn formu",
+            "mode": "scheme",
+            "transcribed_text": "",
+            "image_class": "scheme",
+            "step_label": "",
+            "characterizations": []
+          },
+          {
+            "page_number": 5,
+            "image_index": 0,
+            "molecules": [],
+            "arrows": [],
+            "conditions_text": "",
+            "raw_output": "{\"image_class\": \"text_page\", \"transcribed_text\": \"WO 97/18211\\nPCT/EP96/04882\\n\\n- 3 -\\n\\nsaid salt.\\n\\nThus, according to one of its aspects, the present invention concerns a process for the preparation of acyclovir which comprises\\n\\n(a) treating the N2-acetyl-9-(2-acetoxyethoxymethyl)guanine (diacetylacyclovir) with an alcanolamine in aqueous solution;\\n\\n(b) isolating the acyclovir thus obtained by treatment with a mineral or organic acid and subsequently filtering the separated precipitate.\\n\\nIn the preferred realization form, step (a) is carried out with monoethanolamine.\\n\\nStep (a) is carried out starting from a N2-acetyl-9-(2-acetoxy ethoxymethyl)guanine which may be pure or in a wet state by the residual solvent of its synthesis, in aqueous medium at a temperature of 70÷95°C. At this temperature the reaction is complete after about 3 hours.\\n\\nAmong the alcanolamines, monoethanolamine is preferred but appreciable results are obtained also using diethanolamine and triethanolamine, even though with longer reaction times.\\n\\nIn step (b), after the possible removal of the residual solvent, for example by distillation under vacuum, the reaction mixture is treated with an acid, for example with acetic acid, up to neutrality. Acyclovir thus obtained is isolated by filtration and subsequent washing with an appropriate solvent, for example a ketone such as acetone, methylethylketone or methylisobutylketone, and final drying.\\n\\nIn general, the product obtained is of great purity, read for use in pharmaceutical formulations.\\n\\nIf a further increase of the purity degree or if an acyclovir obtained by another route is available, the product may be, in general, purified by transformation in one of its alkali metal salts, preferably in its sodium salt and subsequent neutralization in aqueous medium. Such a purification presents the advantage that it can be carried out on any crude acyclovir obtained according to any other method.\\n\\nAccording to another of its aspects",
+            "mode": "page_read",
+            "transcribed_text": "WO 97/18211\nPCT/EP96/04882\n\n- 3 -\n\nsaid salt.\n\nThus, according to one of its aspects, the present invention concerns a process for the preparation of acyclovir which comprises\n\n(a) treating the N2-acetyl-9-(2-acetoxyethoxymethyl)guanine (diacetylacyclovir) with an alcanolamine in aqueous solution;\n\n(b) isolating the acyclovir thus obtained by treatment with a mineral or organic acid and subsequently filtering the separated precipitate.\n\nIn the preferred realization form, step (a) is carried out with monoethanolamine.\n\nStep (a) is carried out starting from a N2-acetyl-9-(2-acetoxy ethoxymethyl)guanine which may be pure or in a wet state by the residual solvent of its synthesis, in aqueous medium at a temperature of 70÷95°C. At this temperature the reaction is complete after about 3 hours.\n\nAmong the alcanolamines, monoethanolamine is preferred but appreciable results are obtained also using diethanolamine and triethanolamine, even though with longer reaction times.\n\nIn step (b), after the possible removal of the residual solvent, for example by distillation under vacuum, the reaction mixture is treated with an acid, for example with acetic acid, up to neutrality. Acyclovir thus obtained is isolated by filtration and subsequent washing with an appropriate solvent, for example a ketone such as acetone, methylethylketone or methylisobutylketone, and final drying.\n\nIn general, the product obtained is of great purity, read for use in pharmaceutical formulations.\n\nIf a further increase of the purity degree or if an acyclovir obtained by another route is available, the product may be, in general, purified by transformation in one of its alkali metal salts, preferably in its sodium salt and subsequent neutralization in aqueous medium. Such a purification presents the advantage that it can be carried out on any crude acyclovir obtained according to any other method.\n\nAccording to another of its aspects, the present invention provides a method for the purification of acyclovir which comprises",
+            "image_class": "text_page",
+            "step_label": "",
+            "characterizations": []
+          },
+          {
+            "page_number": 6,
+            "image_index": 0,
+            "molecules": [],
+            "arrows": [],
+            "conditions_text": "",
+            "raw_output": "{\n  \"image_class\": \"text_page\",\n  \"transcribed_text\": \"WO 97/18211\\nPCT/EP96/04882\\n- 4 -\\n\\n(c) treating acyclovir with an alkaline basis; and\\n(d) neutralizing the thus isolated salt by addition of an acid in aqueous medium and isolating the pure acyclovir thus obtained by filtration.\\n\\nIn step (c) the crude acyclovir, for example the product obtained at the end of the above illustrated step (b), even if it is wet by washing solvent, is treated with an alkaline basis, for example with sodium or potassium hydroxide or with sodium or potassium carbonate, in aqueous medium and an organic solvent, preferably a ketone such as acetone, methylethylketone or methylisobutylketone is added to the clear solution; preferably this solvent is the same which has been used for washing acyclovir, when this product has been prepared according to the above illustrated steps (a) and (b).\\n\\nThe acyclovir alkali metal salt thus obtained is isolated by precipitation according to conventional methods, by decolorizing with carbon, if needed, the solution of the salt before the precipitation, then filtering the product and washing it. It is employed as such in the subsequent step.\\n\\nIn step (d) the alkali metal salt thus obtained is neutralized in aqueous medium with a mineral or organic acid, for example with hydrochloric or hydrobromic, acetic, propionic or methanesulfonic acid and the acyclovir in a high purity degree thus obtained is isolated by filtration, subsequent washing and drying.\\n\\nAccording to a preferred aspect, the present invention finally concerns a process for the preparation of highly pure (≥ 99%) 9-(2-hydroxyethoxymethyl)guanine which comprises\\n\\n(a) treating N2-acetyl-9-(2-acetoxyethoxymethyl)guanine of formula II with monoethanolamine in aqueous medium;\\n\\n(b) isolating the 9-(2-hydroxyethoxymethyl)guanine thus obtained by neutralization with acetic acid and filtration of the separated precipitate;\\n\\n(c) treating the wet 9-(2-hydroxyethoxymethyl)guanine with sod",
+            "mode": "page_read",
+            "transcribed_text": "WO 97/18211\nPCT/EP96/04882\n- 4 -\n\n(c) treating acyclovir with an alkaline basis; and\n(d) neutralizing the thus isolated salt by addition of an acid in aqueous medium and isolating the pure acyclovir thus obtained by filtration.\n\nIn step (c) the crude acyclovir, for example the product obtained at the end of the above illustrated step (b), even if it is wet by washing solvent, is treated with an alkaline basis, for example with sodium or potassium hydroxide or with sodium or potassium carbonate, in aqueous medium and an organic solvent, preferably a ketone such as acetone, methylethylketone or methylisobutylketone is added to the clear solution; preferably this solvent is the same which has been used for washing acyclovir, when this product has been prepared according to the above illustrated steps (a) and (b).\n\nThe acyclovir alkali metal salt thus obtained is isolated by precipitation according to conventional methods, by decolorizing with carbon, if needed, the solution of the salt before the precipitation, then filtering the product and washing it. It is employed as such in the subsequent step.\n\nIn step (d) the alkali metal salt thus obtained is neutralized in aqueous medium with a mineral or organic acid, for example with hydrochloric or hydrobromic, acetic, propionic or methanesulfonic acid and the acyclovir in a high purity degree thus obtained is isolated by filtration, subsequent washing and drying.\n\nAccording to a preferred aspect, the present invention finally concerns a process for the preparation of highly pure (≥ 99%) 9-(2-hydroxyethoxymethyl)guanine which comprises\n\n(a) treating N2-acetyl-9-(2-acetoxyethoxymethyl)guanine of formula II with monoethanolamine in aqueous medium;\n\n(b) isolating the 9-(2-hydroxyethoxymethyl)guanine thus obtained by neutralization with acetic acid and filtration of the separated precipitate;\n\n(c) treating the wet 9-(2-hydroxyethoxymethyl)guanine with sodium hydroxide in aqueous medium and letting the sodium salt to precipitate, which is isolated by filtration;\n\n(d) neutralizing the wet sodium salt thus obtained with acetic acid",
+            "image_class": "text_page",
+            "step_label": "",
+            "characterizations": []
+          },
+          {
+            "page_number": 7,
+            "image_index": 0,
+            "molecules": [],
+            "arrows": [],
+            "conditions_text": "",
+            "raw_output": "{\n  \"image_class\": \"text_page\",\n  \"transcribed_text\": \"WO 97/18211\\nPCT/EP96/04882\\n- 5 -\\n\\nin aqueous medium and isolating the thus obtained very pure 9-(2-hydroxyethoxymethyl)guanine by filtration.\\n\\nThe process of the present invention, on one side, allows the preparation of acyclovir by a method which gives it straightforward in a pure crystalline state at the end of the deprotection reaction of the diacetylacyclovir and, on the other side, allows a further purification of acyclovir without using particular apparatus, expecially ionic resins columns.\\n\\nThe following examples illustrate the invention without, however, limiting it.\\n\\nEXAMPLE 1\\n\\nA mixture of 46.250 g (0.149 moles) of N2-acetyl-9-(2-acetoxyethoxymethyl)guanine and 32.750 g (0.536 moles) of monoethanolamine in 600 ml of deionized water are heated at 90°C for 3 hours under stirring, then it is cooled to 60°C and 25 ml of 80% acetic acid are added thereinto to reach a pH of 6.8÷7.2. The mixture is further cooled to about 20°C, then 60 ml of water and 60 ml of acetone are added thereinto. The crystalline product is filtered and washed with acetone. Thus, there is obtained 50 g of acyclovir, wet of acetone, corresponding to 33.250 g of an acyclovir having purity characteristics corresponding to those of a USP standard. Yield: 98.7% of the theoretical.\\n\\nEXAMPLE 2\\n\\n(a) To a mixture of 30 g of acyclovir, wet of acetone, obtained according to Example 1 and corresponding to 19.950 g of dry product, 36 ml of deionized water and 9 ml of 30% sodium hydroxide are added in order to have a pH of 11.8 ÷ 12.0, then 37.5 ml of acetone and 150 ml of decolorizing charcoal are added into the solution. The mixture is filtered, by washing with 1.5 ml of deionized water and 1.5 ml of acetone, the solution is heated to 35°C and 195 ml of acetone are added thereinto. The suspension thus obtained is cooled to 15°C, stirred 2 hours at the same temperature, filtered and the product is washed with 35 ml of acetone. Ther",
+            "mode": "page_read",
+            "transcribed_text": "WO 97/18211\nPCT/EP96/04882\n- 5 -\n\nin aqueous medium and isolating the thus obtained very pure 9-(2-hydroxyethoxymethyl)guanine by filtration.\n\nThe process of the present invention, on one side, allows the preparation of acyclovir by a method which gives it straightforward in a pure crystalline state at the end of the deprotection reaction of the diacetylacyclovir and, on the other side, allows a further purification of acyclovir without using particular apparatus, expecially ionic resins columns.\n\nThe following examples illustrate the invention without, however, limiting it.\n\nEXAMPLE 1\n\nA mixture of 46.250 g (0.149 moles) of N2-acetyl-9-(2-acetoxyethoxymethyl)guanine and 32.750 g (0.536 moles) of monoethanolamine in 600 ml of deionized water are heated at 90°C for 3 hours under stirring, then it is cooled to 60°C and 25 ml of 80% acetic acid are added thereinto to reach a pH of 6.8÷7.2. The mixture is further cooled to about 20°C, then 60 ml of water and 60 ml of acetone are added thereinto. The crystalline product is filtered and washed with acetone. Thus, there is obtained 50 g of acyclovir, wet of acetone, corresponding to 33.250 g of an acyclovir having purity characteristics corresponding to those of a USP standard. Yield: 98.7% of the theoretical.\n\nEXAMPLE 2\n\n(a) To a mixture of 30 g of acyclovir, wet of acetone, obtained according to Example 1 and corresponding to 19.950 g of dry product, 36 ml of deionized water and 9 ml of 30% sodium hydroxide are added in order to have a pH of 11.8 ÷ 12.0, then 37.5 ml of acetone and 150 ml of decolorizing charcoal are added into the solution. The mixture is filtered, by washing with 1.5 ml of deionized water and 1.5 ml of acetone, the solution is heated to 35°C and 195 ml of acetone are added thereinto. The suspension thus obtained is cooled to 15°C, stirred 2 hours at the same temperature, filtered and the product is washed with 35 ml of acetone. There is obtained 25.5 g of sodium salt, wet of acetone, corresponding to 23.2 g of dry product.\n\n(b) To a solution of 24 g of acyclovir sodium salt, wet of acetone,",
+            "image_class": "text_page",
+            "step_label": "",
+            "characterizations": []
+          },
+          {
+            "page_number": 8,
+            "image_index": 0,
+            "molecules": [],
+            "arrows": [],
+            "conditions_text": "",
+            "raw_output": "{\n  \"image_class\": \"text_page\",\n  \"transcribed_text\": \"WO 97/18211\\nPCT/EP96/04882\\n\\n- 6 -\\n\\nas obtained according to (a) and corresponding to 21.9 g of dry product, in 220 ml of deionized water, 6.75 ml of 80% acetic acid are added. The suspension of the crystalline product thus obtained is cooled at 15°C and stirred for 1 hour. Then it is filtered, washed with 35 ml of deionized water and 35 ml of acetone, then dried under vacuum at 80°C up to a residual moisture not higher than 5%. So, there is obtained 18.2 g of acyclovir having a purity of 99.85%.\\n\\nEXAMPLE 3\\n\\nBy operating as described in Example 1, from 17.5 g of N2-acetyl-9-(2-acetoxyethoxymethyl)guanine 18.9 g of acyclovir, wet of acetone, are obtained. By drying under vacuum at 80°C up to constant weight, 12.650 g of acyclovir with a purity of 99.25% are obtained.\\n\\nEXAMPLE 4\\n\\nBy operating as described in Example 2, starting from 4.750 g of acyclovir with a purity of 95.47%, prepared according to Example 6 of BE 833,006, 5.08 g of sodium salt are obtained. By neutralization in aqueous solution of the sodium salt thus obtained, using 80% acetic acid, 4.220 g of acyclovir with a purity of 99.27% are obtained.\",\n  \"steps\": [\n    {\n      \"step_label\": \"Example 2 (continuation)\",\n      \"reactants\": [\n        {\n          \"name\": \"acyclovir sodium salt solution (corresponding to 21.9 g of dry product)\",\n          \"role\": \"reactant\",\n          \"amount\": \"21.9 g dry basis\"\n        }\n      ],\n      \"reagents\": [\n        {\n          \"name\": \"80% acetic acid\",\n          \"role\": \"reagent\",\n          \"amount\": \"6.75 ml\"\n        }\n      ],\n      \"catalysts\": [],\n      \"ligands\": [],\n      \"solvents\": [\n        {\n          \"name\": \"deionized water\",\n          \"role\": \"solvent\",\n          \"amount\": \"220 ml (+ 35 ml wash)\"\n        },\n        {\n          \"name\": \"acetone\",\n          \"role\": \"solvent\",\n          \"amount\": \"35 ml (wash)\"\n        }\n      ],\n      \"products\": [\n        {\n          \"name\": \"acyclovir\",\n   ",
+            "mode": "page_read",
+            "transcribed_text": "WO 97/18211\nPCT/EP96/04882\n\n- 6 -\n\nas obtained according to (a) and corresponding to 21.9 g of dry product, in 220 ml of deionized water, 6.75 ml of 80% acetic acid are added. The suspension of the crystalline product thus obtained is cooled at 15°C and stirred for 1 hour. Then it is filtered, washed with 35 ml of deionized water and 35 ml of acetone, then dried under vacuum at 80°C up to a residual moisture not higher than 5%. So, there is obtained 18.2 g of acyclovir having a purity of 99.85%.\n\nEXAMPLE 3\n\nBy operating as described in Example 1, from 17.5 g of N2-acetyl-9-(2-acetoxyethoxymethyl)guanine 18.9 g of acyclovir, wet of acetone, are obtained. By drying under vacuum at 80°C up to constant weight, 12.650 g of acyclovir with a purity of 99.25% are obtained.\n\nEXAMPLE 4\n\nBy operating as described in Example 2, starting from 4.750 g of acyclovir with a purity of 95.47%, prepared according to Example 6 of BE 833,006, 5.08 g of sodium salt are obtained. By neutralization in aqueous solution of the sodium salt thus obtained, using 80% acetic acid, 4.220 g of acyclovir with a purity of 99.27% are obtained.",
+            "image_class": "text_page",
+            "step_label": "",
+            "characterizations": []
+          },
+          {
+            "page_number": 9,
+            "image_index": 0,
+            "molecules": [],
+            "arrows": [],
+            "conditions_text": "",
+            "raw_output": "{\"image_class\": \"text_page\", \"transcribed_text\": \"WO 97/18211\\nPCT/EP96/04882\\n\\n- 7 -\\n\\nCLAIMS\\n\\n1. Process for the preparation of 9-(2-hydroxyethoxymethyl)guanine which comprises\\n(a) treating the N²-acetyl-9-(2-acetoxyethoxymethyl)guanine with an alcanolamine in aqueous solution;\\n(b) isolating the acyclovir thus obtained by treatment with a mineral or organic acid and filtering the separated precipitate.\\n\\n2. A process according to claim 1, in which said alcanolamine is selected from the group consisting of mono-, di- and triethanolamine.\\n\\n3. A process according to claim 2, in which said alcanolamine is monoethanolamine.\\n\\n4. A process according to claim 1, in which the reaction temperature in step (a) is of 70÷95°C.\\n\\n5. A process according to claim 1, in which acetic acid is employed in step (b).\\n\\n6. A process for the purification of 9-(2-hydroxyethoxymethyl)guanine, which comprises\\n(c) treating 9-(2-hydroxyethoxymethyl)guanine with an alkaline basis; and\\n(d) neutralizing the thus isolated alkaline salt by addition of an acid in aqueous medium and isolating the pure 9-(2-hydroxyethoxymethyl)guanine thus obtained.\\n\\n7. A process according to claim 6, in which sodium or potassium hydroxide is used as alkaline basis in step (c).\\n\\n8. A process for the preparation of 9-(2-hydroxyethoxymethyl)guanine having an at least pharmacologically acceptable purity, which comprises\\n(a) treating N²-acetyl-9-(2-acetoxyethoxymethyl)guanine with monoethanolamine in aqueous medium;\\n(b) isolating the 9-(2-hydroxyethoxymethyl)guanine thus obtained by treatment with acetic acid and filtration of the precipitate thus obtained;\\n(c) treating the wet 9-(2-hydroxyethoxymethyl)guanine with sodium hydroxide; and;\\n(d) neutralizing the wet sodium salt thus obtained with acetic acid\",\n  \"steps\": []\n}",
+            "mode": "page_read",
+            "transcribed_text": "WO 97/18211\nPCT/EP96/04882\n\n- 7 -\n\nCLAIMS\n\n1. Process for the preparation of 9-(2-hydroxyethoxymethyl)guanine which comprises\n(a) treating the N²-acetyl-9-(2-acetoxyethoxymethyl)guanine with an alcanolamine in aqueous solution;\n(b) isolating the acyclovir thus obtained by treatment with a mineral or organic acid and filtering the separated precipitate.\n\n2. A process according to claim 1, in which said alcanolamine is selected from the group consisting of mono-, di- and triethanolamine.\n\n3. A process according to claim 2, in which said alcanolamine is monoethanolamine.\n\n4. A process according to claim 1, in which the reaction temperature in step (a) is of 70÷95°C.\n\n5. A process according to claim 1, in which acetic acid is employed in step (b).\n\n6. A process for the purification of 9-(2-hydroxyethoxymethyl)guanine, which comprises\n(c) treating 9-(2-hydroxyethoxymethyl)guanine with an alkaline basis; and\n(d) neutralizing the thus isolated alkaline salt by addition of an acid in aqueous medium and isolating the pure 9-(2-hydroxyethoxymethyl)guanine thus obtained.\n\n7. A process according to claim 6, in which sodium or potassium hydroxide is used as alkaline basis in step (c).\n\n8. A process for the preparation of 9-(2-hydroxyethoxymethyl)guanine having an at least pharmacologically acceptable purity, which comprises\n(a) treating N²-acetyl-9-(2-acetoxyethoxymethyl)guanine with monoethanolamine in aqueous medium;\n(b) isolating the 9-(2-hydroxyethoxymethyl)guanine thus obtained by treatment with acetic acid and filtration of the precipitate thus obtained;\n(c) treating the wet 9-(2-hydroxyethoxymethyl)guanine with sodium hydroxide; and;\n(d) neutralizing the wet sodium salt thus obtained with acetic acid",
+            "image_class": "text_page",
+            "step_label": "",
+            "characterizations": []
+          },
+          {
+            "page_number": 10,
+            "image_index": 0,
+            "molecules": [],
+            "arrows": [],
+            "conditions_text": "",
+            "raw_output": "{\"image_class\":\"text_page\",\"transcribed_text\":\"WO 97/18211\\n\\nPCT/EP96/04882\\n\\n- 8 -\\n\\nin aqueous medium and isolating the thus obtained pure 9-(2-hydroxyethoxymethyl)guanine.\",\"steps\":[]}",
+            "mode": "page_read",
+            "transcribed_text": "WO 97/18211\n\nPCT/EP96/04882\n\n- 8 -\n\nin aqueous medium and isolating the thus obtained pure 9-(2-hydroxyethoxymethyl)guanine.",
+            "image_class": "text_page",
+            "step_label": "",
+            "characterizations": []
+          },
+          {
+            "page_number": 11,
+            "image_index": 0,
+            "molecules": [],
+            "arrows": [],
+            "conditions_text": "",
+            "raw_output": "```json\n{\n  \"image_class\": \"other\",\n  \"transcribed_text\": \"INTERNATIONAL SEARCH REPORT\\nInternational Application No PCT/EP 96/04882\\n\\nA. CLASSIFICATION OF SUBJECT MATTER\\nIPC 6  C07D473/00\\nAccording to International Patent Classification (IPC) or to both national classification and IPC\\n\\nB. FIELDS SEARCHED\\nMinimum documentation searched (classification system followed by classification symbols)\\nIPC 6  C07D\\nDocumentation searched other than minimum documentation to the extent that such documents are included in the fields searched\\nElectronic data base consulted during the international search (name of data base and, where practical, search terms used)\\n\\nC. DOCUMENTS CONSIDERED TO BE RELEVANT\\nCategory* | Citation of document, with indication, where appropriate, of the relevant passages | Relevant to claim No.\\n\\nA  GB,A,1 567 671 (THE WELLCOME FOUNDATION) 21 May 1980\\n*Document*\\n*Page 2: lines 6-19*\\n*Page 4: claim 1-4*   ---   1\\n\\nA  EP,A,0 289 992 (KRKA) 9 November 1988\\n*Page 8: example 9*\\n*Page 10: example 14*   ---   1\\n\\nA  EP,A,0 532 878 (AJINOMOTO CO.,LTD) 24 March 1993\\n*Page 8: example 4*   ---   1\\n\\nA  US,A,4 146 715 (HOWARD J. SCHAEFFER) 27 March 1979\\n*Column 21: example 44*   ---   1\\n\\n-/--\\n\\n[X] Further documents are listed in the continuation of box C.   [X] Patent family members are listed in annex.\\n\\n* Special categories of cited documents:\\n\\\"A\\\" document defining the general state of the art which is not considered to be of particular relevance\\n\\\"E\\\" earlier document but published on or after the international filing date\\n\\\"L\\\" document which may throw doubts on priority claim(s) or which is cited to establish the publication date of another citation or other special reason (as specified)\\n\\\"O\\\" document referring to an oral disclosure, use, exhibition or other means\\n\\\"P\\\" document published prior to the international filing date but later than the priority date claimed\\n\\\"T\\\" later document published after the international fil",
+            "mode": "page_read",
+            "transcribed_text": "INTERNATIONAL SEARCH REPORT\nInternational Application No PCT/EP 96/04882\n\nA. CLASSIFICATION OF SUBJECT MATTER\nIPC 6  C07D473/00\nAccording to International Patent Classification (IPC) or to both national classification and IPC\n\nB. FIELDS SEARCHED\nMinimum documentation searched (classification system followed by classification symbols)\nIPC 6  C07D\nDocumentation searched other than minimum documentation to the extent that such documents are included in the fields searched\nElectronic data base consulted during the international search (name of data base and, where practical, search terms used)\n\nC. DOCUMENTS CONSIDERED TO BE RELEVANT\nCategory* | Citation of document, with indication, where appropriate, of the relevant passages | Relevant to claim No.\n\nA  GB,A,1 567 671 (THE WELLCOME FOUNDATION) 21 May 1980\n*Document*\n*Page 2: lines 6-19*\n*Page 4: claim 1-4*   ---   1\n\nA  EP,A,0 289 992 (KRKA) 9 November 1988\n*Page 8: example 9*\n*Page 10: example 14*   ---   1\n\nA  EP,A,0 532 878 (AJINOMOTO CO.,LTD) 24 March 1993\n*Page 8: example 4*   ---   1\n\nA  US,A,4 146 715 (HOWARD J. SCHAEFFER) 27 March 1979\n*Column 21: example 44*   ---   1\n\n-/--\n\n[X] Further documents are listed in the continuation of box C.   [X] Patent family members are listed in annex.\n\n* Special categories of cited documents:\n\"A\" document defining the general state of the art which is not considered to be of particular relevance\n\"E\" earlier document but published on or after the international filing date\n\"L\" document which may throw doubts on priority claim(s) or which is cited to establish the publication date of another citation or other special reason (as specified)\n\"O\" document referring to an oral disclosure, use, exhibition or other means\n\"P\" document published prior to the international filing date but later than the priority date claimed\n\"T\" later document published after the international filing date or priority date and not in conflict with the application but cited to understand the principle or theory underlying the invention\n\"X\" document of particular relevance; the claimed invention cannot be considered novel or cannot be considered to involve an inventive step when the document is taken alone\n\"Y\" document of particular relevance; the claimed invention cannot be considered to involve an inventive step when the document is combined with one or more other such documents, such combination being obvious to a person skilled in the art.\n\"&\" document member of the same patent family\n\nDate of the actual completion of the international search: 11 February 1997\nDate of mailing of the international search report: 20.02.97\n\nName and mailing address of the ISA\nEuropean Patent Office, P.B. 5818 Patentlaan 2\nNL - 2280 HV Rijswijk\nTel. (+31-70) 340-2040, Tx. 31 651 epo nl,\nFax: (+31-70) 340-3016\n\nAuthorized officer: Luyten, H\n\nForm PCT/ISA/210 (second sheet) (July 1992)\npage 1 of 2",
+            "image_class": "other",
+            "step_label": "",
+            "characterizations": []
+          },
+          {
+            "page_number": 12,
+            "image_index": 0,
+            "molecules": [],
+            "arrows": [],
+            "conditions_text": "",
+            "raw_output": "{\n  \"image_class\": \"text_page\",\n  \"transcribed_text\": \"INTERNATIONAL SEARCH REPORT\\nInternational Application No\\nPCT/EP 96/04882\\n\\nC.(Continuation) DOCUMENTS CONSIDERED TO BE RELEVANT\\n\\nCategory° | Citation of document, with indication, where appropriate, of the relevant passages | Relevant to claim No.\\n\\nA    EP,A,0 564 006 (KRKA) 6 October 1993\\n     cited in the application\\n     *Page 6-7: example 9*\\n     *Page 8-9: example 14*        1\\n     ---\\nA    EP,A,0 628 558 (SOLAR CHEMICAL S.A.) 14\\n     December 1994\\n     cited in the application\\n     *Document*\\n     & IT,A,931 264 (SOLAR CHEMICALS)        1\\n     ---\\nA    CHEMICAL & PHARMACEUTICAL BULLETIN,\\n     vol. 36, no. 3, March 1988,\\n     pages 1153-1157, XP002024969\\n     HIROATSU MATSUMOTO ET AL:\\n     cited in the application\\n     *Page 1155-1156*        1\\n     -----\\n\\nForm PCT/ISA/210 (continuation of second sheet) (July 1992)\\n\\npage 2 of 2\",\n  \"steps\": []\n}",
+            "mode": "page_read",
+            "transcribed_text": "INTERNATIONAL SEARCH REPORT\nInternational Application No\nPCT/EP 96/04882\n\nC.(Continuation) DOCUMENTS CONSIDERED TO BE RELEVANT\n\nCategory° | Citation of document, with indication, where appropriate, of the relevant passages | Relevant to claim No.\n\nA    EP,A,0 564 006 (KRKA) 6 October 1993\n     cited in the application\n     *Page 6-7: example 9*\n     *Page 8-9: example 14*        1\n     ---\nA    EP,A,0 628 558 (SOLAR CHEMICAL S.A.) 14\n     December 1994\n     cited in the application\n     *Document*\n     & IT,A,931 264 (SOLAR CHEMICALS)        1\n     ---\nA    CHEMICAL & PHARMACEUTICAL BULLETIN,\n     vol. 36, no. 3, March 1988,\n     pages 1153-1157, XP002024969\n     HIROATSU MATSUMOTO ET AL:\n     cited in the application\n     *Page 1155-1156*        1\n     -----\n\nForm PCT/ISA/210 (continuation of second sheet) (July 1992)\n\npage 2 of 2",
+            "image_class": "text_page",
+            "step_label": "",
+            "characterizations": []
+          },
+          {
+            "page_number": 13,
+            "image_index": 0,
+            "molecules": [],
+            "arrows": [],
+            "conditions_text": "",
+            "raw_output": "{\"image_class\":\"text_page\",\"transcribed_text\":\"INTERNATIONAL SEARCH REPORT\\nInformation on patent family members\\n\\nInternational Application No\\nPCT/EP 96/04882\\n\\nPatent document cited in search report | Publication date | Patent family member(s) | Publication date\\n\\nGB-A-1567671   21-05-80\\nAR-A- 228232  15-02-83\\nAR-A- 228281  15-02-83\\nAR-A- 228282  15-02-83\\nAR-A- 228283  15-02-83\\nAT-B- 360042  10-12-80\\nAT-B- 361942  10-04-81\\nAT-B- 360043  10-12-80\\nAT-B- 361007  10-02-81\\nAT-B- 357566  25-07-80\\nAU-B- 515553  09-04-81\\nAU-A- 2275977  07-09-78\\nBG-A- 27750  12-12-79\\nBG-A- 28067  25-02-80\\nCA-A- 1086316  23-09-80\\nCA-A- 1096863  03-03-81\\nCA-A- 1096864  03-03-81\\nCH-A- 629806  14-05-82\\nCH-A- 631176  30-07-82\\nCH-A- 632758  29-10-82\\nCH-A- 632757  29-10-82\\nCH-A- 634843  28-02-83\\nDE-A- 2708827  08-09-77\\nFR-A- 2342972  30-09-77\\nHR-B- 940535  31-12-95\\nJP-C- 1457884  09-09-88\\nJP-A- 52106896  07-09-77\\nJP-B- 63005392  03-02-88\\nLU-A- 76869  26-09-77\\nNL-A- 7702175  05-09-77\\nNL-A- 7709458  01-03-78\\nNL-A- 8400896  02-07-84\\nSE-B- 433216  14-05-84\\nSE-A- 7702233  02-09-77\\nSE-B- 432764  16-04-84\\nSE-A- 7709606  28-02-78\\nSE-B- 447113  27-10-86\\nSE-A- 8304549  23-08-83\\nSU-A- 637086  05-12-78\\nSU-A- 932991  30-05-82\\n\\nForm PCT/ISA/210 (patent family annex) (July 1992)\\n\\npage 1 of 2\",\"steps\":[]}",
+            "mode": "page_read",
+            "transcribed_text": "INTERNATIONAL SEARCH REPORT\nInformation on patent family members\n\nInternational Application No\nPCT/EP 96/04882\n\nPatent document cited in search report | Publication date | Patent family member(s) | Publication date\n\nGB-A-1567671   21-05-80\nAR-A- 228232  15-02-83\nAR-A- 228281  15-02-83\nAR-A- 228282  15-02-83\nAR-A- 228283  15-02-83\nAT-B- 360042  10-12-80\nAT-B- 361942  10-04-81\nAT-B- 360043  10-12-80\nAT-B- 361007  10-02-81\nAT-B- 357566  25-07-80\nAU-B- 515553  09-04-81\nAU-A- 2275977  07-09-78\nBG-A- 27750  12-12-79\nBG-A- 28067  25-02-80\nCA-A- 1086316  23-09-80\nCA-A- 1096863  03-03-81\nCA-A- 1096864  03-03-81\nCH-A- 629806  14-05-82\nCH-A- 631176  30-07-82\nCH-A- 632758  29-10-82\nCH-A- 632757  29-10-82\nCH-A- 634843  28-02-83\nDE-A- 2708827  08-09-77\nFR-A- 2342972  30-09-77\nHR-B- 940535  31-12-95\nJP-C- 1457884  09-09-88\nJP-A- 52106896  07-09-77\nJP-B- 63005392  03-02-88\nLU-A- 76869  26-09-77\nNL-A- 7702175  05-09-77\nNL-A- 7709458  01-03-78\nNL-A- 8400896  02-07-84\nSE-B- 433216  14-05-84\nSE-A- 7702233  02-09-77\nSE-B- 432764  16-04-84\nSE-A- 7709606  28-02-78\nSE-B- 447113  27-10-86\nSE-A- 8304549  23-08-83\nSU-A- 637086  05-12-78\nSU-A- 932991  30-05-82\n\nForm PCT/ISA/210 (patent family annex) (July 1992)\n\npage 1 of 2",
+            "image_class": "text_page",
+            "step_label": "",
+            "characterizations": []
+          },
+          {
+            "page_number": 14,
+            "image_index": 0,
+            "molecules": [],
+            "arrows": [],
+            "conditions_text": "",
+            "raw_output": "{\"image_class\":\"text_page\",\"transcribed_text\":\"INTERNATIONAL SEARCH REPORT\\nInformation on patent family members\\n\\nInternational Application No\\nPCT/EP 96/04882\\n\\nPatent document cited in search report | Publication date | Patent family member(s) | Publication date\\n\\nEP-A-0289992  09-11-88  DE-D- 3889248  01-06-94\\n                        DE-T- 3889248  17-11-94\\n                        EP-A- 0564006  06-10-93\\n                        SI-A- 8710786  31-08-96\\n                        SU-A- 1757467  23-08-92\\n                        SI-A- 8712020  30-06-96\\n\\nEP-A-0532878  24-03-93  JP-A- 5078329  30-03-93\\n                        US-A- 5336770  09-08-94\\n\\nUS-A-4146715  27-03-79  US-A- 4199574  22-04-80\\n\\nEP-A-0564006  06-10-93  DE-D- 3889248  01-06-94\\n                        DE-T- 3889248  17-11-94\\n                        EP-A- 0289992  09-11-88\\n                        SI-A- 8710786  31-08-96\\n                        SU-A- 1757467  23-08-92\\n                        SI-A- 8712020  30-06-96\\n\\nEP-A-0628558  14-12-94  US-A- 5496945  05-03-96\\n\\nForm PCT/ISA/210 (patent family annex) (July 1992)\\n\\npage 2 of 2\",\n \"steps\": []}",
+            "mode": "page_read",
+            "transcribed_text": "INTERNATIONAL SEARCH REPORT\nInformation on patent family members\n\nInternational Application No\nPCT/EP 96/04882\n\nPatent document cited in search report | Publication date | Patent family member(s) | Publication date\n\nEP-A-0289992  09-11-88  DE-D- 3889248  01-06-94\n                        DE-T- 3889248  17-11-94\n                        EP-A- 0564006  06-10-93\n                        SI-A- 8710786  31-08-96\n                        SU-A- 1757467  23-08-92\n                        SI-A- 8712020  30-06-96\n\nEP-A-0532878  24-03-93  JP-A- 5078329  30-03-93\n                        US-A- 5336770  09-08-94\n\nUS-A-4146715  27-03-79  US-A- 4199574  22-04-80\n\nEP-A-0564006  06-10-93  DE-D- 3889248  01-06-94\n                        DE-T- 3889248  17-11-94\n                        EP-A- 0289992  09-11-88\n                        SI-A- 8710786  31-08-96\n                        SU-A- 1757467  23-08-92\n                        SI-A- 8712020  30-06-96\n\nEP-A-0628558  14-12-94  US-A- 5496945  05-03-96\n\nForm PCT/ISA/210 (patent family annex) (July 1992)\n\npage 2 of 2",
+            "image_class": "text_page",
+            "step_label": "",
+            "characterizations": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "reconcile",
+      "label": "Reconcile text + table + scheme + page-read",
+      "status": "done",
+      "detail": "Merged 7 steps (text=5, tables=0, schemes=2, page_read=0)",
+      "data": {
+        "steps": 7,
+        "text_steps": 5,
+        "table_steps": 0,
+        "scheme_steps": 2,
+        "page_read_steps": 0
+      }
+    },
+    {
+      "id": "standardize",
+      "label": "Chemical standardization",
+      "status": "done",
+      "detail": "2 already had SMILES; 32 name(s) could not be resolved; Standardized 5 reaction time(s) to minutes",
+      "data": {
+        "resolved": 0,
+        "validated": 0,
+        "invalid": 0,
+        "unresolved": 32,
+        "total_entities": 34,
+        "times_standardized": 5
+      }
+    }
+  ],
+  "document": {
+    "filename": "9e55643b76d44ebbabff0e728d7e7ca9.pdf",
+    "page_count": 14,
+    "text": "",
+    "segments": [
+      {
+        "segment_id": "page-1",
+        "kind": "body",
+        "page_start": 1,
+        "page_end": 1,
+        "text": "",
+        "meta": {
+          "char_count": 0,
+          "source": "native",
+          "ocr_used": false,
+          "ocr_backend": "",
+          "native_char_count": 0,
+          "final_char_count": 0
+        }
+      },
+      {
+        "segment_id": "page-2",
+        "kind": "body",
+        "page_start": 2,
+        "page_end": 2,
+        "text": "",
+        "meta": {
+          "char_count": 0,
+          "source": "native"
+        }
+      },
+      {
+        "segment_id": "page-3",
+        "kind": "body",
+        "page_start": 3,
+        "page_end": 3,
+        "text": "",
+        "meta": {
+          "char_count": 0,
+          "source": "native"
+        }
+      },
+      {
+        "segment_id": "page-4",
+        "kind": "body",
+        "page_start": 4,
+        "page_end": 4,
+        "text": "",
+        "meta": {
+          "char_count": 0,
+          "source": "native"
+        }
+      },
+      {
+        "segment_id": "page-5",
+        "kind": "body",
+        "page_start": 5,
+        "page_end": 5,
+        "text": "",
+        "meta": {
+          "char_count": 0,
+          "source": "native"
+        }
+      },
+      {
+        "segment_id": "page-6",
+        "kind": "body",
+        "page_start": 6,
+        "page_end": 6,
+        "text": "",
+        "meta": {
+          "char_count": 0,
+          "source": "native"
+        }
+      },
+      {
+        "segment_id": "page-7",
+        "kind": "body",
+        "page_start": 7,
+        "page_end": 7,
+        "text": "",
+        "meta": {
+          "char_count": 0,
+          "source": "native"
+        }
+      },
+      {
+        "segment_id": "page-8",
+        "kind": "body",
+        "page_start": 8,
+        "page_end": 8,
+        "text": "",
+        "meta": {
+          "char_count": 0,
+          "source": "native"
+        }
+      },
+      {
+        "segment_id": "page-9",
+        "kind": "body",
+        "page_start": 9,
+        "page_end": 9,
+        "text": "",
+        "meta": {
+          "char_count": 0,
+          "source": "native"
+        }
+      },
+      {
+        "segment_id": "page-10",
+        "kind": "body",
+        "page_start": 10,
+        "page_end": 10,
+        "text": "",
+        "meta": {
+          "char_count": 0,
+          "source": "native"
+        }
+      },
+      {
+        "segment_id": "page-11",
+        "kind": "body",
+        "page_start": 11,
+        "page_end": 11,
+        "text": "",
+        "meta": {
+          "char_count": 0,
+          "source": "native"
+        }
+      },
+      {
+        "segment_id": "page-12",
+        "kind": "body",
+        "page_start": 12,
+        "page_end": 12,
+        "text": "",
+        "meta": {
+          "char_count": 0,
+          "source": "native"
+        }
+      },
+      {
+        "segment_id": "page-13",
+        "kind": "body",
+        "page_start": 13,
+        "page_end": 13,
+        "text": "",
+        "meta": {
+          "char_count": 0,
+          "source": "native"
+        }
+      },
+      {
+        "segment_id": "page-14",
+        "kind": "body",
+        "page_start": 14,
+        "page_end": 14,
+        "text": "",
+        "meta": {
+          "char_count": 0,
+          "source": "native"
+        }
+      }
+    ],
+    "figure_count": 14,
+    "table_hints": []
+  },
+  "route": {
+    "title": "PROCESS FOR THE PREPARATION OF 9-[(2-HYDROXYETHOXY)METHYL]GUANINE (ACYCLOVIR)",
+    "target_name": "acyclovir (9-[(2-hydroxyethoxy)methyl]guanine)",
+    "target_class": "nucleoside analog",
+    "document_type": "patent",
+    "steps": [
+      {
+        "step_index": 1,
+        "step_label": "Example 1 — hydrolysis/deprotection of diacetylacyclovir with monoethanolamine and isolation (steps a–b)",
+        "reactants": [
+          {
+            "name": "N2-acetyl-9-(2-acetoxyethoxymethyl)guanine (diacetylacyclovir)",
+            "role": "reactant",
+            "amount": "46.250 g (0.149 moles)",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "reagents": [
+          {
+            "name": "monoethanolamine",
+            "role": "reagent",
+            "amount": "32.750 g (0.536 moles)",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          },
+          {
+            "name": "80% acetic acid",
+            "role": "reagent",
+            "amount": "25 ml",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "catalysts": [],
+        "ligands": [],
+        "solvents": [
+          {
+            "name": "deionized water",
+            "role": "solvent",
+            "amount": "600 ml",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "intermediates": [],
+        "products": [
+          {
+            "name": "acyclovir (wet of acetone)",
+            "role": "product",
+            "amount": "50 g wet, corresponding to 33.250 g dry",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "conditions": {
+          "temperature": "heated at 90 °C; cooled to 60 °C for acid addition; further cooled to about 20 °C",
+          "time": "180 minutes",
+          "pressure": "N/A",
+          "atmosphere": "N/A",
+          "other": "pH 6.8–7.2 after 80% acetic acid addition; then 60 ml water and 60 ml acetone added; crystalline product filtered and washed with acetone"
+        },
+        "yield_value": "98.7% of theoretical",
+        "ee_or_dr": "N/A",
+        "notes": "Product has purity characteristics corresponding to those of a USP standard; general process taught at 70–95 °C, ~3 h; alcanolamine may be mono-, di- or triethanolamine (monoethanolamine preferred)",
+        "evidence": "A mixture of 46.250 g (0.149 moles) of N2-acetyl-9-(2-acetoxyethoxymethyl)guanine and 32.750 g (0.536 moles) of monoethanolamine in 600 ml of deionized water are heated at 90°C for 3 hours ... Thus, there is obtained 50 g of acyclovir, wet of acetone ... Yield: 98.7% of the theoretical."
+      },
+      {
+        "step_index": 2,
+        "step_label": "Example 2(a) — formation of acyclovir sodium salt (step c)",
+        "reactants": [
+          {
+            "name": "acyclovir, wet of acetone (from Example 1)",
+            "role": "reactant",
+            "amount": "30 g wet, corresponding to 19.950 g dry product",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "reagents": [
+          {
+            "name": "30% sodium hydroxide",
+            "role": "reagent",
+            "amount": "9 ml",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          },
+          {
+            "name": "decolorizing charcoal",
+            "role": "reagent",
+            "amount": "150 ml",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "catalysts": [],
+        "ligands": [],
+        "solvents": [
+          {
+            "name": "deionized water",
+            "role": "solvent",
+            "amount": "36 ml",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          },
+          {
+            "name": "acetone",
+            "role": "solvent",
+            "amount": "37.5 ml then 195 ml (plus 1.5 ml wash and 35 ml wash)",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "intermediates": [],
+        "products": [
+          {
+            "name": "acyclovir sodium salt (wet of acetone)",
+            "role": "product",
+            "amount": "25.5 g wet, corresponding to 23.2 g dry product",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "conditions": {
+          "temperature": "solution heated to 35 °C; suspension cooled to 15 °C",
+          "time": "120 minutes",
+          "pressure": "N/A",
+          "atmosphere": "N/A",
+          "other": "pH 11.8–12.0 after NaOH; charcoal treatment then filtration washing with 1.5 ml deionized water and 1.5 ml acetone; precipitation by adding 195 ml acetone; product washed with 35 ml acetone"
+        },
+        "yield_value": "N/A",
+        "ee_or_dr": "N/A",
+        "notes": "Sodium salt used as such (wet) in the subsequent neutralization step",
+        "evidence": "To a mixture of 30 g of acyclovir, wet of acetone, obtained according to Example 1 ... 36 ml of deionized water and 9 ml of 30% sodium hydroxide are added in order to have a pH of 11.8 ÷ 12.0 ... There is obtained 25.5 g of sodium salt, wet of acetone, corresponding to 23.2 g of dry product."
+      },
+      {
+        "step_index": 3,
+        "step_label": "Example 2(b) — neutralization of sodium salt to purified acyclovir (step d)",
+        "reactants": [
+          {
+            "name": "acyclovir sodium salt, wet of acetone (from Example 2a)",
+            "role": "reactant",
+            "amount": "24 g wet, corresponding to 21.9 g dry product",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "reagents": [
+          {
+            "name": "80% acetic acid",
+            "role": "reagent",
+            "amount": "6.75 ml",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "catalysts": [],
+        "ligands": [],
+        "solvents": [
+          {
+            "name": "deionized water",
+            "role": "solvent",
+            "amount": "220 ml",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "intermediates": [],
+        "products": [
+          {
+            "name": "acyclovir (purified)",
+            "role": "product",
+            "amount": "18.2 g",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "conditions": {
+          "temperature": "cooled at 15 °C; dried under vacuum at 80 °C",
+          "time": "60 minutes",
+          "pressure": "vacuum (drying)",
+          "atmosphere": "N/A",
+          "other": "filtered, washed with 35 ml deionized water and 35 ml acetone; dried to residual moisture not higher than 5%"
+        },
+        "yield_value": "5%",
+        "ee_or_dr": "N/A",
+        "notes": "Purity 99.85%",
+        "evidence": "To a solution of 24 g of acyclovir sodium salt, wet of acetone ... in 220 ml of deionized water, 6.75 ml of 80% acetic acid are added ... there is obtained 18.2 g of acyclovir having a purity of 99.85%."
+      },
+      {
+        "step_index": 4,
+        "step_label": "Example 3 — repeat of Example 1 at smaller scale with drying",
+        "reactants": [
+          {
+            "name": "N2-acetyl-9-(2-acetoxyethoxymethyl)guanine (diacetylacyclovir)",
+            "role": "reactant",
+            "amount": "17.5 g",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "reagents": [
+          {
+            "name": "monoethanolamine",
+            "role": "reagent",
+            "amount": "N/A (as in Example 1)",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          },
+          {
+            "name": "80% acetic acid",
+            "role": "reagent",
+            "amount": "N/A (as in Example 1)",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "catalysts": [],
+        "ligands": [],
+        "solvents": [
+          {
+            "name": "deionized water",
+            "role": "solvent",
+            "amount": "N/A (as in Example 1)",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          },
+          {
+            "name": "acetone",
+            "role": "solvent",
+            "amount": "N/A (wash)",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "intermediates": [],
+        "products": [
+          {
+            "name": "acyclovir",
+            "role": "product",
+            "amount": "18.9 g wet of acetone; 12.650 g after drying",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "conditions": {
+          "temperature": "as Example 1 (90 °C); drying under vacuum at 80 °C",
+          "time": "180 minutes",
+          "pressure": "vacuum (drying)",
+          "atmosphere": "N/A",
+          "other": "By operating as described in Example 1"
+        },
+        "yield_value": "N/A",
+        "ee_or_dr": "N/A",
+        "notes": "Purity 99.25%",
+        "evidence": "By operating as described in Example 1, from 17.5 g of N2-acetyl-9-(2-acetoxyethoxymethyl)guanine 18.9 g of acyclovir, wet of acetone, are obtained ... 12.650 g of acyclovir with a purity of 99.25% are obtained."
+      },
+      {
+        "step_index": 5,
+        "step_label": "Example 4 — purification of crude acyclovir from another route via sodium salt (steps c–d)",
+        "reactants": [
+          {
+            "name": "acyclovir, purity 95.47% (prepared according to Example 6 of BE 833,006)",
+            "role": "reactant",
+            "amount": "4.750 g",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "reagents": [
+          {
+            "name": "sodium hydroxide",
+            "role": "reagent",
+            "amount": "N/A (as in Example 2)",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          },
+          {
+            "name": "80% acetic acid",
+            "role": "reagent",
+            "amount": "N/A",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "catalysts": [],
+        "ligands": [],
+        "solvents": [
+          {
+            "name": "water",
+            "role": "solvent",
+            "amount": "N/A (aqueous solution)",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          },
+          {
+            "name": "acetone",
+            "role": "solvent",
+            "amount": "N/A (as in Example 2)",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "intermediates": [
+          {
+            "name": "acyclovir sodium salt",
+            "role": "intermediate",
+            "amount": "5.08 g",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "products": [
+          {
+            "name": "acyclovir (purified)",
+            "role": "product",
+            "amount": "4.220 g",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "conditions": {
+          "temperature": "as Example 2",
+          "time": "N/A",
+          "pressure": "N/A",
+          "atmosphere": "N/A",
+          "other": "By operating as described in Example 2; neutralization of the sodium salt in aqueous solution using 80% acetic acid"
+        },
+        "yield_value": "80%",
+        "ee_or_dr": "N/A",
+        "notes": "Purity upgraded from 95.47% to 99.27%",
+        "evidence": "By operating as described in Example 2, starting from 4.750 g of acyclovir with a purity of 95.47% ... 5.08 g of sodium salt are obtained. By neutralization ... using 80% acetic acid, 4.220 g of acyclovir with a purity of 99.27% are obtained."
+      },
+      {
+        "step_index": 6,
+        "step_label": "hydrolysis of diacetylacyclovir (II) to acyclovir",
+        "reactants": [
+          {
+            "name": "II",
+            "role": "reactant",
+            "amount": "N/A",
+            "smiles": "OC1=NC(NC(C)=O)=NC2=C1N=CN2COCCOC(C)=O",
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "reagents": [
+          {
+            "name": "monoethanolamine (aqueous)",
+            "role": "reagent",
+            "amount": "N/A",
+            "smiles": "NCCO",
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "catalysts": [],
+        "ligands": [],
+        "solvents": [],
+        "intermediates": [
+          {
+            "name": "acyclovir",
+            "role": "intermediate",
+            "amount": "N/A",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "products": [
+          {
+            "name": "acyclovir",
+            "role": "intermediate",
+            "amount": "N/A",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "conditions": {
+          "temperature": "N/A",
+          "time": "N/A",
+          "pressure": "N/A",
+          "atmosphere": "N/A",
+          "other": "hydrolysis with an aqueous solution of an alcanolamine, preferably monoethanolamine"
+        },
+        "yield_value": "N/A",
+        "ee_or_dr": "N/A",
+        "notes": "Extracted from image via VLM/OCSR (scheme)",
+        "evidence": "hydrolysis with an aqueous solution of an alcanolamine, preferably monoethanolamine"
+      },
+      {
+        "step_index": 7,
+        "step_label": "purification via alkali metal salt (III)",
+        "reactants": [
+          {
+            "name": "acyclovir",
+            "role": "reactant",
+            "amount": "N/A",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "reagents": [],
+        "catalysts": [],
+        "ligands": [],
+        "solvents": [],
+        "intermediates": [
+          {
+            "name": "III",
+            "role": "intermediate",
+            "amount": "N/A",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "products": [],
+        "conditions": {
+          "temperature": "N/A",
+          "time": "N/A",
+          "pressure": "N/A",
+          "atmosphere": "N/A",
+          "other": "transformation in one of its alkali metal salts of formula III ... wherein M is an atom of an alkali metal, preferably sodium or potassium, and subsequent neutralization of the aqueous solution"
+        },
+        "yield_value": "N/A",
+        "ee_or_dr": "N/A",
+        "notes": "Extracted from image via VLM/OCSR (scheme)",
+        "evidence": "transformation in one of its alkali metal salts of formula III ... wherein M is an atom of an alkali metal, preferably sodium or potassium, and subsequent neutralization of the aqueous solution"
+      }
+    ],
+    "warnings": [
+      "No extractable text in this PDF even after OCR attempt — install Tesseract (or easyocr) and re-run, or use VLM page-read fallback.",
+      "Skipped — no extractable text (awaiting OCR/VLM page-read)",
+      "Text LLM re-run on VLM page-read transcription (21933 chars) → 5 step(s).",
+      "Examples 3 and 4 refer back to Examples 1 and 2 for conditions/reagent amounts; unspecified amounts recorded as N/A.",
+      "In Example 2(a) the text states '150 ml of decolorizing charcoal', which is likely a typographical/unit ambiguity (mass vs volume) in the source.",
+      "General process description (70–95 °C, ~3 h, alternative alcanolamines, alternative acids and ketone solvents) comes from the specification rather than a specific example."
+    ]
+  },
+  "raw_model_output": "\n\n# page_read_text_extract\n{\"title\": \"PROCESS FOR THE PREPARATION OF 9-[(2-HYDROXYETHOXY)METHYL]GUANINE (ACYCLOVIR)\", \"target_name\": \"acyclovir (9-[(2-hydroxyethoxy)methyl]guanine)\", \"target_class\": \"nucleoside analog\", \"document_type\": \"patent\", \"steps\": [{\"step_index\": 1, \"step_label\": \"Example 1 — hydrolysis/deprotection of diacetylacyclovir with monoethanolamine and isolation (steps a–b)\", \"reactants\": [{\"name\": \"N2-acetyl-9-(2-acetoxyethoxymethyl)guanine (diacetylacyclovir)\", \"role\": \"reactant\", \"amount\": \"46.250 g (0.149 moles)\", \"smiles\": null}], \"reagents\": [{\"name\": \"monoethanolamine\", \"role\": \"reagent\", \"amount\": \"32.750 g (0.536 moles)\"}, {\"name\": \"80% acetic acid\", \"role\": \"reagent\", \"amount\": \"25 ml\"}], \"catalysts\": [], \"ligands\": [], \"solvents\": [{\"name\": \"deionized water\", \"role\": \"solvent\", \"amount\": \"600 ml\"}], \"intermediates\": [], \"products\": [{\"name\": \"acyclovir (wet of acetone)\", \"role\": \"product\", \"amount\": \"50 g wet, corresponding to 33.250 g dry\"}], \"conditions\": {\"temperature\": \"heated at 90 °C; cooled to 60 °C for acid addition; further cooled to about 20 °C\", \"time\": \"3 hours\", \"pressure\": \"N/A\", \"atmosphere\": \"N/A\", \"other\": \"pH 6.8–7.2 after 80% acetic acid addition; then 60 ml water and 60 ml acetone added; crystalline product filtered and washed with acetone\"}, \"yield_value\": \"98.7% of theoretical\", \"ee_or_dr\": \"N/A\", \"notes\": \"Product has purity characteristics corresponding to those of a USP standard; general process taught at 70–95 °C, ~3 h; alcanolamine may be mono-, di- or triethanolamine (monoethanolamine preferred)\", \"evidence\": \"A mixture of 46.250 g (0.149 moles) of N2-acetyl-9-(2-acetoxyethoxymethyl)guanine and 32.750 g (0.536 moles) of monoethanolamine in 600 ml of deionized water are heated at 90°C for 3 hours ... Thus, there is obtained 50 g of acyclovir, wet of acetone ... Yield: 98.7% of the theoretical.\"}, {\"step_index\": 2, \"step_label\": \"Example 2(a) — formation of acyclovir sodium salt (step c)\", \"reactants\": [{\"name\": \"acyclovir, wet of acetone (from Example 1)\", \"role\": \"reactant\", \"amount\": \"30 g wet, corresponding to 19.950 g dry product\", \"smiles\": null}], \"reagents\": [{\"name\": \"30% sodium hydroxide\", \"role\": \"reagent\", \"amount\": \"9 ml\"}, {\"name\": \"decolorizing charcoal\", \"role\": \"reagent\", \"amount\": \"150 ml\"}], \"catalysts\": [], \"ligands\": [], \"solvents\": [{\"name\": \"deionized water\", \"role\": \"solvent\", \"amount\": \"36 ml\"}, {\"name\": \"acetone\", \"role\": \"solvent\", \"amount\": \"37.5 ml then 195 ml (plus 1.5 ml wash and 35 ml wash)\"}], \"intermediates\": [], \"products\": [{\"name\": \"acyclovir sodium salt (wet of acetone)\", \"role\": \"product\", \"amount\": \"25.5 g wet, corresponding to 23.2 g dry product\"}], \"conditions\": {\"temperature\": \"solution heated to 35 °C; suspension cooled to 15 °C\", \"time\": \"stirred 2 hours at 15 °C\", \"pressure\": \"N/A\", \"atmosphere\": \"N/A\", \"other\": \"pH 11.8–12.0 after NaOH; charcoal treatment then filtration washing with 1.5 ml deionized water and 1.5 ml acetone; precipitation by adding 195 ml acetone; product washed with 35 ml acetone\"}, \"yield_value\": \"N/A\", \"ee_or_dr\": \"N/A\", \"notes\": \"Sodium salt used as such (wet) in the subsequent neutralization step\", \"evidence\": \"To a mixture of 30 g of acyclovir, wet of acetone, obtained according to Example 1 ... 36 ml of deionized water and 9 ml of 30% sodium hydroxide are added in order to have a pH of 11.8 ÷ 12.0 ... There is obtained 25.5 g of sodium salt, wet of acetone, corresponding to 23.2 g of dry product.\"}, {\"step_index\": 3, \"step_label\": \"Example 2(b) — neutralization of sodium salt to purified acyclovir (step d)\", \"reactants\": [{\"name\": \"acyclovir sodium salt, wet of acetone (from Example 2a)\", \"role\": \"reactant\", \"amount\": \"24 g wet, corresponding to 21.9 g dry product\", \"smiles\": null}], \"reagents\": [{\"name\": \"80% acetic acid\", \"role\": \"reagent\", \"amount\": \"6.75 ml\"}], \"catalysts\": [], \"ligands\": [], \"solvents\": [{\"name\": \"deionized water\", \"role\": \"solvent\", \"amount\": \"220 ml\"}], \"intermediates\": [], \"products\": [{\"name\": \"acyclovir (purified)\", \"role\": \"product\", \"amount\": \"18.2 g\"}], \"conditions\": {\"temperature\": \"cooled at 15 °C; dried under vacuum at 80 °C\", \"time\": \"stirred 1 hour\", \"pressure\": \"vacuum (drying)\", \"atmosphere\": \"N/A\", \"other\": \"filtered, washed with 35 ml deionized water and 35 ml acetone; dried to residual moisture not higher than 5%\"}, \"yield_value\": \"N/A\", \"ee_or_dr\": \"N/A\", \"notes\": \"Purity 99.85%\", \"evidence\": \"To a solution of 24 g of acyclovir sodium salt, wet of acetone ... in 220 ml of deionized water, 6.75 ml of 80% acetic acid are added ... there is obtained 18.2 g of acyclovir having a purity of 99.85%.\"}, {\"step_index\": 4, \"step_label\": \"Example 3 — repeat of Example 1 at smaller scale with drying\", \"reactants\": [{\"name\": \"N2-acetyl-9-(2-acetoxyethoxymethyl)guanine (diacetylacyclovir)\", \"role\": \"reactant\", \"amount\": \"17.5 g\", \"smiles\": null}], \"reagents\": [{\"name\": \"monoethanolamine\", \"role\": \"reagent\", \"amount\": \"N/A (as in Example 1)\"}, {\"name\": \"80% acetic acid\", \"role\": \"reagent\", \"amount\": \"N/A (as in Example 1)\"}], \"catalysts\": [], \"ligands\": [], \"solvents\": [{\"name\": \"deionized water\", \"role\": \"solvent\", \"amount\": \"N/A (as in Example 1)\"}, {\"name\": \"acetone\", \"role\": \"solvent\", \"amount\": \"N/A (wash)\"}], \"intermediates\": [], \"products\": [{\"name\": \"acyclovir\", \"role\": \"product\", \"amount\": \"18.9 g wet of acetone; 12.650 g after drying\"}], \"conditions\": {\"temperature\": \"as Example 1 (90 °C); drying under vacuum at 80 °C\", \"time\": \"as Example 1 (3 hours); dried to constant weight\", \"pressure\": \"vacuum (drying)\", \"atmosphere\": \"N/A\", \"other\": \"By operating as described in Example 1\"}, \"yield_value\": \"N/A\", \"ee_or_dr\": \"N/A\", \"notes\": \"Purity 99.25%\", \"evidence\": \"By operating as described in Example 1, from 17.5 g of N2-acetyl-9-(2-acetoxyethoxymethyl)guanine 18.9 g of acyclovir, wet of acetone, are obtained ... 12.650 g of acyclovir with a purity of 99.25% are obtained.\"}, {\"step_index\": 5, \"step_label\": \"Example 4 — purification of crude acyclovir from another route via sodium salt (steps c–d)\", \"reactants\": [{\"name\": \"acyclovir, purity 95.47% (prepared according to Example 6 of BE 833,006)\", \"role\": \"reactant\", \"amount\": \"4.750 g\", \"smiles\": null}], \"reagents\": [{\"name\": \"sodium hydroxide\", \"role\": \"reagent\", \"amount\": \"N/A (as in Example 2)\"}, {\"name\": \"80% acetic acid\", \"role\": \"reagent\", \"amount\": \"N/A\"}], \"catalysts\": [], \"ligands\": [], \"solvents\": [{\"name\": \"water\", \"role\": \"solvent\", \"amount\": \"N/A (aqueous solution)\"}, {\"name\": \"acetone\", \"role\": \"solvent\", \"amount\": \"N/A (as in Example 2)\"}], \"intermediates\": [{\"name\": \"acyclovir sodium salt\", \"role\": \"intermediate\", \"amount\": \"5.08 g\"}], \"products\": [{\"name\": \"acyclovir (purified)\", \"role\": \"product\", \"amount\": \"4.220 g\"}], \"conditions\": {\"temperature\": \"as Example 2\", \"time\": \"as Example 2\", \"pressure\": \"N/A\", \"atmosphere\": \"N/A\", \"other\": \"By operating as described in Example 2; neutralization of the sodium salt in aqueous solution using 80% acetic acid\"}, \"yield_value\": \"N/A\", \"ee_or_dr\": \"N/A\", \"notes\": \"Purity upgraded from 95.47% to 99.27%\", \"evidence\": \"By operating as described in Example 2, starting from 4.750 g of acyclovir with a purity of 95.47% ... 5.08 g of sodium salt are obtained. By neutralization ... using 80% acetic acid, 4.220 g of acyclovir with a purity of 99.27% are obtained.\"}], \"warnings\": [\"Examples 3 and 4 refer back to Examples 1 and 2 for conditions/reagent amounts; unspecified amounts recorded as N/A.\", \"In Example 2(a) the text states '150 ml of decolorizing charcoal', which is likely a typographical/unit ambiguity (mass vs volume) in the source.\", \"General process description (70–95 °C, ~3 h, alternative alcanolamines, alternative acids and ketone solvents) comes from the specification rather than a specific example.\"]}",
+  "error": null,
+  "from_cache": false,
+  "content_hash": "d7513925ce3119d12e0f585817113b55e8f33d13a0e62412d58adaa86645d226",
+  "source_job_id": null
+}

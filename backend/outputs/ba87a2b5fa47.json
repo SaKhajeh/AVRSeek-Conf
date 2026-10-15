@@ -1,0 +1,931 @@
+{
+  "job_id": "ba87a2b5fa47",
+  "filename": "36_1153.pdf",
+  "stages": [
+    {
+      "id": "parse_pdf",
+      "label": "PDF document understanding (+ OCR)",
+      "status": "done",
+      "detail": "5 pages, 5 images, 0 table hints, 163 text chars",
+      "data": {
+        "page_count": 5,
+        "figure_count": 5,
+        "segments": 5,
+        "text_chars": 163,
+        "ocr_used": false,
+        "ocr_backend": ""
+      }
+    },
+    {
+      "id": "text_extract",
+      "label": "Text reaction extraction (LLM)",
+      "status": "done",
+      "detail": "Extracted 0 step(s) with claude-opus-5",
+      "data": {
+        "steps": 0,
+        "target": "N/A",
+        "text_chars_sent": 163
+      }
+    },
+    {
+      "id": "table_extract",
+      "label": "Table extraction (pdfplumber + LLM)",
+      "status": "stubbed",
+      "detail": "No reaction-like tables found in 0 total tables",
+      "data": {
+        "tables_total": 0,
+        "reaction_tables": 0,
+        "steps_extracted": 0
+      }
+    },
+    {
+      "id": "image_scheme",
+      "label": "Scheme / image extraction (VLM)",
+      "status": "done",
+      "detail": "5 scheme step(s), 0 page-read step(s), 13 molecule(s), 5 page-read(s) from 6 image(s)",
+      "data": {
+        "images_processed": 6,
+        "schemes_found": 1,
+        "molecules_extracted": 13,
+        "page_reads": 5,
+        "transcribed_chars": 5227,
+        "scheme_steps": 5,
+        "page_steps": 0,
+        "schemes": [
+          {
+            "page_number": 1,
+            "image_index": 0,
+            "molecules": [],
+            "arrows": [],
+            "conditions_text": "",
+            "raw_output": "{\n  \"image_class\": \"mixed\",\n  \"transcribed_text\": \"No. 3\\t1153\\n\\n[Chem. Pharm. Bull. 36(3)1153—1157(1988)]\\n\\nA Convenient Synthesis of 9-(2-Hydroxyethoxymethyl)guanine (Acyclovir) and Related Compounds^1)\\n\\nHIROATSU MATSUMOTO,* CHISATO KANEKO, KEIKO YAMADA, TADAO TAKEUCHI, TAKEO MORI, and YOSHIHISA MIZUNO\\n\\nResearch Laboratory, Minophagen Pharmaceutical Co., 2–5233, Komatsubara, Zama, Kanagawa 228, Japan\\n\\n(Received August 4, 1987)\\n\\nA convenient and economical synthesis of 9-(2-hydroxyethoxymethyl)guanine (1, acyclovir, Zovirax, or acyclic guanosine: an antiherpetic agent) from guanine was developed via N^2,O-diacetylacyclovir. Two closely related compounds, N^2-acetylacyclovir (7) and O-acetylacyclovir (8), were also prepared by selective deacetylation.\\n\\nKeywords——acyclovir; N^2-acetylacyclovir; O-acetylacyclovir; alkylation; p-toluenesulfonic acid; antiherpetic agent\\n\\nSchaeffer and coworkers^2) first reported that 9-(2-hydroxyethoxymethyl)guanine (1, acyclovir) may be highly specific inhibitor of herpes viruses proliferation. Since then, a large number of nucleoside analogs in which the carbohydrate moiety is replaced by an acyclic substituent (viz., 2-hydroxyethoxymethyl or 1,3-dihydroxy-2-propoxymethyl) have been prepared.\\n\\nChart 1\\n\\nSeveral methods for the introduction of a 2-hydroxyethoxymethyl group into purines for the synthesis of acyclovir or acyclic nucleosides have been tried,^3-10) with limited success. Schaeffer and colleagues have carried out the base-promoted alkylation of 2,6-dichloropurine with 2-benzoxyethoxymethyl chloride to obtain the N-9 substituted product in 41% yield.^2) Acyclovir was prepared in 13% overall yield from the N-9 derivative in four steps including ammonolysis and hydrogenolytic debenzylation. Barrio and coworkers^11) have studied the reaction at −63 °C of chloro- or methylthio-substituted purine with 2-trimethylsilyloxyethoxymethyl chloride to afford the N-9 substituted products in 50—80% yields. Robins and Hatfi",
+            "mode": "page_read",
+            "transcribed_text": "No. 3\t1153\n\n[Chem. Pharm. Bull. 36(3)1153—1157(1988)]\n\nA Convenient Synthesis of 9-(2-Hydroxyethoxymethyl)guanine (Acyclovir) and Related Compounds^1)\n\nHIROATSU MATSUMOTO,* CHISATO KANEKO, KEIKO YAMADA, TADAO TAKEUCHI, TAKEO MORI, and YOSHIHISA MIZUNO\n\nResearch Laboratory, Minophagen Pharmaceutical Co., 2–5233, Komatsubara, Zama, Kanagawa 228, Japan\n\n(Received August 4, 1987)\n\nA convenient and economical synthesis of 9-(2-hydroxyethoxymethyl)guanine (1, acyclovir, Zovirax, or acyclic guanosine: an antiherpetic agent) from guanine was developed via N^2,O-diacetylacyclovir. Two closely related compounds, N^2-acetylacyclovir (7) and O-acetylacyclovir (8), were also prepared by selective deacetylation.\n\nKeywords——acyclovir; N^2-acetylacyclovir; O-acetylacyclovir; alkylation; p-toluenesulfonic acid; antiherpetic agent\n\nSchaeffer and coworkers^2) first reported that 9-(2-hydroxyethoxymethyl)guanine (1, acyclovir) may be highly specific inhibitor of herpes viruses proliferation. Since then, a large number of nucleoside analogs in which the carbohydrate moiety is replaced by an acyclic substituent (viz., 2-hydroxyethoxymethyl or 1,3-dihydroxy-2-propoxymethyl) have been prepared.\n\nChart 1\n\nSeveral methods for the introduction of a 2-hydroxyethoxymethyl group into purines for the synthesis of acyclovir or acyclic nucleosides have been tried,^3-10) with limited success. Schaeffer and colleagues have carried out the base-promoted alkylation of 2,6-dichloropurine with 2-benzoxyethoxymethyl chloride to obtain the N-9 substituted product in 41% yield.^2) Acyclovir was prepared in 13% overall yield from the N-9 derivative in four steps including ammonolysis and hydrogenolytic debenzylation. Barrio and coworkers^11) have studied the reaction at −63 °C of chloro- or methylthio-substituted purine with 2-trimethylsilyloxyethoxymethyl chloride to afford the N-9 substituted products in 50—80% yields. Robins and Hatfield^12) started from 2,6-dichloropurine or 2-amino-6-chloropurine which was reacted with 2-acetoxyethoxymethyl bromide to obtain the N-9 substituted derivative in 89% or 84% yield, respectively.\n\nProblems associated with these procedures were that the reagents employed were quite expensive and that the amination of the 2-chloro group was tedious. Therefore, the yield of 1\n\nNII-Electronic Library Service",
+            "image_class": "mixed",
+            "step_label": "",
+            "characterizations": []
+          },
+          {
+            "page_number": 2,
+            "image_index": 0,
+            "molecules": [],
+            "arrows": [],
+            "conditions_text": "",
+            "raw_output": "VLM page_read failed: Unterminated string starting at: line 117 column 18 (char 8263)",
+            "mode": "page_read",
+            "transcribed_text": "",
+            "image_class": "error",
+            "step_label": "",
+            "characterizations": []
+          },
+          {
+            "page_number": 3,
+            "image_index": 0,
+            "molecules": [],
+            "arrows": [],
+            "conditions_text": "",
+            "raw_output": "{\n  \"image_class\": \"mixed\",\n  \"transcribed_text\": \"No. 3\\t1155\\n\\ncatalyst.\\n\\nSelective Deprotection of N²,O-Diacetylacyclovir\\n\\nTreatment of 5 with methanol saturated with ammonia gave rise to 1 in 86% yield, which means that overall yield of 1 from guanine was 43%. O-Acetylacyclovir (8) could be isolated in 81% yield on reaction of 5 with methanolic methoxide at room temperature. On the other hand, treatment of 5 with aqueous ammonium hydroxide (pH 11.6) gave rise to N²-acetylacyclovir (7) in 55% yield (50 °C, 1 h). Compound (7) would be a suitable starting material for the preparation of acyclovir phosphate, which might be anticipated to be active against a line of herpes simplex lacking thymidine kinase.\\n\\nFinally, it is worthy of note that among the solvents we examined, dimethyl sulfoxide (DMSO) was found to be the solvent of choice in terms of the solubility of substrates and the yield of 1.\\n\\nChart 2\\nguanine → 3 → 5 (+ 6) → 1, 7, 8\\na: Ac₂O, AcOH\\nb: AcO(CH₂)₂OCH₂OAc 4, DMSO, catalyst\\nc: NH₃–CH₃OH\\nd: NH₄OH\\ne: CH₃ONa–CH₃OH\\n\\nExperimental\\n\\nAll melting points were determined on a Yanagimoto micro melting point apparatus, and are uncorrected. Nuclear magnetic resonance (NMR) spectra were obtained on a JEOL-270 spectrometer using tetramethylsilane as an internal standard. The following abbreviations are used: s = singlet, d = doublet, m = multiplet. Ultraviolet (UV) spectra were measured on a Hitachi 200-20 spectrophotometer. Column chromatography was performed with Kieselgel 60 (E. Merck, 70—230 mesh ASTM).\\n\\n2-Oxa-1,4-butanediol Diacetate (4)——Acetyl bromide (50 g, 0.4 mol) was added dropwise to 1,3-dioxolane (26.6 g 0.36 mol) with cooling in an ice bath, the reaction temperature being maintained below 5 °C. The reaction mixture was allowed to warm to room temperature, and then a solution of sodium acetate (50 g) in acetic acid (200 ml) was added at 110 °C. The reaction mixture was stirred for 1 h. Insoluble material (NaBr) was filtered off and the ",
+            "mode": "page_read",
+            "transcribed_text": "No. 3\t1155\n\ncatalyst.\n\nSelective Deprotection of N²,O-Diacetylacyclovir\n\nTreatment of 5 with methanol saturated with ammonia gave rise to 1 in 86% yield, which means that overall yield of 1 from guanine was 43%. O-Acetylacyclovir (8) could be isolated in 81% yield on reaction of 5 with methanolic methoxide at room temperature. On the other hand, treatment of 5 with aqueous ammonium hydroxide (pH 11.6) gave rise to N²-acetylacyclovir (7) in 55% yield (50 °C, 1 h). Compound (7) would be a suitable starting material for the preparation of acyclovir phosphate, which might be anticipated to be active against a line of herpes simplex lacking thymidine kinase.\n\nFinally, it is worthy of note that among the solvents we examined, dimethyl sulfoxide (DMSO) was found to be the solvent of choice in terms of the solubility of substrates and the yield of 1.\n\nChart 2\nguanine → 3 → 5 (+ 6) → 1, 7, 8\na: Ac₂O, AcOH\nb: AcO(CH₂)₂OCH₂OAc 4, DMSO, catalyst\nc: NH₃–CH₃OH\nd: NH₄OH\ne: CH₃ONa–CH₃OH\n\nExperimental\n\nAll melting points were determined on a Yanagimoto micro melting point apparatus, and are uncorrected. Nuclear magnetic resonance (NMR) spectra were obtained on a JEOL-270 spectrometer using tetramethylsilane as an internal standard. The following abbreviations are used: s = singlet, d = doublet, m = multiplet. Ultraviolet (UV) spectra were measured on a Hitachi 200-20 spectrophotometer. Column chromatography was performed with Kieselgel 60 (E. Merck, 70—230 mesh ASTM).\n\n2-Oxa-1,4-butanediol Diacetate (4)——Acetyl bromide (50 g, 0.4 mol) was added dropwise to 1,3-dioxolane (26.6 g 0.36 mol) with cooling in an ice bath, the reaction temperature being maintained below 5 °C. The reaction mixture was allowed to warm to room temperature, and then a solution of sodium acetate (50 g) in acetic acid (200 ml) was added at 110 °C. The reaction mixture was stirred for 1 h. Insoluble material (NaBr) was filtered off and the filtrate was distilled in vacuo initially to remove acetic acid and then fractionated in vacuo. The fraction boiling at 114—118 °C/10 mmHg¹⁶⁾ was collected. The yield of 4 was 38 g (60%).\n\nN,N'-Diacetylguanine(s) (3)——Diacetylguanine was prepared, with reference to the procedure of Beauchamp and coworkers.¹⁷⁾ A mixture of guanine (15.1 g, 0.1 mol), acetic anhydride (200 ml) and acetic acid (300 ml) was\n\nNII-Electronic Library Service",
+            "image_class": "mixed",
+            "step_label": "",
+            "characterizations": []
+          },
+          {
+            "page_number": 3,
+            "image_index": 0,
+            "molecules": [
+              {
+                "smiles": "Nc1nc2[nH]cnc2c(=O)[nH]1",
+                "bbox": [
+                  0.11,
+                  0.44,
+                  0.23,
+                  0.52
+                ],
+                "role": "reactant",
+                "confidence": 0.93,
+                "source": "vlm",
+                "name": "guanine"
+              },
+              {
+                "smiles": "CC(=O)Nc1nc2n(C(C)=O)cnc2c(=O)[nH]1",
+                "bbox": [
+                  0.25,
+                  0.44,
+                  0.4,
+                  0.53
+                ],
+                "role": "product",
+                "confidence": 0.62,
+                "source": "vlm",
+                "name": "3"
+              },
+              {
+                "smiles": "CC(=O)Nc1nc2n(C(C)=O)cnc2c(=O)[nH]1",
+                "bbox": [
+                  0.25,
+                  0.44,
+                  0.4,
+                  0.53
+                ],
+                "role": "reactant",
+                "confidence": 0.62,
+                "source": "vlm",
+                "name": "3"
+              },
+              {
+                "smiles": "CC(=O)OCCOCOC(C)=O",
+                "bbox": null,
+                "role": "reagent",
+                "confidence": 0.7,
+                "source": "vlm",
+                "name": "4"
+              },
+              {
+                "smiles": "CS(C)=O",
+                "bbox": null,
+                "role": "solvent",
+                "confidence": 0.9,
+                "source": "vlm",
+                "name": null
+              },
+              {
+                "smiles": "CC(=O)Nc1nc2n(COCCOC(C)=O)cnc2c(=O)[nH]1",
+                "bbox": [
+                  0.42,
+                  0.35,
+                  0.6,
+                  0.45
+                ],
+                "role": "product",
+                "confidence": 0.82,
+                "source": "vlm",
+                "name": "5"
+              },
+              {
+                "smiles": "CC(=O)Nc1nc2[nH]cn(COCCOC(C)=O)c2c(=O)[nH]1",
+                "bbox": [
+                  0.41,
+                  0.57,
+                  0.6,
+                  0.67
+                ],
+                "role": "product",
+                "confidence": 0.68,
+                "source": "vlm",
+                "name": "6"
+              },
+              {
+                "smiles": "CC(=O)Nc1nc2n(COCCOC(C)=O)cnc2c(=O)[nH]1",
+                "bbox": [
+                  0.42,
+                  0.35,
+                  0.6,
+                  0.45
+                ],
+                "role": "reactant",
+                "confidence": 0.82,
+                "source": "vlm",
+                "name": "5"
+              },
+              {
+                "smiles": "Nc1nc2n(COCCO)cnc2c(=O)[nH]1",
+                "bbox": [
+                  0.7,
+                  0.31,
+                  0.88,
+                  0.42
+                ],
+                "role": "product",
+                "confidence": 0.88,
+                "source": "vlm",
+                "name": "1"
+              },
+              {
+                "smiles": "CC(=O)Nc1nc2n(COCCOC(C)=O)cnc2c(=O)[nH]1",
+                "bbox": [
+                  0.42,
+                  0.35,
+                  0.6,
+                  0.45
+                ],
+                "role": "reactant",
+                "confidence": 0.82,
+                "source": "vlm",
+                "name": "5"
+              },
+              {
+                "smiles": "CC(=O)Nc1nc2n(COCCO)cnc2c(=O)[nH]1",
+                "bbox": [
+                  0.7,
+                  0.45,
+                  0.88,
+                  0.56
+                ],
+                "role": "product",
+                "confidence": 0.85,
+                "source": "vlm",
+                "name": "7"
+              },
+              {
+                "smiles": "CC(=O)Nc1nc2n(COCCOC(C)=O)cnc2c(=O)[nH]1",
+                "bbox": [
+                  0.42,
+                  0.35,
+                  0.6,
+                  0.45
+                ],
+                "role": "reactant",
+                "confidence": 0.82,
+                "source": "vlm",
+                "name": "5"
+              },
+              {
+                "smiles": "Nc1nc2n(COCCOC(C)=O)cnc2c(=O)[nH]1",
+                "bbox": [
+                  0.7,
+                  0.59,
+                  0.88,
+                  0.7
+                ],
+                "role": "product",
+                "confidence": 0.83,
+                "source": "vlm",
+                "name": "8"
+              }
+            ],
+            "arrows": [
+              {
+                "from": [
+                  0.235,
+                  0.487
+                ],
+                "to": [
+                  0.255,
+                  0.487
+                ],
+                "type": "reaction_arrow"
+              },
+              {
+                "from": [
+                  0.4,
+                  0.487
+                ],
+                "to": [
+                  0.425,
+                  0.487
+                ],
+                "type": "reaction_arrow"
+              },
+              {
+                "from": [
+                  0.425,
+                  0.4
+                ],
+                "to": [
+                  0.44,
+                  0.4
+                ],
+                "type": "reaction_arrow"
+              },
+              {
+                "from": [
+                  0.425,
+                  0.6
+                ],
+                "to": [
+                  0.44,
+                  0.6
+                ],
+                "type": "reaction_arrow"
+              },
+              {
+                "from": [
+                  0.705,
+                  0.36
+                ],
+                "to": [
+                  0.725,
+                  0.36
+                ],
+                "type": "reaction_arrow"
+              },
+              {
+                "from": [
+                  0.705,
+                  0.5
+                ],
+                "to": [
+                  0.725,
+                  0.5
+                ],
+                "type": "reaction_arrow"
+              },
+              {
+                "from": [
+                  0.705,
+                  0.645
+                ],
+                "to": [
+                  0.725,
+                  0.645
+                ],
+                "type": "reaction_arrow"
+              }
+            ],
+            "conditions_text": "Chart 2: guanine -> 3 (a) -> 5 and 6 (b); 5 -> 1 (c), 7 (d), 8 (e); a: a: Ac2O, AcOH; b: b: AcO(CH2)2OCH2OAc 4, DMSO, catalyst; c: c: NH3-CH3OH; d: d: NH4OH; e: e: CH3ONa-CH3OH; (a) a: Ac2O, AcOH; (b) b: AcO(CH2)2OCH2OAc 4, DMSO, catalyst; (c) c: NH3-CH3OH; (d) d: NH4OH; (e) e: CH3ONa-CH3OH; 1 yield 86% LC/MS N/A From body text: 'Treatment of 5 with methanol saturated with ammonia gave rise to 1 in 86% yield'; overall yield of 1 from guanine was 43%; 8 yield 81% LC/MS N/A 'could be isolated in 81% yield on reaction of 5 with methanolic methoxide at room temperature'; 7 yield 55% LC/MS N/A 'treatment of 5 with aqueous ammonium hydroxide (pH 11.6) gave rise to N2-acetylacyclovir (7) in 55% yield (50 °C, 1 h)'; 4 yield 60% LC/MS N/A Experimental: 'The yield of 4 was 38 g (60%)'; fraction boiling at 114—118 °C/10 mmHg",
+            "raw_output": "{\n  \"is_reaction_scheme\": true,\n  \"steps\": [\n    {\n      \"step_label\": \"a\",\n      \"conditions_text\": \"a: Ac2O, AcOH\",\n      \"molecules\": [\n        {\"label\": \"guanine\", \"smiles\": \"Nc1nc2[nH]cnc2c(=O)[nH]1\", \"role\": \"reactant\", \"bbox\": [0.11, 0.44, 0.23, 0.52], \"confidence\": 0.93},\n        {\"label\": \"3\", \"smiles\": \"CC(=O)Nc1nc2n(C(C)=O)cnc2c(=O)[nH]1\", \"role\": \"product\", \"bbox\": [0.25, 0.44, 0.40, 0.53], \"confidence\": 0.62}\n      ]\n    },\n    {\n      \"step_label\": \"b\",\n      \"conditions_text\": \"b: AcO(CH2)2OCH2OAc 4, DMSO, catalyst\",\n      \"molecules\": [\n        {\"label\": \"3\", \"smiles\": \"CC(=O)Nc1nc2n(C(C)=O)cnc2c(=O)[nH]1\", \"role\": \"reactant\", \"bbox\": [0.25, 0.44, 0.40, 0.53], \"confidence\": 0.62},\n        {\"label\": \"4\", \"smiles\": \"CC(=O)OCCOCOC(C)=O\", \"role\": \"reagent\", \"bbox\": null, \"confidence\": 0.7},\n        {\"label\": null, \"smiles\": \"CS(C)=O\", \"role\": \"solvent\", \"bbox\": null, \"confidence\": 0.9},\n        {\"label\": \"5\", \"smiles\": \"CC(=O)Nc1nc2n(COCCOC(C)=O)cnc2c(=O)[nH]1\", \"role\": \"product\", \"bbox\": [0.42, 0.35, 0.60, 0.45], \"confidence\": 0.82},\n        {\"label\": \"6\", \"smiles\": \"CC(=O)Nc1nc2[nH]cn(COCCOC(C)=O)c2c(=O)[nH]1\", \"role\": \"product\", \"bbox\": [0.41, 0.57, 0.60, 0.67], \"confidence\": 0.68}\n      ]\n    },\n    {\n      \"step_label\": \"c\",\n      \"conditions_text\": \"c: NH3-CH3OH\",\n      \"molecules\": [\n        {\"label\": \"5\", \"smiles\": \"CC(=O)Nc1nc2n(COCCOC(C)=O)cnc2c(=O)[nH]1\", \"role\": \"reactant\", \"bbox\": [0.42, 0.35, 0.60, 0.45], \"confidence\": 0.82},\n        {\"label\": \"1\", \"smiles\": \"Nc1nc2n(COCCO)cnc2c(=O)[nH]1\", \"role\": \"product\", \"bbox\": [0.70, 0.31, 0.88, 0.42], \"confidence\": 0.88}\n      ]\n    },\n    {\n      \"step_label\": \"d\",\n      \"conditions_text\": \"d: NH4OH\",\n      \"molecules\": [\n        {\"label\": \"5\", \"smiles\": \"CC(=O)Nc1nc2n(COCCOC(C)=O)cnc2c(=O)[nH]1\", \"role\": \"reactant\", \"bbox\": [0.42, 0.35, 0.60, 0.45], \"confidence\": 0.82},\n        {\"label\": \"7\", \"smiles\": \"CC(=O)Nc1nc2n(COCCO)cnc2c(=O)[nH]1\", \"role\": \"product\", \"bbox\": [0.70, 0.45, 0.88, 0.56], \"confi",
+            "mode": "scheme",
+            "transcribed_text": "",
+            "image_class": "scheme",
+            "step_label": "",
+            "characterizations": [
+              {
+                "compound_id": "1",
+                "name": "acyclovir",
+                "yield_value": "86%",
+                "lcms": "N/A",
+                "notes": "From body text: 'Treatment of 5 with methanol saturated with ammonia gave rise to 1 in 86% yield'; overall yield of 1 from guanine was 43%"
+              },
+              {
+                "compound_id": "8",
+                "name": "O-Acetylacyclovir",
+                "yield_value": "81%",
+                "lcms": "N/A",
+                "notes": "'could be isolated in 81% yield on reaction of 5 with methanolic methoxide at room temperature'"
+              },
+              {
+                "compound_id": "7",
+                "name": "N2-acetylacyclovir",
+                "yield_value": "55%",
+                "lcms": "N/A",
+                "notes": "'treatment of 5 with aqueous ammonium hydroxide (pH 11.6) gave rise to N2-acetylacyclovir (7) in 55% yield (50 °C, 1 h)'"
+              },
+              {
+                "compound_id": "4",
+                "name": "2-Oxa-1,4-butanediol Diacetate",
+                "yield_value": "60%",
+                "lcms": "N/A",
+                "notes": "Experimental: 'The yield of 4 was 38 g (60%)'; fraction boiling at 114—118 °C/10 mmHg"
+              }
+            ]
+          },
+          {
+            "page_number": 4,
+            "image_index": 0,
+            "molecules": [],
+            "arrows": [],
+            "conditions_text": "",
+            "raw_output": "VLM page_read failed: Expecting ',' delimiter: line 33 column 113 (char 7040)",
+            "mode": "page_read",
+            "transcribed_text": "",
+            "image_class": "error",
+            "step_label": "",
+            "characterizations": []
+          },
+          {
+            "page_number": 5,
+            "image_index": 0,
+            "molecules": [],
+            "arrows": [],
+            "conditions_text": "",
+            "raw_output": "{\"image_class\":\"text_page\",\"transcribed_text\":\"No. 3\\t1157\\n\\nMattews, and J. P. H. Verheyden, J. Med. Chem., 26, 759 (1983); b) M. MacCoss, R. L. Tolman, W. T. Ashton, A. F. Wagner, J. Hannah, A. K. Field, J. D. Karkas, and J. I. Germershausen, Chem. Scripta., 26, 113 (1986).\\n15) T. Sato, T. Shimadate, and Y. Ishido, Nippon Kagaku Zasshi, 81, 1440 (1960).\\n16) M. Senkus, J. Am. Chem. Soc., 68, 734 (1946).\\n17) L. M. Beauchamp, B. L. Dolmatch, H. J. Schaeffer, P. Collins, D. J. Bauer, P. M. Keller, and J. A. Fyfe, J. Med. Chem., 28, 982 (1985).\\n\\nNII-Electronic Library Service\",\"steps\":[]}",
+            "mode": "page_read",
+            "transcribed_text": "No. 3\t1157\n\nMattews, and J. P. H. Verheyden, J. Med. Chem., 26, 759 (1983); b) M. MacCoss, R. L. Tolman, W. T. Ashton, A. F. Wagner, J. Hannah, A. K. Field, J. D. Karkas, and J. I. Germershausen, Chem. Scripta., 26, 113 (1986).\n15) T. Sato, T. Shimadate, and Y. Ishido, Nippon Kagaku Zasshi, 81, 1440 (1960).\n16) M. Senkus, J. Am. Chem. Soc., 68, 734 (1946).\n17) L. M. Beauchamp, B. L. Dolmatch, H. J. Schaeffer, P. Collins, D. J. Bauer, P. M. Keller, and J. A. Fyfe, J. Med. Chem., 28, 982 (1985).\n\nNII-Electronic Library Service",
+            "image_class": "text_page",
+            "step_label": "",
+            "characterizations": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "reconcile",
+      "label": "Reconcile text + table + scheme + page-read",
+      "status": "done",
+      "detail": "Merged 5 steps (text=0, tables=0, schemes=5, page_read=0)",
+      "data": {
+        "steps": 5,
+        "text_steps": 0,
+        "table_steps": 0,
+        "scheme_steps": 5,
+        "page_read_steps": 0
+      }
+    },
+    {
+      "id": "standardize",
+      "label": "Chemical standardization",
+      "status": "stubbed",
+      "detail": "15 already had SMILES; 17 name(s) could not be resolved",
+      "data": {
+        "resolved": 0,
+        "validated": 0,
+        "invalid": 0,
+        "unresolved": 17,
+        "total_entities": 32,
+        "times_standardized": 0
+      }
+    }
+  ],
+  "document": {
+    "filename": "f60ef216f0e64ae9923edc7cc996d50b.pdf",
+    "page_count": 5,
+    "text": "NII-Electronic Library Service\n\n\nNII-Electronic Library Service\n\n\nNII-Electronic Library Service\n\n\nNII-Electronic Library Service\n\n\nNII-Electronic Library Service\n",
+    "segments": [
+      {
+        "segment_id": "page-1",
+        "kind": "body",
+        "page_start": 1,
+        "page_end": 1,
+        "text": "NII-Electronic Library Service",
+        "meta": {
+          "char_count": 31,
+          "source": "native",
+          "ocr_used": false,
+          "ocr_backend": "",
+          "native_char_count": 155,
+          "final_char_count": 163
+        }
+      },
+      {
+        "segment_id": "page-2",
+        "kind": "body",
+        "page_start": 2,
+        "page_end": 2,
+        "text": "NII-Electronic Library Service",
+        "meta": {
+          "char_count": 31,
+          "source": "native"
+        }
+      },
+      {
+        "segment_id": "page-3",
+        "kind": "body",
+        "page_start": 3,
+        "page_end": 3,
+        "text": "NII-Electronic Library Service",
+        "meta": {
+          "char_count": 31,
+          "source": "native"
+        }
+      },
+      {
+        "segment_id": "page-4",
+        "kind": "body",
+        "page_start": 4,
+        "page_end": 4,
+        "text": "NII-Electronic Library Service",
+        "meta": {
+          "char_count": 31,
+          "source": "native"
+        }
+      },
+      {
+        "segment_id": "page-5",
+        "kind": "body",
+        "page_start": 5,
+        "page_end": 5,
+        "text": "NII-Electronic Library Service",
+        "meta": {
+          "char_count": 31,
+          "source": "native"
+        }
+      }
+    ],
+    "figure_count": 5,
+    "table_hints": []
+  },
+  "route": {
+    "title": "NII-Electronic Library Service",
+    "target_name": "8",
+    "target_class": "unknown",
+    "document_type": "unknown",
+    "steps": [
+      {
+        "step_index": 1,
+        "step_label": "a",
+        "reactants": [
+          {
+            "name": "guanine",
+            "role": "reactant",
+            "amount": "N/A",
+            "smiles": "Nc1nc2[nH]cnc2c(=O)[nH]1",
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "reagents": [],
+        "catalysts": [],
+        "ligands": [],
+        "solvents": [],
+        "intermediates": [
+          {
+            "name": "3",
+            "role": "intermediate",
+            "amount": "N/A",
+            "smiles": "CC(=O)Nc1nc2n(C(C)=O)cnc2c(=O)[nH]1",
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "products": [
+          {
+            "name": "3",
+            "role": "intermediate",
+            "amount": "N/A",
+            "smiles": "CC(=O)Nc1nc2n(C(C)=O)cnc2c(=O)[nH]1",
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          },
+          {
+            "name": "acyclovir",
+            "role": "product",
+            "amount": "86%",
+            "smiles": null,
+            "cas": null,
+            "notes": "From body text: 'Treatment of 5 with methanol saturated with ammonia gave rise to 1 in 86% yield'; overall yield of 1 from guanine was 43%",
+            "evidence": null
+          },
+          {
+            "name": "O-Acetylacyclovir",
+            "role": "product",
+            "amount": "81%",
+            "smiles": null,
+            "cas": null,
+            "notes": "'could be isolated in 81% yield on reaction of 5 with methanolic methoxide at room temperature'",
+            "evidence": null
+          },
+          {
+            "name": "N2-acetylacyclovir",
+            "role": "product",
+            "amount": "55%",
+            "smiles": null,
+            "cas": null,
+            "notes": "'treatment of 5 with aqueous ammonium hydroxide (pH 11.6) gave rise to N2-acetylacyclovir (7) in 55% yield (50 °C, 1 h)'",
+            "evidence": null
+          },
+          {
+            "name": "2-Oxa-1,4-butanediol Diacetate",
+            "role": "product",
+            "amount": "60%",
+            "smiles": null,
+            "cas": null,
+            "notes": "Experimental: 'The yield of 4 was 38 g (60%)'; fraction boiling at 114—118 °C/10 mmHg",
+            "evidence": null
+          }
+        ],
+        "conditions": {
+          "temperature": "N/A",
+          "time": "N/A",
+          "pressure": "N/A",
+          "atmosphere": "N/A",
+          "other": "a: Ac2O, AcOH"
+        },
+        "yield_value": "86%",
+        "ee_or_dr": "N/A",
+        "notes": "Extracted from image via VLM/OCSR (scheme); LC/MS N/A; LC/MS N/A; LC/MS N/A; LC/MS N/A",
+        "evidence": "a: Ac2O, AcOH"
+      },
+      {
+        "step_index": 2,
+        "step_label": "b",
+        "reactants": [
+          {
+            "name": "3",
+            "role": "reactant",
+            "amount": "N/A",
+            "smiles": "CC(=O)Nc1nc2n(C(C)=O)cnc2c(=O)[nH]1",
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "reagents": [
+          {
+            "name": "4",
+            "role": "reagent",
+            "amount": "N/A",
+            "smiles": "CC(=O)OCCOCOC(C)=O",
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "catalysts": [],
+        "ligands": [],
+        "solvents": [
+          {
+            "name": "CS(C)=O",
+            "role": "solvent",
+            "amount": "N/A",
+            "smiles": "CS(C)=O",
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "intermediates": [
+          {
+            "name": "5",
+            "role": "intermediate",
+            "amount": "N/A",
+            "smiles": "CC(=O)Nc1nc2n(COCCOC(C)=O)cnc2c(=O)[nH]1",
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "products": [
+          {
+            "name": "5",
+            "role": "intermediate",
+            "amount": "N/A",
+            "smiles": "CC(=O)Nc1nc2n(COCCOC(C)=O)cnc2c(=O)[nH]1",
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          },
+          {
+            "name": "6",
+            "role": "product",
+            "amount": "N/A",
+            "smiles": "CC(=O)Nc1nc2[nH]cn(COCCOC(C)=O)c2c(=O)[nH]1",
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          },
+          {
+            "name": "acyclovir",
+            "role": "product",
+            "amount": "86%",
+            "smiles": null,
+            "cas": null,
+            "notes": "From body text: 'Treatment of 5 with methanol saturated with ammonia gave rise to 1 in 86% yield'; overall yield of 1 from guanine was 43%",
+            "evidence": null
+          },
+          {
+            "name": "O-Acetylacyclovir",
+            "role": "product",
+            "amount": "81%",
+            "smiles": null,
+            "cas": null,
+            "notes": "'could be isolated in 81% yield on reaction of 5 with methanolic methoxide at room temperature'",
+            "evidence": null
+          },
+          {
+            "name": "N2-acetylacyclovir",
+            "role": "product",
+            "amount": "55%",
+            "smiles": null,
+            "cas": null,
+            "notes": "'treatment of 5 with aqueous ammonium hydroxide (pH 11.6) gave rise to N2-acetylacyclovir (7) in 55% yield (50 °C, 1 h)'",
+            "evidence": null
+          },
+          {
+            "name": "2-Oxa-1,4-butanediol Diacetate",
+            "role": "product",
+            "amount": "60%",
+            "smiles": null,
+            "cas": null,
+            "notes": "Experimental: 'The yield of 4 was 38 g (60%)'; fraction boiling at 114—118 °C/10 mmHg",
+            "evidence": null
+          }
+        ],
+        "conditions": {
+          "temperature": "N/A",
+          "time": "N/A",
+          "pressure": "N/A",
+          "atmosphere": "N/A",
+          "other": "b: AcO(CH2)2OCH2OAc 4, DMSO, catalyst"
+        },
+        "yield_value": "86%",
+        "ee_or_dr": "N/A",
+        "notes": "Extracted from image via VLM/OCSR (scheme); LC/MS N/A; LC/MS N/A; LC/MS N/A; LC/MS N/A",
+        "evidence": "b: AcO(CH2)2OCH2OAc 4, DMSO, catalyst"
+      },
+      {
+        "step_index": 3,
+        "step_label": "c",
+        "reactants": [
+          {
+            "name": "5",
+            "role": "reactant",
+            "amount": "N/A",
+            "smiles": "CC(=O)Nc1nc2n(COCCOC(C)=O)cnc2c(=O)[nH]1",
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "reagents": [],
+        "catalysts": [],
+        "ligands": [],
+        "solvents": [],
+        "intermediates": [],
+        "products": [
+          {
+            "name": "1",
+            "role": "product",
+            "amount": "N/A",
+            "smiles": "Nc1nc2n(COCCO)cnc2c(=O)[nH]1",
+            "cas": null,
+            "notes": "From body text: 'Treatment of 5 with methanol saturated with ammonia gave rise to 1 in 86% yield'; overall yield of 1 from guanine was 43%",
+            "evidence": null
+          },
+          {
+            "name": "O-Acetylacyclovir",
+            "role": "product",
+            "amount": "81%",
+            "smiles": null,
+            "cas": null,
+            "notes": "'could be isolated in 81% yield on reaction of 5 with methanolic methoxide at room temperature'",
+            "evidence": null
+          },
+          {
+            "name": "N2-acetylacyclovir",
+            "role": "product",
+            "amount": "55%",
+            "smiles": null,
+            "cas": null,
+            "notes": "'treatment of 5 with aqueous ammonium hydroxide (pH 11.6) gave rise to N2-acetylacyclovir (7) in 55% yield (50 °C, 1 h)'",
+            "evidence": null
+          },
+          {
+            "name": "2-Oxa-1,4-butanediol Diacetate",
+            "role": "product",
+            "amount": "60%",
+            "smiles": null,
+            "cas": null,
+            "notes": "Experimental: 'The yield of 4 was 38 g (60%)'; fraction boiling at 114—118 °C/10 mmHg",
+            "evidence": null
+          }
+        ],
+        "conditions": {
+          "temperature": "N/A",
+          "time": "N/A",
+          "pressure": "N/A",
+          "atmosphere": "N/A",
+          "other": "c: NH3-CH3OH"
+        },
+        "yield_value": "86%",
+        "ee_or_dr": "N/A",
+        "notes": "Extracted from image via VLM/OCSR (scheme); LC/MS N/A; LC/MS N/A; LC/MS N/A; LC/MS N/A",
+        "evidence": "c: NH3-CH3OH"
+      },
+      {
+        "step_index": 4,
+        "step_label": "d",
+        "reactants": [
+          {
+            "name": "5",
+            "role": "reactant",
+            "amount": "N/A",
+            "smiles": "CC(=O)Nc1nc2n(COCCOC(C)=O)cnc2c(=O)[nH]1",
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "reagents": [],
+        "catalysts": [],
+        "ligands": [],
+        "solvents": [],
+        "intermediates": [],
+        "products": [
+          {
+            "name": "7",
+            "role": "product",
+            "amount": "N/A",
+            "smiles": "CC(=O)Nc1nc2n(COCCO)cnc2c(=O)[nH]1",
+            "cas": null,
+            "notes": "'treatment of 5 with aqueous ammonium hydroxide (pH 11.6) gave rise to N2-acetylacyclovir (7) in 55% yield (50 °C, 1 h)'",
+            "evidence": null
+          },
+          {
+            "name": "acyclovir",
+            "role": "product",
+            "amount": "86%",
+            "smiles": null,
+            "cas": null,
+            "notes": "From body text: 'Treatment of 5 with methanol saturated with ammonia gave rise to 1 in 86% yield'; overall yield of 1 from guanine was 43%",
+            "evidence": null
+          },
+          {
+            "name": "O-Acetylacyclovir",
+            "role": "product",
+            "amount": "81%",
+            "smiles": null,
+            "cas": null,
+            "notes": "'could be isolated in 81% yield on reaction of 5 with methanolic methoxide at room temperature'",
+            "evidence": null
+          },
+          {
+            "name": "2-Oxa-1,4-butanediol Diacetate",
+            "role": "product",
+            "amount": "60%",
+            "smiles": null,
+            "cas": null,
+            "notes": "Experimental: 'The yield of 4 was 38 g (60%)'; fraction boiling at 114—118 °C/10 mmHg",
+            "evidence": null
+          }
+        ],
+        "conditions": {
+          "temperature": "N/A",
+          "time": "N/A",
+          "pressure": "N/A",
+          "atmosphere": "N/A",
+          "other": "d: NH4OH"
+        },
+        "yield_value": "86%",
+        "ee_or_dr": "N/A",
+        "notes": "Extracted from image via VLM/OCSR (scheme); LC/MS N/A; LC/MS N/A; LC/MS N/A; LC/MS N/A",
+        "evidence": "d: NH4OH"
+      },
+      {
+        "step_index": 5,
+        "step_label": "e",
+        "reactants": [
+          {
+            "name": "5",
+            "role": "reactant",
+            "amount": "N/A",
+            "smiles": "CC(=O)Nc1nc2n(COCCOC(C)=O)cnc2c(=O)[nH]1",
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "reagents": [],
+        "catalysts": [],
+        "ligands": [],
+        "solvents": [],
+        "intermediates": [],
+        "products": [
+          {
+            "name": "8",
+            "role": "product",
+            "amount": "N/A",
+            "smiles": "Nc1nc2n(COCCOC(C)=O)cnc2c(=O)[nH]1",
+            "cas": null,
+            "notes": "'could be isolated in 81% yield on reaction of 5 with methanolic methoxide at room temperature'",
+            "evidence": null
+          },
+          {
+            "name": "acyclovir",
+            "role": "product",
+            "amount": "86%",
+            "smiles": null,
+            "cas": null,
+            "notes": "From body text: 'Treatment of 5 with methanol saturated with ammonia gave rise to 1 in 86% yield'; overall yield of 1 from guanine was 43%",
+            "evidence": null
+          },
+          {
+            "name": "N2-acetylacyclovir",
+            "role": "product",
+            "amount": "55%",
+            "smiles": null,
+            "cas": null,
+            "notes": "'treatment of 5 with aqueous ammonium hydroxide (pH 11.6) gave rise to N2-acetylacyclovir (7) in 55% yield (50 °C, 1 h)'",
+            "evidence": null
+          },
+          {
+            "name": "2-Oxa-1,4-butanediol Diacetate",
+            "role": "product",
+            "amount": "60%",
+            "smiles": null,
+            "cas": null,
+            "notes": "Experimental: 'The yield of 4 was 38 g (60%)'; fraction boiling at 114—118 °C/10 mmHg",
+            "evidence": null
+          }
+        ],
+        "conditions": {
+          "temperature": "N/A",
+          "time": "N/A",
+          "pressure": "N/A",
+          "atmosphere": "N/A",
+          "other": "e: CH3ONa-CH3OH"
+        },
+        "yield_value": "86%",
+        "ee_or_dr": "N/A",
+        "notes": "Extracted from image via VLM/OCSR (scheme); LC/MS N/A; LC/MS N/A; LC/MS N/A; LC/MS N/A",
+        "evidence": "e: CH3ONa-CH3OH"
+      }
+    ],
+    "warnings": [
+      "Very little extractable text (163 characters across 5 pages).",
+      "Page-read text re-extract failed: Error code: 400 - {'error': {'message': 'Provider returned error (request id: 202608251324328867948638268d9d68ozlNoGp)', 'type': 'upstream_error', 'param': '', 'code': 400}}",
+      "The provided document contains no chemical content — only repeated 'NII-Electronic Library Service' placeholder text (likely a failed PDF text extraction).",
+      "No experimental procedures, compounds, amounts, or conditions are present; therefore no synthesis steps could be extracted.",
+      "Title and target information are unavailable; document type cannot be determined."
+    ]
+  },
+  "raw_model_output": "{\"title\": \"NII-Electronic Library Service\", \"target_name\": \"N/A\", \"target_class\": \"unknown\", \"document_type\": \"unknown\", \"steps\": [], \"warnings\": [\"The provided document contains no chemical content — only repeated 'NII-Electronic Library Service' placeholder text (likely a failed PDF text extraction).\", \"No experimental procedures, compounds, amounts, or conditions are present; therefore no synthesis steps could be extracted.\", \"Title and target information are unavailable; document type cannot be determined.\"]}",
+  "error": null,
+  "from_cache": false,
+  "content_hash": "8f36ea9aa9e8ea73a9dde5103362749bc360fd59b9fb22ebcbc6b795314b3537",
+  "source_job_id": null
+}

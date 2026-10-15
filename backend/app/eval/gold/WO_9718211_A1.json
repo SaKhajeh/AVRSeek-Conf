@@ -1,0 +1,22 @@
+{
+  "filename": "WO_9718211_A1.pdf",
+  "target_name_aliases": [
+    "acyclovir",
+    "9-[(2-hydroxyethoxy)methyl]guanine",
+    "9-(2-hydroxyethoxymethyl)guanine"
+  ],
+  "required_names": [
+    "acyclovir",
+    "monoethanolamine",
+    "diacetylacyclovir",
+    "acetic acid",
+    "sodium hydroxide"
+  ],
+  "required_conditions_substrings": [
+    "70",
+    "95",
+    "3",
+    "98.7"
+  ],
+  "min_steps": 2
+}

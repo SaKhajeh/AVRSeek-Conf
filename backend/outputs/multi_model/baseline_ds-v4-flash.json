@@ -1,0 +1,829 @@
+{
+  "generated_at": "2026-09-21T00:45:07.790665+00:00",
+  "batch_id": "4bed65c03d57",
+  "model_label": "ds-v4-flash",
+  "model_text": "deepseek-v4-flash",
+  "mode": "simple_single_shot_full_text",
+  "documents": [
+    {
+      "filename": "36_1153.pdf",
+      "avrseek_reference": {
+        "filename": "36_1153.pdf",
+        "job_id": "642748d319d0",
+        "pipeline_complete": true,
+        "text_extract_status": "done",
+        "text_extract_detail": "Extracted 0 step(s) via single-shot full text (163 chars, document_type=unknown)",
+        "image_scheme_detail": "0 scheme step(s), 0 page-read step(s), 0 molecule(s), 5 page-read(s) from 5 image(s)",
+        "parse_detail": "5 pages, 5 images, 0 table hints, 163 text chars",
+        "steps_count": 3,
+        "target_name": "9-(2-hydroxyethoxymethyl)guanine (acyclovir, 1)",
+        "document_type": "paper",
+        "route_graph_nodes": 9,
+        "warnings_count": 6,
+        "conflicts_count": 1,
+        "confidence_range": [
+          0.75,
+          1.0
+        ],
+        "smiles_entities": 0,
+        "provenance_steps": 0,
+        "scheme_steps": 0
+      },
+      "baseline": {
+        "mode": "simple_single_shot_full_text",
+        "model": "deepseek-v4-flash",
+        "text_chars": 163,
+        "steps_count": 0,
+        "target_name": "N/A",
+        "document_type": "unknown",
+        "warnings": [
+          "The provided text contains only repeated 'NII-Electronic Library Service' and no experimental procedures, Examples, compounds, reagents, conditions, yields, or antiviral synthesis details.",
+          "No small-molecule synthesis knowledge could be extracted."
+        ],
+        "steps": [],
+        "smiles_entities": 0,
+        "confidence_steps": 0,
+        "provenance_steps": 0,
+        "route_graph_nodes": 0
+      },
+      "error": null
+    },
+    {
+      "filename": "EP0532878A2.pdf",
+      "avrseek_reference": {
+        "filename": "EP0532878A2.pdf",
+        "job_id": "a17f208d8ef3",
+        "pipeline_complete": true,
+        "text_extract_status": "done",
+        "text_extract_detail": "Extracted 10 step(s) from 17 evidence chunk(s) (23307/31098 chars, pages [2, 3, 5, 6, 7, 8, 9])",
+        "image_scheme_detail": "4 scheme step(s), 0 page-read step(s), 21 molecule(s), 11 page-read(s) from 13 image(s)",
+        "parse_detail": "11 pages, 11 images, 0 table hints, 31098 text chars",
+        "steps_count": 12,
+        "target_name": "acyclovir (formula IV) and ganciclovir (formula V)",
+        "document_type": "patent",
+        "route_graph_nodes": 46,
+        "warnings_count": 45,
+        "conflicts_count": 2,
+        "confidence_range": [
+          0.7,
+          1.0
+        ],
+        "smiles_entities": 16,
+        "provenance_steps": 12,
+        "scheme_steps": 2
+      },
+      "baseline": {
+        "mode": "simple_single_shot_full_text",
+        "model": "deepseek-v4-flash",
+        "text_chars": 31098,
+        "steps_count": 1,
+        "target_name": "9-((2-acetoxyethoxy)methyl)-N2-acetylguanine and 7-((2-acetoxyethoxy)methyl)-N2-acetylguanine",
+        "document_type": "patent",
+        "warnings": [
+          "Merged 2 evidence chunks from text extraction.",
+          "Claims describe Markush genus and additional processes (e.g., saponification to 9-((2-hydroxyethoxy)methyl)guanine/acyclovir) without experimental details; not extracted as steps.",
+          "Initial stirring temperature before guanosine addition is not specified."
+        ],
+        "steps": [
+          {
+            "step_index": 1,
+            "step_label": "Example 9: Synthesis of 9-((2-acetoxyethoxy)methyl)-N2-acetylguanine and 7-((2-acetoxyethoxy)methyl)-N2-acetylguanine from guanosine",
+            "yield_value": "46% (9-isomer), 31% (7-isomer)",
+            "temperature": "100 °C (after initial 1 h stirring; initial temperature not specified)",
+            "time": "1 h then 24 h",
+            "source": "",
+            "confidence": null,
+            "smiles_entities": 0,
+            "reactants": [
+              "guanosine"
+            ],
+            "products": [
+              "9-((2-acetoxyethoxy)methyl)-N2-acetylguanine",
+              "7-((2-acetoxyethoxy)methyl)-N2-acetylguanine"
+            ]
+          }
+        ],
+        "smiles_entities": 0,
+        "confidence_steps": 0,
+        "provenance_steps": 0,
+        "route_graph_nodes": 0
+      },
+      "error": null
+    },
+    {
+      "filename": "EP0709385A1.pdf",
+      "avrseek_reference": {
+        "filename": "EP0709385A1.pdf",
+        "job_id": "936521c12a48",
+        "pipeline_complete": true,
+        "text_extract_status": "done",
+        "text_extract_detail": "Extracted 16 step(s) via 2 pass(es) (pages covered: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17])",
+        "image_scheme_detail": "8 scheme step(s), 0 page-read step(s), 17 molecule(s), 17 page-read(s) from 20 image(s)",
+        "parse_detail": "17 pages, 17 images, 0 table hints, 46922 text chars",
+        "steps_count": 17,
+        "target_name": "Step 1: Preparation of Formula (2) — silylation of guanine (preferred method, ~1",
+        "document_type": "patent",
+        "route_graph_nodes": 60,
+        "warnings_count": 3,
+        "conflicts_count": 2,
+        "confidence_range": [
+          0.374,
+          1.0
+        ],
+        "smiles_entities": 7,
+        "provenance_steps": 17,
+        "scheme_steps": 2
+      },
+      "baseline": {
+        "mode": "simple_single_shot_full_text",
+        "model": "deepseek-v4-flash",
+        "text_chars": 46922,
+        "steps_count": 2,
+        "target_name": "acyclovir (9-(2-hydroxyethoxymethyl)guanine)",
+        "document_type": "patent",
+        "warnings": [
+          "Merged 2 evidence chunks from text extraction.",
+          "Example 1 product name is as written in the source; it is the protected intermediate of Formula (4).",
+          "Example 3 is a one-pot procedure combining silylation, alkylation, and hydrolysis; it is represented as a single step.",
+          "N-9/N-7 ratios are reported as ranges.",
+          "'1NMR' in the source likely denotes 1H NMR."
+        ],
+        "steps": [
+          {
+            "step_index": 1,
+            "step_label": "Example 1 / Preparation of a Compound of Formula (4)",
+            "yield_value": "87%",
+            "temperature": "reflux 130-135°C; then cooled to 35°C; then below 80°C; then reflux; then cooled to 50°C",
+            "time": "16 h; then 15 h",
+            "source": "",
+            "confidence": null,
+            "smiles_entities": 0,
+            "reactants": [
+              "guanine",
+              "1,3-dioxolane"
+            ],
+            "products": [
+              "9-(2-trimethylsilylethoxymethyl)guanine",
+              "9-(2-hydroxyethoxymethyl)guanine (acyclovir)"
+            ]
+          },
+          {
+            "step_index": 2,
+            "step_label": "Example 2 / Preparation of a Compound of Formula (I)",
+            "yield_value": "69%",
+            "temperature": "reflux; then cooled to 5°C",
+            "time": "N/A",
+            "source": "",
+            "confidence": null,
+            "smiles_entities": 0,
+            "reactants": [
+              "9-(2-trimethylsilylethoxymethyl)guanine"
+            ],
+            "products": [
+              "9-(2-hydroxyethoxymethyl)guanine (acyclovir)"
+            ]
+          }
+        ],
+        "smiles_entities": 0,
+        "confidence_steps": 0,
+        "provenance_steps": 0,
+        "route_graph_nodes": 0
+      },
+      "error": null
+    },
+    {
+      "filename": "EP0862570B1.pdf",
+      "avrseek_reference": {
+        "filename": "EP0862570B1.pdf",
+        "job_id": "1dde4d4228f8",
+        "pipeline_complete": true,
+        "text_extract_status": "done",
+        "text_extract_detail": "Extracted 4 step(s) from 9 evidence chunk(s) (16110/15857 chars, pages [1, 2, 3, 4, 5])",
+        "image_scheme_detail": "No schemes or page text recovered from 0 analyzed image(s).",
+        "parse_detail": "6 pages, 3 images, 0 table hints, 15857 text chars",
+        "steps_count": 4,
+        "target_name": "9-[(2-hydroxyethoxy)methyl]guanine (acyclovir)",
+        "document_type": "patent",
+        "route_graph_nodes": 18,
+        "warnings_count": 27,
+        "conflicts_count": 0,
+        "confidence_range": [
+          0.992,
+          1.0
+        ],
+        "smiles_entities": 0,
+        "provenance_steps": 4,
+        "scheme_steps": 0
+      },
+      "baseline": {
+        "mode": "simple_single_shot_full_text",
+        "model": "deepseek-v4-flash",
+        "text_chars": 15857,
+        "steps_count": 5,
+        "target_name": "acyclovir (9-[(2-hydroxyethoxy)methyl]guanine)",
+        "document_type": "patent",
+        "warnings": [],
+        "steps": [
+          {
+            "step_index": 1,
+            "step_label": "Example 1 / deprotection and isolation",
+            "yield_value": "98.7% of theoretical",
+            "temperature": "90°C then 60°C then about 20°C",
+            "time": "3 h",
+            "source": "",
+            "confidence": null,
+            "smiles_entities": 0,
+            "reactants": [
+              "N2-acetyl-9-(2-acetoxyethoxymethyl)guanine (diacetylacyclovir)"
+            ],
+            "products": [
+              "acyclovir"
+            ]
+          },
+          {
+            "step_index": 2,
+            "step_label": "Example 2(a) / sodium salt formation and purification",
+            "yield_value": "N/A",
+            "temperature": "35°C then 15°C",
+            "time": "2 h stirring at 15°C",
+            "source": "",
+            "confidence": null,
+            "smiles_entities": 0,
+            "reactants": [
+              "acyclovir wet of acetone from Example 1"
+            ],
+            "products": [
+              "acyclovir sodium salt"
+            ]
+          },
+          {
+            "step_index": 3,
+            "step_label": "Example 2(b) / neutralization and isolation",
+            "yield_value": "N/A",
+            "temperature": "15°C; drying at 80°C",
+            "time": "1 h stirring at 15°C",
+            "source": "",
+            "confidence": null,
+            "smiles_entities": 0,
+            "reactants": [
+              "acyclovir sodium salt wet of acetone from Example 2(a)"
+            ],
+            "products": [
+              "acyclovir"
+            ]
+          },
+          {
+            "step_index": 4,
+            "step_label": "Example 3 / deprotection and drying",
+            "yield_value": "N/A",
+            "temperature": "as in Example 1; drying at 80°C",
+            "time": "as in Example 1",
+            "source": "",
+            "confidence": null,
+            "smiles_entities": 0,
+            "reactants": [
+              "N2-acetyl-9-(2-acetoxyethoxymethyl)guanine (diacetylacyclovir)"
+            ],
+            "products": [
+              "acyclovir"
+            ]
+          },
+          {
+            "step_index": 5,
+            "step_label": "Example 4 / salt purification of crude acyclovir",
+            "yield_value": "N/A",
+            "temperature": "N/A (as in Example 2)",
+            "time": "N/A (as in Example 2)",
+            "source": "",
+            "confidence": null,
+            "smiles_entities": 0,
+            "reactants": [
+              "acyclovir"
+            ],
+            "products": [
+              "acyclovir"
+            ]
+          }
+        ],
+        "smiles_entities": 0,
+        "confidence_steps": 0,
+        "provenance_steps": 0,
+        "route_graph_nodes": 0
+      },
+      "error": null
+    },
+    {
+      "filename": "jm00146a002.pdf",
+      "avrseek_reference": {
+        "filename": "jm00146a002.pdf",
+        "job_id": "fadc64b4e914",
+        "pipeline_complete": true,
+        "text_extract_status": "done",
+        "text_extract_detail": "Extracted 25 step(s) via 2 pass(es) (pages covered: [1, 2, 3, 4, 5, 6])",
+        "image_scheme_detail": "2 scheme step(s), 0 page-read step(s), 7 molecule(s), 12 page-read(s) from 13 image(s)",
+        "parse_detail": "6 pages, 18 images, 0 table hints, 43268 text chars",
+        "steps_count": 25,
+        "target_name": "Method A-type alkylation: 5-aminoimidazole-4-carboxamide + 3 → isomer 6b",
+        "document_type": "paper",
+        "route_graph_nodes": 74,
+        "warnings_count": 3,
+        "conflicts_count": 0,
+        "confidence_range": [
+          0.524,
+          1.0
+        ],
+        "smiles_entities": 1,
+        "provenance_steps": 25,
+        "scheme_steps": 0
+      },
+      "baseline": {
+        "mode": "simple_single_shot_full_text",
+        "model": "deepseek-v4-flash",
+        "text_chars": 43268,
+        "steps_count": 0,
+        "target_name": "acyclovir analogues (e.g., 8-azapurine analogue 28, tricyclic derivative 38)",
+        "document_type": "paper",
+        "warnings": [
+          "Merged 3 evidence chunks from text extraction.",
+          "Provided excerpt is part 1/3 and contains only title, abstract, and general chemistry introduction; no concrete Example/Preparation procedures or experimental details are present.",
+          "No reaction steps could be extracted because the text lacks specific reactants, amounts, conditions, yields, or worked examples."
+        ],
+        "steps": [],
+        "smiles_entities": 0,
+        "confidence_steps": 0,
+        "provenance_steps": 0,
+        "route_graph_nodes": 0
+      },
+      "error": null
+    },
+    {
+      "filename": "pdf.pdf",
+      "avrseek_reference": {
+        "filename": "pdf.pdf",
+        "job_id": "53fd94885adf",
+        "pipeline_complete": true,
+        "text_extract_status": "done",
+        "text_extract_detail": "Extracted 5 step(s) via single-shot full text (14976 chars, document_type=paper)",
+        "image_scheme_detail": "1 scheme step(s), 0 page-read step(s), 3 molecule(s), 0 page-read(s) from 2 image(s) (figure pages [2, 3])",
+        "parse_detail": "6 pages, 21 images, 0 table hints, 14976 text chars",
+        "steps_count": 5,
+        "target_name": "acyclovir {9-[(2-hydroxyethoxy)methyl]guanine}",
+        "document_type": "paper",
+        "route_graph_nodes": 12,
+        "warnings_count": 5,
+        "conflicts_count": 0,
+        "confidence_range": [
+          0.67,
+          1.0
+        ],
+        "smiles_entities": 3,
+        "provenance_steps": 1,
+        "scheme_steps": 0
+      },
+      "baseline": {
+        "mode": "simple_single_shot_full_text",
+        "model": "deepseek-v4-flash",
+        "text_chars": 14976,
+        "steps_count": 5,
+        "target_name": "acyclovir (9-[(2-hydroxyethoxy)methyl]guanine)",
+        "document_type": "paper",
+        "warnings": [
+          "Activity evaluation (plaque reduction assay) is not included as a synthesis step.",
+          "Overall yield in abstract is 59%, while isolated pure acyclovir in the procedure is 63%; second crop contained N7-isomer.",
+          "Yields for acetylation and alkylation steps are not separately reported.",
+          "Phosphoric acid is described as catalyst in the alkylation step; p-toluenesulfonic acid is catalyst in the dioxolane-diacetate preparation."
+        ],
+        "steps": [
+          {
+            "step_index": 1,
+            "step_label": "Preparation of dioxolane-diacetate (7)",
+            "yield_value": "81.7%",
+            "temperature": "precooled below 10°C; maintained under 30°C; distillation 40-80°C/1.5 mmHg then 80-95°C/0.75 mmHg",
+            "time": "additional 1 h; distillation",
+            "source": "",
+            "confidence": null,
+            "smiles_entities": 0,
+            "reactants": [
+              "dioxolane 5"
+            ],
+            "products": [
+              "7 (1-acetyl-2-acetylmethoxy-ethyleneglycol)"
+            ]
+          },
+          {
+            "step_index": 2,
+            "step_label": "Acetylation of guanine to diacetylguanine",
+            "yield_value": "N/A",
+            "temperature": "reflux",
+            "time": "overnight",
+            "source": "",
+            "confidence": null,
+            "smiles_entities": 0,
+            "reactants": [
+              "guanine (3)"
+            ],
+            "products": [
+              "diacetylguanine (N2,N9-diprotected guanine)"
+            ]
+          },
+          {
+            "step_index": 3,
+            "step_label": "Alkylation to N2,O-diacetylacyclovir",
+            "yield_value": "N/A",
+            "temperature": "reflux; then 80°C; then room temperature",
+            "time": "6-7 h; then 2 h; then overnight",
+            "source": "",
+            "confidence": null,
+            "smiles_entities": 0,
+            "reactants": [
+              "diacetylguanine residue (from step 2)",
+              "7 (1-acetyl-2-acetylmethoxy-ethyleneglycol)"
+            ],
+            "products": [
+              "N2,O-diacetylacyclovir (2-acetamido-9-(2-acetylethoxymethyl)guanine)"
+            ]
+          },
+          {
+            "step_index": 4,
+            "step_label": "Deacetylation to acyclovir",
+            "yield_value": "N/A",
+            "temperature": "room temperature; then 80°C; then room temperature",
+            "time": "overnight; then 1 h; then overnight",
+            "source": "",
+            "confidence": null,
+            "smiles_entities": 0,
+            "reactants": [
+              "N2,O-diacetylacyclovir solid (from step 3)"
+            ],
+            "products": [
+              "acyclovir (crude)"
+            ]
+          },
+          {
+            "step_index": 5,
+            "step_label": "Recrystallization/purification of acyclovir",
+            "yield_value": "63%",
+            "temperature": "cooled to room temperature; refrigerator overnight",
+            "time": "overnight",
+            "source": "",
+            "confidence": null,
+            "smiles_entities": 0,
+            "reactants": [
+              "acyclovir (crude)"
+            ],
+            "products": [
+              "acyclovir (pure)"
+            ]
+          }
+        ],
+        "smiles_entities": 0,
+        "confidence_steps": 0,
+        "provenance_steps": 0,
+        "route_graph_nodes": 0
+      },
+      "error": null
+    },
+    {
+      "filename": "RU2111967C1.pdf",
+      "avrseek_reference": {
+        "filename": "RU2111967C1.pdf",
+        "job_id": "520719f1fe5e",
+        "pipeline_complete": false,
+        "text_extract_status": "stubbed",
+        "text_extract_detail": "Skipped — no extractable text (awaiting OCR/VLM page-read)",
+        "image_scheme_detail": "VLM analyzed 11 figure page(s); no molecules/steps recovered (may be non-scheme figure or VLM parse issue).",
+        "parse_detail": "11 pages, 11 images, 0 table hints, 0 text chars",
+        "steps_count": 0,
+        "target_name": "N/A",
+        "document_type": "unknown",
+        "route_graph_nodes": 1,
+        "warnings_count": 2,
+        "conflicts_count": 0,
+        "confidence_range": null,
+        "smiles_entities": 0,
+        "provenance_steps": 0,
+        "scheme_steps": 0
+      },
+      "baseline": null,
+      "error": "no extractable text in job cache (OCR needed)"
+    },
+    {
+      "filename": "shiragami1995.pdf",
+      "avrseek_reference": {
+        "filename": "shiragami1995.pdf",
+        "job_id": "4192c0a254f1",
+        "pipeline_complete": false,
+        "text_extract_status": "error",
+        "text_extract_detail": "Error code: 403 - {'error': {'message': 'insufficient user quota, remaining quota: ＄-0.068904 (request id: 202609081008144526639888268d9d6u0EV0TiF)', 'type': 'gap_api_error', 'param': '', 'code': 'insufficient_user_quota'}}",
+        "image_scheme_detail": "VLM analyzed 1 figure page(s) (figure pages [3]); no molecules/steps recovered (may be non-scheme figure or VLM parse issue).",
+        "parse_detail": "5 pages, 5 images, 0 table hints, 10045 text chars",
+        "steps_count": 0,
+        "target_name": "N/A",
+        "document_type": "unknown",
+        "route_graph_nodes": 1,
+        "warnings_count": 1,
+        "conflicts_count": 0,
+        "confidence_range": null,
+        "smiles_entities": 0,
+        "provenance_steps": 0,
+        "scheme_steps": 0
+      },
+      "baseline": {
+        "mode": "simple_single_shot_full_text",
+        "model": "deepseek-v4-flash",
+        "text_chars": 10045,
+        "steps_count": 4,
+        "target_name": "acyclovir (9-(2-hydroxyethoxymethyl)guanine, 1)",
+        "document_type": "paper",
+        "warnings": [
+          "No experimental procedure for preparation of (2-acetoxyethoxy)methyl acetate (4) or for the one-pot reaction; only referenced.",
+          "Step 1 yield not explicitly stated; 86% yield for 5a is after concentration/isomerization/crystallization.",
+          "Atmosphere not specified in experimental procedures.",
+          "Table 1 and Table 2 contain additional condition/yield data not tied to the detailed experimental."
+        ],
+        "steps": [
+          {
+            "step_index": 1,
+            "step_label": "Preparation of 5a: transpurination of guanosine with 4",
+            "yield_value": "N/A",
+            "temperature": "100 °C",
+            "time": "20 h",
+            "source": "",
+            "confidence": null,
+            "smiles_entities": 0,
+            "reactants": [
+              "guanosine (2)",
+              "(2-acetoxyethoxy)methyl acetate (4)"
+            ],
+            "products": [
+              "9-(2-acetoxyethoxymethyl)-N2-acetylguanine (5a)",
+              "7-(2-acetoxyethoxymethyl)-N2-acetylguanine (5b)"
+            ]
+          },
+          {
+            "step_index": 2,
+            "step_label": "Concentration and isomerization of 7-isomer to 9-isomer",
+            "yield_value": "N/A",
+            "temperature": "50 °C then 100 °C",
+            "time": "1 h then 20 h",
+            "source": "",
+            "confidence": null,
+            "smiles_entities": 0,
+            "reactants": [
+              "reaction mixture containing 5a/5b"
+            ],
+            "products": [
+              "isomerized residue enriched in 5a"
+            ]
+          },
+          {
+            "step_index": 3,
+            "step_label": "Crystallization of 5a",
+            "yield_value": "86% (5a)",
+            "temperature": "room temperature",
+            "time": "1 h",
+            "source": "",
+            "confidence": null,
+            "smiles_entities": 0,
+            "reactants": [
+              "isomerized residue"
+            ],
+            "products": [
+              "crude crystals containing 5a"
+            ]
+          },
+          {
+            "step_index": 4,
+            "step_label": "Preparation of acyclovir (1) by hydrolysis",
+            "yield_value": "92%",
+            "temperature": "room temperature",
+            "time": "overnight",
+            "source": "",
+            "confidence": null,
+            "smiles_entities": 0,
+            "reactants": [
+              "crude crystals containing 5a"
+            ],
+            "products": [
+              "acyclovir (9-(2-hydroxyethoxymethyl)guanine, 1)"
+            ]
+          }
+        ],
+        "smiles_entities": 0,
+        "confidence_steps": 0,
+        "provenance_steps": 0,
+        "route_graph_nodes": 0
+      },
+      "error": null
+    },
+    {
+      "filename": "US5567816.pdf",
+      "avrseek_reference": {
+        "filename": "US5567816.pdf",
+        "job_id": "8489747a80e6",
+        "pipeline_complete": false,
+        "text_extract_status": "error",
+        "text_extract_detail": "Error code: 403 - {'error': {'message': 'insufficient user quota, remaining quota: ＄-0.068904 (request id: 202609081008233701764858268d9d609jZmtEr)', 'type': 'gap_api_error', 'param': '', 'code': 'insufficient_user_quota'}}",
+        "image_scheme_detail": "VLM analyzed 9 figure page(s); no molecules/steps recovered (may be non-scheme figure or VLM parse issue).",
+        "parse_detail": "9 pages, 9 images, 0 table hints, 39590 text chars",
+        "steps_count": 0,
+        "target_name": "N/A",
+        "document_type": "unknown",
+        "route_graph_nodes": 1,
+        "warnings_count": 1,
+        "conflicts_count": 0,
+        "confidence_range": null,
+        "smiles_entities": 0,
+        "provenance_steps": 0,
+        "scheme_steps": 0
+      },
+      "baseline": {
+        "mode": "simple_single_shot_full_text",
+        "model": "deepseek-v4-flash",
+        "text_chars": 39590,
+        "steps_count": 3,
+        "target_name": "acyclovir (9-(2-hydroxyethoxymethyl)guanine)",
+        "document_type": "patent",
+        "warnings": [
+          "Merged 2 evidence chunks from text extraction.",
+          "Example 1 and Example 3 combine silylation and alkylation in one vessel; they were split into separate reaction steps for clarity.",
+          "Yields for the silylation sub-steps are not separately reported; Example 1 yield is overall from guanine to Formula (4).",
+          "Atmosphere is not specified in the examples."
+        ],
+        "steps": [
+          {
+            "step_index": 1,
+            "step_label": "Example 1 – silylation of guanine",
+            "yield_value": "N/A",
+            "temperature": "reflux (130–135 °C)",
+            "time": "16 h",
+            "source": "",
+            "confidence": null,
+            "smiles_entities": 0,
+            "reactants": [
+              "guanine"
+            ],
+            "products": [
+              "silylated guanine (Formula 2 mixture)"
+            ]
+          },
+          {
+            "step_index": 2,
+            "step_label": "Example 1 – alkylation with 1,3-dioxolane to Formula (4)",
+            "yield_value": "87% (overall from guanine for Example 1)",
+            "temperature": "reflux",
+            "time": "15 h",
+            "source": "",
+            "confidence": null,
+            "smiles_entities": 0,
+            "reactants": [
+              "silylated guanine (Formula 2 mixture)"
+            ],
+            "products": [
+              "9-(2-trimethylsilylethoxymethyl)guanine (Formula 4)"
+            ]
+          },
+          {
+            "step_index": 3,
+            "step_label": "Example 2 – hydrolysis to acyclovir",
+            "yield_value": "69%",
+            "temperature": "reflux, then cooled to 5 °C",
+            "time": "N/A",
+            "source": "",
+            "confidence": null,
+            "smiles_entities": 0,
+            "reactants": [
+              "9-(2-trimethylsilylethoxymethyl)guanine (Formula 4)"
+            ],
+            "products": [
+              "9-(2-hydroxyethoxymethyl)guanine (acyclovir)"
+            ]
+          }
+        ],
+        "smiles_entities": 0,
+        "confidence_steps": 0,
+        "provenance_steps": 0,
+        "route_graph_nodes": 0
+      },
+      "error": null
+    },
+    {
+      "filename": "US5756737.pdf",
+      "avrseek_reference": {
+        "filename": "US5756737.pdf",
+        "job_id": "1ad1f18a9f03",
+        "pipeline_complete": false,
+        "text_extract_status": "error",
+        "text_extract_detail": "Error code: 403 - {'error': {'message': 'insufficient user quota, remaining quota: ＄-0.068904 (request id: 202609081009027106992468268d9d6aHPWrQZy)', 'type': 'gap_api_error', 'param': '', 'code': 'insufficient_user_quota'}}",
+        "image_scheme_detail": "VLM analyzed 5 figure page(s); no molecules/steps recovered (may be non-scheme figure or VLM parse issue).",
+        "parse_detail": "5 pages, 5 images, 0 table hints, 12459 text chars",
+        "steps_count": 0,
+        "target_name": "N/A",
+        "document_type": "unknown",
+        "route_graph_nodes": 1,
+        "warnings_count": 1,
+        "conflicts_count": 0,
+        "confidence_range": null,
+        "smiles_entities": 0,
+        "provenance_steps": 0,
+        "scheme_steps": 0
+      },
+      "baseline": {
+        "mode": "simple_single_shot_full_text",
+        "model": "deepseek-v4-flash",
+        "text_chars": 12459,
+        "steps_count": 3,
+        "target_name": "acyclovir (9-(2-hydroxy)ethoxymethyl-guanine)",
+        "document_type": "patent",
+        "warnings": [
+          "Provided text truncates Example 1b after '6 ml of HPO'; full procedure, product amount, and yield are not available.",
+          "'HPO' is kept as written; it likely represents H3PO4 but is not certain from the excerpt.",
+          "'NAIO' is kept as written; it likely represents NaIO4. Its stoichiometric amount is taken from the general description, not from the truncated Example 1b.",
+          "The alkylation of N-formylguanine with 2-oxa-1,4-diacetoxybutane and subsequent hydrolysis to acyclovir are described generally but no worked Example details are present in the provided excerpt.",
+          "The purification step is described in the description/claims rather than as a numbered Example.",
+          "'EPLC' in the text likely means HPLC."
+        ],
+        "steps": [
+          {
+            "step_index": 1,
+            "step_label": "Example 1a: Glyoxalguanine (2)",
+            "yield_value": "98%",
+            "temperature": "80 °C for 4 h, then gradually cooled to 5 °C",
+            "time": "4 h",
+            "source": "",
+            "confidence": null,
+            "smiles_entities": 0,
+            "reactants": [
+              "guanine",
+              "glyoxal"
+            ],
+            "products": [
+              "glyoxalguanine (2)"
+            ]
+          },
+          {
+            "step_index": 2,
+            "step_label": "Example 1b: N-Formylguanine (3)",
+            "yield_value": "N/A",
+            "temperature": "N/A",
+            "time": "N/A",
+            "source": "",
+            "confidence": null,
+            "smiles_entities": 0,
+            "reactants": [
+              "glyoxalguanine"
+            ],
+            "products": [
+              "N-formylguanine (3)"
+            ]
+          },
+          {
+            "step_index": 3,
+            "step_label": "Purification of acyclovir by strong anionic ion exchange (description/claims)",
+            "yield_value": "N/A",
+            "temperature": "room temperature",
+            "time": "N/A",
+            "source": "",
+            "confidence": null,
+            "smiles_entities": 0,
+            "reactants": [
+              "acyclovir"
+            ],
+            "products": [
+              "purified acyclovir"
+            ]
+          }
+        ],
+        "smiles_entities": 0,
+        "confidence_steps": 0,
+        "provenance_steps": 0,
+        "route_graph_nodes": 0
+      },
+      "error": null
+    },
+    {
+      "filename": "WO_9718211_A1.pdf",
+      "avrseek_reference": {
+        "filename": "WO_9718211_A1.pdf",
+        "job_id": "6a463a8942f7",
+        "pipeline_complete": false,
+        "text_extract_status": "stubbed",
+        "text_extract_detail": "Skipped — no extractable text (awaiting OCR/VLM page-read)",
+        "image_scheme_detail": "VLM analyzed 14 figure page(s); no molecules/steps recovered (may be non-scheme figure or VLM parse issue).",
+        "parse_detail": "14 pages, 14 images, 0 table hints, 0 text chars",
+        "steps_count": 0,
+        "target_name": "N/A",
+        "document_type": "unknown",
+        "route_graph_nodes": 1,
+        "warnings_count": 2,
+        "conflicts_count": 0,
+        "confidence_range": null,
+        "smiles_entities": 0,
+        "provenance_steps": 0,
+        "scheme_steps": 0
+      },
+      "baseline": null,
+      "error": "no extractable text in job cache (OCR needed)"
+    }
+  ]
+}

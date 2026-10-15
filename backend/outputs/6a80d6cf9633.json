@@ -1,0 +1,1052 @@
+{
+  "job_id": "6a80d6cf9633",
+  "filename": "US5756737.pdf",
+  "stages": [
+    {
+      "id": "parse_pdf",
+      "label": "PDF document understanding (+ OCR)",
+      "status": "done",
+      "detail": "5 pages, 5 images, 0 table hints, 12459 text chars",
+      "data": {
+        "page_count": 5,
+        "figure_count": 5,
+        "segments": 5,
+        "text_chars": 12459,
+        "ocr_used": false,
+        "ocr_backend": "",
+        "document_type": "patent",
+        "procedure_pages": [
+          1,
+          2,
+          3
+        ],
+        "evidence_profile": {
+          "document_type": "patent",
+          "procedure_pages": [
+            1,
+            2,
+            3
+          ],
+          "high_evidence_pages": [
+            1,
+            2,
+            3
+          ],
+          "low_evidence_pages": [],
+          "total_chars": 12442,
+          "pages": [
+            {
+              "page": 1,
+              "char_count": 1601,
+              "section": "references",
+              "synthesis_score": 1.0,
+              "evidence_types": [
+                {
+                  "type": "compound_preparation",
+                  "confidence": 1.0
+                },
+                {
+                  "type": "patent_example",
+                  "confidence": 0.333
+                },
+                {
+                  "type": "abstract_claim",
+                  "confidence": 0.5
+                },
+                {
+                  "type": "references",
+                  "confidence": 1.0
+                }
+              ]
+            },
+            {
+              "page": 2,
+              "char_count": 4383,
+              "section": "experimental",
+              "synthesis_score": 1.0,
+              "evidence_types": [
+                {
+                  "type": "compound_preparation",
+                  "confidence": 1.0
+                },
+                {
+                  "type": "experimental_procedure",
+                  "confidence": 0.65
+                },
+                {
+                  "type": "patent_example",
+                  "confidence": 0.333
+                },
+                {
+                  "type": "reaction_conditions",
+                  "confidence": 0.333
+                },
+                {
+                  "type": "background",
+                  "confidence": 1.0
+                }
+              ]
+            },
+            {
+              "page": 3,
+              "char_count": 5524,
+              "section": "experimental",
+              "synthesis_score": 1.0,
+              "evidence_types": [
+                {
+                  "type": "reaction_conditions",
+                  "confidence": 1.0
+                },
+                {
+                  "type": "patent_example",
+                  "confidence": 0.817
+                },
+                {
+                  "type": "compound_preparation",
+                  "confidence": 0.5
+                },
+                {
+                  "type": "experimental_procedure",
+                  "confidence": 0.25
+                }
+              ]
+            },
+            {
+              "page": 4,
+              "char_count": 0,
+              "section": "body",
+              "synthesis_score": 0.0,
+              "evidence_types": []
+            },
+            {
+              "page": 5,
+              "char_count": 934,
+              "section": "experimental",
+              "synthesis_score": 0.25,
+              "evidence_types": [
+                {
+                  "type": "experimental_procedure",
+                  "confidence": 0.25
+                },
+                {
+                  "type": "abstract_claim",
+                  "confidence": 0.5
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "text_extract",
+      "label": "Text reaction extraction (LLM)",
+      "status": "error",
+      "detail": "Connection error.",
+      "data": null
+    },
+    {
+      "id": "table_extract",
+      "label": "Table extraction (pdfplumber + LLM)",
+      "status": "stubbed",
+      "detail": "No reaction-like tables found in 0 total tables",
+      "data": {
+        "tables_total": 0,
+        "reaction_tables": 0,
+        "steps_extracted": 0
+      }
+    },
+    {
+      "id": "image_scheme",
+      "label": "Scheme / image extraction (VLM)",
+      "status": "done",
+      "detail": "VLM analyzed 5 figure page(s); no molecules/steps recovered (may be non-scheme figure or VLM parse issue).",
+      "data": {
+        "images_processed": 5,
+        "schemes_found": 0,
+        "molecules_extracted": 0,
+        "page_reads": 5,
+        "scheme_steps": 0,
+        "page_steps": 0,
+        "figure_pages": [],
+        "figure_page_info": [],
+        "schemes": [
+          {
+            "page_number": 1,
+            "image_index": 0,
+            "molecules": [],
+            "arrows": [],
+            "conditions_text": "",
+            "raw_output": "VLM page_read failed: Connection error.",
+            "mode": "page_read",
+            "transcribed_text": "",
+            "image_class": "error",
+            "step_label": "",
+            "characterizations": []
+          },
+          {
+            "page_number": 2,
+            "image_index": 0,
+            "molecules": [],
+            "arrows": [],
+            "conditions_text": "",
+            "raw_output": "VLM page_read failed: Connection error.",
+            "mode": "page_read",
+            "transcribed_text": "",
+            "image_class": "error",
+            "step_label": "",
+            "characterizations": []
+          },
+          {
+            "page_number": 3,
+            "image_index": 0,
+            "molecules": [],
+            "arrows": [],
+            "conditions_text": "",
+            "raw_output": "VLM page_read failed: Connection error.",
+            "mode": "page_read",
+            "transcribed_text": "",
+            "image_class": "error",
+            "step_label": "",
+            "characterizations": []
+          },
+          {
+            "page_number": 4,
+            "image_index": 0,
+            "molecules": [],
+            "arrows": [],
+            "conditions_text": "",
+            "raw_output": "VLM page_read failed: Connection error.",
+            "mode": "page_read",
+            "transcribed_text": "",
+            "image_class": "error",
+            "step_label": "",
+            "characterizations": []
+          },
+          {
+            "page_number": 5,
+            "image_index": 0,
+            "molecules": [],
+            "arrows": [],
+            "conditions_text": "",
+            "raw_output": "VLM page_read failed: Connection error.",
+            "mode": "page_read",
+            "transcribed_text": "",
+            "image_class": "error",
+            "step_label": "",
+            "characterizations": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "reconcile",
+      "label": "Reconcile text + table + scheme + page-read",
+      "status": "done",
+      "detail": "Merged 0 steps (text=0, tables=0, schemes=0, page_read=0)",
+      "data": {
+        "steps": 0,
+        "text_steps": 0,
+        "table_steps": 0,
+        "scheme_steps": 0,
+        "page_read_steps": 0
+      }
+    },
+    {
+      "id": "standardize",
+      "label": "Chemical standardization",
+      "status": "stubbed",
+      "detail": "No chemical entities to process",
+      "data": {
+        "resolved": 0,
+        "validated": 0,
+        "invalid": 0,
+        "unresolved": 0,
+        "total_entities": 0,
+        "times_standardized": 0,
+        "resolution_status_counts": {}
+      }
+    }
+  ],
+  "document": {
+    "filename": "12ae1497f7f54774996ba58948e15c34.pdf",
+    "page_count": 5,
+    "text": "United States Patent (19) \nTurchetta et al. \n54 PROCESS FOR THE PREPARATION OF 9-(2- \nHYDROXY)-ETHOXYMETHYL-GUANINE \n75 Inventors: Stefano Turchetta; Sabina Pucci; \nGianfranco Piccoli; Giovanni Frare, \nall of Milan, Italy \n73) Assignee: Recordati S.A. Chemical and \nPharmaceutical Company, Chiasso, \nSwitzerland \n21 Appl. No.: \n602,789 \n22 PCT Filed: \nFeb. 3, 1994 \n(86 PCT No.: \nPCT/EP94/00308 \nS371 Date: \nMar. 7, 1996 \nS 102(e) Date: Mar. 7, 1996 \n87). PCT Pub. No.: WO95/07281 \nPCT Pub. Date: Mar 16, 1995 \n(30) \nForeign Application Priority Data \nSep. 10, 1993 \nIT \nItaly ....... \n... RM93AO608 \nNov. 3, 1993 \nIT \nItaly ............................... M93A02324 \n(51 \nint. C. m. \nCO7D 473/18 \nIII \nUS005756737A \n11 \nPatent Number: \n5,756,737 \n45 \nDate of Patent: \nMay 26, 1998 \n52 U.S. C. ............................................. 544/276; 544/251 \n(58) Field of Search .............................................. 544/276 \n56) \nReferences Cited \nU.S. PATENT DOCUMENTS \n4,146,715 \n3/1979 Schaefer ................................ 544,276 \n4,816,447 \n3/1989 Ashton ...................................... 514/81 \nFOREIGN PATENT DOCUMENTS \n0.532 878 3/1993 European Pat. Off. . \n59-80685 \n5/1984 Japan. \n1567671 \n5/1980 United Kingdom. \nOTHER PUBLICATIONS \nShapiro. Biochemistry 8, 238(1969). \nPrimary Examiner-Mark L. Berch \nAttorney, Agent, or Firm-Griffin. Butler, Whisenhunt & \nSzipl \n57 \nABSTRACT \nA process for the preparation of acyclovir by alkylation of \nN-formylguanine with 2-oxa-1,4-diacyloxybutane and \nhydrolysis of the resulting intermediate is described. \n7 Claims, No Drawings \n  \n\n\n5,756.737 \n1. \nPROCESS FOR THE PREPARATION OF 9-(2- \nHYDROXY)-ETHOXYMETHYL-GUANINE \nThis application is based on International Application \nNo. PCT/EP94/00308, filed on Feb. 3, 1994 and published \nas International Publication No. WO95/07281 on Mar. 16, \n1995. \nBACKGROUND OF THE INVENTION \nThe present invention relates to a novel, improved process \nfor the preparation of 9-(2-hydroxy)-ethoxymethyl-guanine, \nof formula (I) \nO \nHN \nN y \nHN \nN \nN-'N1NoH \nThe preparation of compound (I), known as \"acyclovir\" \nand widely used in therapy as an antiviral, was described for \nexample in Belgian Patent 833,006 starting from guanine, \nwhich is first subjected to trimethylsilylation at the three \n2-amino, 6 and 9 positions. The resulting silylated interme \ndiate is then treated with 2-benzoyloxyethoxymethyl \nchloride, to form (after deprotection of the N and N \npositions) 9-(2-benzoyloxy)ethoxymethyl-guanine, from \nwhich acyclovir is recovered by ammonolysis in methanol. \nThe process involves the use of a very strong excess of the \n(I) \nsilylating agent, with obvious problems as far as costs and \nwastes are concerned, moreover it leads to a product which \nis remarkably impure for the presence of the 7-substituted \nisomer in unacceptable amounts in view of the pharmaceu \ntical use. \nBritish Patent 1.567.671 discloses another process, in \nwhich the protection of the amino group at the 2-position is \ncarried out by acylation; the patent claims, as acylating \ngroups, acetyl, propionyl, butyryl and benzoyl, even though \nthe only described case is the one of N9-diacetylguanine, \nwhich is reacted with 2-oxa-1,4-diacetoxybutane to give \nN-acetyl-9-(2-acetoxy)ethoxymethyl-guanine, which is \nhydrolysed to yield finally acyclovir, in yields which could \nbe satisfactory if only remarkable amounts (up to 13%) of \nthe 7-isomer did not form, which-besides forming to the \ndetriment of the desired product-involves further expen \nsive purification steps. \nU.S. Pat. No. 4,146,671 provides a method for the prepa \nration of guanine derivatives, including acyclovir, by react \ning a diacylated guanine with a diester of 2-oxa-or \n2-thiabutanediol and subsequent hydrolysis. \n5 \n15 \n25 \n30 \n35 \n45 \n2 \nEP 0 532 878 describes the preparation of acyclovir \nstarting from guanosine and a diester of 2-oxa-butanediol \nand acetic anhydride, followed by hydrolysis. The desired \nproduct is obtained together with the 7-isomer, which is to \nbe converted into the desired 9-isomer, \nSUMMARY OF THE INVENTION \nNow it has surprisingly been found that acyclovir can be \nobtained in high yields, substantially preventing the undes \nired 7-isomer to form, by carrying out the alkylation of the \n9- position of the purine ring with 2-oxa-1,4- \ndiacetoxybutane on N-formylguanine. The latter compound \nis described in literature (Shapiro, Biochemistry, 8,231-245 \n(1969)). According to this author. N-formylguanine can be \nobtained by treatment of the glyoxal-guanine adduct with \nsodium periodate and/or periodic acid. The process is repro \nducible in high yields, although N-formylguanine can be \nobtained, according to the process of the invention, also \nthrough other ways. \nDESCRIPTION OF PREFERRED \nEMBODEMENTS \nN-formylguanine may also be obtained by the following: \noxidation of the glyoxal-guanine adduct by means of \nperacetic acid or hydrogen peroxide or lead tetraac \netate: \ndirect formylation of guanine with formic acid, in the \npresence or not of solvents such as dimethylformamide \nor dimethylsulfoxide, optionally in the presence of \ndicyclohexylcarbodiimide; \ndirect formylation of guanine with formylacetic \nanhydride, optionally in solvents such as \ndimethylformamide, dimethylsulfoxide, hexamethyl \nphosphoric triamide or formic acid. \nWhichever operative procedure to prepare \nN-formylguanine is followed, the subsequent reaction of \nsaid compound with 2-oxa-1,4-diacetoxybutane leads, in \nyields above 90% (and, more significantly, with formation of \nonly traces of the 7-isomer) to N*-formyl-9-(2-acetoxy) \nethoxymethyl-guanine, which is finally deacylated either in \na single step, with aqueous alkali, or is first deformylated in \nacid medium and finally deacetylated by alkali hydrolysis. \nThe following scheme summarizes the process according to \nthe invention. \nScheme 1 \nO \nO \nO \nHN \nN \nN \nN \nO \nHN \nW \nCHO \ny -A se \nr y Or se \nr y \nHo \n1s N \nN 1s N \n-'s n 1 \nH \n2 \n3 \n\n\n5,756.737 \n3 \n4 \n-continued \n- Scheme 1 \nO \nO \nHN \nr \nHN \nN \ny \n- \n3 \nO \n1s N \nN-N-1NoH \nydrolysis -'s N \nN-o-o- \nIn said scheme R is hydrogen, C-C alkyl or phenyl. The \ndiol product (2) can be recovered in high yields suspending \nguanine (1) in H2O, adding a glyoxal aqueous solution and \nheating the mixture to 80° C. for 4 hours (R. Shapiro, loc, \ncit; R. Shapiro and J. Hachmann, Biochemistry 5, 2799 \n(1966)). Diol (2) can then be oxidized to formyl derivative \n(3) in very good yields by means of a stoichiometric amount \nof NAIO, in water kept at pH 1.8-2.2. \nN-Formylguanine (3) (which, as already stated, is obtain \nable also by direct formylation of guanine) can then be \nsubjected to the alkylation reaction to obtain the N-9 alky \nlated compound (4) in high yields, without formation of the \nN-7 alkylated product in important percentages; finally \nacyclovir (I) can be obtained from compound (4) by \nhydrolysis with aqueous NaOH. in excellent yields. \nOn the whole, therefore, the above described synthesis \nallows to obtain the desired product () in quite satisfactory \nyields, higher than those obtained with the synthesis via \nacetylguanine, and above all without formation of noticeable \namounts of the 7-alkylated product, \nIn a further embodiment, the process of the present \ninvention provides a final purification step in order to obtain \nacyclovir substantially free from guanine. Said purification \nstep advantageously provides acyclovir in very highly pure \nform. \nIt has been found that eluting an aqueous basic solution of \nacyclovir through a strong anionic ion exchange resin allows \nto obtain the desired product substantially free from gua \nAccording to the present invention, the purification step \ncomprises: \na) dissolving acyclovir into an aqueous basic solution and \ndiluting the so obtained solution with water; \nb) loading said diluted solution of point a) on a strong \nanionic ion exchanging column in a resin:acyclovir \nwfw ratio ranging from 2 to 1.5; \nc) eluting said diluted solution at a flow ranging from 200 \nto 300 ml/hour; \nd) eluting acyclovir with an eluant consisting of a mixture \nformed by lower alcohol/aqueous base solution in a viv \nratio ranging from 0.8 to 1.2, and with a eluant? \nacyclovir v?w ratio ranging from 15:1 to 20:1 1/kg at \nthe same flow as point c) to give an eluate; \ne) isolating acyclovir from said eluate of point d). \nAnionic ion exchange resins are resins of the basic type, \nwhich consist of polymers having several crosslinking \ndegrees and bearing quaternary ammonium groups. The \nresins used according to the present invention are basic \nresins of the strong type. \nExamples of strong basic resins are dextrans, agarose, \ncellulose, divinylbenzene, appropriately functionalized with \nquaternary ammonium groups. \nThese resins are normally commercially available with \nthe trade marks Amberlite(s). Dowexs), Sephacels, \nSephadex8), etc. \n5 \n25 \n30 \n35 \n45 \n50 \n55 \n65 \n4 \nAmberlite(E) IRA-400, Relite() 3A, MAC HP-44 are \npreferred. \nThe chromatography is carried out on the resin in its basic \nform. \nThe elution is performed at room temperature. \nThe aqueous basic solution of point a) consists of an \nalkaline metal hydroxide, such as lithium, sodium, potas \nsium hydroxide, solution. The base concentration ranges \nfrom 5 to 15%, a 10% sodium hydroxide solution being \npreferred. \nA 1.75 resin:acyclovir wiv ratio is preferred. \nThe preferred eluant flow is 250 ml/hour. \nLower alcohols of point d) are methyl alcohol, ethyl \nalcohol, propyl alcohol. The aqueous base solution of point \nd) consists of an alkaline metal hydroxide in a concentration \nranging from 0.8 to 1.2M., A 1:1 viv methyl alcohol/1M \nsodium hydroxide is preferred. \nA 17.5 1/kg eluantiacyclovir v?w ratio is preferred. \nThe isolation of the product from the eluate as in point e) \nis carried out according to conventional techniques. \nPreferably, acyclovir is precipitated by acidifying the eluate \nwith an appropriate acid. \nThe so obtained product has a guanine content lower than \n0.1%. \nAccording to the purification step of the present \ninvention, the so obtained acyclovir is from 3 to 4 times \npurer than the best commercially available products. \nThe above pure form of acyclovir is a further object of the \npresent invention. \nThe purification step of the present invention is applicable \nto every other well known process for the preparation of \nacyclovir. For example, the above mentioned processes of \nBE 833.006 and GB 1.567.671 lead to a final product \ncontaining from 1 to 3% of guanine, which is a unacceptable \namount, since U.S. Pharmacopoeia prescribes a maximum \nupper limit of 0.7%. \nTherefore, the purification of acyclovir as above \ndescribed, constitutes a further object of the present inven \ntion. \nThe following examples further illustrate the process of \nthe invention, \nEXAMPLE 1. \na) \"Glyoxalguanine” (2) \n100 g (0.662 mole) of guanine, 800 ml of HO and 150 ml \nof a 40% whv glyoxal aqueous solution (1.32 moles) are \nmixed at room temperature in a 2 1 round-bottom flaskfitted \nwith condenser, thermometer and magnetic stirrer and the \nmixture is heated to 80°C, for 4 hours, after which the flask \ncontentis gradually cooled to 5°C., filtered and washed with \nwater. After drying under vacuum to constant weight, 136 g \nof product (98% yield) are obtained, showing a >98% purity \nby EPLC analysis. \nb) N-Formylguanine (3) \nA suspension of 100 g (0.478 mole) of glyoxalguanine in \n800 ml of water adjusted to pH 1.8-2.2 with 6 ml of HPO, \n\n\n5,756,737 \n7 \n8 \na, dissolving acyclovir into an aqueous basic solution and \nacyclovir v?w ratio ranging from 15:1 to 20:1 l/kg at \ndiluting the so obtained solution with water; \nthe same flow as point c) to give an eluate; \nb) loading said diluted solution of point a) on a strong \ne) isolating acyclovir from said eluate of point d). \n6. A process according to claim 5, characterized in that \n5 9-(2-hydroxy)ethoxymethyl-guanine (acyclovir) is obtained \nc) eluting said diluted solution at a flow ranging from 200 \nsuggests R Nierized in that 9-(2-hydroxy) \nto 300 ml/hour; \nethoxymethyl-guanine (acyclovir) is obtained with a content \nd) eluting acyclovir with an eluant consisting of a mixture \nof less than 0.1% of guanine. \nformed by lower alcohol/aqueous base solution in a viv \nratio ranging from 0.8 to 1.2, and with a eluant/ \nk \n:: \n* \n: \nanionic ion exchanging column in a resin:acyclovir \nw/w ratio ranging from 2 to 1.5; \n",
+    "segments": [
+      {
+        "segment_id": "page-1",
+        "kind": "procedure_candidate",
+        "page_start": 1,
+        "page_end": 1,
+        "text": "United States Patent (19) \nTurchetta et al. \n54 PROCESS FOR THE PREPARATION OF 9-(2- \nHYDROXY)-ETHOXYMETHYL-GUANINE \n75 Inventors: Stefano Turchetta; Sabina Pucci; \nGianfranco Piccoli; Giovanni Frare, \nall of Milan, Italy \n73) Assignee: Recordati S.A. Chemical and \nPharmaceutical Company, Chiasso, \nSwitzerland \n21 Appl. No.: \n602,789 \n22 PCT Filed: \nFeb. 3, 1994 \n(86 PCT No.: \nPCT/EP94/00308 \nS371 Date: \nMar. 7, 1996 \nS 102(e) Date: Mar. 7, 1996 \n87). PCT Pub. No.: WO95/07281 \nPCT Pub. Date: Mar 16, 1995 \n(30) \nForeign Application Priority Data \nSep. 10, 1993 \nIT \nItaly ....... \n... RM93AO608 \nNov. 3, 1993 \nIT \nItaly ............................... M93A02324 \n(51 \nint. C. m. \nCO7D 473/18 \nIII \nUS005756737A \n11 \nPatent Number: \n5,756,737 \n45 \nDate of Patent: \nMay 26, 1998 \n52 U.S. C. ............................................. 544/276; 544/251 \n(58) Field of Search .............................................. 544/276 \n56) \nReferences Cited \nU.S. PATENT DOCUMENTS \n4,146,715 \n3/1979 Schaefer ................................ 544,276 \n4,816,447 \n3/1989 Ashton ...................................... 514/81 \nFOREIGN PATENT DOCUMENTS \n0.532 878 3/1993 European Pat. Off. . \n59-80685 \n5/1984 Japan. \n1567671 \n5/1980 United Kingdom. \nOTHER PUBLICATIONS \nShapiro. Biochemistry 8, 238(1969). \nPrimary Examiner-Mark L. Berch \nAttorney, Agent, or Firm-Griffin. Butler, Whisenhunt & \nSzipl \n57 \nABSTRACT \nA process for the preparation of acyclovir by alkylation of \nN-formylguanine with 2-oxa-1,4-diacyloxybutane and \nhydrolysis of the resulting intermediate is described. \n7 Claims, No Drawings",
+        "meta": {
+          "char_count": 1606,
+          "source": "native",
+          "synthesis_score": 1.0,
+          "section": "references",
+          "evidence_types": [
+            {
+              "type": "compound_preparation",
+              "confidence": 1.0
+            },
+            {
+              "type": "patent_example",
+              "confidence": 0.3333333333333333
+            },
+            {
+              "type": "abstract_claim",
+              "confidence": 0.5
+            },
+            {
+              "type": "references",
+              "confidence": 1.0
+            }
+          ],
+          "document_type": "patent",
+          "procedure_pages": [
+            1,
+            2,
+            3
+          ],
+          "high_evidence_pages": [
+            1,
+            2,
+            3
+          ],
+          "ocr_used": false,
+          "ocr_backend": "",
+          "native_char_count": 12453,
+          "final_char_count": 12459,
+          "evidence_profile": {
+            "document_type": "patent",
+            "procedure_pages": [
+              1,
+              2,
+              3
+            ],
+            "high_evidence_pages": [
+              1,
+              2,
+              3
+            ],
+            "low_evidence_pages": [],
+            "total_chars": 12442,
+            "pages": [
+              {
+                "page": 1,
+                "char_count": 1601,
+                "section": "references",
+                "synthesis_score": 1.0,
+                "evidence_types": [
+                  {
+                    "type": "compound_preparation",
+                    "confidence": 1.0
+                  },
+                  {
+                    "type": "patent_example",
+                    "confidence": 0.333
+                  },
+                  {
+                    "type": "abstract_claim",
+                    "confidence": 0.5
+                  },
+                  {
+                    "type": "references",
+                    "confidence": 1.0
+                  }
+                ]
+              },
+              {
+                "page": 2,
+                "char_count": 4383,
+                "section": "experimental",
+                "synthesis_score": 1.0,
+                "evidence_types": [
+                  {
+                    "type": "compound_preparation",
+                    "confidence": 1.0
+                  },
+                  {
+                    "type": "experimental_procedure",
+                    "confidence": 0.65
+                  },
+                  {
+                    "type": "patent_example",
+                    "confidence": 0.333
+                  },
+                  {
+                    "type": "reaction_conditions",
+                    "confidence": 0.333
+                  },
+                  {
+                    "type": "background",
+                    "confidence": 1.0
+                  }
+                ]
+              },
+              {
+                "page": 3,
+                "char_count": 5524,
+                "section": "experimental",
+                "synthesis_score": 1.0,
+                "evidence_types": [
+                  {
+                    "type": "reaction_conditions",
+                    "confidence": 1.0
+                  },
+                  {
+                    "type": "patent_example",
+                    "confidence": 0.817
+                  },
+                  {
+                    "type": "compound_preparation",
+                    "confidence": 0.5
+                  },
+                  {
+                    "type": "experimental_procedure",
+                    "confidence": 0.25
+                  }
+                ]
+              },
+              {
+                "page": 4,
+                "char_count": 0,
+                "section": "body",
+                "synthesis_score": 0.0,
+                "evidence_types": []
+              },
+              {
+                "page": 5,
+                "char_count": 934,
+                "section": "experimental",
+                "synthesis_score": 0.25,
+                "evidence_types": [
+                  {
+                    "type": "experimental_procedure",
+                    "confidence": 0.25
+                  },
+                  {
+                    "type": "abstract_claim",
+                    "confidence": 0.5
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "segment_id": "page-2",
+        "kind": "procedure_candidate",
+        "page_start": 2,
+        "page_end": 2,
+        "text": "5,756.737 \n1. \nPROCESS FOR THE PREPARATION OF 9-(2- \nHYDROXY)-ETHOXYMETHYL-GUANINE \nThis application is based on International Application \nNo. PCT/EP94/00308, filed on Feb. 3, 1994 and published \nas International Publication No. WO95/07281 on Mar. 16, \n1995. \nBACKGROUND OF THE INVENTION \nThe present invention relates to a novel, improved process \nfor the preparation of 9-(2-hydroxy)-ethoxymethyl-guanine, \nof formula (I) \nO \nHN \nN y \nHN \nN \nN-'N1NoH \nThe preparation of compound (I), known as \"acyclovir\" \nand widely used in therapy as an antiviral, was described for \nexample in Belgian Patent 833,006 starting from guanine, \nwhich is first subjected to trimethylsilylation at the three \n2-amino, 6 and 9 positions. The resulting silylated interme \ndiate is then treated with 2-benzoyloxyethoxymethyl \nchloride, to form (after deprotection of the N and N \npositions) 9-(2-benzoyloxy)ethoxymethyl-guanine, from \nwhich acyclovir is recovered by ammonolysis in methanol. \nThe process involves the use of a very strong excess of the \n(I) \nsilylating agent, with obvious problems as far as costs and \nwastes are concerned, moreover it leads to a product which \nis remarkably impure for the presence of the 7-substituted \nisomer in unacceptable amounts in view of the pharmaceu \ntical use. \nBritish Patent 1.567.671 discloses another process, in \nwhich the protection of the amino group at the 2-position is \ncarried out by acylation; the patent claims, as acylating \ngroups, acetyl, propionyl, butyryl and benzoyl, even though \nthe only described case is the one of N9-diacetylguanine, \nwhich is reacted with 2-oxa-1,4-diacetoxybutane to give \nN-acetyl-9-(2-acetoxy)ethoxymethyl-guanine, which is \nhydrolysed to yield finally acyclovir, in yields which could \nbe satisfactory if only remarkable amounts (up to 13%) of \nthe 7-isomer did not form, which-besides forming to the \ndetriment of the desired product-involves further expen \nsive purification steps. \nU.S. Pat. No. 4,146,671 provides a method for the prepa \nration of guanine derivatives, including acyclovir, by react \ning a diacylated guanine with a diester of 2-oxa-or \n2-thiabutanediol and subsequent hydrolysis. \n5 \n15 \n25 \n30 \n35 \n45 \n2 \nEP 0 532 878 describes the preparation of acyclovir \nstarting from guanosine and a diester of 2-oxa-butanediol \nand acetic anhydride, followed by hydrolysis. The desired \nproduct is obtained together with the 7-isomer, which is to \nbe converted into the desired 9-isomer, \nSUMMARY OF THE INVENTION \nNow it has surprisingly been found that acyclovir can be \nobtained in high yields, substantially preventing the undes \nired 7-isomer to form, by carrying out the alkylation of the \n9- position of the purine ring with 2-oxa-1,4- \ndiacetoxybutane on N-formylguanine. The latter compound \nis described in literature (Shapiro, Biochemistry, 8,231-245 \n(1969)). According to this author. N-formylguanine can be \nobtained by treatment of the glyoxal-guanine adduct with \nsodium periodate and/or periodic acid. The process is repro \nducible in high yields, although N-formylguanine can be \nobtained, according to the process of the invention, also \nthrough other ways. \nDESCRIPTION OF PREFERRED \nEMBODEMENTS \nN-formylguanine may also be obtained by the following: \noxidation of the glyoxal-guanine adduct by means of \nperacetic acid or hydrogen peroxide or lead tetraac \netate: \ndirect formylation of guanine with formic acid, in the \npresence or not of solvents such as dimethylformamide \nor dimethylsulfoxide, optionally in the presence of \ndicyclohexylcarbodiimide; \ndirect formylation of guanine with formylacetic \nanhydride, optionally in solvents such as \ndimethylformamide, dimethylsulfoxide, hexamethyl \nphosphoric triamide or formic acid. \nWhichever operative procedure to prepare \nN-formylguanine is followed, the subsequent reaction of \nsaid compound with 2-oxa-1,4-diacetoxybutane leads, in \nyields above 90% (and, more significantly, with formation of \nonly traces of the 7-isomer) to N*-formyl-9-(2-acetoxy) \nethoxymethyl-guanine, which is finally deacylated either in \na single step, with aqueous alkali, or is first deformylated in \nacid medium and finally deacetylated by alkali hydrolysis. \nThe following scheme summarizes the process according to \nthe invention. \nScheme 1 \nO \nO \nO \nHN \nN \nN \nN \nO \nHN \nW \nCHO \ny -A se \nr y Or se \nr y \nHo \n1s N \nN 1s N \n-'s n 1 \nH \n2 \n3",
+        "meta": {
+          "char_count": 4385,
+          "source": "native",
+          "synthesis_score": 1.0,
+          "section": "experimental",
+          "evidence_types": [
+            {
+              "type": "compound_preparation",
+              "confidence": 1.0
+            },
+            {
+              "type": "experimental_procedure",
+              "confidence": 0.65
+            },
+            {
+              "type": "patent_example",
+              "confidence": 0.3333333333333333
+            },
+            {
+              "type": "reaction_conditions",
+              "confidence": 0.3333333333333333
+            },
+            {
+              "type": "background",
+              "confidence": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "segment_id": "page-3",
+        "kind": "procedure_candidate",
+        "page_start": 3,
+        "page_end": 3,
+        "text": "5,756.737 \n3 \n4 \n-continued \n- Scheme 1 \nO \nO \nHN \nr \nHN \nN \ny \n- \n3 \nO \n1s N \nN-N-1NoH \nydrolysis -'s N \nN-o-o- \nIn said scheme R is hydrogen, C-C alkyl or phenyl. The \ndiol product (2) can be recovered in high yields suspending \nguanine (1) in H2O, adding a glyoxal aqueous solution and \nheating the mixture to 80° C. for 4 hours (R. Shapiro, loc, \ncit; R. Shapiro and J. Hachmann, Biochemistry 5, 2799 \n(1966)). Diol (2) can then be oxidized to formyl derivative \n(3) in very good yields by means of a stoichiometric amount \nof NAIO, in water kept at pH 1.8-2.2. \nN-Formylguanine (3) (which, as already stated, is obtain \nable also by direct formylation of guanine) can then be \nsubjected to the alkylation reaction to obtain the N-9 alky \nlated compound (4) in high yields, without formation of the \nN-7 alkylated product in important percentages; finally \nacyclovir (I) can be obtained from compound (4) by \nhydrolysis with aqueous NaOH. in excellent yields. \nOn the whole, therefore, the above described synthesis \nallows to obtain the desired product () in quite satisfactory \nyields, higher than those obtained with the synthesis via \nacetylguanine, and above all without formation of noticeable \namounts of the 7-alkylated product, \nIn a further embodiment, the process of the present \ninvention provides a final purification step in order to obtain \nacyclovir substantially free from guanine. Said purification \nstep advantageously provides acyclovir in very highly pure \nform. \nIt has been found that eluting an aqueous basic solution of \nacyclovir through a strong anionic ion exchange resin allows \nto obtain the desired product substantially free from gua \nAccording to the present invention, the purification step \ncomprises: \na) dissolving acyclovir into an aqueous basic solution and \ndiluting the so obtained solution with water; \nb) loading said diluted solution of point a) on a strong \nanionic ion exchanging column in a resin:acyclovir \nwfw ratio ranging from 2 to 1.5; \nc) eluting said diluted solution at a flow ranging from 200 \nto 300 ml/hour; \nd) eluting acyclovir with an eluant consisting of a mixture \nformed by lower alcohol/aqueous base solution in a viv \nratio ranging from 0.8 to 1.2, and with a eluant? \nacyclovir v?w ratio ranging from 15:1 to 20:1 1/kg at \nthe same flow as point c) to give an eluate; \ne) isolating acyclovir from said eluate of point d). \nAnionic ion exchange resins are resins of the basic type, \nwhich consist of polymers having several crosslinking \ndegrees and bearing quaternary ammonium groups. The \nresins used according to the present invention are basic \nresins of the strong type. \nExamples of strong basic resins are dextrans, agarose, \ncellulose, divinylbenzene, appropriately functionalized with \nquaternary ammonium groups. \nThese resins are normally commercially available with \nthe trade marks Amberlite(s). Dowexs), Sephacels, \nSephadex8), etc. \n5 \n25 \n30 \n35 \n45 \n50 \n55 \n65 \n4 \nAmberlite(E) IRA-400, Relite() 3A, MAC HP-44 are \npreferred. \nThe chromatography is carried out on the resin in its basic \nform. \nThe elution is performed at room temperature. \nThe aqueous basic solution of point a) consists of an \nalkaline metal hydroxide, such as lithium, sodium, potas \nsium hydroxide, solution. The base concentration ranges \nfrom 5 to 15%, a 10% sodium hydroxide solution being \npreferred. \nA 1.75 resin:acyclovir wiv ratio is preferred. \nThe preferred eluant flow is 250 ml/hour. \nLower alcohols of point d) are methyl alcohol, ethyl \nalcohol, propyl alcohol. The aqueous base solution of point \nd) consists of an alkaline metal hydroxide in a concentration \nranging from 0.8 to 1.2M., A 1:1 viv methyl alcohol/1M \nsodium hydroxide is preferred. \nA 17.5 1/kg eluantiacyclovir v?w ratio is preferred. \nThe isolation of the product from the eluate as in point e) \nis carried out according to conventional techniques. \nPreferably, acyclovir is precipitated by acidifying the eluate \nwith an appropriate acid. \nThe so obtained product has a guanine content lower than \n0.1%. \nAccording to the purification step of the present \ninvention, the so obtained acyclovir is from 3 to 4 times \npurer than the best commercially available products. \nThe above pure form of acyclovir is a further object of the \npresent invention. \nThe purification step of the present invention is applicable \nto every other well known process for the preparation of \nacyclovir. For example, the above mentioned processes of \nBE 833.006 and GB 1.567.671 lead to a final product \ncontaining from 1 to 3% of guanine, which is a unacceptable \namount, since U.S. Pharmacopoeia prescribes a maximum \nupper limit of 0.7%. \nTherefore, the purification of acyclovir as above \ndescribed, constitutes a further object of the present inven \ntion. \nThe following examples further illustrate the process of \nthe invention, \nEXAMPLE 1. \na) \"Glyoxalguanine” (2) \n100 g (0.662 mole) of guanine, 800 ml of HO and 150 ml \nof a 40% whv glyoxal aqueous solution (1.32 moles) are \nmixed at room temperature in a 2 1 round-bottom flaskfitted \nwith condenser, thermometer and magnetic stirrer and the \nmixture is heated to 80°C, for 4 hours, after which the flask \ncontentis gradually cooled to 5°C., filtered and washed with \nwater. After drying under vacuum to constant weight, 136 g \nof product (98% yield) are obtained, showing a >98% purity \nby EPLC analysis. \nb) N-Formylguanine (3) \nA suspension of 100 g (0.478 mole) of glyoxalguanine in \n800 ml of water adjusted to pH 1.8-2.2 with 6 ml of HPO,",
+        "meta": {
+          "char_count": 5526,
+          "source": "native",
+          "synthesis_score": 1.0,
+          "section": "experimental",
+          "evidence_types": [
+            {
+              "type": "reaction_conditions",
+              "confidence": 1.0
+            },
+            {
+              "type": "patent_example",
+              "confidence": 0.8166666666666667
+            },
+            {
+              "type": "compound_preparation",
+              "confidence": 0.5
+            },
+            {
+              "type": "experimental_procedure",
+              "confidence": 0.25
+            }
+          ]
+        }
+      },
+      {
+        "segment_id": "page-4",
+        "kind": "body",
+        "page_start": 4,
+        "page_end": 4,
+        "text": "",
+        "meta": {
+          "char_count": 0,
+          "source": "native",
+          "synthesis_score": 0.0,
+          "section": "body",
+          "evidence_types": []
+        }
+      },
+      {
+        "segment_id": "page-5",
+        "kind": "body",
+        "page_start": 5,
+        "page_end": 5,
+        "text": "5,756,737 \n7 \n8 \na, dissolving acyclovir into an aqueous basic solution and \nacyclovir v?w ratio ranging from 15:1 to 20:1 l/kg at \ndiluting the so obtained solution with water; \nthe same flow as point c) to give an eluate; \nb) loading said diluted solution of point a) on a strong \ne) isolating acyclovir from said eluate of point d). \n6. A process according to claim 5, characterized in that \n5 9-(2-hydroxy)ethoxymethyl-guanine (acyclovir) is obtained \nc) eluting said diluted solution at a flow ranging from 200 \nsuggests R Nierized in that 9-(2-hydroxy) \nto 300 ml/hour; \nethoxymethyl-guanine (acyclovir) is obtained with a content \nd) eluting acyclovir with an eluant consisting of a mixture \nof less than 0.1% of guanine. \nformed by lower alcohol/aqueous base solution in a viv \nratio ranging from 0.8 to 1.2, and with a eluant/ \nk \n:: \n* \n: \nanionic ion exchanging column in a resin:acyclovir \nw/w ratio ranging from 2 to 1.5;",
+        "meta": {
+          "char_count": 936,
+          "source": "native",
+          "synthesis_score": 0.25,
+          "section": "experimental",
+          "evidence_types": [
+            {
+              "type": "experimental_procedure",
+              "confidence": 0.25
+            },
+            {
+              "type": "abstract_claim",
+              "confidence": 0.5
+            }
+          ]
+        }
+      }
+    ],
+    "figure_count": 5,
+    "table_hints": []
+  },
+  "route": {
+    "title": "US5756737.pdf",
+    "target_name": "N/A",
+    "target_class": "unknown",
+    "document_type": "unknown",
+    "steps": [],
+    "warnings": [
+      "Experimental content detected on pages [1, 2, 3], but only 0 reaction step(s) extracted while 8 procedure subsection(s) were retrieved — possible under-extraction."
+    ],
+    "conflicts": [],
+    "route_graph": {
+      "nodes": [
+        {
+          "node_id": "n_a",
+          "name": "N/A",
+          "canonical_name": "N/A",
+          "compound_ids": [],
+          "step_indices": [
+            0
+          ],
+          "role": "target"
+        }
+      ],
+      "edges": [],
+      "target_node_id": "n_a"
+    },
+    "compound_links": []
+  },
+  "raw_model_output": null,
+  "error": null,
+  "from_cache": false,
+  "content_hash": null,
+  "source_job_id": null,
+  "extraction_debug": {
+    "document_type": "patent",
+    "pages_included": [
+      1,
+      2,
+      3,
+      5
+    ],
+    "pages_excluded": [],
+    "candidate_procedure_pages": [
+      1,
+      2,
+      3
+    ],
+    "mandatory_pages": [
+      1,
+      2,
+      3
+    ],
+    "exclusion_reasons": {},
+    "chars_total": 12459,
+    "chars_selected": 13020,
+    "truncated": false,
+    "truncation_note": "",
+    "pass_index": 1,
+    "pass_count": 1,
+    "chunk_count": 8,
+    "chunks": [
+      {
+        "page_start": 1,
+        "page_end": 1,
+        "section": "references",
+        "evidence_types": [
+          "compound_preparation",
+          "patent_example",
+          "abstract_claim",
+          "references"
+        ],
+        "chars": 1601,
+        "score": 1.0
+      },
+      {
+        "page_start": 2,
+        "page_end": 2,
+        "section": "examples",
+        "evidence_types": [
+          "patent_example",
+          "compound_preparation"
+        ],
+        "chars": 3810,
+        "score": 1.0
+      },
+      {
+        "page_start": 2,
+        "page_end": 2,
+        "section": "examples",
+        "evidence_types": [
+          "patent_example",
+          "compound_preparation"
+        ],
+        "chars": 571,
+        "score": 1.0
+      },
+      {
+        "page_start": 3,
+        "page_end": 3,
+        "section": "examples",
+        "evidence_types": [
+          "patent_example",
+          "compound_preparation"
+        ],
+        "chars": 2206,
+        "score": 1.0
+      },
+      {
+        "page_start": 3,
+        "page_end": 3,
+        "section": "examples",
+        "evidence_types": [
+          "patent_example",
+          "compound_preparation"
+        ],
+        "chars": 1420,
+        "score": 1.0
+      },
+      {
+        "page_start": 3,
+        "page_end": 3,
+        "section": "examples",
+        "evidence_types": [
+          "patent_example",
+          "compound_preparation"
+        ],
+        "chars": 1223,
+        "score": 1.0
+      },
+      {
+        "page_start": 3,
+        "page_end": 3,
+        "section": "examples",
+        "evidence_types": [
+          "patent_example",
+          "compound_preparation"
+        ],
+        "chars": 669,
+        "score": 1.0
+      },
+      {
+        "page_start": 5,
+        "page_end": 5,
+        "section": "experimental",
+        "evidence_types": [
+          "experimental_procedure",
+          "abstract_claim"
+        ],
+        "chars": 934,
+        "score": 0.25
+      }
+    ],
+    "procedure_pages": [
+      1,
+      2,
+      3
+    ],
+    "warnings": [],
+    "info": [
+      "Procedure/evidence pages detected: [1, 2, 3] (document_type=patent).",
+      "Mandatory procedure page set (with neighbors): [1, 2, 3].",
+      "Experimental/example pages detected: [1, 2, 3]."
+    ],
+    "page_selection": {
+      "candidate_procedure_pages": [
+        1,
+        2,
+        3
+      ],
+      "mandatory_pages": [
+        1,
+        2,
+        3
+      ],
+      "pages_included": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "pages_excluded": [],
+      "exclusion_reasons": {},
+      "pass_count": 1,
+      "passes": [
+        {
+          "document_type": "patent",
+          "pages_included": [
+            1,
+            2,
+            3,
+            5
+          ],
+          "pages_excluded": [],
+          "candidate_procedure_pages": [
+            1,
+            2,
+            3
+          ],
+          "mandatory_pages": [
+            1,
+            2,
+            3
+          ],
+          "exclusion_reasons": {},
+          "chars_total": 12459,
+          "chars_selected": 13020,
+          "truncated": false,
+          "truncation_note": "",
+          "pass_index": 1,
+          "pass_count": 1,
+          "chunk_count": 8,
+          "chunks": [
+            {
+              "page_start": 1,
+              "page_end": 1,
+              "section": "references",
+              "evidence_types": [
+                "compound_preparation",
+                "patent_example",
+                "abstract_claim",
+                "references"
+              ],
+              "chars": 1601,
+              "score": 1.0
+            },
+            {
+              "page_start": 2,
+              "page_end": 2,
+              "section": "examples",
+              "evidence_types": [
+                "patent_example",
+                "compound_preparation"
+              ],
+              "chars": 3810,
+              "score": 1.0
+            },
+            {
+              "page_start": 2,
+              "page_end": 2,
+              "section": "examples",
+              "evidence_types": [
+                "patent_example",
+                "compound_preparation"
+              ],
+              "chars": 571,
+              "score": 1.0
+            },
+            {
+              "page_start": 3,
+              "page_end": 3,
+              "section": "examples",
+              "evidence_types": [
+                "patent_example",
+                "compound_preparation"
+              ],
+              "chars": 2206,
+              "score": 1.0
+            },
+            {
+              "page_start": 3,
+              "page_end": 3,
+              "section": "examples",
+              "evidence_types": [
+                "patent_example",
+                "compound_preparation"
+              ],
+              "chars": 1420,
+              "score": 1.0
+            },
+            {
+              "page_start": 3,
+              "page_end": 3,
+              "section": "examples",
+              "evidence_types": [
+                "patent_example",
+                "compound_preparation"
+              ],
+              "chars": 1223,
+              "score": 1.0
+            },
+            {
+              "page_start": 3,
+              "page_end": 3,
+              "section": "examples",
+              "evidence_types": [
+                "patent_example",
+                "compound_preparation"
+              ],
+              "chars": 669,
+              "score": 1.0
+            },
+            {
+              "page_start": 5,
+              "page_end": 5,
+              "section": "experimental",
+              "evidence_types": [
+                "experimental_procedure",
+                "abstract_claim"
+              ],
+              "chars": 934,
+              "score": 0.25
+            }
+          ],
+          "procedure_pages": [
+            1,
+            2,
+            3
+          ],
+          "warnings": [],
+          "info": [
+            "Procedure/evidence pages detected: [1, 2, 3] (document_type=patent).",
+            "Mandatory procedure page set (with neighbors): [1, 2, 3]."
+          ]
+        }
+      ]
+    },
+    "reconciliation": {},
+    "route_graph_nodes": 1,
+    "compound_links": 0,
+    "observability": {
+      "document": {
+        "pages": 5,
+        "text_chars": 12459,
+        "figures": 5,
+        "tables": 0
+      },
+      "page_selection": {
+        "candidate_procedure_pages": [
+          1,
+          2,
+          3
+        ],
+        "mandatory_pages": [
+          1,
+          2,
+          3
+        ],
+        "pages_included": [
+          1,
+          2,
+          3,
+          5
+        ],
+        "pages_excluded": [],
+        "exclusion_reasons": {},
+        "pass_count": 1,
+        "passes": [
+          {
+            "document_type": "patent",
+            "pages_included": [
+              1,
+              2,
+              3,
+              5
+            ],
+            "pages_excluded": [],
+            "candidate_procedure_pages": [
+              1,
+              2,
+              3
+            ],
+            "mandatory_pages": [
+              1,
+              2,
+              3
+            ],
+            "exclusion_reasons": {},
+            "chars_total": 12459,
+            "chars_selected": 13020,
+            "truncated": false,
+            "truncation_note": "",
+            "pass_index": 1,
+            "pass_count": 1,
+            "chunk_count": 8,
+            "chunks": [
+              {
+                "page_start": 1,
+                "page_end": 1,
+                "section": "references",
+                "evidence_types": [
+                  "compound_preparation",
+                  "patent_example",
+                  "abstract_claim",
+                  "references"
+                ],
+                "chars": 1601,
+                "score": 1.0
+              },
+              {
+                "page_start": 2,
+                "page_end": 2,
+                "section": "examples",
+                "evidence_types": [
+                  "patent_example",
+                  "compound_preparation"
+                ],
+                "chars": 3810,
+                "score": 1.0
+              },
+              {
+                "page_start": 2,
+                "page_end": 2,
+                "section": "examples",
+                "evidence_types": [
+                  "patent_example",
+                  "compound_preparation"
+                ],
+                "chars": 571,
+                "score": 1.0
+              },
+              {
+                "page_start": 3,
+                "page_end": 3,
+                "section": "examples",
+                "evidence_types": [
+                  "patent_example",
+                  "compound_preparation"
+                ],
+                "chars": 2206,
+                "score": 1.0
+              },
+              {
+                "page_start": 3,
+                "page_end": 3,
+                "section": "examples",
+                "evidence_types": [
+                  "patent_example",
+                  "compound_preparation"
+                ],
+                "chars": 1420,
+                "score": 1.0
+              },
+              {
+                "page_start": 3,
+                "page_end": 3,
+                "section": "examples",
+                "evidence_types": [
+                  "patent_example",
+                  "compound_preparation"
+                ],
+                "chars": 1223,
+                "score": 1.0
+              },
+              {
+                "page_start": 3,
+                "page_end": 3,
+                "section": "examples",
+                "evidence_types": [
+                  "patent_example",
+                  "compound_preparation"
+                ],
+                "chars": 669,
+                "score": 1.0
+              },
+              {
+                "page_start": 5,
+                "page_end": 5,
+                "section": "experimental",
+                "evidence_types": [
+                  "experimental_procedure",
+                  "abstract_claim"
+                ],
+                "chars": 934,
+                "score": 0.25
+              }
+            ],
+            "procedure_pages": [
+              1,
+              2,
+              3
+            ],
+            "warnings": [],
+            "info": [
+              "Procedure/evidence pages detected: [1, 2, 3] (document_type=patent).",
+              "Mandatory procedure page set (with neighbors): [1, 2, 3]."
+            ]
+          }
+        ]
+      },
+      "text_extraction": {
+        "steps": 0,
+        "passes": 1
+      },
+      "table_extraction": {
+        "steps": 0
+      },
+      "scheme_extraction": {
+        "scheme_steps": 0,
+        "page_read_steps": 0
+      },
+      "reconciliation": {},
+      "standardization": {
+        "resolved": 0,
+        "validated": 0,
+        "invalid": 0,
+        "unresolved": 0,
+        "total_entities": 0,
+        "times_standardized": 0,
+        "resolution_status_counts": {}
+      },
+      "provenance": {
+        "entities_with_provenance": 0,
+        "entities_without_provenance": 0,
+        "reactions_with_conflicts": 0
+      }
+    }
+  }
+}

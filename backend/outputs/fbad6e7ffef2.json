@@ -1,0 +1,1860 @@
+{
+  "job_id": "fbad6e7ffef2",
+  "filename": "shiragami1995.pdf",
+  "stages": [
+    {
+      "id": "parse_pdf",
+      "label": "PDF document understanding (+ OCR)",
+      "status": "done",
+      "detail": "5 pages, 5 images, 0 table hints, 10045 text chars",
+      "data": {
+        "page_count": 5,
+        "figure_count": 5,
+        "segments": 5,
+        "text_chars": 10045,
+        "ocr_used": false,
+        "ocr_backend": "",
+        "document_type": "paper",
+        "procedure_pages": [
+          1,
+          2,
+          4,
+          5
+        ],
+        "evidence_profile": {
+          "document_type": "paper",
+          "procedure_pages": [
+            1,
+            2,
+            4,
+            5
+          ],
+          "high_evidence_pages": [
+            4,
+            5
+          ],
+          "low_evidence_pages": [],
+          "total_chars": 10028,
+          "pages": [
+            {
+              "page": 1,
+              "char_count": 1987,
+              "section": "body",
+              "synthesis_score": 0.55,
+              "evidence_types": [
+                {
+                  "type": "compound_preparation",
+                  "confidence": 0.5
+                },
+                {
+                  "type": "experimental_procedure",
+                  "confidence": 0.6
+                }
+              ]
+            },
+            {
+              "page": 2,
+              "char_count": 2185,
+              "section": "abstract",
+              "synthesis_score": 0.55,
+              "evidence_types": [
+                {
+                  "type": "compound_preparation",
+                  "confidence": 0.5
+                },
+                {
+                  "type": "reaction_table",
+                  "confidence": 0.5
+                },
+                {
+                  "type": "background",
+                  "confidence": 1.0
+                },
+                {
+                  "type": "abstract_claim",
+                  "confidence": 0.5
+                },
+                {
+                  "type": "experimental_procedure",
+                  "confidence": 0.6
+                }
+              ]
+            },
+            {
+              "page": 3,
+              "char_count": 1416,
+              "section": "tables",
+              "synthesis_score": 0.5,
+              "evidence_types": [
+                {
+                  "type": "analytical_characterization",
+                  "confidence": 1.0
+                },
+                {
+                  "type": "compound_preparation",
+                  "confidence": 0.5
+                },
+                {
+                  "type": "reaction_table",
+                  "confidence": 0.5
+                }
+              ]
+            },
+            {
+              "page": 4,
+              "char_count": 1585,
+              "section": "experimental",
+              "synthesis_score": 0.967,
+              "evidence_types": [
+                {
+                  "type": "experimental_procedure",
+                  "confidence": 0.817
+                },
+                {
+                  "type": "analytical_characterization",
+                  "confidence": 1.0
+                },
+                {
+                  "type": "compound_preparation",
+                  "confidence": 0.5
+                },
+                {
+                  "type": "reaction_table",
+                  "confidence": 0.5
+                },
+                {
+                  "type": "reaction_conditions",
+                  "confidence": 0.333
+                }
+              ]
+            },
+            {
+              "page": 5,
+              "char_count": 2855,
+              "section": "experimental",
+              "synthesis_score": 0.844,
+              "evidence_types": [
+                {
+                  "type": "reaction_conditions",
+                  "confidence": 0.817
+                },
+                {
+                  "type": "analytical_characterization",
+                  "confidence": 1.0
+                },
+                {
+                  "type": "experimental_procedure",
+                  "confidence": 0.333
+                },
+                {
+                  "type": "references",
+                  "confidence": 1.0
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "text_extract",
+      "label": "Text reaction extraction (LLM)",
+      "status": "done",
+      "detail": "Extracted 5 step(s) via single-shot full text (10045 chars, document_type=paper)",
+      "data": {
+        "steps": 5,
+        "target": "9-(2-hydroxyethoxymethyl)guanine (acyclovir)",
+        "text_chars_sent": 10045,
+        "single_shot": true,
+        "evidence_chunks": 0,
+        "pages_included": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "pages_excluded": [],
+        "truncated": false,
+        "document_type": "paper",
+        "extraction_plan": {
+          "document_type": "paper",
+          "pages_included": [
+            1,
+            3,
+            4,
+            5
+          ],
+          "pages_excluded": [
+            2
+          ],
+          "chars_total": 10045,
+          "chars_selected": 8257,
+          "truncated": true,
+          "truncation_note": "Selected 8257 of 10045 chars from pages [1, 3, 4, 5]; omitted pages [2] due to budget (90000).",
+          "chunk_count": 4,
+          "chunks": [
+            {
+              "page_start": 1,
+              "page_end": 1,
+              "section": "body",
+              "evidence_types": [
+                "compound_preparation",
+                "experimental_procedure"
+              ],
+              "chars": 1987,
+              "score": 0.55
+            },
+            {
+              "page_start": 3,
+              "page_end": 3,
+              "section": "tables",
+              "evidence_types": [
+                "analytical_characterization",
+                "compound_preparation",
+                "reaction_table"
+              ],
+              "chars": 1416,
+              "score": 0.5
+            },
+            {
+              "page_start": 4,
+              "page_end": 4,
+              "section": "experimental",
+              "evidence_types": [
+                "experimental_procedure",
+                "analytical_characterization",
+                "compound_preparation",
+                "reaction_table"
+              ],
+              "chars": 1585,
+              "score": 0.9666666666666667
+            },
+            {
+              "page_start": 5,
+              "page_end": 5,
+              "section": "experimental",
+              "evidence_types": [
+                "reaction_conditions",
+                "analytical_characterization",
+                "experimental_procedure",
+                "references"
+              ],
+              "chars": 2855,
+              "score": 0.8441666666666666
+            }
+          ],
+          "procedure_pages": [
+            1,
+            2,
+            4,
+            5
+          ],
+          "warnings": [
+            "Selected 8257 of 10045 chars from pages [1, 3, 4, 5]; omitted pages [2] due to budget (90000).",
+            "Some procedure pages not included in LLM input (budget): [2]."
+          ],
+          "info": [
+            "Procedure/evidence pages detected: [1, 2, 4, 5] (document_type=paper).",
+            "Experimental/example pages detected: [1, 2, 4, 5]."
+          ],
+          "single_shot": true,
+          "figure_pages_vlm": [
+            {
+              "page": 3,
+              "score": 2.5,
+              "reason": "caption:FIG. 11"
+            }
+          ],
+          "route_graph_nodes": 17,
+          "compound_links": 2
+        }
+      }
+    },
+    {
+      "id": "table_extract",
+      "label": "Table extraction (pdfplumber + LLM)",
+      "status": "stubbed",
+      "detail": "No reaction-like tables found in 0 total tables",
+      "data": {
+        "tables_total": 0,
+        "reaction_tables": 0,
+        "steps_extracted": 0
+      }
+    },
+    {
+      "id": "image_scheme",
+      "label": "Scheme / image extraction (VLM)",
+      "status": "done",
+      "detail": "4 scheme step(s), 0 page-read step(s), 15 molecule(s), 0 page-read(s) from 1 image(s) (figure pages [3])",
+      "data": {
+        "images_processed": 1,
+        "schemes_found": 1,
+        "molecules_extracted": 15,
+        "page_reads": 0,
+        "transcribed_chars": 0,
+        "scheme_steps": 4,
+        "page_steps": 0,
+        "figure_pages": [
+          3
+        ],
+        "figure_page_info": [
+          {
+            "page": 3,
+            "score": 2.5,
+            "reason": "caption:FIG. 11"
+          }
+        ],
+        "schemes": [
+          {
+            "page_number": 3,
+            "image_index": 0,
+            "molecules": [
+              {
+                "smiles": "NC1=NC2=C(N=CN2C2OC(CO)C(O)C2O)C(=O)N1",
+                "bbox": [
+                  0.16,
+                  0.11,
+                  0.3,
+                  0.22
+                ],
+                "role": "reactant",
+                "confidence": 0.85,
+                "source": "vlm",
+                "name": "guanosine (2)"
+              },
+              {
+                "smiles": "C1COCO1",
+                "bbox": [
+                  0.27,
+                  0.1,
+                  0.36,
+                  0.14
+                ],
+                "role": "reagent",
+                "confidence": 0.8,
+                "source": "vlm",
+                "name": "(3)"
+              },
+              {
+                "smiles": "CC(=O)OC(C)=O",
+                "bbox": [
+                  0.31,
+                  0.13,
+                  0.37,
+                  0.16
+                ],
+                "role": "reagent",
+                "confidence": 0.85,
+                "source": "vlm",
+                "name": "Ac2O"
+              },
+              {
+                "smiles": "",
+                "bbox": [
+                  0.31,
+                  0.14,
+                  0.4,
+                  0.17
+                ],
+                "role": "catalyst",
+                "confidence": 0.8,
+                "source": "vlm",
+                "name": "acid catalyst"
+              },
+              {
+                "smiles": "NC1=NC2=C(N=CN2C2OC(CO)C(O)C2O)C(=O)N1",
+                "bbox": [
+                  0.16,
+                  0.11,
+                  0.3,
+                  0.22
+                ],
+                "role": "reactant",
+                "confidence": 0.85,
+                "source": "vlm",
+                "name": "guanosine (2)"
+              },
+              {
+                "smiles": "CC(=O)OCCOCOC(C)=O",
+                "bbox": [
+                  0.29,
+                  0.16,
+                  0.4,
+                  0.22
+                ],
+                "role": "reactant",
+                "confidence": 0.7,
+                "source": "vlm",
+                "name": "(4)"
+              },
+              {
+                "smiles": "",
+                "bbox": [
+                  0.41,
+                  0.15,
+                  0.5,
+                  0.18
+                ],
+                "role": "catalyst",
+                "confidence": 0.85,
+                "source": "vlm",
+                "name": "acid catalyst"
+              },
+              {
+                "smiles": "CC(=O)OC(C)=O",
+                "bbox": [
+                  0.43,
+                  0.18,
+                  0.49,
+                  0.21
+                ],
+                "role": "reagent",
+                "confidence": 0.85,
+                "source": "vlm",
+                "name": "Ac2O"
+              },
+              {
+                "smiles": "O=C1NC(NC(C)=O)=NC2=C1N=CN2COCCOC(C)=O",
+                "bbox": [
+                  0.51,
+                  0.12,
+                  0.68,
+                  0.22
+                ],
+                "role": "product",
+                "confidence": 0.75,
+                "source": "vlm",
+                "name": "9-isomer (5a)"
+              },
+              {
+                "smiles": "O=C1NC(NC(C)=O)=NC2=C1N(COCCOC(C)=O)C=N2",
+                "bbox": [
+                  0.69,
+                  0.12,
+                  0.86,
+                  0.22
+                ],
+                "role": "product",
+                "confidence": 0.7,
+                "source": "vlm",
+                "name": "7-isomer (5b)"
+              },
+              {
+                "smiles": "O=C1NC(NC(C)=O)=NC2=C1N(COCCOC(C)=O)C=N2",
+                "bbox": [
+                  0.69,
+                  0.12,
+                  0.86,
+                  0.22
+                ],
+                "role": "reactant",
+                "confidence": 0.7,
+                "source": "vlm",
+                "name": "7-isomer (5b)"
+              },
+              {
+                "smiles": "O=C1NC(NC(C)=O)=NC2=C1N=CN2COCCOC(C)=O",
+                "bbox": [
+                  0.51,
+                  0.12,
+                  0.68,
+                  0.22
+                ],
+                "role": "product",
+                "confidence": 0.7,
+                "source": "vlm",
+                "name": "9-isomer (5a)"
+              },
+              {
+                "smiles": "O=C1NC(NC(C)=O)=NC2=C1N=CN2COCCOC(C)=O",
+                "bbox": [
+                  0.51,
+                  0.12,
+                  0.68,
+                  0.22
+                ],
+                "role": "reactant",
+                "confidence": 0.7,
+                "source": "vlm",
+                "name": "9-isomer (5a)"
+              },
+              {
+                "smiles": "O=C1NC(N)=NC2=C1N=CN2COCCO",
+                "bbox": [
+                  0.32,
+                  0.24,
+                  0.48,
+                  0.33
+                ],
+                "role": "product",
+                "confidence": 0.8,
+                "source": "vlm",
+                "name": "acyclovir (1)"
+              },
+              {
+                "smiles": "O=C1NC(N)=NC2=C1N(COCCO)C=N2",
+                "bbox": [
+                  0.55,
+                  0.24,
+                  0.72,
+                  0.33
+                ],
+                "role": "product",
+                "confidence": 0.7,
+                "source": "vlm",
+                "name": "7-isomer (7)"
+              }
+            ],
+            "arrows": [
+              {
+                "from": [
+                  0.42,
+                  0.19
+                ],
+                "to": [
+                  0.51,
+                  0.19
+                ],
+                "type": "reaction_arrow"
+              },
+              {
+                "from": [
+                  0.2,
+                  0.28
+                ],
+                "to": [
+                  0.31,
+                  0.28
+                ],
+                "type": "reaction_arrow"
+              },
+              {
+                "from": [
+                  0.72,
+                  0.22
+                ],
+                "to": [
+                  0.6,
+                  0.22
+                ],
+                "type": "reaction_arrow"
+              }
+            ],
+            "conditions_text": "FIG. I: guanosine (2) + 4 (or 1,3-dioxolane 3 / Ac2O) with acid catalyst and Ac2O gives 9-isomer (5a) and 7-isomer (5b); isomerization of 5b to 5a; then 1) OH- 2) H+ gives acyclovir (1) and 7-isomer (7). TABLE 1 conditions: additives 4 (2 equiv) or 3 (2 equiv), Ac2O (8 equiv); catalysts p-TsOH·H2O, H2SO4, H2NPhSO3H, H3PO4 (0.1 equiv); solvent none, MeCN or DMF; 82-120 °C, 24-48 h.; FIG. I, step 1 (one-pot from 1,3-dioxolane 3): (3) 1,3-dioxolane; Ac2O, acid catalyst; FIG. I, step 2 (transpurination with acyclic sugar 4): acid catalyst, Ac2O; isomerization (5b → 5a): isomerization; FIG. I, deacetylation step: 1) OH-  2) H+; 5a yield 30-48% (TABLE 1, depending on entry) LC/MS N/A TABLE 1 entries (% yield 5a): 48, 42, 40, 47, 30, 35, 33, 45; 5b yield 19-39% (TABLE 1, depending on entry) LC/MS N/A TABLE 1 entries (% yield 5b): 38, 35, 36, 38, 19, 21, 19, 39; caption: t acetic anhydride (FIG. 11). \nSince the catalyst in the synthesis of the acyclic sugar moiety 4 could be the same \nas that used in transpurination, the one pot reaction of guanosine with 1,3-dioxolane (3) \nand acetic anhydride in the presence of acid catalyst gave similar results (TABLE 1). \nTo obtain the desired, biologically active N-9 isomer 5a exclusively, isomerization \nof the N-7 isomer 5 b",
+            "raw_output": "{\n  \"is_reaction_scheme\": true,\n  \"steps\": [\n    {\n      \"step_label\": \"FIG. I, step 1 (one-pot from 1,3-dioxolane 3)\",\n      \"conditions_text\": \"(3) 1,3-dioxolane; Ac2O, acid catalyst\",\n      \"molecules\": [\n        {\n          \"label\": \"guanosine (2)\",\n          \"smiles\": \"NC1=NC2=C(N=CN2C2OC(CO)C(O)C2O)C(=O)N1\",\n          \"role\": \"reactant\",\n          \"bbox\": [0.16, 0.11, 0.30, 0.22],\n          \"confidence\": 0.85\n        },\n        {\n          \"label\": \"(3)\",\n          \"smiles\": \"C1COCO1\",\n          \"role\": \"reagent\",\n          \"bbox\": [0.27, 0.10, 0.36, 0.14],\n          \"confidence\": 0.8\n        },\n        {\n          \"label\": \"Ac2O\",\n          \"smiles\": \"CC(=O)OC(C)=O\",\n          \"role\": \"reagent\",\n          \"bbox\": [0.31, 0.13, 0.37, 0.16],\n          \"confidence\": 0.85\n        },\n        {\n          \"label\": \"acid catalyst\",\n          \"smiles\": null,\n          \"role\": \"catalyst\",\n          \"bbox\": [0.31, 0.14, 0.40, 0.17],\n          \"confidence\": 0.8\n        }\n      ]\n    },\n    {\n      \"step_label\": \"FIG. I, step 2 (transpurination with acyclic sugar 4)\",\n      \"conditions_text\": \"acid catalyst, Ac2O\",\n      \"molecules\": [\n        {\n          \"label\": \"guanosine (2)\",\n          \"smiles\": \"NC1=NC2=C(N=CN2C2OC(CO)C(O)C2O)C(=O)N1\",\n          \"role\": \"reactant\",\n          \"bbox\": [0.16, 0.11, 0.30, 0.22],\n          \"confidence\": 0.85\n        },\n        {\n          \"label\": \"(4)\",\n          \"smiles\": \"CC(=O)OCCOCOC(C)=O\",\n          \"role\": \"reactant\",\n          \"bbox\": [0.29, 0.16, 0.40, 0.22],\n          \"confidence\": 0.7\n        },\n        {\n          \"label\": \"acid catalyst\",\n          \"smiles\": null,\n          \"role\": \"catalyst\",\n          \"bbox\": [0.41, 0.15, 0.50, 0.18],\n          \"confidence\": 0.85\n        },\n        {\n          \"label\": \"Ac2O\",\n          \"smiles\": \"CC(=O)OC(C)=O\",\n          \"role\": \"reagent\",\n          \"bbox\": [0.43, 0.18, 0.49, 0.21],\n          \"confidence\": 0.85\n        },\n        {\n          \"label\": \"9-isomer (5a)\",\n          \"smiles\": \"",
+            "mode": "scheme",
+            "transcribed_text": "",
+            "image_class": "scheme",
+            "step_label": "",
+            "characterizations": [
+              {
+                "compound_id": "5a",
+                "name": "9-isomer (5a)",
+                "yield_value": "30-48% (TABLE 1, depending on entry)",
+                "lcms": "N/A",
+                "notes": "TABLE 1 entries (% yield 5a): 48, 42, 40, 47, 30, 35, 33, 45"
+              },
+              {
+                "compound_id": "5b",
+                "name": "7-isomer (5b)",
+                "yield_value": "19-39% (TABLE 1, depending on entry)",
+                "lcms": "N/A",
+                "notes": "TABLE 1 entries (% yield 5b): 38, 35, 36, 38, 19, 21, 19, 39"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "reconcile",
+      "label": "Reconcile text + table + scheme + page-read",
+      "status": "done",
+      "detail": "Merged 7 steps (text=5, tables=0, schemes=4, page_read=0)",
+      "data": {
+        "steps": 7,
+        "text_steps": 5,
+        "table_steps": 0,
+        "scheme_steps": 4,
+        "page_read_steps": 0
+      }
+    },
+    {
+      "id": "standardize",
+      "label": "Chemical standardization",
+      "status": "done",
+      "detail": "14 already had SMILES; 20 name(s) could not be resolved; Standardized 4 reaction time(s) to minutes",
+      "data": {
+        "resolved": 0,
+        "validated": 0,
+        "invalid": 0,
+        "unresolved": 20,
+        "total_entities": 34,
+        "times_standardized": 4
+      }
+    }
+  ],
+  "document": {
+    "filename": "534e0aab8f4e40a4940684d676d273a8.pdf",
+    "page_count": 5,
+    "text": "This article was downloaded by: [University of Glasgow]\nOn: 12 April 2013, At: 03:59\nPublisher: Taylor & Francis\nInforma Ltd Registered in England and Wales Registered Number: 1072954 Registered\noffice: Mortimer House, 37-41 Mortimer Street, London W1T 3JH, UK\nNucleosides and Nucleotides\nPublication details, including instructions for authors and\nsubscription information:\nhttp://www.tandfonline.com/loi/lncn19\nSynthesis of 9-(2-\nHydroxyethoxymethyl)guanine\n(Acyclovir) from Guanosine\nHiroshi Shiragami a , Yoshihito Koguchi a , Yasuhiro Tanaka a , Satoshi\nTakamatsu a , Yumiko Uchida a , Takashi Ineyama a & Kunisuke Izawa\na\na Central Research Laboratories, Ajinomoto Co., Inc, 1-1 Suzuki-cho,\nKawasaki-ku, Kawasaki, 210, Japan\nVersion of record first published: 16 Feb 2007.\nTo cite this article: Hiroshi Shiragami , Yoshihito Koguchi , Yasuhiro Tanaka , Satoshi\nTakamatsu , Yumiko Uchida , Takashi Ineyama & Kunisuke Izawa (1995): Synthesis of 9-(2-\nHydroxyethoxymethyl)guanine (Acyclovir) from Guanosine, Nucleosides and Nucleotides, 14:3-5,\n337-340\nTo link to this article:  http://dx.doi.org/10.1080/15257779508012376\nPLEASE SCROLL DOWN FOR ARTICLE\nFull terms and conditions of use: http://www.tandfonline.com/page/terms-and-conditions\nThis article may be used for research, teaching, and private study purposes. Any\nsubstantial or systematic reproduction, redistribution, reselling, loan, sub-licensing,\nsystematic supply, or distribution in any form to anyone is expressly forbidden.\nThe publisher does not give any warranty express or implied or make any representation\nthat the contents will be complete or accurate or up to date. The accuracy of any\ninstructions, formulae, and drug doses should be independently verified with primary\nsources. The publisher shall not be liable for any loss, actions, claims, proceedings,\ndemand, or costs or damages whatsoever or howsoever caused arising directly or\nindirectly in connection with or arising out of the use of this material.\n\n\nNUCLEOSIDES & NUCLEOTIDES, 14(3-5), 337-340 (1995) \nSYNTHESIS OF 9-(2-HYDROXYETHOXYMETHYL)GUANINE \n(ACYCLOVIR) FROM GUANOSINE \nHiroshi Shiragami, Yoshihito Koguchi, Yasuhiro Tanaka, Satoshi Takamatsu, \nYumiko Uchida, Takashi Ineyama and Kunisuke Izawa* \nCentral Research Laboratories, Ajinomoto Co., Inc. \n1-1 Suzuki-cho, Kawasaki-ku, Kawasaki 210, Japan \nAbstract: A convenient synthesis of 9-(2-hydroxyethoxymethyl)guanine (acyclovir) from \nguanosine by chemical transpurination was developed. The isomerization of the 7-isomer \nto the desired 9-isomer and the purification of the 9-isomer was achieved simply by \nconcentration, heating and further crystallization. \nIntroduction \nThe discovery of 9-(2-hydroxyethoxymethyl)guanine (acyclovir)la-c (1) which has \npotent activity against herpes simplex type 1 and 2 viruses triggered a world wide effort to \nsynthesize guanine nucleosides and acyclic nucleoside analogues.2a-f Several methods for \nthe synthesis of acyclovir have been reported. Previously, Boryski and Golankiewicz \nreported3 transpurination of tetraa~etylguanosine~ \n(6), leading to 9- and 7-(2- \nacetoxyethoxymethyl)-N2-acetyIguanine (5). However, many problems occur when \nadapting this method for large-scale production, because it requires many steps and \nisolation of intermediary products, and has less regioselectivity. \nHere, we wish to report more convenient and economical synthesis of acyclovir (1) \nfrom natural g uanos i tie (2) by c hem ical t ran spu ri nat ion. \nResults and Disciission \nReacting 1,3-dioxolane (3) with acetic anhydride in the presence of acid catalyst \ngave (2-acetoxyethoxy)methyl acetate5 (4). The transpurination reaction of guanosine (2) \nwith this acyclic sugar moiety 4 in the presence of acetic anhydride and catalytic amount of \nacid gave a mixture of 9-(2-acetoxyethoxyrnethyl)-N~-acetylguanine \n(5a) and 742- \nacetoxyethoxymethyl)-N2-acetylguanine (5b) in high yield (FIG. I). Various acid catalysts \nwere applicable to the transpurination, as summarized in TABLE 1. The reaction proceeded \nwith or without solvent. \n337 \nCopyright 0 1995 by Marcel Defier, Inc. \nDownloaded by [University of Glasgow] at 03:59 12 April 2013 \n\n\n338 \nSHIRAGAMI ET AL. \nHO OH \nguanosine (2) \n7-isomer (5b) \n9-isomer (5a) \nisomerization \nFIG. I \nTABLE 1. Transpurinntion reaction from guanosine. \nconditions \nproducts \nadditives \ncatalysts \nsolvent temp. \ntime \n(% yield) \nP-TSOH*H~O \nH2S04 \nH2NPhS03H \nH3P04 \np-TsOH*H20 \np-TsOH.H20 \nH2NPhS03H \nHzP04 \n(\"C) \n100 \n1 00 \n100 \n100 \nMeCN \n82 \nDMF \n120 \nDMF \n120 \n100 \n24 \n24 \n24 \n48 \n24 \n24 \n24 \n5a \n48 \n42 \n40 \n47 \n30 \n35 \n33 \n45 \n5 b  \n38 - \n35 \n36 \n38 \n19 \n21 \n19 \n39 \na 0.1 equiv. of catalyst was used for the reaction. \nHPLC analysis of the reaction revealed that tetraacetylguanosine (6) was produced \nfirst and the transformation of 6 into 5 was observed subsequently. Indeed, the reaction \nstarting from the fully protected nucleoside 6 gave the comparable formation of 5 even in \nthe absence of acetic anhydride, but the transpurination of guanosine (2) itself did not \noccur without acetic anhydride (FIG. 11). \nSince the catalyst in the synthesis of the acyclic sugar moiety 4 could be the same \nas that used in transpurination, the one pot reaction of guanosine with 1,3-dioxolane (3) \nand acetic anhydride in the presence of acid catalyst gave similar results (TABLE 1). \nTo obtain the desired, biologically active N-9 isomer 5a exclusively, isomerization \nof the N-7 isomer 5 b  to 5n is required. This was realized by distilling off volatile \nDownloaded by [University of Glasgow] at 03:59 12 April 2013 \n\n\nSYNTHESIS OF ACYCLOVIR FROM GUANOSINE \n339 \nAcO OAc \n(6) \n(4) \n9-isomer (5a) (42%) \n7-isomer (5b) (30%) \ne \npTsOH*HzO a- \nNo Reaction \n100 C . 4 8 h .  \nFIG. II \nTABLE 2. Isomer ratios in the process. \nconditions \nprocedure \ntemp. \ntime \npressure \n947- isomer \n(\"C) \n(h) \n(mmHg) \nratioa \nTranspurinat ionb \n90-100 \n19.0 \n760 \n1.45 \nConcentration \n90-100 \n1.0 \n30-40 \nc.a. 2.0 \nIsomerization \n90-100 \n3.0 \n30 \n6.34 \n90-100 \n22.5 \n30 \n17.1 \nCrystallization \n25 \n1.0 \n760 \n120 \na The ratios were calculated based on HPLC peak area. \nb Giianosine (2) was reacted with 1,3-dioxolane (3) (2 equiv.) and \nAc2O (7 equiv.) in the presence of p-TsOHoH20 (0.1 equiv.). \ncomponents from the reaction mixture, followed by heating the residue at 100 \"C under \nreduced pressure (FIG. I). These isomerization conditions were considerably milder than \nthose reported previously3 and afforded a much higher N-9/N-7 ratio. After the \nisomerization, by adding an appropriate solvent such as ethyl acetate, acetonitrile or water \nto the residue, 5a was crystallized selectively from the concentrate (TABLE 2). \nTreating 5a with aqueous sodium hydroxide followed by neutralization with \nhydrochloric acid gave acyclovir (I) in 92% yield with high isomeric purity, which means \nthat the overall yield of I from guanosine was 78%. \nExperimental \n9-(2-acetoxyethoxymethyl)-N2-acetylguanine (5a) \nTo 50 g (176.5 mmol) of guanosine were added 62 g (353 mmol) of 4, 180 g \n(1.75 mol) of acetic anhydride and 3.4 g (17.5 mmol) of p-toluenesulfonic acid \nDownloaded by [University of Glasgow] at 03:59 12 April 2013 \n\n\n340 \nSHIRAGAMI ET AL. \nmonohydrate, and the mixture was stirred at 100 \"C for 20 h. The reaction mixture was \nconcentrated under reduced pressure (10 mmHg) at 50 \"C for 1 h. The resulting residue \nwas stirred at 100 \"C under reduced pressure (10 mmHg) for 20 h. The mixture was cooled \nto room temperature and 100 mL of ethyl acetate was added, and stirred further for 1 h. \nThe crystals were separated by filtration, washed with ethyl acetate (20 mL), and dried \nunder reduced pressure. The crude crystals (53 g) contained 46.9 g of 5a (86% yield), \naccompanied with 270 mg (0.5%) of 511, which were determined by HPLC. \n9-[2-(hydroxyethoxy)methyl]guanine (1) (acyclovir) \n10 g of crude crystals containing 5a were dissolved in 100 mL of 5% aqueous \nNaOH and the mixture was stirred at room temperature overnight. The reaction mixture \nwas neutralized by 1M HC1 and the resulting precipitate was filtered to provide 6.4 g of 1 \n(92% yield): m.p. 247-248 \"C; hmax(H20) 252 nm (E 12127); hmin(H20) 221 nm (E \n2298); lH NMR(400MHz, Me2SO-dg) 6 3.47 (4H, s, H-3', 47, 4.67 (lH, brs, OH), \n5.35 (2H, s, H-l'), 6.50 (2H, brs, NH2), 7.81 (lH, s, H-8), 10.63 (lH, brs, CONH). \n13C NMR (400 MHz, Me2SO-dg) 6 60.14 (C-4'), 70.62 (C-3'), 72.27 (C-l'), 116.73 \n(C-5), 138.00 (C-8), 15 1.67 (C-4), 154.1 1 (C-2), 157.05 (C-6); fast atom bombardment \nmass spectrum, m/z 226 (MH+). Anal. Calcd. for CsHllN503: C, 42.67; H, 4.92; N, \n31.10. Found: C, 42.39; H, 4.98; N, 30.95. \nREFERENCES \n1. (a) Elion, G. B.; Furman, P. A.; Fyfe, J. A.; de Miranda, P.; Beauchamp, L.; \nSchaeffer, H. J. Proc. Natl. Acod. Sci. USA, 1977, 74, 5716. \n(b) Schaeffer, H. J.; Beauchamp, L.; de Miranda, P.; Elion, C. B.; Bauer, D. J.; \nCollins, P. Nature, 1978, 272, 583. \n(c) Kelley J. L.; Schaeffer, H. J. .I. Hetcrocycl. Chem., 1986, 23(1), 271. \n2. (a) Chu, C. K.; Cutler, S. J. $1. Hcterocycl. Chcm., 1986, 23, 289. \n(b) Moorman, A. R.; Hill, J. A. ,I. Labelled Compd. Radiopharm, 1988,25(9), 963. \n(c) Kusmierek, J. T.; Czochralska, B.; Johansson, N. G.; Shugar, D. Acta Chem. \nScand, Ser. B., 1987, B41(10), 701. \n(d) Krenitsky, T. A,; Hall, W. W.; Pauro, D. M.; Beauchamp, L. M.; Schaeffer, H. \nJ.; Whiteman, P. D. Proc. Nutl. Acad. Sci. USA, 1984,8(10), 3209. \n(e) Matsumoto, H.; Kaneko, K. T.; Mori, T.; Mizuno, Y. Chem. Pharm. Bull., 1989, \n37(1), 229. \n(0 \nKaneko, C.; Matsurnoto, H.; Yarnada, K.; Takeuchi, T.; Mori, T.; Mizuno, Y. \nChem. Pharm Bit/l., 1988, 36(4), 1283. \n3. Boryski, J; Golankiewicz, R. Niiclcosides & Nucleotides, 1987, 6, 385 and 1989, 8, \n529. The 7-isomer was converted to a 55:45 mixture of the 9- and 7-isomers by heating \nat 230 \"C for 5 niin without catalyst. \n4. Reese, C. B.; Saffhill, R. J. .I. Chcm. Soc., Pcrkin Trans. 11, 1972, 2937. \n5. Senkus, M. .I. Am. Clicm. Soc., 1946,661, 734. \nDownloaded by [University of Glasgow] at 03:59 12 April 2013 \n",
+    "segments": [
+      {
+        "segment_id": "page-1",
+        "kind": "procedure_candidate",
+        "page_start": 1,
+        "page_end": 1,
+        "text": "This article was downloaded by: [University of Glasgow]\nOn: 12 April 2013, At: 03:59\nPublisher: Taylor & Francis\nInforma Ltd Registered in England and Wales Registered Number: 1072954 Registered\noffice: Mortimer House, 37-41 Mortimer Street, London W1T 3JH, UK\nNucleosides and Nucleotides\nPublication details, including instructions for authors and\nsubscription information:\nhttp://www.tandfonline.com/loi/lncn19\nSynthesis of 9-(2-\nHydroxyethoxymethyl)guanine\n(Acyclovir) from Guanosine\nHiroshi Shiragami a , Yoshihito Koguchi a , Yasuhiro Tanaka a , Satoshi\nTakamatsu a , Yumiko Uchida a , Takashi Ineyama a & Kunisuke Izawa\na\na Central Research Laboratories, Ajinomoto Co., Inc, 1-1 Suzuki-cho,\nKawasaki-ku, Kawasaki, 210, Japan\nVersion of record first published: 16 Feb 2007.\nTo cite this article: Hiroshi Shiragami , Yoshihito Koguchi , Yasuhiro Tanaka , Satoshi\nTakamatsu , Yumiko Uchida , Takashi Ineyama & Kunisuke Izawa (1995): Synthesis of 9-(2-\nHydroxyethoxymethyl)guanine (Acyclovir) from Guanosine, Nucleosides and Nucleotides, 14:3-5,\n337-340\nTo link to this article:  http://dx.doi.org/10.1080/15257779508012376\nPLEASE SCROLL DOWN FOR ARTICLE\nFull terms and conditions of use: http://www.tandfonline.com/page/terms-and-conditions\nThis article may be used for research, teaching, and private study purposes. Any\nsubstantial or systematic reproduction, redistribution, reselling, loan, sub-licensing,\nsystematic supply, or distribution in any form to anyone is expressly forbidden.\nThe publisher does not give any warranty express or implied or make any representation\nthat the contents will be complete or accurate or up to date. The accuracy of any\ninstructions, formulae, and drug doses should be independently verified with primary\nsources. The publisher shall not be liable for any loss, actions, claims, proceedings,\ndemand, or costs or damages whatsoever or howsoever caused arising directly or\nindirectly in connection with or arising out of the use of this material.",
+        "meta": {
+          "char_count": 1988,
+          "source": "native",
+          "synthesis_score": 0.55,
+          "section": "body",
+          "evidence_types": [
+            {
+              "type": "compound_preparation",
+              "confidence": 0.5
+            },
+            {
+              "type": "experimental_procedure",
+              "confidence": 0.6
+            }
+          ],
+          "document_type": "paper",
+          "procedure_pages": [
+            1,
+            2,
+            4,
+            5
+          ],
+          "high_evidence_pages": [
+            4,
+            5
+          ],
+          "ocr_used": false,
+          "ocr_backend": "",
+          "native_char_count": 10037,
+          "final_char_count": 10045,
+          "evidence_profile": {
+            "document_type": "paper",
+            "procedure_pages": [
+              1,
+              2,
+              4,
+              5
+            ],
+            "high_evidence_pages": [
+              4,
+              5
+            ],
+            "low_evidence_pages": [],
+            "total_chars": 10028,
+            "pages": [
+              {
+                "page": 1,
+                "char_count": 1987,
+                "section": "body",
+                "synthesis_score": 0.55,
+                "evidence_types": [
+                  {
+                    "type": "compound_preparation",
+                    "confidence": 0.5
+                  },
+                  {
+                    "type": "experimental_procedure",
+                    "confidence": 0.6
+                  }
+                ]
+              },
+              {
+                "page": 2,
+                "char_count": 2185,
+                "section": "abstract",
+                "synthesis_score": 0.55,
+                "evidence_types": [
+                  {
+                    "type": "compound_preparation",
+                    "confidence": 0.5
+                  },
+                  {
+                    "type": "reaction_table",
+                    "confidence": 0.5
+                  },
+                  {
+                    "type": "background",
+                    "confidence": 1.0
+                  },
+                  {
+                    "type": "abstract_claim",
+                    "confidence": 0.5
+                  },
+                  {
+                    "type": "experimental_procedure",
+                    "confidence": 0.6
+                  }
+                ]
+              },
+              {
+                "page": 3,
+                "char_count": 1416,
+                "section": "tables",
+                "synthesis_score": 0.5,
+                "evidence_types": [
+                  {
+                    "type": "analytical_characterization",
+                    "confidence": 1.0
+                  },
+                  {
+                    "type": "compound_preparation",
+                    "confidence": 0.5
+                  },
+                  {
+                    "type": "reaction_table",
+                    "confidence": 0.5
+                  }
+                ]
+              },
+              {
+                "page": 4,
+                "char_count": 1585,
+                "section": "experimental",
+                "synthesis_score": 0.967,
+                "evidence_types": [
+                  {
+                    "type": "experimental_procedure",
+                    "confidence": 0.817
+                  },
+                  {
+                    "type": "analytical_characterization",
+                    "confidence": 1.0
+                  },
+                  {
+                    "type": "compound_preparation",
+                    "confidence": 0.5
+                  },
+                  {
+                    "type": "reaction_table",
+                    "confidence": 0.5
+                  },
+                  {
+                    "type": "reaction_conditions",
+                    "confidence": 0.333
+                  }
+                ]
+              },
+              {
+                "page": 5,
+                "char_count": 2855,
+                "section": "experimental",
+                "synthesis_score": 0.844,
+                "evidence_types": [
+                  {
+                    "type": "reaction_conditions",
+                    "confidence": 0.817
+                  },
+                  {
+                    "type": "analytical_characterization",
+                    "confidence": 1.0
+                  },
+                  {
+                    "type": "experimental_procedure",
+                    "confidence": 0.333
+                  },
+                  {
+                    "type": "references",
+                    "confidence": 1.0
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "segment_id": "page-2",
+        "kind": "procedure_candidate",
+        "page_start": 2,
+        "page_end": 2,
+        "text": "NUCLEOSIDES & NUCLEOTIDES, 14(3-5), 337-340 (1995) \nSYNTHESIS OF 9-(2-HYDROXYETHOXYMETHYL)GUANINE \n(ACYCLOVIR) FROM GUANOSINE \nHiroshi Shiragami, Yoshihito Koguchi, Yasuhiro Tanaka, Satoshi Takamatsu, \nYumiko Uchida, Takashi Ineyama and Kunisuke Izawa* \nCentral Research Laboratories, Ajinomoto Co., Inc. \n1-1 Suzuki-cho, Kawasaki-ku, Kawasaki 210, Japan \nAbstract: A convenient synthesis of 9-(2-hydroxyethoxymethyl)guanine (acyclovir) from \nguanosine by chemical transpurination was developed. The isomerization of the 7-isomer \nto the desired 9-isomer and the purification of the 9-isomer was achieved simply by \nconcentration, heating and further crystallization. \nIntroduction \nThe discovery of 9-(2-hydroxyethoxymethyl)guanine (acyclovir)la-c (1) which has \npotent activity against herpes simplex type 1 and 2 viruses triggered a world wide effort to \nsynthesize guanine nucleosides and acyclic nucleoside analogues.2a-f Several methods for \nthe synthesis of acyclovir have been reported. Previously, Boryski and Golankiewicz \nreported3 transpurination of tetraa~etylguanosine~ \n(6), leading to 9- and 7-(2- \nacetoxyethoxymethyl)-N2-acetyIguanine (5). However, many problems occur when \nadapting this method for large-scale production, because it requires many steps and \nisolation of intermediary products, and has less regioselectivity. \nHere, we wish to report more convenient and economical synthesis of acyclovir (1) \nfrom natural g uanos i tie (2) by c hem ical t ran spu ri nat ion. \nResults and Disciission \nReacting 1,3-dioxolane (3) with acetic anhydride in the presence of acid catalyst \ngave (2-acetoxyethoxy)methyl acetate5 (4). The transpurination reaction of guanosine (2) \nwith this acyclic sugar moiety 4 in the presence of acetic anhydride and catalytic amount of \nacid gave a mixture of 9-(2-acetoxyethoxyrnethyl)-N~-acetylguanine \n(5a) and 742- \nacetoxyethoxymethyl)-N2-acetylguanine (5b) in high yield (FIG. I). Various acid catalysts \nwere applicable to the transpurination, as summarized in TABLE 1. The reaction proceeded \nwith or without solvent. \n337 \nCopyright 0 1995 by Marcel Defier, Inc. \nDownloaded by [University of Glasgow] at 03:59 12 April 2013",
+        "meta": {
+          "char_count": 2187,
+          "source": "native",
+          "synthesis_score": 0.55,
+          "section": "abstract",
+          "evidence_types": [
+            {
+              "type": "compound_preparation",
+              "confidence": 0.5
+            },
+            {
+              "type": "reaction_table",
+              "confidence": 0.5
+            },
+            {
+              "type": "background",
+              "confidence": 1.0
+            },
+            {
+              "type": "abstract_claim",
+              "confidence": 0.5
+            },
+            {
+              "type": "experimental_procedure",
+              "confidence": 0.6
+            }
+          ]
+        }
+      },
+      {
+        "segment_id": "page-3",
+        "kind": "procedure_candidate",
+        "page_start": 3,
+        "page_end": 3,
+        "text": "338 \nSHIRAGAMI ET AL. \nHO OH \nguanosine (2) \n7-isomer (5b) \n9-isomer (5a) \nisomerization \nFIG. I \nTABLE 1. Transpurinntion reaction from guanosine. \nconditions \nproducts \nadditives \ncatalysts \nsolvent temp. \ntime \n(% yield) \nP-TSOH*H~O \nH2S04 \nH2NPhS03H \nH3P04 \np-TsOH*H20 \np-TsOH.H20 \nH2NPhS03H \nHzP04 \n(\"C) \n100 \n1 00 \n100 \n100 \nMeCN \n82 \nDMF \n120 \nDMF \n120 \n100 \n24 \n24 \n24 \n48 \n24 \n24 \n24 \n5a \n48 \n42 \n40 \n47 \n30 \n35 \n33 \n45 \n5 b  \n38 - \n35 \n36 \n38 \n19 \n21 \n19 \n39 \na 0.1 equiv. of catalyst was used for the reaction. \nHPLC analysis of the reaction revealed that tetraacetylguanosine (6) was produced \nfirst and the transformation of 6 into 5 was observed subsequently. Indeed, the reaction \nstarting from the fully protected nucleoside 6 gave the comparable formation of 5 even in \nthe absence of acetic anhydride, but the transpurination of guanosine (2) itself did not \noccur without acetic anhydride (FIG. 11). \nSince the catalyst in the synthesis of the acyclic sugar moiety 4 could be the same \nas that used in transpurination, the one pot reaction of guanosine with 1,3-dioxolane (3) \nand acetic anhydride in the presence of acid catalyst gave similar results (TABLE 1). \nTo obtain the desired, biologically active N-9 isomer 5a exclusively, isomerization \nof the N-7 isomer 5 b  to 5n is required. This was realized by distilling off volatile \nDownloaded by [University of Glasgow] at 03:59 12 April 2013",
+        "meta": {
+          "char_count": 1418,
+          "source": "native",
+          "synthesis_score": 0.5,
+          "section": "tables",
+          "evidence_types": [
+            {
+              "type": "analytical_characterization",
+              "confidence": 1.0
+            },
+            {
+              "type": "compound_preparation",
+              "confidence": 0.5
+            },
+            {
+              "type": "reaction_table",
+              "confidence": 0.5
+            }
+          ]
+        }
+      },
+      {
+        "segment_id": "page-4",
+        "kind": "procedure_candidate",
+        "page_start": 4,
+        "page_end": 4,
+        "text": "SYNTHESIS OF ACYCLOVIR FROM GUANOSINE \n339 \nAcO OAc \n(6) \n(4) \n9-isomer (5a) (42%) \n7-isomer (5b) (30%) \ne \npTsOH*HzO a- \nNo Reaction \n100 C . 4 8 h .  \nFIG. II \nTABLE 2. Isomer ratios in the process. \nconditions \nprocedure \ntemp. \ntime \npressure \n947- isomer \n(\"C) \n(h) \n(mmHg) \nratioa \nTranspurinat ionb \n90-100 \n19.0 \n760 \n1.45 \nConcentration \n90-100 \n1.0 \n30-40 \nc.a. 2.0 \nIsomerization \n90-100 \n3.0 \n30 \n6.34 \n90-100 \n22.5 \n30 \n17.1 \nCrystallization \n25 \n1.0 \n760 \n120 \na The ratios were calculated based on HPLC peak area. \nb Giianosine (2) was reacted with 1,3-dioxolane (3) (2 equiv.) and \nAc2O (7 equiv.) in the presence of p-TsOHoH20 (0.1 equiv.). \ncomponents from the reaction mixture, followed by heating the residue at 100 \"C under \nreduced pressure (FIG. I). These isomerization conditions were considerably milder than \nthose reported previously3 and afforded a much higher N-9/N-7 ratio. After the \nisomerization, by adding an appropriate solvent such as ethyl acetate, acetonitrile or water \nto the residue, 5a was crystallized selectively from the concentrate (TABLE 2). \nTreating 5a with aqueous sodium hydroxide followed by neutralization with \nhydrochloric acid gave acyclovir (I) in 92% yield with high isomeric purity, which means \nthat the overall yield of I from guanosine was 78%. \nExperimental \n9-(2-acetoxyethoxymethyl)-N2-acetylguanine (5a) \nTo 50 g (176.5 mmol) of guanosine were added 62 g (353 mmol) of 4, 180 g \n(1.75 mol) of acetic anhydride and 3.4 g (17.5 mmol) of p-toluenesulfonic acid \nDownloaded by [University of Glasgow] at 03:59 12 April 2013",
+        "meta": {
+          "char_count": 1587,
+          "source": "native",
+          "synthesis_score": 0.9666666666666667,
+          "section": "experimental",
+          "evidence_types": [
+            {
+              "type": "experimental_procedure",
+              "confidence": 0.8166666666666667
+            },
+            {
+              "type": "analytical_characterization",
+              "confidence": 1.0
+            },
+            {
+              "type": "compound_preparation",
+              "confidence": 0.5
+            },
+            {
+              "type": "reaction_table",
+              "confidence": 0.5
+            },
+            {
+              "type": "reaction_conditions",
+              "confidence": 0.3333333333333333
+            }
+          ]
+        }
+      },
+      {
+        "segment_id": "page-5",
+        "kind": "body",
+        "page_start": 5,
+        "page_end": 5,
+        "text": "340 \nSHIRAGAMI ET AL. \nmonohydrate, and the mixture was stirred at 100 \"C for 20 h. The reaction mixture was \nconcentrated under reduced pressure (10 mmHg) at 50 \"C for 1 h. The resulting residue \nwas stirred at 100 \"C under reduced pressure (10 mmHg) for 20 h. The mixture was cooled \nto room temperature and 100 mL of ethyl acetate was added, and stirred further for 1 h. \nThe crystals were separated by filtration, washed with ethyl acetate (20 mL), and dried \nunder reduced pressure. The crude crystals (53 g) contained 46.9 g of 5a (86% yield), \naccompanied with 270 mg (0.5%) of 511, which were determined by HPLC. \n9-[2-(hydroxyethoxy)methyl]guanine (1) (acyclovir) \n10 g of crude crystals containing 5a were dissolved in 100 mL of 5% aqueous \nNaOH and the mixture was stirred at room temperature overnight. The reaction mixture \nwas neutralized by 1M HC1 and the resulting precipitate was filtered to provide 6.4 g of 1 \n(92% yield): m.p. 247-248 \"C; hmax(H20) 252 nm (E 12127); hmin(H20) 221 nm (E \n2298); lH NMR(400MHz, Me2SO-dg) 6 3.47 (4H, s, H-3', 47, 4.67 (lH, brs, OH), \n5.35 (2H, s, H-l'), 6.50 (2H, brs, NH2), 7.81 (lH, s, H-8), 10.63 (lH, brs, CONH). \n13C NMR (400 MHz, Me2SO-dg) 6 60.14 (C-4'), 70.62 (C-3'), 72.27 (C-l'), 116.73 \n(C-5), 138.00 (C-8), 15 1.67 (C-4), 154.1 1 (C-2), 157.05 (C-6); fast atom bombardment \nmass spectrum, m/z 226 (MH+). Anal. Calcd. for CsHllN503: C, 42.67; H, 4.92; N, \n31.10. Found: C, 42.39; H, 4.98; N, 30.95. \nREFERENCES \n1. (a) Elion, G. B.; Furman, P. A.; Fyfe, J. A.; de Miranda, P.; Beauchamp, L.; \nSchaeffer, H. J. Proc. Natl. Acod. Sci. USA, 1977, 74, 5716. \n(b) Schaeffer, H. J.; Beauchamp, L.; de Miranda, P.; Elion, C. B.; Bauer, D. J.; \nCollins, P. Nature, 1978, 272, 583. \n(c) Kelley J. L.; Schaeffer, H. J. .I. Hetcrocycl. Chem., 1986, 23(1), 271. \n2. (a) Chu, C. K.; Cutler, S. J. $1. Hcterocycl. Chcm., 1986, 23, 289. \n(b) Moorman, A. R.; Hill, J. A. ,I. Labelled Compd. Radiopharm, 1988,25(9), 963. \n(c) Kusmierek, J. T.; Czochralska, B.; Johansson, N. G.; Shugar, D. Acta Chem. \nScand, Ser. B., 1987, B41(10), 701. \n(d) Krenitsky, T. A,; Hall, W. W.; Pauro, D. M.; Beauchamp, L. M.; Schaeffer, H. \nJ.; Whiteman, P. D. Proc. Nutl. Acad. Sci. USA, 1984,8(10), 3209. \n(e) Matsumoto, H.; Kaneko, K. T.; Mori, T.; Mizuno, Y. Chem. Pharm. Bull., 1989, \n37(1), 229. \n(0 \nKaneko, C.; Matsurnoto, H.; Yarnada, K.; Takeuchi, T.; Mori, T.; Mizuno, Y. \nChem. Pharm Bit/l., 1988, 36(4), 1283. \n3. Boryski, J; Golankiewicz, R. Niiclcosides & Nucleotides, 1987, 6, 385 and 1989, 8, \n529. The 7-isomer was converted to a 55:45 mixture of the 9- and 7-isomers by heating \nat 230 \"C for 5 niin without catalyst. \n4. Reese, C. B.; Saffhill, R. J. .I. Chcm. Soc., Pcrkin Trans. 11, 1972, 2937. \n5. Senkus, M. .I. Am. Clicm. Soc., 1946,661, 734. \nDownloaded by [University of Glasgow] at 03:59 12 April 2013",
+        "meta": {
+          "char_count": 2857,
+          "source": "native",
+          "synthesis_score": 0.8441666666666666,
+          "section": "experimental",
+          "evidence_types": [
+            {
+              "type": "reaction_conditions",
+              "confidence": 0.8166666666666667
+            },
+            {
+              "type": "analytical_characterization",
+              "confidence": 1.0
+            },
+            {
+              "type": "experimental_procedure",
+              "confidence": 0.3333333333333333
+            },
+            {
+              "type": "references",
+              "confidence": 1.0
+            }
+          ]
+        }
+      }
+    ],
+    "figure_count": 5,
+    "table_hints": []
+  },
+  "route": {
+    "title": "Synthesis of 9-(2-Hydroxyethoxymethyl)guanine (Acyclovir) from Guanosine",
+    "target_name": "9-(2-hydroxyethoxymethyl)guanine (acyclovir)",
+    "target_class": "nucleoside analog (acyclic guanine nucleoside analog)",
+    "document_type": "paper",
+    "steps": [
+      {
+        "step_index": 1,
+        "step_label": "Preparation of acyclic sugar moiety (2-acetoxyethoxy)methyl acetate (4)",
+        "reactants": [
+          {
+            "name": "1,3-dioxolane",
+            "role": "reactant",
+            "amount": "N/A (2 equiv. relative to guanosine in one-pot variant)",
+            "smiles": "C1COCO1",
+            "cas": null,
+            "notes": "original_name: 1,3-dioxolane (3)",
+            "evidence": null
+          },
+          {
+            "name": "acetic anhydride",
+            "role": "reactant",
+            "amount": "N/A (7 equiv. relative to guanosine in one-pot variant)",
+            "smiles": "CC(=O)OC(C)=O",
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "reagents": [],
+        "catalysts": [
+          {
+            "name": "acid catalyst (e.g. p-toluenesulfonic acid monohydrate; also H2SO4, sulfanilic acid (H2NPhSO3H), H3PO4)",
+            "role": "catalyst",
+            "amount": "0.1 equiv. (in tabulated reactions)",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "ligands": [],
+        "solvents": [
+          {
+            "name": "none / neat (reaction proceeded with or without solvent; MeCN or DMF also used in Table 1)",
+            "role": "solvent",
+            "amount": "N/A",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "intermediates": [
+          {
+            "name": "(2-acetoxyethoxy)methyl acetate",
+            "role": "intermediate",
+            "amount": "N/A",
+            "smiles": "CC(=O)OCCOCOC(C)=O",
+            "cas": null,
+            "notes": "original_name: (2-acetoxyethoxy)methyl acetate (4)",
+            "evidence": null
+          }
+        ],
+        "products": [
+          {
+            "name": "(2-acetoxyethoxy)methyl acetate",
+            "role": "intermediate",
+            "amount": "N/A",
+            "smiles": "CC(=O)OCCOCOC(C)=O",
+            "cas": null,
+            "notes": "original_name: (2-acetoxyethoxy)methyl acetate (4)",
+            "evidence": null
+          }
+        ],
+        "conditions": {
+          "temperature": "N/A (one-pot transpurination variant run at 100 °C)",
+          "time": "N/A",
+          "pressure": "atmospheric",
+          "atmosphere": "N/A",
+          "other": "Catalyst for making 4 can be the same as that used in transpurination, enabling a one-pot process with guanosine"
+        },
+        "yield_value": "N/A",
+        "ee_or_dr": "N/A",
+        "notes": "General procedure only (ref. 5); no isolated amounts reported. Table 1 shows one-pot reaction of guanosine with 1,3-dioxolane and Ac2O gave similar results to the two-step route.",
+        "evidence": "Reacting 1,3-dioxolane (3) with acetic anhydride in the presence of acid catalyst gave (2-acetoxyethoxy)methyl acetate (4).",
+        "source": "",
+        "confidence": 0.6,
+        "evidence_refs": []
+      },
+      {
+        "step_index": 2,
+        "step_label": "Experimental: transpurination of guanosine with 4 → mixture of 9-isomer (5a) and 7-isomer (5b)",
+        "reactants": [
+          {
+            "name": "guanosine",
+            "role": "reactant",
+            "amount": "50 g (176.5 mmol)",
+            "smiles": "NC1=NC2=C(N=CN2[C@@H]2O[C@H](CO)[C@@H](O)[C@H]2O)C(=O)N1",
+            "cas": null,
+            "notes": "original_name: guanosine (2)",
+            "evidence": null
+          },
+          {
+            "name": "(2-acetoxyethoxy)methyl acetate",
+            "role": "reactant",
+            "amount": "62 g (353 mmol)",
+            "smiles": "CC(=O)OCCOCOC(C)=O",
+            "cas": null,
+            "notes": "original_name: (2-acetoxyethoxy)methyl acetate (4)",
+            "evidence": null
+          },
+          {
+            "name": "acetic anhydride",
+            "role": "reactant",
+            "amount": "180 g (1.75 mol)",
+            "smiles": "CC(=O)OC(C)=O",
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "reagents": [],
+        "catalysts": [
+          {
+            "name": "p-toluenesulfonic acid",
+            "role": "catalyst",
+            "amount": "3.4 g (17.5 mmol)",
+            "smiles": null,
+            "cas": null,
+            "notes": "original_name: p-toluenesulfonic acid monohydrate",
+            "evidence": null
+          }
+        ],
+        "ligands": [],
+        "solvents": [
+          {
+            "name": "none (neat, acetic anhydride serves as medium)",
+            "role": "solvent",
+            "amount": "N/A",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "intermediates": [
+          {
+            "name": "tetraacetylguanosine",
+            "role": "intermediate",
+            "amount": "N/A",
+            "smiles": null,
+            "cas": null,
+            "notes": "original_name: tetraacetylguanosine (6)",
+            "evidence": null
+          }
+        ],
+        "products": [
+          {
+            "name": "9-(2-acetoxyethoxymethyl)-N2-acetylguanine",
+            "role": "product",
+            "amount": "N/A at this stage",
+            "smiles": null,
+            "cas": null,
+            "notes": "original_name: 9-(2-acetoxyethoxymethyl)-N2-acetylguanine (5a)",
+            "evidence": null
+          },
+          {
+            "name": "7-(2-acetoxyethoxymethyl)-N2-acetylguanine",
+            "role": "byproduct",
+            "amount": "N/A at this stage",
+            "smiles": null,
+            "cas": null,
+            "notes": "original_name: 7-(2-acetoxyethoxymethyl)-N2-acetylguanine (5b)",
+            "evidence": null
+          }
+        ],
+        "conditions": {
+          "temperature": "100 °C (Table 2: 90–100 °C)",
+          "time": "1200 minutes",
+          "pressure": "atmospheric (760 mmHg)",
+          "atmosphere": "N/A",
+          "other": "HPLC showed tetraacetylguanosine (6) forms first, then converts to 5; transpurination of guanosine does not occur without acetic anhydride; 9/7-isomer ratio ca. 1.45 after transpurination"
+        },
+        "yield_value": "N/A (isomer mixture; Table 1: 5a 48%, 5b 38% with p-TsOH·H2O)",
+        "ee_or_dr": "9/7-isomer ratio 1.45 (HPLC peak area)",
+        "notes": "Various acid catalysts applicable (p-TsOH·H2O, H2SO4, sulfanilic acid, H3PO4); solvent optional (MeCN 82 °C, DMF 120 °C)",
+        "evidence": "To 50 g (176.5 mmol) of guanosine were added 62 g (353 mmol) of 4, 180 g (1.75 mol) of acetic anhydride and 3.4 g (17.5 mmol) of p-toluenesulfonic acid monohydrate, and the mixture was stirred at 100 °C for 20 h.",
+        "source": "",
+        "confidence": 0.95,
+        "evidence_refs": []
+      },
+      {
+        "step_index": 3,
+        "step_label": "Concentration and thermal isomerization of 7-isomer (5b) to 9-isomer (5a)",
+        "reactants": [
+          {
+            "name": "crude reaction mixture containing 5a and 5b",
+            "role": "reactant",
+            "amount": "from step 2",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "reagents": [],
+        "catalysts": [
+          {
+            "name": "residual p-toluenesulfonic acid",
+            "role": "catalyst",
+            "amount": "N/A",
+            "smiles": null,
+            "cas": null,
+            "notes": "original_name: residual p-toluenesulfonic acid (from step 2)",
+            "evidence": null
+          }
+        ],
+        "ligands": [],
+        "solvents": [],
+        "intermediates": [],
+        "products": [
+          {
+            "name": "residue enriched in 9-(2-acetoxyethoxymethyl)-N2-acetylguanine",
+            "role": "product",
+            "amount": "N/A",
+            "smiles": null,
+            "cas": null,
+            "notes": "original_name: residue enriched in 9-(2-acetoxyethoxymethyl)-N2-acetylguanine (5a)",
+            "evidence": null
+          }
+        ],
+        "conditions": {
+          "temperature": "50 °C (concentration); 100 °C (isomerization); Table 2: 90–100 °C",
+          "time": "60 minutes, 1200 minutes",
+          "pressure": "10 mmHg (Table 2: 30–40 mmHg)",
+          "atmosphere": "N/A",
+          "other": "Volatile components distilled off, then residue heated under reduced pressure; conditions milder than previously reported (230 °C, 5 min)"
+        },
+        "yield_value": "N/A",
+        "ee_or_dr": "9/7 ratio increased from ~1.45 to ~17.1",
+        "notes": "Isomerization achieved simply by concentration and heating under reduced pressure",
+        "evidence": "The reaction mixture was concentrated under reduced pressure (10 mmHg) at 50 °C for 1 h. The resulting residue was stirred at 100 °C under reduced pressure (10 mmHg) for 20 h.",
+        "source": "",
+        "confidence": 0.6,
+        "evidence_refs": []
+      },
+      {
+        "step_index": 4,
+        "step_label": "Crystallization/purification of 5a from ethyl acetate",
+        "reactants": [
+          {
+            "name": "isomerized residue containing 5a",
+            "role": "reactant",
+            "amount": "from step 3",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "reagents": [],
+        "catalysts": [],
+        "ligands": [],
+        "solvents": [
+          {
+            "name": "ethyl acetate",
+            "role": "solvent",
+            "amount": "100 mL (plus 20 mL wash)",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "intermediates": [],
+        "products": [
+          {
+            "name": "9-(2-acetoxyethoxymethyl)-N2-acetylguanine (5a), crude crystals",
+            "role": "product",
+            "amount": "53 g crude containing 46.9 g of 5a",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "conditions": {
+          "temperature": "cooled to room temperature (25 °C)",
+          "time": "60 minutes",
+          "pressure": "760 mmHg; drying under reduced pressure",
+          "atmosphere": "N/A",
+          "other": "Crystals filtered, washed with ethyl acetate (20 mL), dried under reduced pressure; alternative crystallization solvents: acetonitrile or water; 9/7 ratio after crystallization 120"
+        },
+        "yield_value": "86% (46.9 g of 5a)",
+        "ee_or_dr": "9/7-isomer ratio 120; contains 270 mg (0.5%) of 7-isomer",
+        "notes": "Purity determined by HPLC; 5a crystallizes selectively from the concentrate",
+        "evidence": "The crude crystals (53 g) contained 46.9 g of 5a (86% yield), accompanied with 270 mg (0.5%) of 5b, which were determined by HPLC.",
+        "source": "",
+        "confidence": 0.95,
+        "evidence_refs": []
+      },
+      {
+        "step_index": 5,
+        "step_label": "Deacetylation with aqueous NaOH and neutralization with HCl → acyclovir (1)",
+        "reactants": [
+          {
+            "name": "crude crystals containing 9-(2-acetoxyethoxymethyl)-N2-acetylguanine",
+            "role": "reactant",
+            "amount": "10 g",
+            "smiles": null,
+            "cas": null,
+            "notes": "original_name: crude crystals containing 9-(2-acetoxyethoxymethyl)-N2-acetylguanine (5a)",
+            "evidence": null
+          }
+        ],
+        "reagents": [
+          {
+            "name": "sodium hydroxide (5% aqueous)",
+            "role": "reagent",
+            "amount": "100 mL of 5% aqueous NaOH",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          },
+          {
+            "name": "hydrochloric acid",
+            "role": "reagent (neutralization)",
+            "amount": "1 M HCl, as needed",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "catalysts": [],
+        "ligands": [],
+        "solvents": [
+          {
+            "name": "water",
+            "role": "solvent",
+            "amount": "100 mL (as 5% aqueous NaOH)",
+            "smiles": null,
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "intermediates": [],
+        "products": [
+          {
+            "name": "9-[2-(hydroxyethoxy)methyl]guanine (acyclovir, 1)",
+            "role": "product",
+            "amount": "6.4 g",
+            "smiles": "NC1=NC2=C(N=CN2COCCO)C(=O)N1",
+            "cas": null,
+            "notes": null,
+            "evidence": null
+          }
+        ],
+        "conditions": {
+          "temperature": "room temperature",
+          "time": "720 minutes",
+          "pressure": "atmospheric",
+          "atmosphere": "N/A",
+          "other": "Neutralized with 1 M HCl; precipitate collected by filtration"
+        },
+        "yield_value": "92% (overall yield from guanosine 78%)",
+        "ee_or_dr": "high isomeric purity (N-9 isomer)",
+        "notes": "m.p. 247–248 °C; λmax(H2O) 252 nm (ε 12127), λmin 221 nm (ε 2298); FAB-MS m/z 226 (MH+); Anal. Calcd for C8H11N5O3: C 42.67, H 4.92, N 31.10; Found C 42.39, H 4.98, N 30.95",
+        "evidence": "10 g of crude crystals containing 5a were dissolved in 100 mL of 5% aqueous NaOH ... neutralized by 1M HCl and the resulting precipitate was filtered to provide 6.4 g of 1 (92% yield)",
+        "source": "",
+        "confidence": 0.95,
+        "evidence_refs": []
+      },
+      {
+        "step_index": 6,
+        "step_label": "isomerization (5b → 5a)",
+        "reactants": [
+          {
+            "name": "7-isomer",
+            "role": "reactant",
+            "amount": "N/A",
+            "smiles": "O=C1NC(NC(C)=O)=NC2=C1N(COCCOC(C)=O)C=N2",
+            "cas": null,
+            "notes": "original_name: 7-isomer (5b)",
+            "evidence": null
+          }
+        ],
+        "reagents": [],
+        "catalysts": [],
+        "ligands": [],
+        "solvents": [],
+        "intermediates": [
+          {
+            "name": "9-isomer",
+            "role": "intermediate",
+            "amount": "N/A",
+            "smiles": "O=C1NC(NC(C)=O)=NC2=C1N=CN2COCCOC(C)=O",
+            "cas": null,
+            "notes": "original_name: 9-isomer (5a); TABLE 1 entries (% yield 5a): 48, 42, 40, 47, 30, 35, 33, 45",
+            "evidence": null
+          }
+        ],
+        "products": [
+          {
+            "name": "9-isomer",
+            "role": "intermediate",
+            "amount": "N/A",
+            "smiles": "O=C1NC(NC(C)=O)=NC2=C1N=CN2COCCOC(C)=O",
+            "cas": null,
+            "notes": "original_name: 9-isomer (5a); TABLE 1 entries (% yield 5a): 48, 42, 40, 47, 30, 35, 33, 45",
+            "evidence": null
+          },
+          {
+            "name": "7-isomer",
+            "role": "product",
+            "amount": "19-39% (TABLE 1, depending on entry)",
+            "smiles": null,
+            "cas": null,
+            "notes": "original_name: 7-isomer (5b); TABLE 1 entries (% yield 5b): 38, 35, 36, 38, 19, 21, 19, 39",
+            "evidence": null
+          }
+        ],
+        "conditions": {
+          "temperature": "N/A",
+          "time": "N/A",
+          "pressure": "N/A",
+          "atmosphere": "N/A",
+          "other": "isomerization"
+        },
+        "yield_value": "30-48% (TABLE 1, depending on entry)",
+        "ee_or_dr": "N/A",
+        "notes": "Extracted from image via VLM/OCSR (scheme); LC/MS N/A; LC/MS N/A",
+        "evidence": "isomerization",
+        "source": "scheme",
+        "confidence": 0.7,
+        "evidence_refs": [
+          {
+            "page": 3,
+            "page_end": null,
+            "section": "figures",
+            "evidence_type": "reaction_scheme",
+            "source": "scheme",
+            "quote": "isomerization",
+            "confidence": 0.7,
+            "image_id": "page3"
+          }
+        ]
+      },
+      {
+        "step_index": 7,
+        "step_label": "FIG. I, deacetylation step",
+        "reactants": [
+          {
+            "name": "9-isomer",
+            "role": "reactant",
+            "amount": "N/A",
+            "smiles": "O=C1NC(NC(C)=O)=NC2=C1N=CN2COCCOC(C)=O",
+            "cas": null,
+            "notes": "original_name: 9-isomer (5a)",
+            "evidence": null
+          }
+        ],
+        "reagents": [],
+        "catalysts": [],
+        "ligands": [],
+        "solvents": [],
+        "intermediates": [],
+        "products": [
+          {
+            "name": "acyclovir",
+            "role": "product",
+            "amount": "N/A",
+            "smiles": "O=C1NC(N)=NC2=C1N=CN2COCCO",
+            "cas": null,
+            "notes": "original_name: acyclovir (1)",
+            "evidence": null
+          },
+          {
+            "name": "7-isomer",
+            "role": "product",
+            "amount": "N/A",
+            "smiles": "O=C1NC(N)=NC2=C1N(COCCO)C=N2",
+            "cas": null,
+            "notes": "original_name: 7-isomer (7)",
+            "evidence": null
+          },
+          {
+            "name": "9-isomer",
+            "role": "product",
+            "amount": "30-48% (TABLE 1, depending on entry)",
+            "smiles": null,
+            "cas": null,
+            "notes": "original_name: 9-isomer (5a); TABLE 1 entries (% yield 5a): 48, 42, 40, 47, 30, 35, 33, 45",
+            "evidence": null
+          },
+          {
+            "name": "7-isomer",
+            "role": "product",
+            "amount": "19-39% (TABLE 1, depending on entry)",
+            "smiles": null,
+            "cas": null,
+            "notes": "original_name: 7-isomer (5b); TABLE 1 entries (% yield 5b): 38, 35, 36, 38, 19, 21, 19, 39",
+            "evidence": null
+          }
+        ],
+        "conditions": {
+          "temperature": "N/A",
+          "time": "N/A",
+          "pressure": "N/A",
+          "atmosphere": "N/A",
+          "other": "1) OH-  2) H+"
+        },
+        "yield_value": "30-48% (TABLE 1, depending on entry)",
+        "ee_or_dr": "N/A",
+        "notes": "Extracted from image via VLM/OCSR (scheme); LC/MS N/A; LC/MS N/A",
+        "evidence": "1) OH-  2) H+",
+        "source": "scheme",
+        "confidence": 0.7,
+        "evidence_refs": [
+          {
+            "page": 3,
+            "page_end": null,
+            "section": "figures",
+            "evidence_type": "reaction_scheme",
+            "source": "scheme",
+            "quote": "1) OH-  2) H+",
+            "confidence": 0.7,
+            "image_id": "page3"
+          }
+        ]
+      }
+    ],
+    "warnings": [
+      "Selected 8257 of 10045 chars from pages [1, 3, 4, 5]; omitted pages [2] due to budget (90000).",
+      "Some procedure pages not included in LLM input (budget): [2].",
+      "Step 1 (synthesis of (2-acetoxyethoxy)methyl acetate 4) is described only generally with a literature reference; no amounts, temperature, time or yield are given.",
+      "Table 1 catalyst/solvent/yield pairings are garbled in the OCR text; only the p-TsOH·H2O entry (5a 48%, 5b 38%) is cited with moderate confidence.",
+      "Table 2 footnote conditions (2 equiv 1,3-dioxolane, 7 equiv Ac2O, 0.1 equiv p-TsOH·H2O) refer to the one-pot variant, not exactly the Experimental section stoichiometry.",
+      "Filtered 2 summary/literature/duplicate step(s) after reconcile.",
+      "Normalized 19 chemical name(s) via synonym layer."
+    ],
+    "conflicts": [],
+    "route_graph": {
+      "nodes": [
+        {
+          "node_id": "2_acetoxyethoxy_methyl_acetate",
+          "name": "(2-acetoxyethoxy)methyl acetate",
+          "canonical_name": "(2-acetoxyethoxy)methyl acetate",
+          "compound_ids": [],
+          "step_indices": [
+            1,
+            2
+          ],
+          "role": "product"
+        },
+        {
+          "node_id": "1_3_dioxolane",
+          "name": "1,3-dioxolane",
+          "canonical_name": "1,3-dioxolane",
+          "compound_ids": [],
+          "step_indices": [
+            1
+          ],
+          "role": "reactant"
+        },
+        {
+          "node_id": "acetic_anhydride",
+          "name": "acetic anhydride",
+          "canonical_name": "acetic anhydride",
+          "compound_ids": [],
+          "step_indices": [
+            1,
+            2
+          ],
+          "role": "reactant"
+        },
+        {
+          "node_id": "9_2_acetoxyethoxymethyl_n2_acetylguanine",
+          "name": "9-(2-acetoxyethoxymethyl)-N2-acetylguanine",
+          "canonical_name": "9-(2-acetoxyethoxymethyl)-N2-acetylguanine",
+          "compound_ids": [],
+          "step_indices": [
+            2
+          ],
+          "role": "product"
+        },
+        {
+          "node_id": "7_2_acetoxyethoxymethyl_n2_acetylguanine",
+          "name": "7-(2-acetoxyethoxymethyl)-N2-acetylguanine",
+          "canonical_name": "7-(2-acetoxyethoxymethyl)-N2-acetylguanine",
+          "compound_ids": [],
+          "step_indices": [
+            2
+          ],
+          "role": "product"
+        },
+        {
+          "node_id": "guanosine",
+          "name": "guanosine",
+          "canonical_name": "guanosine",
+          "compound_ids": [],
+          "step_indices": [
+            2
+          ],
+          "role": "reactant"
+        },
+        {
+          "node_id": "tetraacetylguanosine",
+          "name": "tetraacetylguanosine",
+          "canonical_name": "tetraacetylguanosine",
+          "compound_ids": [],
+          "step_indices": [
+            2
+          ],
+          "role": "intermediate"
+        },
+        {
+          "node_id": "residue_enriched_in_9_2_acetoxyethoxymethyl_n2_acetylguanine",
+          "name": "residue enriched in 9-(2-acetoxyethoxymethyl)-N2-acetylguanine",
+          "canonical_name": "residue enriched in 9-(2-acetoxyethoxymethyl)-N2-acetylguanine",
+          "compound_ids": [],
+          "step_indices": [
+            3
+          ],
+          "role": "product"
+        },
+        {
+          "node_id": "crude_reaction_mixture_containing_5a_and_5b",
+          "name": "crude reaction mixture containing 5a and 5b",
+          "canonical_name": "crude reaction mixture containing 5a and 5b",
+          "compound_ids": [],
+          "step_indices": [
+            3
+          ],
+          "role": "reactant"
+        },
+        {
+          "node_id": "9_2_acetoxyethoxymethyl_n2_acetylguanine_5a_crude_crystals",
+          "name": "9-(2-acetoxyethoxymethyl)-N2-acetylguanine (5a), crude crystals",
+          "canonical_name": "9-(2-acetoxyethoxymethyl)-N2-acetylguanine (5a), crude crystals",
+          "compound_ids": [],
+          "step_indices": [
+            4
+          ],
+          "role": "product"
+        },
+        {
+          "node_id": "isomerized_residue_containing_5a",
+          "name": "isomerized residue containing 5a",
+          "canonical_name": "isomerized residue containing 5a",
+          "compound_ids": [],
+          "step_indices": [
+            4
+          ],
+          "role": "reactant"
+        },
+        {
+          "node_id": "9_2_hydroxyethoxy_methyl_guanine_acyclovir_1",
+          "name": "9-[2-(hydroxyethoxy)methyl]guanine (acyclovir, 1)",
+          "canonical_name": "9-[2-(hydroxyethoxy)methyl]guanine (acyclovir, 1)",
+          "compound_ids": [],
+          "step_indices": [
+            5
+          ],
+          "role": "product"
+        },
+        {
+          "node_id": "crude_crystals_containing_9_2_acetoxyethoxymethyl_n2_acetylguanine",
+          "name": "crude crystals containing 9-(2-acetoxyethoxymethyl)-N2-acetylguanine",
+          "canonical_name": "crude crystals containing 9-(2-acetoxyethoxymethyl)-N2-acetylguanine",
+          "compound_ids": [],
+          "step_indices": [
+            5
+          ],
+          "role": "reactant"
+        },
+        {
+          "node_id": "9_isomer",
+          "name": "9-isomer",
+          "canonical_name": "9-isomer",
+          "compound_ids": [],
+          "step_indices": [
+            6,
+            7
+          ],
+          "role": "product"
+        },
+        {
+          "node_id": "7_isomer",
+          "name": "7-isomer",
+          "canonical_name": "7-isomer",
+          "compound_ids": [],
+          "step_indices": [
+            6,
+            7
+          ],
+          "role": "product"
+        },
+        {
+          "node_id": "acyclovir",
+          "name": "acyclovir",
+          "canonical_name": "acyclovir",
+          "compound_ids": [],
+          "step_indices": [
+            7
+          ],
+          "role": "product"
+        },
+        {
+          "node_id": "9_2_hydroxyethoxymethyl_guanine_acyclovir",
+          "name": "9-(2-hydroxyethoxymethyl)guanine (acyclovir)",
+          "canonical_name": "9-(2-hydroxyethoxymethyl)guanine (acyclovir)",
+          "compound_ids": [],
+          "step_indices": [
+            7
+          ],
+          "role": "target"
+        }
+      ],
+      "edges": [
+        {
+          "from_node": "1_3_dioxolane",
+          "to_node": "2_acetoxyethoxy_methyl_acetate",
+          "step_index": 1,
+          "relation": "transforms_to"
+        },
+        {
+          "from_node": "acetic_anhydride",
+          "to_node": "2_acetoxyethoxy_methyl_acetate",
+          "step_index": 1,
+          "relation": "transforms_to"
+        },
+        {
+          "from_node": "guanosine",
+          "to_node": "9_2_acetoxyethoxymethyl_n2_acetylguanine",
+          "step_index": 2,
+          "relation": "transforms_to"
+        },
+        {
+          "from_node": "guanosine",
+          "to_node": "7_2_acetoxyethoxymethyl_n2_acetylguanine",
+          "step_index": 2,
+          "relation": "transforms_to"
+        },
+        {
+          "from_node": "2_acetoxyethoxy_methyl_acetate",
+          "to_node": "9_2_acetoxyethoxymethyl_n2_acetylguanine",
+          "step_index": 2,
+          "relation": "transforms_to"
+        },
+        {
+          "from_node": "2_acetoxyethoxy_methyl_acetate",
+          "to_node": "7_2_acetoxyethoxymethyl_n2_acetylguanine",
+          "step_index": 2,
+          "relation": "transforms_to"
+        },
+        {
+          "from_node": "acetic_anhydride",
+          "to_node": "9_2_acetoxyethoxymethyl_n2_acetylguanine",
+          "step_index": 2,
+          "relation": "transforms_to"
+        },
+        {
+          "from_node": "acetic_anhydride",
+          "to_node": "7_2_acetoxyethoxymethyl_n2_acetylguanine",
+          "step_index": 2,
+          "relation": "transforms_to"
+        },
+        {
+          "from_node": "crude_reaction_mixture_containing_5a_and_5b",
+          "to_node": "residue_enriched_in_9_2_acetoxyethoxymethyl_n2_acetylguanine",
+          "step_index": 3,
+          "relation": "transforms_to"
+        },
+        {
+          "from_node": "isomerized_residue_containing_5a",
+          "to_node": "9_2_acetoxyethoxymethyl_n2_acetylguanine_5a_crude_crystals",
+          "step_index": 4,
+          "relation": "transforms_to"
+        },
+        {
+          "from_node": "crude_crystals_containing_9_2_acetoxyethoxymethyl_n2_acetylguanine",
+          "to_node": "9_2_hydroxyethoxy_methyl_guanine_acyclovir_1",
+          "step_index": 5,
+          "relation": "transforms_to"
+        },
+        {
+          "from_node": "7_isomer",
+          "to_node": "9_isomer",
+          "step_index": 6,
+          "relation": "transforms_to"
+        },
+        {
+          "from_node": "7_isomer",
+          "to_node": "7_isomer",
+          "step_index": 6,
+          "relation": "transforms_to"
+        },
+        {
+          "from_node": "9_isomer",
+          "to_node": "acyclovir",
+          "step_index": 7,
+          "relation": "transforms_to"
+        },
+        {
+          "from_node": "9_isomer",
+          "to_node": "7_isomer",
+          "step_index": 7,
+          "relation": "transforms_to"
+        },
+        {
+          "from_node": "9_isomer",
+          "to_node": "9_isomer",
+          "step_index": 7,
+          "relation": "transforms_to"
+        },
+        {
+          "from_node": "9_isomer",
+          "to_node": "7_isomer",
+          "step_index": 7,
+          "relation": "transforms_to"
+        },
+        {
+          "from_node": "2_acetoxyethoxy_methyl_acetate",
+          "to_node": "2_acetoxyethoxy_methyl_acetate",
+          "step_index": 2,
+          "relation": "intermediate_flow"
+        }
+      ],
+      "target_node_id": "9_2_hydroxyethoxymethyl_guanine_acyclovir"
+    },
+    "compound_links": [
+      {
+        "compound_id": "5a",
+        "name": "",
+        "step_indices": [
+          3,
+          4
+        ],
+        "role": "intermediate",
+        "example_label": ""
+      },
+      {
+        "compound_id": "5",
+        "name": "",
+        "step_indices": [
+          3,
+          4
+        ],
+        "role": "intermediate",
+        "example_label": ""
+      }
+    ]
+  },
+  "raw_model_output": "{\n  \"title\": \"Synthesis of 9-(2-Hydroxyethoxymethyl)guanine (Acyclovir) from Guanosine\",\n  \"target_name\": \"9-(2-hydroxyethoxymethyl)guanine (acyclovir)\",\n  \"target_class\": \"nucleoside analog (acyclic guanine nucleoside analog)\",\n  \"document_type\": \"paper\",\n  \"steps\": [\n    {\n      \"step_index\": 1,\n      \"step_label\": \"Preparation of acyclic sugar moiety (2-acetoxyethoxy)methyl acetate (4)\",\n      \"reactants\": [\n        {\"name\": \"1,3-dioxolane (3)\", \"role\": \"reactant\", \"amount\": \"N/A (2 equiv. relative to guanosine in one-pot variant)\", \"smiles\": \"C1COCO1\"},\n        {\"name\": \"acetic anhydride\", \"role\": \"reactant\", \"amount\": \"N/A (7 equiv. relative to guanosine in one-pot variant)\", \"smiles\": \"CC(=O)OC(C)=O\"}\n      ],\n      \"reagents\": [],\n      \"catalysts\": [{\"name\": \"acid catalyst (e.g. p-toluenesulfonic acid monohydrate; also H2SO4, sulfanilic acid (H2NPhSO3H), H3PO4)\", \"role\": \"catalyst\", \"amount\": \"0.1 equiv. (in tabulated reactions)\"}],\n      \"ligands\": [],\n      \"solvents\": [{\"name\": \"none / neat (reaction proceeded with or without solvent; MeCN or DMF also used in Table 1)\", \"role\": \"solvent\", \"amount\": \"N/A\"}],\n      \"intermediates\": [],\n      \"products\": [{\"name\": \"(2-acetoxyethoxy)methyl acetate (4)\", \"role\": \"product\", \"amount\": \"N/A\", \"smiles\": \"CC(=O)OCCOCOC(C)=O\"}],\n      \"conditions\": {\"temperature\": \"N/A (one-pot transpurination variant run at 100 °C)\", \"time\": \"N/A\", \"pressure\": \"atmospheric\", \"atmosphere\": \"N/A\", \"other\": \"Catalyst for making 4 can be the same as that used in transpurination, enabling a one-pot process with guanosine\"},\n      \"yield_value\": \"N/A\",\n      \"ee_or_dr\": \"N/A\",\n      \"notes\": \"General procedure only (ref. 5); no isolated amounts reported. Table 1 shows one-pot reaction of guanosine with 1,3-dioxolane and Ac2O gave similar results to the two-step route.\",\n      \"evidence\": \"Reacting 1,3-dioxolane (3) with acetic anhydride in the presence of acid catalyst gave (2-acetoxyethoxy)methyl acetate (4).\"\n    },\n    {\n      \"step_index\": 2,\n      \"step_label\": \"Experimental: transpurination of guanosine with 4 → mixture of 9-isomer (5a) and 7-isomer (5b)\",\n      \"reactants\": [\n        {\"name\": \"guanosine (2)\", \"role\": \"reactant\", \"amount\": \"50 g (176.5 mmol)\", \"smiles\": \"NC1=NC2=C(N=CN2[C@@H]2O[C@H](CO)[C@@H](O)[C@H]2O)C(=O)N1\"},\n        {\"name\": \"(2-acetoxyethoxy)methyl acetate (4)\", \"role\": \"reactant\", \"amount\": \"62 g (353 mmol)\", \"smiles\": \"CC(=O)OCCOCOC(C)=O\"},\n        {\"name\": \"acetic anhydride\", \"role\": \"reactant\", \"amount\": \"180 g (1.75 mol)\", \"smiles\": \"CC(=O)OC(C)=O\"}\n      ],\n      \"reagents\": [],\n      \"catalysts\": [{\"name\": \"p-toluenesulfonic acid monohydrate\", \"role\": \"catalyst\", \"amount\": \"3.4 g (17.5 mmol)\"}],\n      \"ligands\": [],\n      \"solvents\": [{\"name\": \"none (neat, acetic anhydride serves as medium)\", \"role\": \"solvent\", \"amount\": \"N/A\"}],\n      \"intermediates\": [{\"name\": \"tetraacetylguanosine (6)\", \"role\": \"intermediate\", \"amount\": \"N/A\"}],\n      \"products\": [\n        {\"name\": \"9-(2-acetoxyethoxymethyl)-N2-acetylguanine (5a)\", \"role\": \"product\", \"amount\": \"N/A at this stage\"},\n        {\"name\": \"7-(2-acetoxyethoxymethyl)-N2-acetylguanine (5b)\", \"role\": \"byproduct\", \"amount\": \"N/A at this stage\"}\n      ],\n      \"conditions\": {\"temperature\": \"100 °C (Table 2: 90–100 °C)\", \"time\": \"20 h (Table 2: 19.0 h)\", \"pressure\": \"atmospheric (760 mmHg)\", \"atmosphere\": \"N/A\", \"other\": \"HPLC showed tetraacetylguanosine (6) forms first, then converts to 5; transpurination of guanosine does not occur without acetic anhydride; 9/7-isomer ratio ca. 1.45 after transpurination\"},\n      \"yield_value\": \"N/A (isomer mixture; Table 1: 5a 48%, 5b 38% with p-TsOH·H2O)\",\n      \"ee_or_dr\": \"9/7-isomer ratio 1.45 (HPLC peak area)\",\n      \"notes\": \"Various acid catalysts applicable (p-TsOH·H2O, H2SO4, sulfanilic acid, H3PO4); solvent optional (MeCN 82 °C, DMF 120 °C)\",\n      \"evidence\": \"To 50 g (176.5 mmol) of guanosine were added 62 g (353 mmol) of 4, 180 g (1.75 mol) of acetic anhydride and 3.4 g (17.5 mmol) of p-toluenesulfonic acid monohydrate, and the mixture was stirred at 100 °C for 20 h.\"\n    },\n    {\n      \"step_index\": 3,\n      \"step_label\": \"Concentration and thermal isomerization of 7-isomer (5b) to 9-isomer (5a)\",\n      \"reactants\": [{\"name\": \"crude reaction mixture containing 5a and 5b\", \"role\": \"reactant\", \"amount\": \"from step 2\"}],\n      \"reagents\": [],\n      \"catalysts\": [{\"name\": \"residual p-toluenesulfonic acid (from step 2)\", \"role\": \"catalyst\", \"amount\": \"N/A\"}],\n      \"ligands\": [],\n      \"solvents\": [],\n      \"intermediates\": [],\n      \"products\": [{\"name\": \"residue enriched in 9-(2-acetoxyethoxymethyl)-N2-acetylguanine (5a)\", \"role\": \"product\", \"amount\": \"N/A\"}],\n      \"conditions\": {\"temperature\": \"50 °C (concentration); 100 °C (isomerization); Table 2: 90–100 °C\", \"time\": \"1 h concentration + 20 h isomerization (Table 2: 3.0 h → ratio 6.34; 22.5 h → ratio 17.1)\", \"pressure\": \"10 mmHg (Table 2: 30–40 mmHg)\", \"atmosphere\": \"N/A\", \"other\": \"Volatile components distilled off, then residue heated under reduced pressure; conditions milder than previously reported (230 °C, 5 min)\"},\n      \"yield_value\": \"N/A\",\n      \"ee_or_dr\": \"9/7 ratio increased from ~1.45 to ~17.1\",\n      \"notes\": \"Isomerization achieved simply by concentration and heating under reduced pressure\",\n      \"evidence\": \"The reaction mixture was concentrated under reduced pressure (10 mmHg) at 50 °C for 1 h. The resulting residue was stirred at 100 °C under reduced pressure (10 mmHg) for 20 h.\"\n    },\n    {\n      \"step_index\": 4,\n      \"step_label\": \"Crystallization/purification of 5a from ethyl acetate\",\n      \"reactants\": [{\"name\": \"isomerized residue containing 5a\", \"role\": \"reactant\", \"amount\": \"from step 3\"}],\n      \"reagents\": [],\n      \"catalysts\": [],\n      \"ligands\": [],\n      \"solvents\": [{\"name\": \"ethyl acetate\", \"role\": \"solvent\", \"amount\": \"100 mL (plus 20 mL wash)\"}],\n      \"intermediates\": [],\n      \"products\": [{\"name\": \"9-(2-acetoxyethoxymethyl)-N2-acetylguanine (5a), crude crystals\", \"role\": \"product\", \"amount\": \"53 g crude containing 46.9 g of 5a\"}],\n      \"conditions\": {\"temperature\": \"cooled to room temperature (25 °C)\", \"time\": \"1 h stirring\", \"pressure\": \"760 mmHg; drying under reduced pressure\", \"atmosphere\": \"N/A\", \"other\": \"Crystals filtered, washed with ethyl acetate (20 mL), dried under reduced pressure; alternative crystallization solvents: acetonitrile or water; 9/7 ratio after crystallization 120\"},\n      \"yield_value\": \"86% (46.9 g of 5a)\",\n      \"ee_or_dr\": \"9/7-isomer ratio 120; contains 270 mg (0.5%) of 7-isomer\",\n      \"notes\": \"Purity determined by HPLC; 5a crystallizes selectively from the concentrate\",\n      \"evidence\": \"The crude crystals (53 g) contained 46.9 g of 5a (86% yield), accompanied with 270 mg (0.5%) of 5b, which were determined by HPLC.\"\n    },\n    {\n      \"step_index\": 5,\n      \"step_label\": \"Deacetylation with aqueous NaOH and neutralization with HCl → acyclovir (1)\",\n      \"reactants\": [{\"name\": \"crude crystals containing 9-(2-acetoxyethoxymethyl)-N2-acetylguanine (5a)\", \"role\": \"reactant\", \"amount\": \"10 g\"}],\n      \"reagents\": [\n        {\"name\": \"sodium hydroxide (5% aqueous)\", \"role\": \"reagent\", \"amount\": \"100 mL of 5% aqueous NaOH\"},\n        {\"name\": \"hydrochloric acid\", \"role\": \"reagent (neutralization)\", \"amount\": \"1 M HCl, as needed\"}\n      ],\n      \"catalysts\": [],\n      \"ligands\": [],\n      \"solvents\": [{\"name\": \"water\", \"role\": \"solvent\", \"amount\": \"100 mL (as 5% aqueous NaOH)\"}],\n      \"intermediates\": [],\n      \"products\": [{\"name\": \"9-[2-(hydroxyethoxy)methyl]guanine (acyclovir, 1)\", \"role\": \"product\", \"amount\": \"6.4 g\", \"smiles\": \"NC1=NC2=C(N=CN2COCCO)C(=O)N1\"}],\n      \"conditions\": {\"temperature\": \"room temperature\", \"time\": \"overnight\", \"pressure\": \"atmospheric\", \"atmosphere\": \"N/A\", \"other\": \"Neutralized with 1 M HCl; precipitate collected by filtration\"},\n      \"yield_value\": \"92% (overall yield from guanosine 78%)\",\n      \"ee_or_dr\": \"high isomeric purity (N-9 isomer)\",\n      \"notes\": \"m.p. 247–248 °C; λmax(H2O) 252 nm (ε 12127), λmin 221 nm (ε 2298); FAB-MS m/z 226 (MH+); Anal. Calcd for C8H11N5O3: C 42.67, H 4.92, N 31.10; Found C 42.39, H 4.98, N 30.95\",\n      \"evidence\": \"10 g of crude crystals containing 5a were dissolved in 100 mL of 5% aqueous NaOH ... neutralized by 1M HCl and the resulting precipitate was filtered to provide 6.4 g of 1 (92% yield)\"\n    }\n  ],\n  \"warnings\": [\n    \"Step 1 (synthesis of (2-acetoxyethoxy)methyl acetate 4) is described only generally with a literature reference; no amounts, temperature, time or yield are given.\",\n    \"Table 1 catalyst/solvent/yield pairings are garbled in the OCR text; only the p-TsOH·H2O entry (5a 48%, 5b 38%) is cited with moderate confidence.\",\n    \"Table 2 footnote conditions (2 equiv 1,3-dioxolane, 7 equiv Ac2O, 0.1 equiv p-TsOH·H2O) refer to the one-pot variant, not exactly the Experimental section stoichiometry.\"\n  ]\n}",
+  "error": null,
+  "from_cache": false,
+  "content_hash": null,
+  "source_job_id": null,
+  "extraction_debug": {
+    "document_type": "paper",
+    "pages_included": [
+      1,
+      3,
+      4,
+      5
+    ],
+    "pages_excluded": [
+      2
+    ],
+    "chars_total": 10045,
+    "chars_selected": 8257,
+    "truncated": true,
+    "truncation_note": "Selected 8257 of 10045 chars from pages [1, 3, 4, 5]; omitted pages [2] due to budget (90000).",
+    "chunk_count": 4,
+    "chunks": [
+      {
+        "page_start": 1,
+        "page_end": 1,
+        "section": "body",
+        "evidence_types": [
+          "compound_preparation",
+          "experimental_procedure"
+        ],
+        "chars": 1987,
+        "score": 0.55
+      },
+      {
+        "page_start": 3,
+        "page_end": 3,
+        "section": "tables",
+        "evidence_types": [
+          "analytical_characterization",
+          "compound_preparation",
+          "reaction_table"
+        ],
+        "chars": 1416,
+        "score": 0.5
+      },
+      {
+        "page_start": 4,
+        "page_end": 4,
+        "section": "experimental",
+        "evidence_types": [
+          "experimental_procedure",
+          "analytical_characterization",
+          "compound_preparation",
+          "reaction_table"
+        ],
+        "chars": 1585,
+        "score": 0.9666666666666667
+      },
+      {
+        "page_start": 5,
+        "page_end": 5,
+        "section": "experimental",
+        "evidence_types": [
+          "reaction_conditions",
+          "analytical_characterization",
+          "experimental_procedure",
+          "references"
+        ],
+        "chars": 2855,
+        "score": 0.8441666666666666
+      }
+    ],
+    "procedure_pages": [
+      1,
+      2,
+      4,
+      5
+    ],
+    "warnings": [
+      "Selected 8257 of 10045 chars from pages [1, 3, 4, 5]; omitted pages [2] due to budget (90000).",
+      "Some procedure pages not included in LLM input (budget): [2]."
+    ],
+    "info": [
+      "Procedure/evidence pages detected: [1, 2, 4, 5] (document_type=paper).",
+      "Experimental/example pages detected: [1, 2, 4, 5]."
+    ],
+    "single_shot": true,
+    "figure_pages_vlm": [
+      {
+        "page": 3,
+        "score": 2.5,
+        "reason": "caption:FIG. 11"
+      }
+    ],
+    "route_graph_nodes": 17,
+    "compound_links": 2
+  }
+}
